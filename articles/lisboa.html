@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Los mejores hoteles de Lisboa 2025 — Voyage Lumière</title>
+  <meta name="description" content="Los mejores hoteles de Lisboa para 2025: desde hoteles boutique de lujo en Alfama hasta opciones con encanto en Bairro Alto, para todos los presupuestos."/>
+  <meta name="keywords" content="hoteles Lisboa 2025, mejores hoteles Lisboa, donde dormir Lisboa, Alfama hoteles"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=1600&q=80') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    /* Hotel cards */
+    .hotel-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:1.5rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
+    .hotel-name{font-family:var(--ff-head);font-size:1.15rem;color:var(--navy);margin-bottom:.3rem}
+    .hotel-zone{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:.6rem;font-weight:700}
+    .hotel-desc{font-size:.88rem;line-height:1.65;color:#555;margin-bottom:.75rem}
+    .hotel-price{background:var(--navy);color:#fff;padding:.9rem 1.1rem;border-radius:2px;text-align:center;min-width:110px;flex-shrink:0}
+    .hotel-price-num{font-family:var(--ff-head);font-size:1.4rem;font-weight:700;color:var(--gold);display:block;line-height:1}
+    .hotel-price-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;opacity:.7;display:block;margin-top:.2rem}
+    .hotel-book{display:inline-block;margin-top:.5rem;background:var(--gold);color:var(--navy);padding:.45rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .hotel-book:hover{background:var(--gold-lt)}
+    .hotel-stars{color:var(--gold);font-size:.85rem;margin-bottom:.4rem}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+    .weather-item{background:var(--warm);border-radius:2px;padding:.6rem .8rem;text-align:center}
+    .weather-month{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.hotel-card{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="lisboa.html" class="active">Lisboa</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">Portugal</a><span>/</span><span style="color:#fff">Lisboa</span></div>
+      <h1>Los mejores <em>hoteles<br/>de Lisboa</em> 2025</h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Portugal</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 8 min de lectura</span>
+        <span>👁 38.900 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main>
+      <div class="article-content">
+        <p>Lisboa se ha convertido en uno de los destinos más populares de Europa, y con razón: sus barrios históricos con azulejos, su gastronomía extraordinaria, el fado y sus miradores con vistas únicas la hacen irresistible. Elegir bien el hotel es clave para disfrutarla al máximo. Esta selección cubre todos los presupuestos y barrios.</p>
+
+        <div class="tip-box">
+          <strong>💡 ¿En qué barrio alojarse en Lisboa?</strong>
+          <p>Alfama es el más fotogénico pero tiene muchas cuestas. Chiado y Baixa son más cómodos para moverse. Bairro Alto es ideal para viajeros que buscan vida nocturna y restaurantes. Si es tu primera vez, Chiado es la mejor opción.</p>
+        </div>
+
+        <h2 id="lujo">Hoteles de lujo en Lisboa (200€+ noche)</h2>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-zone">Chiado</div>
+            <div class="hotel-stars">★★★★★</div>
+            <h3 class="hotel-name">Bairro Alto Hotel</h3>
+            <p class="hotel-desc">El hotel boutique más icónico de Lisboa. Ubicado en un palacio del siglo XVIII restaurado con gusto exquisito, sus suites con vista al Tejo son incomparables. Desayuno incluido con productos locales.</p>
+            <a href="https://www.booking.com/hotel/pt/bairro-alto.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
+          </div>
+          <div class="hotel-price"><span class="hotel-price-num">220€</span><span class="hotel-price-label">desde/noche</span></div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-zone">Baixa · Frente al río</div>
+            <div class="hotel-stars">★★★★★</div>
+            <h3 class="hotel-name">Memmo Alfama Design Hotel</h3>
+            <p class="hotel-desc">Incrustado en las calles de Alfama, este hotel tiene una piscina con vistas panorámicas al Tejo que es uno de los mejores rincones de Lisboa. Diseño contemporáneo dentro de un edificio histórico restaurado.</p>
+            <a href="https://www.booking.com/hotel/pt/memmo-alfama.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
+          </div>
+          <div class="hotel-price"><span class="hotel-price-num">195€</span><span class="hotel-price-label">desde/noche</span></div>
+        </div>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1000&q=80" alt="Lisboa vistas"/>
+        <p class="img-caption">Vistas al río Tejo desde los miradores de Lisboa · © Unsplash</p>
+
+        <h2 id="medio">Hoteles de gama media (80–180€ noche)</h2>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-zone">Príncipe Real</div>
+            <div class="hotel-stars">★★★★</div>
+            <h3 class="hotel-name">Casa Balthazar</h3>
+            <p class="hotel-desc">Una joya escondida en el barrio más elegante de Lisboa. Casa con encanto, solo 17 habitaciones, jardín tranquilo y a 10 minutos a pie de Chiado. El desayuno en el jardín es una de las experiencias más agradables de la ciudad.</p>
+            <a href="https://www.booking.com/hotel/pt/casa-balthazar.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
+          </div>
+          <div class="hotel-price"><span class="hotel-price-num">135€</span><span class="hotel-price-label">desde/noche</span></div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-zone">Intendente</div>
+            <div class="hotel-stars">★★★★</div>
+            <h3 class="hotel-name">The Independente Suites & Terrace</h3>
+            <p class="hotel-desc">Hostel de lujo en una mansión histórica con terrazas con vistas. Mezcla perfecta de diseño, historia y precio razonable. Su restaurante en la azotea es uno de los favoritos de los lisboetas.</p>
+            <a href="https://www.booking.com/hotel/pt/the-independente.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
+          </div>
+          <div class="hotel-price"><span class="hotel-price-num">95€</span><span class="hotel-price-label">desde/noche</span></div>
+        </div>
+
+        <h2 id="economico">Opciones económicas en Lisboa (20–75€ noche)</h2>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-zone">Baixa · Centro</div>
+            <div class="hotel-stars">★★★</div>
+            <h3 class="hotel-name">Yes! Lisbon Hostel</h3>
+            <p class="hotel-desc">Reconocido durante años como uno de los mejores hostales del mundo. Ubicación perfecta, personal excepcional, ambiente social increíble. Las habitaciones privadas tienen baño propio y son una ganga para el precio.</p>
+            <a href="https://www.booking.com/hotel/pt/yes-lisbon-hostel.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
+          </div>
+          <div class="hotel-price"><span class="hotel-price-num">45€</span><span class="hotel-price-label">desde/noche</span></div>
+        </div>
+
+        <div class="tip-box">
+          <strong>📅 ¿Cuándo reservar hotel en Lisboa?</strong>
+          <p>Lisboa es muy popular entre mayo y octubre. Para conseguir los mejores precios y disponibilidad, reserva con <strong>al menos 6–8 semanas de antelación</strong> en temporada alta. En noviembre y febrero los precios bajan hasta un 40% y la ciudad tiene mucho encanto.</p>
+        </div>
+
+        <h2 id="consejos">Consejos para reservar hotel en Lisboa</h2>
+        <ul>
+          <li><strong>Evita los hoteles en Alfama si tienes problemas de movilidad:</strong> las calles son muy empinadas y adoquinadas.</li>
+          <li><strong>Pregunta siempre por el desayuno:</strong> en Lisboa suele ser extraordinario y muchos hoteles lo incluyen.</li>
+          <li><strong>Los hoteles cerca del metro son muy cómodos:</strong> las líneas Azul y Verde conectan todo el centro.</li>
+          <li><strong>Compara siempre entre Booking y la web del hotel:</strong> a veces el precio directo es mejor e incluye ventajas adicionales.</li>
+          <li><strong>Los apartamentos en Chiado o Príncipe Real</strong> son una excelente alternativa para estancias de 4+ noches.</li>
+        </ul>
+      </div>
+      <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#lujo">Hoteles de lujo</a></li><li><a href="#medio">Gama media</a></li><li><a href="#economico">Opciones económicas</a></li><li><a href="#consejos">Consejos para reservar</a></li></ul></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Todos los hoteles en Lisboa</div><div class="sidebar-card-body"><p>Compara más de 600 hoteles disponibles en Lisboa con cancelación gratuita.</p><a href="https://www.booking.com/city/pt/lisbon.html?aid=TU_ID" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver en Booking →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🌤 Clima en Lisboa</div><div class="sidebar-card-body"><div class="weather-grid"><div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">15°C</div></div><div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">17°C</div></div><div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">22°C</div></div><div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">29°C</div></div><div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">26°C</div></div><div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">17°C</div></div></div></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">✈️ Vuelos a Lisboa</div><div class="sidebar-card-body"><p>Compara vuelos al Aeropuerto Humberto Delgado.</p><a href="https://www.skyscanner.es/vuelos-baratos/lisboa.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Comparar en Skyscanner →</a></div></div>
+      <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Italia</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div><div class="article-body"><p class="article-tag">España</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Europa</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para gastar menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="#">Privacidad</a><a href="#">Cookies</a></div></div></footer>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <script>
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40));document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*80}ms`;observer.observe(el);});const banner=document.getElementById('cookieBanner');if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+  </script>
+</body>
+</html>

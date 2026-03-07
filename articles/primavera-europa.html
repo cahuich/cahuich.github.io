@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mejores destinos europeos en primavera 2025 — Voyage Lumière</title>
+  <meta name="description" content="Los mejores destinos de Europa para visitar en primavera: flores, temperaturas perfectas, menos turistas y los paisajes más espectaculares de la temporada."/>
+  <meta name="keywords" content="destinos europa primavera, viajes primavera europa, donde ir primavera europa, tulipanes amsterdam"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.68) 100%),url('https://images.unsplash.com/photo-1490750967868-88df5691cc37?w=1600&q=80') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65)}.breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.6rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    /* Destination ranking cards */
+    .dest-rank-card{display:grid;grid-template-columns:60px 1fr;gap:1.2rem;align-items:start;background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:1.4rem;margin-bottom:1.2rem}
+    .dest-rank-num{font-family:var(--ff-head);font-size:2.5rem;font-weight:700;color:var(--gold-lt);line-height:1;text-align:center}
+    .dest-rank-name{font-family:var(--ff-head);font-size:1.1rem;color:var(--navy);margin-bottom:.3rem}
+    .dest-rank-country{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:700;margin-bottom:.5rem}
+    .dest-rank-desc{font-size:.88rem;line-height:1.65;color:#555;margin-bottom:.6rem}
+    .dest-rank-when{font-size:.78rem;color:var(--muted);font-style:italic}
+    .dest-rank-book{display:inline-block;margin-top:.5rem;background:var(--navy);color:#fff;padding:.4rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .dest-rank-book:hover{background:var(--gold);color:var(--navy)}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="primavera-europa.html" class="active">Primavera</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">Temporadas</a><span>/</span><span style="color:#fff">Primavera</span></div>
+      <h1>Los mejores destinos<br/>de Europa en <em>primavera</em></h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Temporada</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 11 min de lectura</span>
+        <span>👁 89.300 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main>
+      <div class="article-content">
+        <p>La primavera es, sin duda, la mejor época del año para viajar por Europa. El clima es suave, los jardines están en flor, las multitudes de verano aún no han llegado y los precios están en un punto intermedio muy razonable. Entre marzo y junio, Europa ofrece versiones de sí misma que muchos viajeros no llegan a conocer. Esta es nuestra selección de los destinos imprescindibles.</p>
+
+        <div class="tip-box">
+          <strong>🌸 ¿Cuándo exactamente es la primavera en Europa?</strong>
+          <p>Meteorológicamente, la primavera europea va de <strong>marzo a mayo</strong>. Junio sigue siendo una excelente opción antes de que el verano masifique los destinos. La semana de Semana Santa es el único período a evitar si quieres escapar de las multitudes.</p>
+        </div>
+
+        <h2 id="ranking">Los 8 mejores destinos europeos en primavera</h2>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">01</div>
+          <div>
+            <div class="dest-rank-country">Países Bajos</div>
+            <h3 class="dest-rank-name">Ámsterdam y los campos de tulipanes</h3>
+            <p class="dest-rank-desc">Abril es el mes mágico en los Países Bajos. Los Keukenhof Gardens, con 7 millones de bulbos en flor, son uno de los espectáculos naturales más impresionantes del mundo. Ámsterdam en primavera es una ciudad completamente diferente a la versión de verano: más tranquila, más auténtica y con sus canales bordeados de flores.</p>
+            <p class="dest-rank-when">📅 Mejor momento: mediados de abril (tulipanes en plena floración)</p>
+            <a href="https://www.booking.com/city/nl/amsterdam.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">02</div>
+          <div>
+            <div class="dest-rank-country">Francia</div>
+            <h3 class="dest-rank-name">París en flor</h3>
+            <p class="dest-rank-desc">Los jardines de Luxemburgo, el Bois de Boulogne y los bulevares del Marais se transforman en abril y mayo. La ciudad tiene una luz especial en primavera que los fotógrafos conocen bien. Las terrazas de los cafés se llenan de vida y los precios son más razonables que en verano.</p>
+            <p class="dest-rank-when">📅 Mejor momento: segunda quincena de abril y mayo</p>
+            <a href="https://www.booking.com/city/fr/paris.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1490750967868-88df5691cc37?w=1000&q=80" alt="Flores primavera Europa"/>
+        <p class="img-caption">Los campos de tulipanes de los Países Bajos en plena floración de abril · © Unsplash</p>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">03</div>
+          <div>
+            <div class="dest-rank-country">Portugal</div>
+            <h3 class="dest-rank-name">Lisboa y el Alentejo en flor</h3>
+            <p class="dest-rank-desc">Marzo y abril son los meses más hermosos en Portugal. Lisboa tiene temperaturas de 18–22°C perfectas para caminar, y el Alentejo interior se cubre de amapolas y flores silvestres que transforman el paisaje en algo irreal. Nadie habla de esto en las guías convencionales.</p>
+            <p class="dest-rank-when">📅 Mejor momento: marzo y abril</p>
+            <a href="https://www.booking.com/city/pt/lisbon.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">04</div>
+          <div>
+            <div class="dest-rank-country">Alemania</div>
+            <h3 class="dest-rank-name">El Valle del Rin y los cerezos en flor</h3>
+            <p class="dest-rank-desc">En marzo y principios de abril, las orillas del Rin y las ciudades del sur de Alemania se cubren de cerezos en flor al estilo japonés. Bonn, en particular, tiene avenidas enteras de cerezos que rivalizan con Kioto. Un secreto que pocos viajeros conocen.</p>
+            <p class="dest-rank-when">📅 Mejor momento: finales de marzo y primera semana de abril</p>
+            <a href="https://www.booking.com/city/de/bonn.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">05</div>
+          <div>
+            <div class="dest-rank-country">España</div>
+            <h3 class="dest-rank-name">Andalucía: Sevilla y Granada</h3>
+            <p class="dest-rank-desc">La Feria de Abril en Sevilla (finales de abril) es una de las fiestas más vibrantes de Europa. Granada en primavera tiene los jardines de la Alhambra en su esplendor máximo, con las sierras nevadas de fondo. Temperaturas perfectas de 22–26°C.</p>
+            <p class="dest-rank-when">📅 Mejor momento: abril y primera quincena de mayo</p>
+            <a href="https://www.booking.com/city/es/seville.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">06</div>
+          <div>
+            <div class="dest-rank-country">República Checa</div>
+            <h3 class="dest-rank-name">Praga sin multitudes</h3>
+            <p class="dest-rank-desc">Mayo en Praga es una revelación. La ciudad, saturada de turistas en verano, recupera su magia en primavera. El barrio de Malá Strana con sus jardines en flor y el Castillo de Praga sin colas hacen de este el mejor momento para visitarla. Precio del alojamiento hasta un 35% más barato que en agosto.</p>
+            <p class="dest-rank-when">📅 Mejor momento: mayo y primera quincena de junio</p>
+            <a href="https://www.booking.com/city/cz/prague.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">07</div>
+          <div>
+            <div class="dest-rank-country">Italia</div>
+            <h3 class="dest-rank-name">La Toscana en mayo</h3>
+            <p class="dest-rank-desc">Los campos de cipreses, viñedos verdes y amapolas rojas de la Toscana en mayo son exactamente la imagen de Italia que todos llevan en la mente. Val d'Orcia, Siena y el Chianti están en su mejor momento entre finales de abril y mediados de mayo.</p>
+            <p class="dest-rank-when">📅 Mejor momento: mayo (la vegetación está en su punto máximo)</p>
+            <a href="https://www.booking.com/region/it/tuscany.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <div class="dest-rank-card">
+          <div class="dest-rank-num">08</div>
+          <div>
+            <div class="dest-rank-country">Eslovenia</div>
+            <h3 class="dest-rank-name">El Lago Bled: el secreto mejor guardado</h3>
+            <p class="dest-rank-desc">El Lago Bled, con su isla flotante y su castillo medieval sobre el acantilado, es uno de los paisajes más fotogénicos de Europa. En mayo las montañas circundantes aún tienen nieve en las cimas mientras el lago está verde esmeralda. Y apenas hay turistas. El destino revelación de los próximos años.</p>
+            <p class="dest-rank-when">📅 Mejor momento: mayo y junio</p>
+            <a href="https://www.booking.com/city/si/bled.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-rank-book">Reservar hotel →</a>
+          </div>
+        </div>
+
+        <h2 id="consejos">Consejos para viajar en primavera</h2>
+        <ul>
+          <li><strong>Reserva con antelación en Semana Santa:</strong> es la única semana de primavera en que los precios se disparan y los destinos se masifican.</li>
+          <li><strong>El tiempo es variable:</strong> lleva siempre una chaqueta impermeable ligera. Las lluvias de primavera son cortas pero frecuentes en el norte de Europa.</li>
+          <li><strong>Los jardines botánicos son imprescindibles:</strong> Kew Gardens en Londres, Jardin des Plantes en París, Schönbrunn en Viena. En primavera están en su apogeo.</li>
+          <li><strong>Aprovecha los días largos:</strong> en mayo y junio el sol no se pone hasta las 21:00 en el norte de Europa, dándote mucho más tiempo para explorar.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>📸 El truco de los fotógrafos de viaje</strong>
+          <p>La primavera es la mejor estación para fotografiar Europa. La luz es suave, el cielo tiene nubes interesantes y los colores de la vegetación contrastan perfectamente con los edificios históricos. La "hora dorada" (primera hora tras el amanecer) en mayo dura casi 90 minutos.</p>
+        </div>
+
+      </div>
+      <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#ranking">Top 8 destinos</a></li><li><a href="#consejos">Consejos de temporada</a></li></ul></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Reserva tu hotel</div><div class="sidebar-card-body"><p>Encuentra los mejores precios para este primavera en Europa.</p><a href="https://www.booking.com?aid=TU_ID" target="_blank" rel="noopener" class="sidebar-booking-btn">Comparar en Booking →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">✈️ Vuelos baratos</div><div class="sidebar-card-body"><p>Los vuelos de primavera se agotan rápido. Compara ahora.</p><a href="https://www.skyscanner.es" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Buscar vuelos →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">💶 ¿Cuánto gastar?</div><div class="sidebar-card-body"><p>Lee nuestra guía completa para viajar a Europa con presupuesto bajo.</p><a href="presupuesto-europa.html" class="sidebar-booking-btn" style="background:var(--warm);color:var(--navy);border:1px solid var(--border)">Guía de presupuesto →</a></div></div>
+      <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Francia</p><h3 class="article-title">Guía completa de París para 2025</h3><p class="article-excerpt">El destino número uno de Europa para la primavera.</p><div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Portugal</p><h3 class="article-title">Los mejores hoteles de Lisboa 2025</h3><p class="article-excerpt">Lisboa en primavera: la ciudad más acogedora de Europa.</p><div class="article-footer"><span>8 min</span><a href="lisboa.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Europa</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Los trucos que funcionan de verdad para gastar menos.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="primavera-europa.html">Primavera</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li><li><a href="#">Gastronomía</a></li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="#">Privacidad</a><a href="#">Cookies</a></div></div></footer>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <script>
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40));document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*80}ms`;observer.observe(el);});const banner=document.getElementById('cookieBanner');if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+  </script>
+</body>
+</html>

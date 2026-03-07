@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cómo viajar a Europa con presupuesto bajo 2025 — Voyage Lumière</title>
+  <meta name="description" content="Guía completa para viajar a Europa gastando menos de 60€ al día: vuelos baratos, alojamiento económico, transporte en tren y trucos que funcionan de verdad."/>
+  <meta name="keywords" content="viajar europa barato, presupuesto europa, eurotrip economico, vuelos baratos europa, interrail"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65)}.breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.6rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    /* Budget breakdown */
+    .budget-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+    .budget-table th{background:var(--navy);color:#fff;padding:.75rem 1rem;text-align:left;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+    .budget-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border);color:#444}
+    .budget-table tr:last-child td{font-weight:700;color:var(--navy);background:rgba(197,160,89,.08)}
+    .budget-table tr:nth-child(even) td{background:var(--warm)}
+    /* Tip cards grid */
+    .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    .tip-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:1.2rem}
+    .tip-card-icon{font-size:1.5rem;margin-bottom:.6rem}
+    .tip-card-title{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);margin-bottom:.4rem}
+    .tip-card-desc{font-size:.83rem;line-height:1.6;color:var(--muted)}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.tips-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="presupuesto-europa.html" class="active">Presupuesto</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">Consejos</a><span>/</span><span style="color:#fff">Presupuesto</span></div>
+      <h1>Cómo viajar a <em>Europa<br/>con poco presupuesto</em></h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Consejos</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 9 min de lectura</span>
+        <span>👁 74.200 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main>
+      <div class="article-content">
+        <p>Europa tiene fama de cara, pero la realidad es que con la planificación correcta puedes recorrer sus mejores destinos gastando menos de 60€ al día, incluyendo alojamiento, comida, transporte y actividades. Esta guía reúne los trucos que funcionan de verdad, sin sacrificar la calidad de la experiencia.</p>
+
+        <div class="tip-box">
+          <strong>💶 ¿Cuánto dinero necesitas para viajar a Europa?</strong>
+          <p>Con <strong>40–50€/día</strong> puedes viajar cómodamente por Europa del Este (Praga, Budapest, Cracovia). Para Europa Occidental (París, Ámsterdam, Zurich) necesitas <strong>60–80€/día</strong> mínimo. El sur de Europa (Portugal, España, Grecia) se sitúa en el término medio: <strong>50–65€/día</strong>.</p>
+        </div>
+
+        <h2 id="vuelos">Vuelos baratos a Europa: los trucos que funcionan</h2>
+        <p>El vuelo suele ser el gasto más grande del viaje, y también donde más se puede ahorrar con la estrategia correcta.</p>
+
+        <h3>✈️ Cuándo comprar el vuelo</h3>
+        <ul>
+          <li><strong>El punto dulce:</strong> entre 6 y 8 semanas antes para vuelos intercontinentales, 3–5 semanas para vuelos dentro de Europa.</li>
+          <li><strong>Los martes y miércoles</strong> suelen tener las mejores tarifas (las aerolíneas lanzan promociones los lunes y hay menos demanda a mitad de semana).</li>
+          <li><strong>Activa las alertas de precio</strong> en Google Flights para tu ruta: te avisarán cuando el precio baje.</li>
+          <li><strong>Vuela en temporada baja:</strong> octubre–noviembre y enero–febrero tienen precios hasta un 60% más bajos que el verano.</li>
+        </ul>
+
+        <h3>🔍 Las mejores apps para encontrar vuelos baratos</h3>
+        <ul>
+          <li><strong>Google Flights:</strong> el mejor comparador. Su vista de calendario muestra los días más baratos del mes.</li>
+          <li><strong>Skyscanner:</strong> busca "en cualquier lugar" desde tu ciudad para descubrir los destinos más baratos del momento.</li>
+          <li><strong>Kiwi.com:</strong> especializado en combinaciones de aerolíneas que otros buscadores no muestran.</li>
+          <li><strong>Ryanair y Easyjet directamente:</strong> sus promociones aparecen primero en sus webs oficiales.</li>
+        </ul>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&q=80" alt="Aeropuerto viaje Europa"/>
+        <p class="img-caption">Planificar bien el vuelo puede ahorrar cientos de euros en tu viaje · © Unsplash</p>
+
+        <h2 id="alojamiento">Alojamiento barato en Europa que no arruina el viaje</h2>
+        <p>El alojamiento puede representar entre el 30% y el 50% de tu presupuesto total. Estas opciones te permiten dormir bien sin gastar de más.</p>
+
+        <h3>🏨 Opciones por precio</h3>
+        <ul>
+          <li><strong>Hostales con habitaciones privadas (25–55€/noche):</strong> la mejor relación calidad-precio para viajeros solos o en pareja. Los hostales europeos tienen un nivel muy alto. Busca los que tienen puntuación +8.5 en Booking.</li>
+          <li><strong>Apartamentos en Airbnb o Booking (40–80€/noche):</strong> rentables para grupos de 3 o más personas, especialmente si cocinas.</li>
+          <li><strong>Hoteles de 2–3 estrellas fuera del centro (50–90€/noche):</strong> a menudo cerca del metro, perfectos si no necesitas estar en el corazón de la ciudad.</li>
+          <li><strong>Couchsurfing (gratis):</strong> no para todos, pero sigue siendo una comunidad activa con millones de anfitriones.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>🏨 Truco de alojamiento poco conocido</strong>
+          <p>Los <strong>hoteles de aeropuerto</strong> de las ciudades grandes suelen ser más baratos que los del centro y tienen acceso directo al transporte público. El trayecto al centro en metro suele costar 2–4€ y no supera los 30 minutos.</p>
+        </div>
+
+        <h2 id="transporte">Moverse por Europa: tren, bus y vuelos internos</h2>
+
+        <h3>🚂 Interrail / Eurail: ¿vale la pena?</h3>
+        <p>El pase Interrail (para europeos) o Eurail (para no europeos) permite viajar en tren por múltiples países. Vale la pena si planeas visitar 4 o más países en menos de un mes. El pase de 1 mes continuo cuesta alrededor de 500€ para mayores de 28 años.</p>
+
+        <h3>🚌 Flixbus: el transporte más barato de Europa</h3>
+        <p>Los autobuses de Flixbus conectan más de 4.000 destinos en Europa. Un trayecto de 3–4 horas puede costar entre 5€ y 20€ si lo reservas con antelación. La alternativa más económica al tren para distancias medias.</p>
+
+        <h2 id="comida">Comer bien en Europa sin gastar mucho</h2>
+        <ul>
+          <li><strong>Mercados locales:</strong> cada ciudad tiene su mercado de abastos. Desayuno o almuerzo entre 4–8€ con productos locales de alta calidad.</li>
+          <li><strong>Menú del día:</strong> en España, Francia e Italia muchos restaurantes ofrecen menú del día de lunes a viernes por 10–15€ con primer plato, segundo y bebida.</li>
+          <li><strong>Supermercados:</strong> Aldi, Lidl y Carrefour están en toda Europa. Una cena comprada en supermercado cuesta 6–10€ y suele ser mejor que un restaurante turístico de precio similar.</li>
+          <li><strong>Fuentes de agua gratuitas:</strong> en muchas ciudades europeas el agua del grifo es potable y excelente. Lleva una botella reutilizable.</li>
+        </ul>
+
+        <h2 id="desglose">Desglose de presupuesto diario realista</h2>
+        <table class="budget-table">
+          <thead><tr><th>Categoría</th><th>Presupuesto bajo</th><th>Presupuesto medio</th></tr></thead>
+          <tbody>
+            <tr><td>Alojamiento</td><td>20–30€</td><td>50–70€</td></tr>
+            <tr><td>Comida</td><td>15–20€</td><td>30–45€</td></tr>
+            <tr><td>Transporte local</td><td>3–6€</td><td>8–12€</td></tr>
+            <tr><td>Actividades / museos</td><td>5–10€</td><td>15–25€</td></tr>
+            <tr><td><strong>TOTAL diario</strong></td><td><strong>43–66€</strong></td><td><strong>103–152€</strong></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="trucos">10 trucos esenciales para viajar barato por Europa</h2>
+        <div class="tips-grid">
+          <div class="tip-card"><div class="tip-card-icon">🎭</div><div class="tip-card-title">Museos gratuitos</div><div class="tip-card-desc">Muchos museos son gratuitos el primer domingo de mes o para menores de 26 años con carnet de estudiante.</div></div>
+          <div class="tip-card"><div class="tip-card-icon">📱</div><div class="tip-card-title">SIM de datos local</div><div class="tip-card-desc">Una SIM europea (Holafly o Airalo) cuesta 15–25€ para datos ilimitados en toda Europa durante 30 días.</div></div>
+          <div class="tip-card"><div class="tip-card-icon">🎒</div><div class="tip-card-title">Solo equipaje de mano</div><div class="tip-card-desc">Volar con Ryanair o Easyjet sin maleta facturada ahorra entre 30€ y 80€ por trayecto.</div></div>
+          <div class="tip-card"><div class="tip-card-icon">🚶</div><div class="tip-card-title">Free tours</div><div class="tip-card-desc">En todas las ciudades grandes hay tours gratuitos guiados. Pagas solo la propina al guía al final (5–10€).</div></div>
+          <div class="tip-card"><div class="tip-card-icon">💳</div><div class="tip-card-title">Tarjeta sin comisiones</div><div class="tip-card-desc">Revolut y Wise no cobran comisiones por pagos en el extranjero. Ahorra hasta un 3% en cada compra.</div></div>
+          <div class="tip-card"><div class="tip-card-icon">🌙</div><div class="tip-card-title">Trenes nocturnos</div><div class="tip-card-desc">El tren nocturno te desplaza entre ciudades mientras duermes, ahorrando una noche de hotel y el vuelo.</div></div>
+        </div>
+      </div>
+      <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#vuelos">Vuelos baratos</a></li><li><a href="#alojamiento">Alojamiento económico</a></li><li><a href="#transporte">Transporte en Europa</a></li><li><a href="#comida">Comer sin gastar</a></li><li><a href="#desglose">Desglose de presupuesto</a></li><li><a href="#trucos">10 trucos esenciales</a></li></ul></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">✈️ Compara vuelos</div><div class="sidebar-card-body"><p>Encuentra las mejores tarifas para volar a Europa desde tu ciudad.</p><a href="https://www.skyscanner.es" target="_blank" rel="noopener" class="sidebar-booking-btn">Buscar en Skyscanner →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Hostales recomendados</div><div class="sidebar-card-body"><p>Los mejores hostales con habitaciones privadas en Europa, con más de 8.5 de puntuación.</p><a href="https://www.booking.com?aid=TU_ID" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Ver en Booking →</a></div></div>
+      <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Destinos para viajar barato</h2></div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Portugal</p><h3 class="article-title">Los mejores hoteles de Lisboa para 2025</h3><p class="article-excerpt">Lisboa sigue siendo una de las capitales europeas más asequibles.</p><div class="article-footer"><span>8 min</span><a href="lisboa.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div><div class="article-body"><p class="article-tag">España</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">Barcelona tiene muchas opciones gratuitas y accesibles para el bolsillo.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Italia</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">Roma tiene museos gratuitos, fuentes públicas y los mejores gelatos a 2€.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="#">Privacidad</a><a href="#">Cookies</a></div></div></footer>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <script>
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40));document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*80}ms`;observer.observe(el);});const banner=document.getElementById('cookieBanner');if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qué ver en Barcelona en 3 días 2025 — Voyage Lumière</title>
+  <meta name="description" content="La guía perfecta para ver lo mejor de Barcelona en 3 días: Sagrada Familia, Gaudí, la Barceloneta, el Born y los mejores restaurantes de la ciudad."/>
+  <meta name="keywords" content="Barcelona 3 días, qué ver Barcelona, Sagrada Familia, Gaudí, hoteles Barcelona"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&q=80') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+    .weather-item{background:var(--warm);border-radius:2px;padding:.6rem .8rem;text-align:center}
+    .weather-month{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
+    /* Day cards */
+    .day-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;margin:2rem 0;overflow:hidden}
+    .day-card-header{background:var(--navy);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    .day-num{font-family:var(--ff-head);font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+    .day-title{font-family:var(--ff-head);font-size:1rem;color:#fff}
+    .day-card-body{padding:1.5rem}
+    .day-card-body p{font-size:.93rem;margin-bottom:1rem;color:#444}
+    .day-card-body ul{padding-left:1.2rem}
+    .day-card-body li{font-size:.9rem;margin-bottom:.4rem;color:#444}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="barcelona.html" class="active">Barcelona</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">España</a><span>/</span><span style="color:#fff">Barcelona</span></div>
+      <h1>Qué ver en <em>Barcelona</em><br/>en 3 días</h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">España</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 10 min de lectura</span>
+        <span>👁 61.800 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main>
+      <div class="article-content">
+        <p>Barcelona es una de las ciudades más vibrantes y visualmente impresionantes de Europa. La obra de Antoni Gaudí, sus playas urbanas, su gastronomía de vanguardia y su energía mediterránea la convierten en un destino que enamora a primera vista. Con tres días bien organizados, puedes ver lo mejor de la ciudad sin prisas.</p>
+
+        <div class="tip-box">
+          <strong>💡 Mejor época para visitar Barcelona</strong>
+          <p>Septiembre y octubre son los meses perfectos: el mar sigue cálido, los turistas de agosto ya se fueron y el clima es ideal (22–27°C). Evita julio y agosto si puedes: calor intenso, playas masificadas y precios en máximos.</p>
+        </div>
+
+        <h2 id="dia1">Día 1 — Gaudí y el Eixample</h2>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">1</div><div class="day-title">Gaudí, la Sagrada Família y el Passeig de Gràcia</div></div>
+          <div class="day-card-body">
+            <p>Empieza temprano con la Sagrada Família. Reserva la entrada online para las 9:00 AM y pide acceso a las torres para las mejores vistas de la ciudad. La basílica lleva más de 140 años en construcción y cada visita revela detalles nuevos.</p>
+            <ul>
+              <li><strong>Mañana (9:00–12:00):</strong> Sagrada Família con torres incluidas</li>
+              <li><strong>Mediodía:</strong> Paseo por el Eixample, el barrio modernista. Busca la "manzana de la discordia" (Casa Batlló, Casa Amatller, Casa Lleó Morera)</li>
+              <li><strong>Tarde (15:00–18:00):</strong> Casa Batlló o Casa Milà (La Pedrera) — escoge una, son similares en precio y espectacularidad</li>
+              <li><strong>Noche:</strong> Cena en el Eixample. El barrio tiene una oferta gastronómica excepcional para todos los presupuestos</li>
+            </ul>
+          </div>
+        </div>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1000&q=80" alt="Sagrada Família Barcelona"/>
+        <p class="img-caption">La Sagrada Família, la obra maestra inacabada de Antoni Gaudí · © Unsplash</p>
+
+        <h2 id="dia2">Día 2 — El Born, la Barceloneta y el Gótico</h2>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">2</div><div class="day-title">Historia, playa y mercado</div></div>
+          <div class="day-card-body">
+            <p>El segundo día está dedicado al corazón histórico de Barcelona y al mar. Empieza en el Barrio Gótico y termina al atardecer en la playa.</p>
+            <ul>
+              <li><strong>Mañana (9:00–11:00):</strong> Mercado de la Boqueria. Llega pronto para evitar la masificación y desayuna en alguna de sus barras interiores</li>
+              <li><strong>11:00–13:00:</strong> Barrio Gótico. Callejea sin mapa: la Catedral, el Pont del Bisbe, la Plaça Reial</li>
+              <li><strong>Tarde:</strong> El Born y el Parque de la Ciutadella. El barrio más hipster de Barcelona, con galerías, cafeterías de especialidad y el Palau de la Música Catalana</li>
+              <li><strong>Final del día:</strong> Barceloneta. La playa urbana más famosa de Europa. Tómate una cerveza viendo el atardecer</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="dia3">Día 3 — Montjuïc y Park Güell</h2>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">3</div><div class="day-title">Las mejores vistas y el parque más mágico</div></div>
+          <div class="day-card-body">
+            <p>El tercer día es para las alturas: las vistas de Barcelona desde Montjuïc y la magia de Park Güell, el parque más peculiar del mundo.</p>
+            <ul>
+              <li><strong>Mañana (8:30–10:30):</strong> Park Güell. Reserva entrada online (acceso al recinto monumental). A primera hora la luz es espectacular y hay menos gente</li>
+              <li><strong>11:30–14:00:</strong> Gracia, el barrio bohemio. Calles tranquilas, mercados locales y la mejor gente para ver</li>
+              <li><strong>Tarde:</strong> Montjuïc en teleférico. El castillo, el Pavelló Mies van der Rohe y las vistas panorámicas de la ciudad y el puerto</li>
+              <li><strong>Última noche:</strong> El Poble Sec, el barrio de los bares de tapas de moda. La calle Blai es la más famosa</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="gastronomia">Qué comer en Barcelona</h2>
+        <p>Barcelona tiene una escena gastronómica que mezcla la tradición catalana con la vanguardia culinaria. Estos son los platos y experiencias que no debes perderte.</p>
+        <ul>
+          <li><strong>Pan con tomate (pa amb tomàquet):</strong> el desayuno catalán por excelencia. Pan tostado frotado con tomate, aceite y sal. Simple y perfecto.</li>
+          <li><strong>Patatas bravas:</strong> cada bar tiene su receta secreta de salsa. Pruébalas en varios sitios y compara.</li>
+          <li><strong>Fideuà:</strong> la versión barcelonesa de la paella, con fideos en lugar de arroz. Mejor en los chiringuitos del Barceloneta.</li>
+          <li><strong>Cava:</strong> el champán catalán. Pídelo en cualquier bar como aperitivo.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>🚇 Transporte en Barcelona</strong>
+          <p>La T-Casual (10 viajes, 11,35€) es la opción más económica para el metro y autobús. La tarjeta T-Día (8,60€) permite viajes ilimitados durante un día completo, ideal si planeas moverte mucho. El Aerobús conecta el aeropuerto con la Plaza Catalunya en 35 minutos por 6,75€.</p>
+        </div>
+
+        <h2 id="presupuesto">Presupuesto para 3 días en Barcelona</h2>
+        <ul>
+          <li><strong>Bajo:</strong> 65–85€/día (hostal, supermercado + tapas, museos gratuitos los domingos)</li>
+          <li><strong>Medio:</strong> 120–160€/día (hotel 3★, restaurantes locales, principales atracciones)</li>
+          <li><strong>Alto:</strong> 250€+/día (hotel boutique, gastronomía de autor, experiencias VIP)</li>
+        </ul>
+      </div>
+      <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#dia1">Día 1 — Gaudí</a></li><li><a href="#dia2">Día 2 — Gótico y playa</a></li><li><a href="#dia3">Día 3 — Montjuïc</a></li><li><a href="#gastronomia">Qué comer</a></li><li><a href="#presupuesto">Presupuesto</a></li></ul></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Hoteles en Barcelona</div><div class="sidebar-card-body"><p>Más de 1.000 hoteles disponibles. Cancela gratis en la mayoría.</p><a href="https://www.booking.com/city/es/barcelona.html?aid=TU_ID" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver en Booking →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🌤 Clima en Barcelona</div><div class="sidebar-card-body"><div class="weather-grid"><div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">13°C</div></div><div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">16°C</div></div><div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">21°C</div></div><div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">28°C</div></div><div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">26°C</div></div><div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">15°C</div></div></div></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">✈️ Vuelos a Barcelona</div><div class="sidebar-card-body"><p>Compara vuelos al aeropuerto El Prat.</p><a href="https://www.skyscanner.es/vuelos-baratos/barcelona.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Comparar en Skyscanner →</a></div></div>
+      <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Italia · Guía completa</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo te esperan.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Europa · Consejos</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para recorrer Europa gastando menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Portugal · Guía completa</p><h3 class="article-title">Los mejores hoteles de Lisboa para 2025</h3><p class="article-excerpt">Desde boutiques de lujo hasta hostales con encanto, la mejor selección.</p><div class="article-footer"><span>8 min</span><a href="lisboa.html" class="read-more">Leer →</a></div></div></article>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="#">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div></div></footer>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <script>
+    const navbar=document.getElementById('navbar');
+    window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40));
+    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*80}ms`;observer.observe(el);});
+    const banner=document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
+    function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}
+    function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+  </script>
+</body>
+</html>
