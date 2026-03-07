@@ -3,121 +3,432 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594535933040491"
-     crossorigin="anonymous"></script>
   <title>Política de Privacidad — Voyage Lumière</title>
-  <meta name="description" content="Política de privacidad de Voyage Lumière. Información sobre cómo recopilamos, usamos y protegemos tus datos personales."/>
+  <meta name="description" content="Política de privacidad de Voyage Lumière. Información sobre el uso de cookies, Google AdSense, programas de afiliados y protección de datos personales."/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .page-hero { margin-top:72px; background:var(--navy); padding:7rem 5vw 5rem; position:relative; overflow:hidden; }
-    .page-hero::before { content:''; position:absolute; right:-10%; top:-30%; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(197,160,89,.12),transparent 70%); pointer-events:none; }
-    .page-hero-inner { max-width:700px; animation:fadeUp .8s ease-out both; }
-    .page-hero p.eyebrow { font-family:var(--ff-acc); font-style:italic; color:var(--gold); font-size:1.1rem; margin-bottom:1rem; }
-    .page-hero h1 { font-family:var(--ff-head); font-size:clamp(2.5rem,5vw,4rem); font-weight:700; color:#fff; line-height:1.1; margin-bottom:1.5rem; }
-    .page-hero h1 em { font-style:italic; color:var(--gold-lt); }
-    .page-hero p.lead { font-size:1.1rem; line-height:1.75; color:rgba(255,255,255,.7); max-width:580px; }
+    .page-hero {
+      margin-top: 72px;
+      background: var(--navy);
+      padding: 5rem 5vw 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      right: -5%;
+      top: -40%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197,160,89,.1), transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner { max-width: 800px; animation: fadeUp .7s ease-out both; }
+    .page-hero p.eyebrow {
+      font-family: var(--ff-acc);
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: .75rem;
+    }
+    .page-hero h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .page-hero .updated {
+      font-size: .82rem;
+      color: rgba(255,255,255,.45);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
 
-    .legal-section { padding:5rem 5vw; background:var(--cream); }
-    .legal-inner { max-width:780px; margin:0 auto; }
-    .legal-inner h2 { font-family:var(--ff-head); font-size:1.5rem; color:var(--navy); margin:2.5rem 0 1rem; font-weight:600; }
-    .legal-inner h2:first-child { margin-top:0; }
-    .legal-inner p { font-size:.95rem; line-height:1.8; color:#444; margin-bottom:1rem; }
-    .legal-inner ul { margin:0 0 1.5rem 1.5rem; }
-    .legal-inner li { font-size:.95rem; line-height:1.8; color:#444; margin-bottom:.4rem; }
-    .legal-inner a { color:var(--gold); text-decoration:underline; }
-    .legal-inner a:hover { color:var(--navy); }
-    .legal-updated { font-size:.85rem; color:var(--muted); font-style:italic; margin-bottom:2rem; }
+    /* LAYOUT */
+    .legal-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 5vw 6rem;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* SIDEBAR TOC */
+    .legal-toc {
+      position: sticky;
+      top: 96px;
+      background: var(--warm);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1.5rem;
+    }
+    .legal-toc h3 {
+      font-family: var(--ff-head);
+      font-size: .9rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-toc ol {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      counter-reset: toc;
+    }
+    .legal-toc li { counter-increment: toc; }
+    .legal-toc a {
+      font-size: .8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      line-height: 1.4;
+      transition: color .3s;
+    }
+    .legal-toc a::before {
+      content: counter(toc) ".";
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: .75rem;
+    }
+    .legal-toc a:hover { color: var(--navy); }
+
+    /* CONTENT */
+    .legal-content { font-size: .97rem; line-height: 1.85; color: #444; }
+
+    .legal-content h2 {
+      font-family: var(--ff-head);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 3rem 0 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 96px;
+    }
+    .legal-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+
+    .legal-content h3 {
+      font-family: var(--ff-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 1.8rem 0 .6rem;
+    }
+
+    .legal-content p { margin-bottom: 1.1rem; }
+
+    .legal-content ul, .legal-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .legal-content li { margin-bottom: .5rem; }
+    .legal-content strong { color: var(--navy); font-weight: 700; }
+    .legal-content a { color: var(--gold); border-bottom: 1px solid rgba(197,160,89,.3); transition: border-color .3s; }
+    .legal-content a:hover { border-color: var(--gold); }
+
+    /* highlight box */
+    .legal-box {
+      background: linear-gradient(135deg, rgba(197,160,89,.07), rgba(197,160,89,.13));
+      border-left: 3px solid var(--gold);
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 3px 3px 0;
+      margin: 1.5rem 0;
+    }
+    .legal-box strong {
+      display: block;
+      font-family: var(--ff-head);
+      color: var(--navy);
+      margin-bottom: .4rem;
+    }
+    .legal-box p { margin: 0; font-size: .9rem; color: #555; }
+
+    /* contact card */
+    .contact-card {
+      background: var(--navy);
+      border-radius: 3px;
+      padding: 1.8rem;
+      margin-top: 3rem;
+      color: rgba(255,255,255,.8);
+    }
+    .contact-card h3 {
+      font-family: var(--ff-head);
+      color: #fff;
+      margin-bottom: .75rem;
+      font-size: 1.1rem;
+    }
+    .contact-card p { font-size: .88rem; line-height: 1.7; margin-bottom: .5rem; }
+    .contact-card a { color: var(--gold); }
+
+    /* table */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: .85rem;
+    }
+    .cookie-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: .75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+    .cookie-table td {
+      padding: .7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: #444;
+      vertical-align: top;
+    }
+    .cookie-table tr:nth-child(even) td { background: var(--warm); }
+
+    @media (max-width: 900px) {
+      .legal-wrapper { grid-template-columns: 1fr; }
+      .legal-toc { position: static; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html#destinos">Destinos</a></li>
-      <li><a href="articles/paris.html">París</a></li>
+      <li><a href="index.html#articulos">Guías</a></li>
       <li><a href="sobre-nosotros.html">Nosotros</a></li>
       <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
     <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- PAGE HERO -->
+  <!-- HERO -->
   <div class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Información legal</p>
-      <h1>Política de <em>Privacidad</em></h1>
-      <p class="lead">Tu privacidad es importante para nosotros. En esta página explicamos cómo recopilamos, usamos y protegemos tu información personal cuando visitas Voyage Lumière.</p>
+      <h1>Política de Privacidad</h1>
+      <p class="updated">Última actualización: 1 de mayo de 2025</p>
     </div>
   </div>
 
-  <!-- LEGAL CONTENT -->
-  <section class="legal-section">
-    <div class="legal-inner">
-      <p class="legal-updated">Última actualización: marzo 2026</p>
+  <!-- CONTENT -->
+  <div class="legal-wrapper">
 
-      <h2>1. Responsable del tratamiento</h2>
-      <p>El responsable del tratamiento de tus datos personales es Voyage Lumière, accesible desde este sitio web. Si tienes preguntas sobre esta política, puedes contactarnos a través de nuestra <a href="sobre-nosotros.html">página de contacto</a>.</p>
+    <!-- SIDEBAR -->
+    <aside class="legal-toc">
+      <h3>Contenido</h3>
+      <ol>
+        <li><a href="#responsable">Responsable del tratamiento</a></li>
+        <li><a href="#datos-recogidos">Datos que recopilamos</a></li>
+        <li><a href="#finalidad">Finalidad del tratamiento</a></li>
+        <li><a href="#cookies">Política de cookies</a></li>
+        <li><a href="#adsense">Google AdSense</a></li>
+        <li><a href="#afiliados">Programas de afiliados</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#terceros">Terceros proveedores</a></li>
+        <li><a href="#derechos">Tus derechos</a></li>
+        <li><a href="#menores">Menores de edad</a></li>
+        <li><a href="#cambios">Cambios en esta política</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ol>
+    </aside>
 
-      <h2>2. Datos que recopilamos</h2>
-      <p>Podemos recopilar los siguientes tipos de información:</p>
+    <!-- MAIN -->
+    <main class="legal-content">
+
+      <div class="legal-box">
+        <strong>📋 Resumen rápido</strong>
+        <p>Voyage Lumière recopila datos mínimos de navegación para mejorar el sitio. Usamos Google AdSense para mostrar anuncios y programas de afiliados (Awin / Booking.com) para recomendar hoteles. Nunca vendemos tus datos a terceros. Puedes rechazar las cookies no esenciales en cualquier momento.</p>
+      </div>
+
+      <h2 id="responsable">1. Responsable del tratamiento</h2>
+      <p>El responsable del tratamiento de los datos personales recogidos a través de este sitio web es:</p>
       <ul>
-        <li><strong>Datos de contacto:</strong> nombre y dirección de correo electrónico cuando te suscribes a nuestra newsletter o envías un formulario de contacto.</li>
-        <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas, tiempo de permanencia y otros datos técnicos recopilados mediante cookies y tecnologías similares.</li>
-        <li><strong>Datos de interacción:</strong> comentarios, valoraciones y otras interacciones que realices en nuestro sitio.</li>
+        <li><strong>Nombre del sitio:</strong> Voyage Lumière</li>
+        <li><strong>Sitio web:</strong> voyage-lumiere.com (o el dominio en uso)</li>
+        <li><strong>Correo de contacto:</strong> privacidad@voyagelumiere.com</li>
+      </ul>
+      <p>Al acceder y utilizar este sitio web, aceptas las prácticas descritas en esta Política de Privacidad.</p>
+
+      <h2 id="datos-recogidos">2. Datos que recopilamos</h2>
+      <p>Recopilamos información de las siguientes formas:</p>
+
+      <h3>2.1 Datos que nos proporcionas directamente</h3>
+      <ul>
+        <li><strong>Formulario de newsletter:</strong> dirección de correo electrónico cuando te suscribes voluntariamente a nuestro boletín.</li>
+        <li><strong>Formulario de contacto:</strong> nombre, correo electrónico y el mensaje que nos envías.</li>
       </ul>
 
-      <h2>3. Finalidad del tratamiento</h2>
-      <p>Utilizamos tus datos personales para:</p>
+      <h3>2.2 Datos recogidos automáticamente</h3>
       <ul>
-        <li>Enviarte nuestra newsletter con contenido de viaje, ofertas y novedades (solo si te has suscrito voluntariamente).</li>
-        <li>Responder a tus consultas y propuestas de colaboración.</li>
-        <li>Mejorar la experiencia de navegación y personalizar el contenido.</li>
-        <li>Mostrar publicidad relevante a través de servicios de terceros como Google AdSense.</li>
-        <li>Analizar el tráfico web y el comportamiento de los usuarios para mejorar nuestros servicios.</li>
+        <li><strong>Datos de navegación:</strong> páginas visitadas, tiempo de permanencia, clics y navegación dentro del sitio.</li>
+        <li><strong>Datos técnicos:</strong> dirección IP (anonimizada), tipo de navegador, sistema operativo, resolución de pantalla y país de origen.</li>
+        <li><strong>Cookies y tecnologías similares:</strong> descritas en detalle en la sección de cookies.</li>
       </ul>
 
-      <h2>4. Cookies y tecnologías similares</h2>
-      <p>Nuestro sitio web utiliza cookies propias y de terceros. Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo para mejorar tu experiencia de navegación. Utilizamos:</p>
+      <h2 id="finalidad">3. Finalidad del tratamiento</h2>
+      <p>Utilizamos los datos recopilados para las siguientes finalidades:</p>
       <ul>
-        <li><strong>Cookies técnicas:</strong> necesarias para el funcionamiento del sitio (preferencias de cookies, sesión).</li>
-        <li><strong>Cookies analíticas:</strong> para comprender cómo los visitantes interactúan con nuestro sitio.</li>
-        <li><strong>Cookies publicitarias:</strong> utilizadas por Google AdSense y nuestros socios de afiliados (como Booking.com) para mostrarte anuncios personalizados.</li>
+        <li>Proporcionar y mejorar el contenido y funcionamiento del sitio web.</li>
+        <li>Enviar el boletín de noticias a los suscriptores que lo han solicitado expresamente.</li>
+        <li>Responder a consultas enviadas a través del formulario de contacto.</li>
+        <li>Mostrar publicidad relevante a través de Google AdSense.</li>
+        <li>Rastrear clics en links de afiliados para el pago de comisiones.</li>
+        <li>Analizar el uso del sitio para mejorar la experiencia del usuario.</li>
       </ul>
-      <p>Puedes gestionar tus preferencias de cookies en cualquier momento desde la configuración de tu navegador. Ten en cuenta que desactivar ciertas cookies puede afectar la funcionalidad del sitio.</p>
+      <p><strong>Base legal:</strong> el tratamiento se basa en tu consentimiento (cookies no esenciales, newsletter) y en el interés legítimo del titular del sitio (analítica básica, seguridad).</p>
 
-      <h2>5. Enlaces de afiliados</h2>
-      <p>Voyage Lumière participa en programas de afiliados. Cuando haces clic en ciertos enlaces a servicios como Booking.com o Skyscanner, podemos recibir una comisión si realizas una reserva. Esto no supone ningún coste adicional para ti y nos ayuda a mantener este proyecto editorial.</p>
+      <h2 id="cookies">4. Política de cookies</h2>
+      <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Este sitio utiliza los siguientes tipos de cookies:</p>
 
-      <h2>6. Compartición de datos con terceros</h2>
-      <p>No vendemos ni compartimos tu información personal con terceros, salvo en los siguientes casos:</p>
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Nombre / Origen</th>
+            <th>Finalidad</th>
+            <th>Duración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Esencial</strong></td>
+            <td>cookieConsent (propio)</td>
+            <td>Guarda tu preferencia sobre el banner de cookies</td>
+            <td>1 año</td>
+          </tr>
+          <tr>
+            <td><strong>Analítica</strong></td>
+            <td>_ga, _gid (Google Analytics)</td>
+            <td>Mide visitas y comportamiento de usuarios de forma anónima</td>
+            <td>2 años / 24 horas</td>
+          </tr>
+          <tr>
+            <td><strong>Publicidad</strong></td>
+            <td>__gads, IDE (Google AdSense)</td>
+            <td>Muestra anuncios personalizados según tus intereses</td>
+            <td>13 meses</td>
+          </tr>
+          <tr>
+            <td><strong>Afiliado</strong></td>
+            <td>awin_click (Awin)</td>
+            <td>Rastrea clics en links de afiliados para atribución de comisiones</td>
+            <td>30 días</td>
+          </tr>
+          <tr>
+            <td><strong>Afiliado</strong></td>
+            <td>bkcookie (Booking.com)</td>
+            <td>Identifica reservas originadas desde nuestros links</td>
+            <td>30 días</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Cómo gestionar o rechazar las cookies</h3>
+      <p>Puedes rechazar las cookies no esenciales en el banner que aparece al entrar al sitio. También puedes configurar tu navegador para bloquear o eliminar cookies:</p>
       <ul>
-        <li><strong>Proveedores de servicios:</strong> como plataformas de envío de newsletters, servicios de análisis web y redes publicitarias, que procesan datos en nuestro nombre.</li>
-        <li><strong>Obligación legal:</strong> cuando sea requerido por ley o por una autoridad competente.</li>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+        <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
       </ul>
+      <p>Ten en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad del sitio.</p>
 
-      <h2>7. Conservación de datos</h2>
-      <p>Conservamos tus datos personales durante el tiempo necesario para cumplir con las finalidades descritas en esta política, o según lo exija la legislación aplicable. Los datos de suscripción a la newsletter se conservan hasta que solicites la baja.</p>
+      <h2 id="adsense">5. Google AdSense</h2>
+      <p>Este sitio web muestra anuncios gestionados por <strong>Google AdSense</strong>, un servicio de publicidad de Google LLC. Google utiliza cookies para mostrar anuncios basados en tus visitas anteriores a este y otros sitios web.</p>
 
-      <h2>8. Tus derechos</h2>
-      <p>De acuerdo con la normativa vigente de protección de datos, tienes derecho a:</p>
+      <div class="legal-box">
+        <strong>ℹ️ Sobre la publicidad personalizada de Google</strong>
+        <p>Google puede utilizar cookies de publicidad para mostrar anuncios personalizados. Puedes desactivar la publicidad personalizada en <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" style="color:var(--gold)">google.com/settings/ads</a> o mediante la herramienta de exclusión voluntaria de Google Analytics en <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--gold)">tools.google.com/dlpage/gaoptout</a>.</p>
+      </div>
+
+      <p>Para más información sobre cómo Google utiliza los datos recopilados, consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>.</p>
+      <p>Este sitio cumple con las políticas del programa Google AdSense, incluyendo las relativas al contenido apto, la transparencia de los anuncios y el consentimiento de usuarios de la Unión Europea (EU User Consent Policy).</p>
+
+      <h2 id="afiliados">6. Programas de afiliados</h2>
+      <p>Voyage Lumière participa en programas de marketing de afiliados. Esto significa que algunos de los enlaces que aparecen en este sitio son enlaces de afiliado: si haces clic en uno de ellos y realizas una compra o reserva, podemos recibir una comisión sin costo adicional para ti.</p>
+
+      <h3>6.1 Awin</h3>
+      <p>Somos publisher de <strong>Awin</strong>, una red internacional de afiliados. Awin puede instalar cookies de seguimiento en tu dispositivo cuando haces clic en un enlace de afiliado para atribuir correctamente las conversiones.</p>
       <ul>
-        <li>Acceder a tus datos personales.</li>
-        <li>Rectificar datos inexactos o incompletos.</li>
-        <li>Solicitar la eliminación de tus datos.</li>
-        <li>Oponerte al tratamiento de tus datos.</li>
-        <li>Solicitar la portabilidad de tus datos.</li>
-        <li>Retirar tu consentimiento en cualquier momento.</li>
+        <li><strong>Duración de la cookie:</strong> 30 días</li>
+        <li><strong>Política de privacidad de Awin:</strong> <a href="https://www.awin.com/gb/legal/privacy-policy" target="_blank" rel="noopener">awin.com/privacy-policy</a></li>
       </ul>
-      <p>Para ejercer cualquiera de estos derechos, puedes contactarnos a través de nuestra <a href="sobre-nosotros.html">página de contacto</a>.</p>
 
-      <h2>9. Seguridad</h2>
-      <p>Implementamos medidas técnicas y organizativas apropiadas para proteger tus datos personales contra el acceso no autorizado, la alteración, divulgación o destrucción.</p>
+      <h3>6.2 Booking.com</h3>
+      <p>Participamos en el programa de afiliados de <strong>Booking.com</strong> a través de la red Awin. Los enlaces a Booking.com incluidos en este sitio pueden contener identificadores de afiliado que nos permiten recibir una comisión por las reservas completadas.</p>
+      <ul>
+        <li>Esto no supone ningún costo adicional para el usuario</li>
+        <li>Las opiniones y recomendaciones publicadas en este sitio son independientes y no están condicionadas por las comisiones de afiliado</li>
+        <li><strong>Política de privacidad de Booking.com:</strong> <a href="https://www.booking.com/content/privacy.html" target="_blank" rel="noopener">booking.com/content/privacy</a></li>
+      </ul>
 
-      <h2>10. Cambios en esta política</h2>
-      <p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. La fecha de última actualización se indica al principio de esta página. Te recomendamos revisarla periódicamente.</p>
-    </div>
-  </section>
+      <div class="legal-box">
+        <strong>📢 Declaración de transparencia</strong>
+        <p>En cumplimiento de la normativa sobre publicidad y transparencia, declaramos expresamente que este sitio contiene enlaces de afiliado. Identificamos estos enlaces siempre que sea posible. Nuestras opiniones y recomendaciones son siempre honestas e independientes.</p>
+      </div>
+
+      <h2 id="newsletter">7. Newsletter y comunicaciones por email</h2>
+      <p>Si te suscribes a nuestro boletín de noticias, recopilamos tu dirección de correo electrónico con tu consentimiento expreso. Utilizamos esta información exclusivamente para:</p>
+      <ul>
+        <li>Enviarte el boletín semanal con contenido editorial sobre viajes</li>
+        <li>Informarte de nuevas guías y artículos publicados</li>
+        <li>Compartir ofertas y descuentos relevantes de nuestros socios afiliados</li>
+      </ul>
+      <p><strong>Puedes darte de baja en cualquier momento</strong> haciendo clic en el enlace de cancelación incluido en cada email o enviando un mensaje a privacidad@voyagelumiere.com.</p>
+      <p>No compartimos tu dirección de email con terceros para fines de marketing ajenos a Voyage Lumière.</p>
+
+      <h2 id="terceros">8. Proveedores de servicios de terceros</h2>
+      <p>Además de los ya mencionados, utilizamos los siguientes servicios de terceros que pueden recopilar datos:</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> análisis de tráfico web. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad</a></li>
+        <li><strong>Unsplash:</strong> imágenes del sitio. Las imágenes son de uso libre bajo licencia Unsplash.</li>
+        <li><strong>Google Fonts:</strong> tipografías web cargadas desde los servidores de Google.</li>
+        <li><strong>Skyscanner:</strong> comparador de vuelos enlazado como referencia. <a href="https://www.skyscanner.es/privacidad" target="_blank" rel="noopener">Política de privacidad</a></li>
+      </ul>
+
+      <h2 id="derechos">9. Tus derechos</h2>
+      <p>De acuerdo con la normativa aplicable de protección de datos, tienes derecho a:</p>
+      <ul>
+        <li><strong>Acceso:</strong> solicitar una copia de los datos personales que tenemos sobre ti.</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+        <li><strong>Supresión:</strong> solicitar la eliminación de tus datos personales ("derecho al olvido").</li>
+        <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos para determinadas finalidades.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+        <li><strong>Retirada del consentimiento:</strong> retirar en cualquier momento el consentimiento otorgado, sin que ello afecte a la licitud del tratamiento previo.</li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos, contacta con nosotros en <strong>privacidad@voyagelumiere.com</strong>. Responderemos en un plazo máximo de 30 días.</p>
+
+      <h2 id="menores">10. Menores de edad</h2>
+      <p>Este sitio web no está dirigido a menores de 16 años y no recopilamos conscientemente datos personales de menores. Si eres padre o tutor y crees que tu hijo nos ha proporcionado información personal, contacta con nosotros para que podamos eliminar dicha información.</p>
+
+      <h2 id="cambios">11. Cambios en esta política</h2>
+      <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cuando realicemos cambios significativos, actualizaremos la fecha indicada al inicio del documento y, si procede, te notificaremos por email si estás suscrito a nuestro boletín.</p>
+      <p>Te recomendamos revisar esta página periódicamente para estar informado de cualquier cambio.</p>
+
+      <h2 id="contacto">12. Contacto</h2>
+      <div class="contact-card">
+        <h3>¿Tienes preguntas sobre tu privacidad?</h3>
+        <p>Si tienes cualquier pregunta, duda o quieres ejercer tus derechos, puedes contactarnos:</p>
+        <p>📧 <a href="mailto:privacidad@voyagelumiere.com">privacidad@voyagelumiere.com</a></p>
+        <p>📝 También puedes usar el formulario de contacto en nuestra <a href="sobre-nosotros.html">página "Sobre nosotros"</a>.</p>
+        <p style="margin-top:1rem;font-size:.8rem;opacity:.55">Respondemos en un plazo máximo de 30 días hábiles.</p>
+      </div>
+
+    </main>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -125,33 +436,32 @@
       <div class="footer-brand">
         <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
         <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
-        <div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">📌</a>
+          <a href="#" class="social-btn">▶</a>
+          <a href="#" class="social-btn">𝕏</a>
+        </div>
       </div>
-      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="articles/paris.html">París</a></li><li><a href="#">Roma</a></li><li><a href="#">Barcelona</a></li><li><a href="#">Lisboa</a></li></ul></div>
-      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="#">Naturaleza</a></li><li><a href="#">Ciudad</a></li></ul></div>
-      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="articles/paris.html">París</a></li><li><a href="articles/roma.html">Roma</a></li><li><a href="articles/barcelona.html">Barcelona</a></li><li><a href="articles/lisboa.html">Lisboa</a></li></ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="articles/primavera-europa.html">Primavera en Europa</a></li><li><a href="articles/presupuesto-europa.html">Viaje económico</a></li><li><a href="#">Gastronomía</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html" style="color:var(--gold)">Política de Privacidad</a></li><li><a href="cookies.html">Política de Cookies</a></li><li><a href="aviso-legal.html">Aviso Legal</a></li><li><a href="sobre-nosotros.html">Contacto</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 Voyage Lumière</span>
-      <div class="footer-legal"><a href="privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div>
+      <span>© 2025 Voyage Lumière · Todos los derechos reservados</span>
+      <div class="footer-legal">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="#">Cookies</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Afiliados</a>
+      </div>
     </div>
   </footer>
-
-  <div class="cookie-banner" id="cookieBanner">
-    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="privacidad.html" style="color:var(--gold)">Más info</a></p>
-    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div>
-  </div>
 
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
     document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), {threshold:.12});
-    document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay=`${(i%4)*80}ms`; observer.observe(el); });
-    const banner = document.getElementById('cookieBanner');
-    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
-    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
-    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
   </script>
 </body>
 </html>
