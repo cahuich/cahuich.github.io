@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guía completa de París 2025 — Voyage Lumière</title>
+  <meta name="description" content="Todo lo que necesitas saber para visitar París: qué ver, dónde comer, dónde dormir y los mejores consejos para aprovechar al máximo tu viaje a la Ciudad de la Luz."/>
+  <meta name="keywords" content="París guía viaje, qué ver en París, hoteles París, museos París, Torre Eiffel"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* ── ARTICLE HERO ── */
+    .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
+    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.7) 100%), url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=1600&q=80') center/cover no-repeat; }
+    .article-hero-content { position:relative; z-index:2; padding:0 8vw 4rem; max-width:900px; animation:fadeUp .8s ease-out both; }
+    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.65); margin-bottom:1.2rem; }
+    .breadcrumb a { color:rgba(255,255,255,.65); transition:color .3s; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { opacity:.5; }
+    .article-hero h1 { font-family:var(--ff-head); font-size:clamp(2.2rem,5vw,3.8rem); font-weight:700; line-height:1.1; color:#fff; margin-bottom:1.2rem; }
+    .article-hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; color:rgba(255,255,255,.7); font-size:.82rem; }
+    .article-meta-tag { background:var(--gold); color:var(--navy); padding:.25rem .75rem; border-radius:1px; font-weight:700; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-wrapper { max-width:1200px; margin:0 auto; padding:4rem 5vw; display:grid; grid-template-columns:1fr 320px; gap:4rem; align-items:start; }
+    .article-main {}
+    .article-sidebar { position:sticky; top:96px; display:flex; flex-direction:column; gap:1.5rem; }
+
+    /* ── ARTICLE CONTENT ── */
+    .article-content { font-size:1.05rem; line-height:1.85; color:#333; }
+    .article-content h2 { font-family:var(--ff-head); font-size:1.75rem; font-weight:600; color:var(--navy); margin:2.5rem 0 1rem; padding-top:1rem; border-top:1px solid var(--border); }
+    .article-content h3 { font-family:var(--ff-head); font-size:1.2rem; font-weight:600; color:var(--navy); margin:1.8rem 0 .75rem; }
+    .article-content p { margin-bottom:1.3rem; }
+    .article-content ul, .article-content ol { padding-left:1.5rem; margin-bottom:1.3rem; }
+    .article-content li { margin-bottom:.5rem; }
+    .article-content strong { color:var(--navy); font-weight:700; }
+    .article-content a { color:var(--gold); border-bottom:1px solid rgba(197,160,89,.3); transition:border-color .3s; }
+    .article-content a:hover { border-color:var(--gold); }
+
+    /* highlight box */
+    .tip-box { background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15)); border-left:3px solid var(--gold); padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
+    .tip-box strong { color:var(--navy); display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
+    .tip-box p { margin:0; font-size:.93rem; color:#555; }
+
+    /* image in article */
+    .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
+    .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
+
+    /* ── SIDEBAR WIDGETS ── */
+    .sidebar-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+    .sidebar-card-header { background:var(--navy); color:#fff; padding:1rem 1.2rem; font-family:var(--ff-head); font-size:.95rem; font-weight:600; }
+    .sidebar-card-body { padding:1.2rem; }
+    .sidebar-card-body p { font-size:.85rem; line-height:1.6; color:var(--muted); margin-bottom:1rem; }
+    .sidebar-booking-btn { display:block; background:var(--gold); color:var(--navy); text-align:center; padding:.8rem; border-radius:2px; font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+    .sidebar-booking-btn:hover { background:var(--gold-lt); }
+
+    .toc { list-style:none; padding:0; display:flex; flex-direction:column; gap:.4rem; }
+    .toc li a { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.5rem; transition:color .3s; }
+    .toc li a::before { content:'→'; color:var(--gold); font-size:.7rem; }
+    .toc li a:hover { color:var(--navy); }
+
+    .weather-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+    .weather-item { background:var(--warm); border-radius:2px; padding:.6rem .8rem; text-align:center; }
+    .weather-month { font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+    .weather-temp { font-family:var(--ff-head); font-size:.95rem; color:var(--navy); font-weight:600; }
+
+    /* ── RELATED ARTICLES ── */
+    .related-section { background:var(--warm); padding:5rem 5vw; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:900px) {
+      .article-wrapper { grid-template-columns:1fr; }
+      .article-sidebar { position:static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html" class="active">París</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>/</span>
+        <a href="#">Francia</a>
+        <span>/</span>
+        <span style="color:#fff">París</span>
+      </div>
+      <h1>Guía completa de <em>París</em><br/>para 2025</h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Francia</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 12 min de lectura</span>
+        <span>👁 48.200 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AD LEADERBOARD -->
+  <div class="ad-banner">
+    <div class="ad-placeholder">
+      <!-- ADSENSE: código 728×90 aquí -->
+      📢 Google AdSense 728×90
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <div class="article-wrapper">
+
+    <!-- MAIN CONTENT -->
+    <main class="article-main">
+      <div class="article-content">
+
+        <p>París no necesita presentación. La Ciudad de la Luz lleva siglos siendo el destino soñado de millones de viajeros, y con razón: sus monumentos icónicos, su gastronomía sin igual, sus museos llenos de historia y su atmósfera inconfundible la convierten en un destino único en el mundo. Esta guía te ayudará a aprovecharla al máximo.</p>
+
+        <div class="tip-box">
+          <strong>💡 Consejo de editor</strong>
+          <p>La mejor época para visitar París es entre <strong>abril y junio</strong>: clima agradable, jardines en flor y menos turistas que en agosto. Evita agosto si puedes, ya que muchos parisinos están de vacaciones y algunos negocios cierran.</p>
+        </div>
+
+        <h2 id="que-ver">¿Qué ver en París?</h2>
+        <p>París tiene tantos atractivos que es fácil sentirse abrumado. Para facilitar la planificación, dividimos la ciudad en zonas temáticas que puedes explorar en un día cada una.</p>
+
+        <h3>🗼 La Torre Eiffel y el Trocadéro</h3>
+        <p>El símbolo más reconocible de París es imprescindible, pero hay formas de vivirlo mejor que haciendo cola durante horas. <strong>Reserva tu entrada online</strong> con al menos 2 semanas de antelación para acceder directamente. Para las fotos perfectas, el jardín del Trocadéro al amanecer está prácticamente desierto.</p>
+        <ul>
+          <li>Sube hasta el segundo piso para las mejores vistas (el tercero, aunque más alto, tiene menos espacio)</li>
+          <li>El espectáculo de luces nocturno ocurre cada hora en punto hasta la 1:00 AM</li>
+          <li>Picnic en el Champ de Mars: tradición parisina imprescindible</li>
+        </ul>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=1000&q=80" alt="Torre Eiffel al atardecer"/>
+        <p class="img-caption">La Torre Eiffel vista desde el Champ de Mars al atardecer · © Unsplash</p>
+
+        <h3>🎨 El Louvre y el Museo d'Orsay</h3>
+        <p>El Louvre alberga más de 35.000 obras de arte y podría ocuparte semanas enteras. Planifica estratégicamente: decide qué quieres ver antes de llegar (la Mona Lisa, la Venus de Milo, la Victoria Alada de Samotracia) y sigue el mapa oficial. Reserva con antelación para evitar la cola.</p>
+        <p>El Musée d'Orsay, alojado en una antigua estación de tren, es muchos visitantes consideran superior al Louvre en experiencia: alberga la mayor colección impresionista del mundo, con obras de Monet, Renoir, Van Gogh y Degas.</p>
+
+        <div class="tip-box">
+          <strong>🎫 Paris Museum Pass</strong>
+          <p>Si planeas visitar más de 3 museos, el <strong>Paris Museum Pass</strong> (de 2, 4 o 6 días) te da acceso ilimitado a más de 50 museos y monumentos, incluyendo el Louvre, Versalles y el Musée d'Orsay, con acceso prioritario sin colas.</p>
+        </div>
+
+        <h2 id="donde-comer">¿Dónde comer en París?</h2>
+        <p>La gastronomía parisina va mucho más allá de los croissants y el foie gras. La ciudad tiene una escena culinaria extraordinariamente diversa.</p>
+
+        <h3>🥐 Desayuno y brunch</h3>
+        <p>Para el desayuno parisino auténtico, busca una <em>boulangerie</em> de barrio. Las mejores suelen tener cola de lugareños por las mañanas: una señal infalible de calidad. Pide un <strong>café crème</strong> con un <strong>pain au chocolat</strong> recién horneado.</p>
+
+        <h3>🍷 Bistrós y brasseries</h3>
+        <p>Los bistrós tradicionales sirven la cocina francesa más auténtica: steak frites, boeuf bourguignon, moules marinières. Busca la pizarra del menú del día (entre 12€ y 18€) para comer fenomenal sin arruinarte. Evita los restaurantes con menús plastificados y fotos de los platos: suelen ser trampas para turistas.</p>
+
+        <h2 id="donde-dormir">¿Dónde dormir en París?</h2>
+        <p>París tiene alojamiento para todos los presupuestos, aunque los precios son más altos que en otras ciudades europeas. El barrio donde te alojes determinará en gran medida tu experiencia.</p>
+
+        <h3>Barrios recomendados por zona</h3>
+        <ul>
+          <li><strong>Le Marais (3.º y 4.º):</strong> Histórico, lleno de galerías, vida nocturna y buenos restaurantes. Ideal para primeras visitas.</li>
+          <li><strong>Saint-Germain-des-Prés (6.º):</strong> El París literario y bohemio. Más tranquilo y elegante.</li>
+          <li><strong>Montmartre (18.º):</strong> Romántico y artístico, pero alejado del centro. Requiere más desplazamientos.</li>
+          <li><strong>Bastille (11.º y 12.º):</strong> Auténtico y local, con precios más asequibles. Excelente conexión en metro.</li>
+        </ul>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&q=80" alt="Calles de París"/>
+        <p class="img-caption">Los Campos Elíseos al atardecer · © Unsplash</p>
+
+        <h2 id="transporte">Cómo moverse por París</h2>
+        <p>El metro de París es una de las redes de transporte público más eficientes del mundo. Con 16 líneas y más de 300 estaciones, puedes llegar a prácticamente cualquier punto de la ciudad en menos de 20 minutos.</p>
+        <ul>
+          <li><strong>Navigo Easy:</strong> tarjeta recargable para t+ individuales o en packs de 10</li>
+          <li><strong>Navigo Semaine:</strong> pase semanal ilimitado (Lunes–Domingo), rentable si te quedas 4+ días</li>
+          <li><strong>Vélib':</strong> sistema de bicicletas compartidas, ideal para trayectos cortos</li>
+          <li>Taxis y Uber: disponibles pero más caros. Útiles de noche o con equipaje</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>✈️ Desde el aeropuerto</strong>
+          <p>El <strong>RER B</strong> conecta el aeropuerto CDG con el centro de París en 35 minutos por unos 11€. Es la opción más rápida y económica. Los taxis oficiales tienen tarifa fija: 53€ desde CDG al centro (margen derecha) y 58€ (margen izquierda).</p>
+        </div>
+
+        <h2 id="presupuesto">Presupuesto orientativo</h2>
+        <p>París tiene fama de cara, y no es completamente injustificada. Pero con planificación es posible disfrutarla sin gastar una fortuna.</p>
+        <ul>
+          <li><strong>Presupuesto bajo:</strong> 80–100€/día (hostales, menú del día, museos gratuitos)</li>
+          <li><strong>Presupuesto medio:</strong> 150–200€/día (hotel 3★, restaurantes, principales museos)</li>
+          <li><strong>Presupuesto alto:</strong> 300€+/día (hoteles boutique, alta gastronomía, experiencias VIP)</li>
+        </ul>
+
+      </div><!-- /article-content -->
+
+      <!-- AD RECTANGLE en artículo -->
+      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
+        <div class="ad-rect">
+          <!-- ADSENSE: código 300×250 aquí -->
+          📢 AdSense 300×250
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <!-- Tabla de contenidos -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">📋 Contenidos</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#que-ver">¿Qué ver en París?</a></li>
+            <li><a href="#donde-comer">¿Dónde comer?</a></li>
+            <li><a href="#donde-dormir">¿Dónde dormir?</a></li>
+            <li><a href="#transporte">Cómo moverse</a></li>
+            <li><a href="#presupuesto">Presupuesto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Reservar hotel (AFILIADO) -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🏨 Reserva tu hotel en París</div>
+        <div class="sidebar-card-body">
+          <p>Compara precios en más de 500 hoteles disponibles en París. Cancela gratis en la mayoría de opciones.</p>
+          <!-- AFILIADO: reemplaza con tu link de Booking.com -->
+          <a href="https://www.booking.com/city/fr/paris.html?aid=TU_ID_AQUI" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver hoteles en Booking →</a>
+        </div>
+      </div>
+
+      <!-- Clima -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🌤 Clima en París</div>
+        <div class="sidebar-card-body">
+          <div class="weather-grid">
+            <div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">6°C</div></div>
+            <div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">12°C</div></div>
+            <div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">19°C</div></div>
+            <div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">25°C</div></div>
+            <div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">21°C</div></div>
+            <div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">9°C</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vuelos (AFILIADO) -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">✈️ Encuentra tu vuelo</div>
+        <div class="sidebar-card-body">
+          <p>Compara precios de cientos de aerolíneas para volar a París al mejor precio.</p>
+          <a href="https://www.skyscanner.es/vuelos-baratos/paris.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff;">Comparar en Skyscanner →</a>
+        </div>
+      </div>
+
+      <!-- AD 300×250 sidebar -->
+      <div class="ad-rect" style="width:100%;height:250px;">
+        <!-- ADSENSE: código 300×250 sidebar -->
+        📢 AdSense 300×250
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ARTÍCULOS RELACIONADOS -->
+  <section class="related-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Sigue explorando</p>
+      <h2 class="section-title">Artículos relacionados</h2>
+    </div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">París · Cultura</p>
+          <h3 class="article-title">El Louvre en 3 horas: ruta optimizada para no perderte lo esencial</h3>
+          <p class="article-excerpt">Una ruta diseñada para ver las piezas más importantes sin agotarte en el intento.</p>
+          <div class="article-footer"><span>5 min</span><a href="#" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1549144511-f099e773c147?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Gastronomía</p>
+          <h3 class="article-title">Los mejores bistrós de París donde comen los parisinos de verdad</h3>
+          <p class="article-excerpt">Alejados de las zonas turísticas, estos locales son los favoritos de los locales.</p>
+          <div class="article-footer"><span>7 min</span><a href="#" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Día trip</p>
+          <h3 class="article-title">Versalles desde París: guía completa para una excursión de un día</h3>
+          <p class="article-excerpt">Cómo llegar, cuánto tiempo dedicarle y qué no puedes dejar de ver en el palacio.</p>
+          <div class="article-footer"><span>9 min</span><a href="#" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="#">Roma</a></li><li><a href="#">Barcelona</a></li><li><a href="#">Lisboa</a></li></ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="#">Naturaleza</a></li><li><a href="#">Ciudad</a></li></ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Contacto</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière</span>
+      <div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="../privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay=`${(i%4)*80}ms`; observer.observe(el); });
+    const banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+  </script>
+</body>
+</html>

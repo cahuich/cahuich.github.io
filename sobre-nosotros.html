@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros — Voyage Lumière</title>
+  <meta name="description" content="Conoce al equipo detrás de Voyage Lumière, la guía de viaje editorial dedicada a los mejores destinos de Europa."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .page-hero { margin-top:72px; background:var(--navy); padding:7rem 5vw 5rem; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; right:-10%; top:-30%; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(197,160,89,.12),transparent 70%); pointer-events:none; }
+    .page-hero-inner { max-width:700px; animation:fadeUp .8s ease-out both; }
+    .page-hero p.eyebrow { font-family:var(--ff-acc); font-style:italic; color:var(--gold); font-size:1.1rem; margin-bottom:1rem; }
+    .page-hero h1 { font-family:var(--ff-head); font-size:clamp(2.5rem,5vw,4rem); font-weight:700; color:#fff; line-height:1.1; margin-bottom:1.5rem; }
+    .page-hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .page-hero p.lead { font-size:1.1rem; line-height:1.75; color:rgba(255,255,255,.7); max-width:580px; }
+
+    /* MISSION */
+    .mission-section { padding:6rem 5vw; background:var(--cream); }
+    .mission-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .mission-img { height:480px; border-radius:3px; background:url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=80') center/cover no-repeat; position:relative; }
+    .mission-img::after { content:''; position:absolute; inset:0; border-radius:3px; box-shadow:inset 0 0 0 1px rgba(197,160,89,.3); }
+    .mission-badge { position:absolute; bottom:-1.5rem; right:-1.5rem; background:var(--gold); color:var(--navy); width:110px; height:110px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:var(--ff-head); text-align:center; box-shadow:0 8px 24px rgba(197,160,89,.4); }
+    .mission-badge span:first-child { font-size:1.8rem; font-weight:700; line-height:1; }
+    .mission-badge span:last-child { font-size:.6rem; text-transform:uppercase; letter-spacing:.1em; opacity:.8; }
+    .mission-text h2 { font-family:var(--ff-head); font-size:clamp(1.8rem,3vw,2.4rem); color:var(--navy); margin-bottom:1.2rem; }
+    .mission-text p { font-size:.97rem; line-height:1.8; color:#444; margin-bottom:1.2rem; }
+    .mission-pillars { display:flex; flex-direction:column; gap:.75rem; margin-top:1.5rem; }
+    .pillar { display:flex; align-items:flex-start; gap:.85rem; }
+    .pillar-icon { width:36px; height:36px; flex-shrink:0; background:rgba(197,160,89,.12); border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+    .pillar-text strong { display:block; font-size:.9rem; color:var(--navy); margin-bottom:.15rem; }
+    .pillar-text span { font-size:.82rem; color:var(--muted); line-height:1.5; }
+
+    /* VALUES */
+    .values-section { padding:6rem 5vw; background:var(--warm); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1100px; margin:0 auto; }
+    .value-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; padding:2rem; transition:transform .4s, box-shadow .4s; }
+    .value-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(26,43,76,.08); }
+    .value-icon { font-size:2.2rem; margin-bottom:1.2rem; }
+    .value-title { font-family:var(--ff-head); font-size:1.1rem; color:var(--navy); margin-bottom:.75rem; }
+    .value-desc { font-size:.875rem; line-height:1.7; color:var(--muted); }
+
+    /* TEAM */
+    .team-section { padding:6rem 5vw; background:var(--cream); }
+    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1100px; margin:0 auto; }
+    .team-card { text-align:center; }
+    .team-photo { width:140px; height:140px; border-radius:50%; margin:0 auto 1.2rem; background-size:cover; background-position:center; border:3px solid var(--gold-lt); }
+    .team-name { font-family:var(--ff-head); font-size:1.1rem; color:var(--navy); margin-bottom:.2rem; }
+    .team-role { font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); margin-bottom:.75rem; }
+    .team-bio { font-size:.84rem; line-height:1.65; color:var(--muted); max-width:260px; margin:0 auto; }
+
+    /* COLLABORATE */
+    .collab-section { background:var(--navy); padding:5rem 5vw; text-align:center; }
+    .collab-inner { max-width:640px; margin:0 auto; }
+    .collab-inner h2 { font-family:var(--ff-head); font-size:clamp(1.8rem,3vw,2.5rem); color:#fff; margin-bottom:1rem; }
+    .collab-inner p { font-size:.97rem; line-height:1.75; color:rgba(255,255,255,.65); margin-bottom:2.5rem; }
+    .collab-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+    /* CONTACT FORM */
+    .contact-form { display:flex; flex-direction:column; gap:1rem; max-width:480px; margin:0 auto; text-align:left; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-input { width:100%; padding:.85rem 1.2rem; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15); border-radius:2px; color:#fff; font-family:var(--ff-body); font-size:.9rem; outline:none; transition:border-color .3s; }
+    .form-input:focus { border-color:var(--gold); }
+    .form-input::placeholder { color:rgba(255,255,255,.35); }
+    textarea.form-input { resize:vertical; min-height:120px; }
+
+    @media(max-width:900px){
+      .mission-inner { grid-template-columns:1fr; }
+      .mission-img { height:300px; }
+      .values-grid, .team-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:600px){
+      .values-grid, .team-grid { grid-template-columns:1fr; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#destinos">Destinos</a></li>
+      <li><a href="articles/paris.html">París</a></li>
+      <li><a href="sobre-nosotros.html" class="active">Nosotros</a></li>
+      <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Quiénes somos</p>
+      <h1>Viajeros que <em>escriben<br/>para viajeros</em></h1>
+      <p class="lead">Voyage Lumière nació de una convicción simple: los mejores consejos de viaje vienen de personas que realmente han estado allí, que conocen los rincones secretos, los errores que no debes cometer y las experiencias que transforman un viaje.</p>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission-section">
+    <div class="mission-inner">
+      <div class="mission-img reveal">
+        <div class="mission-badge">
+          <span>2019</span>
+          <span>Fundada</span>
+        </div>
+      </div>
+      <div class="mission-text reveal">
+        <p class="section-tag" style="display:inline-flex;margin-bottom:.75rem;">Nuestra misión</p>
+        <h2>Inspirar viajes más inteligentes y memorables</h2>
+        <p>Somos un equipo de periodistas de viaje, fotógrafos y entusiastas del turismo europeo. Cada artículo que publicamos está basado en visitas reales, no en comunicados de prensa ni en contenido patrocinado no declarado.</p>
+        <p>Creemos que viajar bien no es cuestión de presupuesto, sino de información. Con la guía correcta, cualquier persona puede tener la experiencia que antes parecía reservada para unos pocos.</p>
+        <div class="mission-pillars">
+          <div class="pillar"><div class="pillar-icon">✍️</div><div class="pillar-text"><strong>Contenido editorial independiente</strong><span>Nuestros autores viajan por su cuenta. Ningún artículo está pagado por hoteles o destinos.</span></div></div>
+          <div class="pillar"><div class="pillar-icon">🔄</div><div class="pillar-text"><strong>Actualización constante</strong><span>Revisamos nuestras guías cada temporada para asegurar que la información sea precisa.</span></div></div>
+          <div class="pillar"><div class="pillar-icon">🌍</div><div class="pillar-text"><strong>Perspectiva local</strong><span>Colaboramos con residentes y guías locales en cada destino que cubrimos.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AD BANNER -->
+  <div class="ad-banner">
+    <div class="ad-placeholder">📢 Google AdSense 728×90</div>
+  </div>
+
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Lo que nos guía</p>
+      <h2 class="section-title">Nuestros valores</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">🧭</div>
+        <h3 class="value-title">Autenticidad ante todo</h3>
+        <p class="value-desc">Solo recomendamos lo que nosotros mismos usaríamos. Nuestra credibilidad vale más que cualquier comisión.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">📚</div>
+        <h3 class="value-title">Profundidad de contenido</h3>
+        <p class="value-desc">Nos negamos a publicar listas genéricas. Cada guía es el resultado de investigación real y visitas sobre el terreno.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">♿</div>
+        <h3 class="value-title">Viaje para todos</h3>
+        <p class="value-desc">Incluimos información de accesibilidad, opciones de bajo presupuesto y alternativas para viajeros con necesidades especiales.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🌱</div>
+        <h3 class="value-title">Turismo responsable</h3>
+        <p class="value-desc">Promovemos prácticas de viaje sostenibles y el respeto por las comunidades y entornos que visitamos.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">💬</div>
+        <h3 class="value-title">Comunidad activa</h3>
+        <p class="value-desc">Nuestros lectores son parte de la redacción. Sus experiencias enriquecen y actualizan nuestras guías continuamente.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🔍</div>
+        <h3 class="value-title">Transparencia total</h3>
+        <p class="value-desc">Declaramos siempre cuando existe una relación de afiliado. Nuestra opinión editorial nunca está en venta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Las personas detrás</p>
+      <h2 class="section-title">Nuestro equipo</h2>
+      <p class="section-sub">Periodistas, viajeros y apasionados del mundo que dedican su vida a descubrir y compartir lo mejor de Europa.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80')"></div>
+        <h3 class="team-name">Sophie Mercier</h3>
+        <p class="team-role">Directora Editorial</p>
+        <p class="team-bio">Periodista de viaje con 15 años de experiencia. Ha visitado más de 60 países y vivido en París, Berlín y Lisboa.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80')"></div>
+        <h3 class="team-name">Marco Ferretti</h3>
+        <p class="team-role">Editor Italia & Sur de Europa</p>
+        <p class="team-bio">Romano de nacimiento y viajero de vocación. Especialista en gastronomía mediterránea y turismo cultural.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80')"></div>
+        <h3 class="team-name">Ana Vidal</h3>
+        <p class="team-role">Editora España & Portugal</p>
+        <p class="team-bio">Madrileña apasionada por los caminos menos transitados. Experta en rutas de naturaleza y turismo rural.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATE / CONTACT -->
+  <section class="collab-section">
+    <div class="collab-inner reveal">
+      <p class="section-tag" style="color:var(--gold);justify-content:center;">Trabaja con nosotros</p>
+      <h2>¿Tienes algo que contar?</h2>
+      <p>Colaboramos con escritores freelance, fotógrafos y expertos locales. Si tienes una historia de viaje única o conoces un destino como nadie, nos encantaría saber de ti.</p>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="Tu nombre" required/>
+          <input type="email" class="form-input" placeholder="tu@email.com" required/>
+        </div>
+        <input type="text" class="form-input" placeholder="Asunto (ej. Propuesta de colaboración)"/>
+        <textarea class="form-input" placeholder="Cuéntanos sobre ti y tu propuesta..."></textarea>
+        <button type="submit" class="btn-primary" style="align-self:flex-start;">Enviar mensaje →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="articles/paris.html">París</a></li><li><a href="#">Roma</a></li><li><a href="#">Barcelona</a></li><li><a href="#">Lisboa</a></li></ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="#">Naturaleza</a></li><li><a href="#">Ciudad</a></li></ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Contacto</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière</span>
+      <div class="footer-legal"><a href="privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay=`${(i%4)*80}ms`; observer.observe(el); });
+    const banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+    function handleContact(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Mensaje enviado'; btn.style.background = '#2E7D32';
+      e.target.reset(); btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
