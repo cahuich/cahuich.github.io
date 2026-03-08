@@ -7,6 +7,8 @@
   <meta name="description" content="La guía perfecta para ver lo mejor de Barcelona en 3 días: Sagrada Familia, Gaudí, la Barceloneta, el Born y los mejores restaurantes de la ciudad."/>
   <meta name="keywords" content="Barcelona 3 días, qué ver Barcelona, Sagrada Familia, Gaudí, hoteles Barcelona"/>
   <link rel="stylesheet" href="../css/style.css"/>
+  <!-- GetYourGuide Integration Analyzer -->
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
     .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&q=80') center/cover no-repeat}
@@ -30,6 +32,64 @@
     .tip-box p{margin:0;font-size:.93rem;color:#555}
     .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
     .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+
+    /* ── TIQETS WIDGET ── */
+    .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
+    .tiqets-row {
+      display:flex; align-items:center; gap:.7rem;
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:2px; padding:.65rem .8rem;
+      transition:background .25s, border-color .25s, transform .2s;
+      text-decoration:none; color:inherit;
+    }
+    .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
+    .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
+    .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tiqets-name { font-size:.82rem; font-weight:600; color:var(--navy); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
+    .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
+    .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
+
+    /* ── TIQETS INLINE BLOCK ── */
+    .tiqets-inline-block {
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:3px; overflow:hidden; margin:2.5rem 0;
+    }
+    .tiqets-inline-header {
+      background:linear-gradient(135deg, var(--navy), #0d1e3a);
+      padding:1rem 1.4rem;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:.5rem;
+    }
+    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
+    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
+    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+    .tiqets-card-inline {
+      display:flex; align-items:center; gap:.9rem;
+      background:#fff; padding:.9rem 1.1rem;
+      text-decoration:none; color:inherit;
+      transition:background .2s;
+    }
+    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
+    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
+    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
+    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
+    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
+    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
+    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
+    .tiqets-inline-footer {
+      padding:.7rem 1.2rem;
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:.5rem;
+      background:var(--warm); border-top:1px solid var(--border);
+    }
+    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
+    .tiqets-inline-footer a:hover { color:var(--navy); }
+    .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
+    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
+
+
     .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
     .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
@@ -144,6 +204,72 @@
           </div>
         </div>
 
+        
+        <!-- ── Tiqets Inline Widget — Barcelona ───────────────── -->
+        <div class="tiqets-inline-block">
+          <div class="tiqets-inline-header">
+            <span class="tiq-title">🎫 Entradas para las atracciones de Barcelona</span>
+            <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
+          </div>
+          <div class="tiqets-cards-grid">
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/sagrada-familia/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">⛪</span>
+            <span class="tci-body">
+              <span class="tci-name">Sagrada Família</span>
+              <span class="tci-desc">Torres incluidas · Acceso prioritario</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 26€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/casa-batllo/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">🦎</span>
+            <span class="tci-body">
+              <span class="tci-name">Casa Batlló</span>
+              <span class="tci-desc">Experiencia Magic Nights · Imprescindible</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 35€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/park-guell/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">🌿</span>
+            <span class="tci-body">
+              <span class="tci-name">Park Güell</span>
+              <span class="tci-desc">Recinto monumental Gaudí · Sin colas</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 10€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/camp-nou/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">⚽</span>
+            <span class="tci-body">
+              <span class="tci-name">Camp Nou</span>
+              <span class="tci-desc">Tour del estadio del FC Barcelona</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 26€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          </div>
+          <div class="tiqets-inline-footer">
+            <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/?partner=TU_TIQETS_PARTNER_ID"
+               target="_blank" rel="noopener sponsored">
+              Ver todas las entradas en Barcelona →
+            </a>
+            <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
+          </div>
+        </div>
+        <!-- ── /Tiqets ──────────────────────────────────────────── -->
         <h2 id="gastronomia">Qué comer en Barcelona</h2>
         <p>Barcelona tiene una escena gastronómica que mezcla la tradición catalana con la vanguardia culinaria. Estos son los platos y experiencias que no debes perderte.</p>
         <ul>
@@ -165,14 +291,85 @@
           <li><strong>Alto:</strong> 250€+/día (hotel boutique, gastronomía de autor, experiencias VIP)</li>
         </ul>
       </div>
+
+      <!-- GYG Inline Widget — Barcelona -->
+      <div style="margin:2.5rem 0;">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en Barcelona</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Afiliado · 8% comisión</span>
+          </div>
+          <div style="padding:1rem;">
+            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                 data-gyg-location-id="45"
+                 data-gyg-locale="es"
+                 data-gyg-type="activities"
+                 data-gyg-number-of-items="4"
+                 data-gyg-partner-id="1ABLZMR">
+            </div>
+            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+              Actividades por <a href="https://www.getyourguide.es/barcelona-l45/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
     </main>
 
     <aside class="article-sidebar">
       <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#dia1">Día 1 — Gaudí</a></li><li><a href="#dia2">Día 2 — Gótico y playa</a></li><li><a href="#dia3">Día 3 — Montjuïc</a></li><li><a href="#gastronomia">Qué comer</a></li><li><a href="#presupuesto">Presupuesto</a></li></ul></div></div>
-      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Hoteles en Barcelona</div><div class="sidebar-card-body"><p>Más de 1.000 hoteles disponibles. Cancela gratis en la mayoría.</p><a href="https://www.booking.com/city/es/barcelona.html?aid=TU_ID" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver en Booking →</a></div></div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Hoteles en Barcelona</div><div class="sidebar-card-body"><p>Más de 1.000 hoteles disponibles. Cancela gratis en la mayoría.</p><a href="https://www.booking.com/city/es/barcelona.html?aid=2802340" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver en Booking →</a></div></div>
       <div class="sidebar-card reveal"><div class="sidebar-card-header">🌤 Clima en Barcelona</div><div class="sidebar-card-body"><div class="weather-grid"><div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">13°C</div></div><div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">16°C</div></div><div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">21°C</div></div><div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">28°C</div></div><div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">26°C</div></div><div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">15°C</div></div></div></div></div>
       <div class="sidebar-card reveal"><div class="sidebar-card-header">✈️ Vuelos a Barcelona</div><div class="sidebar-card-body"><p>Compara vuelos al aeropuerto El Prat.</p><a href="https://www.skyscanner.es/vuelos-baratos/barcelona.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Comparar en Skyscanner →</a></div></div>
+      <!-- GYG Widget Barcelona -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎟️ Tours y entradas en Barcelona</div>
+        <div class="sidebar-card-body" style="padding:.8rem;">
+          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id="45" data-gyg-locale="es" data-gyg-type="city" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR"></div>
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">Actividades con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a></p>
+        </div>
+      </div>
+      <!-- Tiqets Widget — Barcelona -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎫 Entradas sin colas — Barcelona</div>
+        <div class="sidebar-card-body" style="padding:.6rem .8rem;">
+          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">Ticket móvil · Confirmación inmediata · Sin esperar en taquilla.</p>
+          <div class="tiqets-list">
+        <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/sagrada-familia/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored" class="tiqets-row">
+          <span class="tiqets-icon">⛪</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Sagrada Família</span>
+            <span class="tiqets-badge">Desde 26€ · Torres incluidas</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+        <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/casa-batllo/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored" class="tiqets-row">
+          <span class="tiqets-icon">🦎</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Casa Batlló</span>
+            <span class="tiqets-badge">Desde 35€ · Experiencia mágica</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+        <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/park-guell/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored" class="tiqets-row">
+          <span class="tiqets-icon">🌿</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Park Güell</span>
+            <span class="tiqets-badge">Desde 10€ · Recinto monumental</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+          </div>
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored"
+             style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
+            Ver todas las entradas en Tiqets →
+          </a>
+        </div>
+      </div>
       <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
     </aside>
   </div>

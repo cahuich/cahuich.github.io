@@ -82,6 +82,89 @@
     @media (max-width:600px) {
       .destinations-grid { grid-template-columns:1fr; }
     }
+
+    /* ── TIQETS SECTION ── */
+    .tiq-tabs {
+      display:flex; gap:.5rem; flex-wrap:wrap;
+      margin-bottom:2rem; border-bottom:2px solid var(--border); padding-bottom:0;
+    }
+    .tiq-tab {
+      background:none; border:none; cursor:pointer;
+      font-family:var(--ff-head); font-size:.9rem; font-weight:600;
+      color:var(--muted); padding:.7rem 1.4rem;
+      border-bottom:2px solid transparent; margin-bottom:-2px;
+      transition:color .25s, border-color .25s;
+    }
+    .tiq-tab:hover { color:var(--navy); }
+    .tiq-tab.active { color:var(--navy); border-bottom-color:var(--gold); }
+
+    .tiq-panel { display:none; }
+    .tiq-panel.active { display:block; }
+
+    .tiq-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1.2rem;
+      margin-bottom:1.2rem;
+    }
+    .tiq-ticket-card {
+      background:#fff; border:1px solid var(--border); border-radius:3px;
+      overflow:hidden; text-decoration:none; color:inherit;
+      display:flex; flex-direction:column;
+      transition:transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .tiq-ticket-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(26,43,76,.12);
+      border-color:var(--gold);
+    }
+    .ttc-img {
+      height:160px; background-size:cover; background-position:center;
+      flex-shrink:0; position:relative;
+    }
+    .ttc-body {
+      padding:1rem 1.1rem; display:flex; flex-direction:column; flex:1;
+    }
+    .ttc-badge {
+      font-size:.65rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.1em; color:var(--gold); margin-bottom:.5rem; display:block;
+    }
+    .ttc-name {
+      font-family:var(--ff-head); font-size:1rem; font-weight:700;
+      color:var(--navy); line-height:1.25; margin-bottom:.4rem;
+    }
+    .ttc-desc {
+      font-size:.78rem; color:var(--muted); line-height:1.5;
+      flex:1; margin-bottom:.8rem;
+    }
+    .ttc-footer {
+      display:flex; justify-content:space-between; align-items:center;
+      border-top:1px solid var(--border); padding-top:.7rem; margin-top:auto;
+    }
+    .ttc-price {
+      font-family:var(--ff-head); font-size:1rem; font-weight:700;
+      color:var(--navy);
+    }
+    .ttc-cta {
+      font-size:.73rem; font-weight:700; color:var(--gold);
+      text-transform:uppercase; letter-spacing:.08em;
+      transition:letter-spacing .2s;
+    }
+    .tiq-ticket-card:hover .ttc-cta { letter-spacing:.14em; }
+
+    .tiq-panel-footer {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:.75rem; padding:.9rem 0;
+      border-top:1px solid var(--border);
+    }
+    .tiq-panel-footer a {
+      font-size:.83rem; font-weight:600; color:var(--gold);
+      border-bottom:1px solid transparent; transition:border-color .2s;
+    }
+    .tiq-panel-footer a:hover { border-color:var(--gold); }
+
+    @media(max-width:1024px) { .tiq-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:560px)  { .tiq-grid { grid-template-columns:1fr; } .tiq-tab { font-size:.8rem; padding:.6rem 1rem; } }
   </style>
 </head>
 <body>
@@ -91,6 +174,7 @@
     <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#destinos" class="active">Destinos</a></li>
+      <li><a href="#entradas">Entradas</a></li>
       <li><a href="#articulos">Guías</a></li>
       <li><a href="sobre-nosotros.html">Nosotros</a></li>
       <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
@@ -161,7 +245,7 @@
           <p class="dest-meta">✦ Mar–May</p>
         </div>
         <!-- AFILIADO: reemplaza con tu link de Booking -->
-        <a href="https://www.booking.com/city/it/venice.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
+        <a href="https://www.booking.com/city/it/venice.html?aid=2802340" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
         <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div>
@@ -170,7 +254,7 @@
           <h3 class="dest-name">Barcelona</h3>
           <p class="dest-meta">✦ Sep–Nov</p>
         </div>
-        <a href="https://www.booking.com/city/es/barcelona.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
+        <a href="https://www.booking.com/city/es/barcelona.html?aid=2802340" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
         <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=700&q=80')"></div>
@@ -179,7 +263,7 @@
           <h3 class="dest-name">Londres</h3>
           <p class="dest-meta">✦ May–Ago</p>
         </div>
-        <a href="https://www.booking.com/city/gb/london.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
+        <a href="https://www.booking.com/city/gb/london.html?aid=2802340" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
         <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=700&q=80')"></div>
@@ -188,7 +272,7 @@
           <h3 class="dest-name">Santorini</h3>
           <p class="dest-meta">✦ Jun–Sep</p>
         </div>
-        <a href="https://www.booking.com/island/gr/santorini.html?aid=TU_ID" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
+        <a href="https://www.booking.com/island/gr/santorini.html?aid=2802340" target="_blank" rel="noopener" class="dest-book">Reservar →</a>
       </div>
     </div>
   </section>
@@ -289,6 +373,312 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- TIQETS — ENTRADAS DESTACADAS                          -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="entradas" style="padding:6rem 5vw; background:var(--cream);">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Salta las colas</p>
+      <h2 class="section-title">Entradas destacadas</h2>
+      <p class="section-sub">Reserva al instante tus visitas a los monumentos más icónicos de Europa.<br/>Ticket móvil · Confirmación inmediata · Cancela gratis.</p>
+    </div>
+
+    <!-- Tabs de ciudad -->
+    <div style="max-width:1280px;margin:0 auto;">
+
+      <div class="tiq-tabs">
+        <button class="tiq-tab active" onclick="switchTab(this,'paris')">🗼 París</button>
+        <button class="tiq-tab" onclick="switchTab(this,'roma')">🏟️ Roma</button>
+        <button class="tiq-tab" onclick="switchTab(this,'barcelona')">⛪ Barcelona</button>
+        <button class="tiq-tab" onclick="switchTab(this,'lisboa')">🏰 Lisboa</button>
+      </div>
+
+      <!-- ── PARIS ── -->
+      <div class="tiq-panel active" id="panel-paris">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏛️ Más popular</span>
+              <h3 class="ttc-name">Museo del Louvre</h3>
+              <p class="ttc-desc">Acceso prioritario · Sin colas · Ticket móvil</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 22€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">👑 Imprescindible</span>
+              <h3 class="ttc-name">Palacio de Versalles</h3>
+              <p class="ttc-desc">Acceso palacio + jardines · Cancela gratis</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 18€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/eiffel-tower/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🗼 Icónico</span>
+              <h3 class="ttc-name">Torre Eiffel</h3>
+              <p class="ttc-desc">Subida hasta la cima · Reserva anticipada</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 11€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🎨 Arte</span>
+              <h3 class="ttc-name">Musée d'Orsay</h3>
+              <p class="ttc-desc">Colección impresionista · Acceso prioritario</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 14€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en París →
+          </a>
+          <a href="articles/paris.html" style="color:var(--muted)">Leer guía completa de París</a>
+        </div>
+      </div>
+
+      <!-- ── ROMA ── -->
+      <div class="tiq-panel" id="panel-roma">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/colosseum-and-ancient-rome/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏟️ Más visitado</span>
+              <h3 class="ttc-name">Coliseo y Foro Romano</h3>
+              <p class="ttc-desc">Entrada combinada · Salta la cola · 2 días</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 16€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/vatican-museums-sistine-chapel/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Imprescindible</span>
+              <h3 class="ttc-name">Museos Vaticanos</h3>
+              <p class="ttc-desc">Capilla Sixtina · Acceso temprano 8AM</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 20€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/borghese-gallery/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🖼️ Arte</span>
+              <h3 class="ttc-name">Galería Borghese</h3>
+              <p class="ttc-desc">Bernini y Caravaggio · Reserva obligatoria</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 25€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/castel-santangelo/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏰 Vistas</span>
+              <h3 class="ttc-name">Castel Sant'Angelo</h3>
+              <p class="ttc-desc">Vistas panorámicas del Tíber · Sin esperas</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 12€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Roma →
+          </a>
+          <a href="articles/roma.html" style="color:var(--muted)">Leer guía completa de Roma</a>
+        </div>
+      </div>
+
+      <!-- ── BARCELONA ── -->
+      <div class="tiq-panel" id="panel-barcelona">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/sagrada-familia/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Más popular</span>
+              <h3 class="ttc-name">Sagrada Família</h3>
+              <p class="ttc-desc">Torres incluidas · Acceso prioritario Gaudí</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 26€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/casa-batllo/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🦎 Experiencia</span>
+              <h3 class="ttc-name">Casa Batlló</h3>
+              <p class="ttc-desc">Magic Nights · Audioguía incluida</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 35€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/park-guell/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🌿 Gaudí</span>
+              <h3 class="ttc-name">Park Güell</h3>
+              <p class="ttc-desc">Recinto monumental · Entrada limitada</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 10€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/camp-nou/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⚽ Deporte</span>
+              <h3 class="ttc-name">Camp Nou · FC Barcelona</h3>
+              <p class="ttc-desc">Tour del estadio + museo · Experiencia única</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 26€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Barcelona →
+          </a>
+          <a href="articles/barcelona.html" style="color:var(--muted)">Leer guía completa de Barcelona</a>
+        </div>
+      </div>
+
+      <!-- ── LISBOA ── -->
+      <div class="tiq-panel" id="panel-lisboa">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/tower-of-belem/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏰 UNESCO</span>
+              <h3 class="ttc-name">Torre de Belém</h3>
+              <p class="ttc-desc">Patrimonio de la Humanidad · Sin esperas</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 6€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/jeronimos-monastery/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Arte manuelino</span>
+              <h3 class="ttc-name">Monasterio de los Jerónimos</h3>
+              <p class="ttc-desc">Gótico manuelino · Ticket rápido online</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 10€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/oceanarium-of-lisbon/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1488330890490-c291ecf62571?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🐠 Familia</span>
+              <h3 class="ttc-name">Oceanario de Lisboa</h3>
+              <p class="ttc-desc">El mayor acuario de Europa · Recomendado</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 19€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/pena-palace-sintra/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1548164560-e04e2a42fce5?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏯 Excursión</span>
+              <h3 class="ttc-name">Palacio de Sintra</h3>
+              <p class="ttc-desc">Día completo desde Lisboa · Incluye transporte</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 14€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Lisboa →
+          </a>
+          <a href="articles/lisboa.html" style="color:var(--muted)">Leer guía de hoteles en Lisboa</a>
+        </div>
+      </div>
+
+      <!-- Nota legal afiliado -->
+      <p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:1.5rem;">
+        Entradas en colaboración con <strong>Tiqets</strong> · Este sitio recibe una comisión por reservas completadas · Sin costo adicional para el usuario
+      </p>
+
+    </div>
+  </section>
+  <!-- /TIQETS -->
+
   <!-- AFILIADOS BAND -->
   <div class="promo-band">
     <div class="promo-inner">
@@ -297,7 +687,7 @@
         <h2 class="promo-title">Planifica tu viaje con los mejores precios</h2>
         <p class="promo-desc">Hemos seleccionado las plataformas más confiables para que reserves con total seguridad. Comparamos precios en tiempo real para que siempre obtengas la mejor oferta.</p>
         <div class="promo-partners">
-          <a href="https://www.booking.com?aid=TU_ID" target="_blank" rel="noopener" class="partner-btn">Booking.com →</a>
+          <a href="https://www.booking.com?aid=2802340" target="_blank" rel="noopener" class="partner-btn">Booking.com →</a>
           <a href="https://www.skyscanner.es" target="_blank" rel="noopener" class="partner-btn outline">Comparar vuelos →</a>
         </div>
       </div>
@@ -383,6 +773,14 @@
     if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
     function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
     function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+
+    // Tiqets City Tabs
+    function switchTab(btn, city) {
+      document.querySelectorAll('.tiq-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tiq-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + city).classList.add('active');
+    }
   </script>
 </body>
 </html>

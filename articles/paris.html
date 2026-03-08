@@ -7,6 +7,8 @@
   <meta name="description" content="Todo lo que necesitas saber para visitar París: qué ver, dónde comer, dónde dormir y los mejores consejos para aprovechar al máximo tu viaje a la Ciudad de la Luz."/>
   <meta name="keywords" content="París guía viaje, qué ver en París, hoteles París, museos París, Torre Eiffel"/>
   <link rel="stylesheet" href="../css/style.css"/>
+  <!-- GetYourGuide Integration Analyzer (reemplaza 1ABLZMR con tu ID real de GYG) -->
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
   <style>
     /* ── ARTICLE HERO ── */
     .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
@@ -45,6 +47,64 @@
     /* image in article */
     .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
     .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
+
+
+    /* ── TIQETS WIDGET ── */
+    .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
+    .tiqets-row {
+      display:flex; align-items:center; gap:.7rem;
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:2px; padding:.65rem .8rem;
+      transition:background .25s, border-color .25s, transform .2s;
+      text-decoration:none; color:inherit;
+    }
+    .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
+    .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
+    .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tiqets-name { font-size:.82rem; font-weight:600; color:var(--navy); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
+    .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
+    .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
+
+    /* ── TIQETS INLINE BLOCK ── */
+    .tiqets-inline-block {
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:3px; overflow:hidden; margin:2.5rem 0;
+    }
+    .tiqets-inline-header {
+      background:linear-gradient(135deg, var(--navy), #0d1e3a);
+      padding:1rem 1.4rem;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:.5rem;
+    }
+    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
+    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
+    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+    .tiqets-card-inline {
+      display:flex; align-items:center; gap:.9rem;
+      background:#fff; padding:.9rem 1.1rem;
+      text-decoration:none; color:inherit;
+      transition:background .2s;
+    }
+    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
+    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
+    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
+    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
+    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
+    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
+    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
+    .tiqets-inline-footer {
+      padding:.7rem 1.2rem;
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:.5rem;
+      background:var(--warm); border-top:1px solid var(--border);
+    }
+    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
+    .tiqets-inline-footer a:hover { color:var(--navy); }
+    .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
+    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
+
 
     /* ── SIDEBAR WIDGETS ── */
     .sidebar-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
@@ -154,6 +214,72 @@
           <p>Si planeas visitar más de 3 museos, el <strong>Paris Museum Pass</strong> (de 2, 4 o 6 días) te da acceso ilimitado a más de 50 museos y monumentos, incluyendo el Louvre, Versalles y el Musée d'Orsay, con acceso prioritario sin colas.</p>
         </div>
 
+        
+        <!-- ── Tiqets Inline Widget — París ───────────────── -->
+        <div class="tiqets-inline-block">
+          <div class="tiqets-inline-header">
+            <span class="tiq-title">🎫 Entradas para las atracciones de París</span>
+            <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
+          </div>
+          <div class="tiqets-cards-grid">
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">🏛️</span>
+            <span class="tci-body">
+              <span class="tci-name">Museo del Louvre</span>
+              <span class="tci-desc">Acceso prioritario sin colas · Ticket móvil</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 22€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">👑</span>
+            <span class="tci-body">
+              <span class="tci-name">Palacio de Versalles</span>
+              <span class="tci-desc">Acceso a jardines y palacio · Cancela gratis</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 18€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">🎨</span>
+            <span class="tci-body">
+              <span class="tci-name">Musée d'Orsay</span>
+              <span class="tci-desc">Colección impresionista · Sin esperas</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 14€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/eiffel-tower/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <span class="tci-icon">🗼</span>
+            <span class="tci-body">
+              <span class="tci-name">Torre Eiffel</span>
+              <span class="tci-desc">Subida hasta la cima · Reserva anticipada</span>
+            </span>
+            <span class="tci-price">
+              <span class="tci-price-num">Desde 11€</span>
+              <span class="tci-cta">Reservar →</span>
+            </span>
+          </a>
+          </div>
+          <div class="tiqets-inline-footer">
+            <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID"
+               target="_blank" rel="noopener sponsored">
+              Ver todas las entradas en París →
+            </a>
+            <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
+          </div>
+        </div>
+        <!-- ── /Tiqets ──────────────────────────────────────────── -->
         <h2 id="donde-comer">¿Dónde comer en París?</h2>
         <p>La gastronomía parisina va mucho más allá de los croissants y el foie gras. La ciudad tiene una escena culinaria extraordinariamente diversa.</p>
 
@@ -201,12 +327,33 @@
 
       </div><!-- /article-content -->
 
+      <!-- GetYourGuide Widget — Actividades en París (ancho completo) -->
+      <div style="margin:2.5rem 0;">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en París</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Comisión de afiliado · 8%</span>
+          </div>
+          <div style="padding:1rem;">
+            <!-- Widget Activity GYG — París (location-id 16) -->
+            <!-- Reemplaza 1ABLZMR con tu ID real de GetYourGuide -->
+            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                 data-gyg-location-id="16"
+                 data-gyg-locale="es"
+                 data-gyg-type="activities"
+                 data-gyg-number-of-items="4"
+                 data-gyg-partner-id="1ABLZMR">
+            </div>
+            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+              Actividades proporcionadas por <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <!-- AD RECTANGLE en artículo -->
       <div class="ad-rect-wrap" style="margin:2.5rem 0;">
-        <div class="ad-rect">
-          <!-- ADSENSE: código 300×250 aquí -->
-          📢 AdSense 300×250
-        </div>
+        <div class="ad-rect">📢 AdSense 300×250</div>
       </div>
 
     </main>
@@ -234,7 +381,7 @@
         <div class="sidebar-card-body">
           <p>Compara precios en más de 500 hoteles disponibles en París. Cancela gratis en la mayoría de opciones.</p>
           <!-- AFILIADO: reemplaza con tu link de Booking.com -->
-          <a href="https://www.booking.com/city/fr/paris.html?aid=TU_ID_AQUI" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver hoteles en Booking →</a>
+          <a href="https://www.booking.com/city/fr/paris.html?aid=2802340_AQUI" target="_blank" rel="noopener" class="sidebar-booking-btn">Ver hoteles en Booking →</a>
         </div>
       </div>
 
@@ -262,9 +409,76 @@
         </div>
       </div>
 
+      <!-- GetYourGuide Widget — París -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎟️ Tours y entradas en París</div>
+        <div class="sidebar-card-body" style="padding:.8rem;">
+          <!-- Widget oficial GYG — City Widget París (location-id 16) -->
+          <!-- Reemplaza 1ABLZMR con tu Partner ID de GetYourGuide -->
+          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame"
+               data-gyg-location-id="16"
+               data-gyg-locale="es"
+               data-gyg-type="city"
+               data-gyg-number-of-items="3"
+               data-gyg-partner-id="1ABLZMR">
+          </div>
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">
+            Actividades en colaboración con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ── Tiqets Entradas — París ───────────────────────────── -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎫 Entradas sin colas en París</div>
+        <div class="sidebar-card-body" style="padding:.6rem .8rem;">
+          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">
+            Reserva tus entradas al instante. Ticket móvil · Confirmación inmediata.
+          </p>
+          <div class="tiqets-list">
+
+        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored"
+           class="tiqets-row">
+          <span class="tiqets-icon">🏛️</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Museo del Louvre</span>
+            <span class="tiqets-badge">Desde 22€ · Sin colas</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored"
+           class="tiqets-row">
+          <span class="tiqets-icon">👑</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Palacio de Versalles</span>
+            <span class="tiqets-badge">Desde 18€ · Entradas rápidas</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
+           target="_blank" rel="noopener sponsored"
+           class="tiqets-row">
+          <span class="tiqets-icon">🎨</span>
+          <span class="tiqets-info">
+            <span class="tiqets-name">Musée d'Orsay</span>
+            <span class="tiqets-badge">Desde 14€ · Acceso prioritario</span>
+          </span>
+          <span class="tiqets-arrow">→</span>
+        </a>
+          </div>
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored"
+             style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
+            Ver todas las entradas en Tiqets →
+          </a>
+        </div>
+      </div>
+      <!-- ── /Tiqets ──────────────────────────────────────────────── -->
       <!-- AD 300×250 sidebar -->
       <div class="ad-rect" style="width:100%;height:250px;">
-        <!-- ADSENSE: código 300×250 sidebar -->
         📢 AdSense 300×250
       </div>
 
