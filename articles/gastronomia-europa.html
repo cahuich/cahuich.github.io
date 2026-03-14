@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gastronomía Europea — Los platos que debes probar en cada país · Voyage Lumière</title>
+  <meta name="description" content="Guía completa de gastronomía europea: los platos imprescindibles de Francia, Italia, España y Portugal. Dónde comer como un local y qué evitar como turista."/>
+  <meta name="keywords" content="gastronomía europea, comida típica Europa, qué comer en París, carbonara Roma, tapas Barcelona, pastel de nata Lisboa"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
+  <style>
+    /* ── ARTICLE HERO ── */
+    .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
+    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80') center/cover no-repeat; }
+    .article-hero-content { position:relative; z-index:2; padding:0 8vw 4rem; max-width:900px; animation:fadeUp .8s ease-out both; }
+    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.65); margin-bottom:1.2rem; }
+    .breadcrumb a { color:rgba(255,255,255,.65); transition:color .3s; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { opacity:.5; }
+    .article-hero h1 { font-family:var(--ff-head); font-size:clamp(2.2rem,5vw,3.8rem); font-weight:700; line-height:1.1; color:#fff; margin-bottom:1.2rem; }
+    .article-hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; color:rgba(255,255,255,.7); font-size:.82rem; }
+    .article-meta-tag { background:var(--gold); color:var(--navy); padding:.25rem .75rem; border-radius:1px; font-weight:700; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-wrapper { max-width:1200px; margin:0 auto; padding:4rem 5vw; display:grid; grid-template-columns:1fr 320px; gap:4rem; align-items:start; }
+    .article-sidebar { position:sticky; top:96px; display:flex; flex-direction:column; gap:1.5rem; }
+
+    /* ── CONTENT ── */
+    .article-content { font-size:1.05rem; line-height:1.85; color:#333; }
+    .article-content h2 { font-family:var(--ff-head); font-size:1.75rem; font-weight:600; color:var(--navy); margin:2.5rem 0 1rem; padding-top:1rem; border-top:1px solid var(--border); }
+    .article-content h3 { font-family:var(--ff-head); font-size:1.2rem; font-weight:600; color:var(--navy); margin:1.8rem 0 .75rem; }
+    .article-content p { margin-bottom:1.3rem; }
+    .article-content ul, .article-content ol { padding-left:1.5rem; margin-bottom:1.3rem; }
+    .article-content li { margin-bottom:.5rem; }
+    .article-content strong { color:var(--navy); font-weight:700; }
+    .article-content a { color:var(--gold); border-bottom:1px solid rgba(197,160,89,.3); transition:border-color .3s; }
+    .article-content a:hover { border-color:var(--gold); }
+
+    .tip-box { background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15)); border-left:3px solid var(--gold); padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
+    .tip-box strong { color:var(--navy); display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
+    .tip-box p { margin:0; font-size:.93rem; color:#555; }
+
+    .warning-box { background:rgba(198,40,40,.05); border-left:3px solid #C62828; padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
+    .warning-box strong { color:#C62828; display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
+    .warning-box p { margin:0; font-size:.93rem; color:#555; }
+
+    .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
+    .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
+
+    /* ── PLATO CARD ── */
+    .platos-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:2rem 0; }
+    .plato-card {
+      background:#fff; border:1px solid var(--border); border-radius:3px;
+      overflow:hidden; transition:box-shadow .25s, transform .25s;
+    }
+    .plato-card:hover { box-shadow:0 8px 24px rgba(26,43,76,.1); transform:translateY(-2px); }
+    .plato-img { height:160px; background-size:cover; background-position:center; }
+    .plato-body { padding:1rem 1.1rem; }
+    .plato-flag { font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); font-weight:700; margin-bottom:.3rem; }
+    .plato-name { font-family:var(--ff-head); font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:.3rem; }
+    .plato-desc { font-size:.8rem; color:var(--muted); line-height:1.55; }
+    .plato-price { display:inline-block; background:var(--warm); border:1px solid var(--border); border-radius:1px; font-size:.68rem; font-weight:700; color:var(--navy); padding:.2rem .55rem; margin-top:.5rem; }
+
+    /* ── RESTAURANTE LIST ── */
+    .rest-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:.6rem; margin:1.2rem 0; }
+    .rest-list li {
+      display:flex; align-items:flex-start; gap:.8rem;
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:2px; padding:.8rem 1rem;
+    }
+    .rest-emoji { font-size:1.1rem; flex-shrink:0; margin-top:.1rem; }
+    .rest-info { flex:1; }
+    .rest-name { font-weight:700; color:var(--navy); font-size:.88rem; }
+    .rest-detail { font-size:.78rem; color:var(--muted); line-height:1.5; margin-top:.15rem; }
+    .rest-price { font-family:var(--ff-head); font-size:.85rem; color:var(--gold); font-weight:700; flex-shrink:0; }
+
+    /* ── COUNTRY SECTION BANNER ── */
+    .country-banner {
+      background:var(--navy); border-radius:3px;
+      padding:1.2rem 1.5rem; margin:2.5rem 0 1rem;
+      display:flex; align-items:center; gap:1rem;
+    }
+    .country-flag { font-size:2rem; flex-shrink:0; }
+    .country-title { font-family:var(--ff-head); font-size:1.3rem; color:#fff; font-weight:700; }
+    .country-sub { font-size:.78rem; color:rgba(255,255,255,.5); margin-top:.15rem; }
+
+    /* ── SIDEBAR ── */
+    .sidebar-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+    .sidebar-card-header { background:var(--navy); color:#fff; padding:1rem 1.2rem; font-family:var(--ff-head); font-size:.95rem; font-weight:600; }
+    .sidebar-card-body { padding:1.2rem; }
+    .sidebar-card-body p { font-size:.85rem; line-height:1.6; color:var(--muted); margin-bottom:1rem; }
+    .sidebar-booking-btn { display:block; background:var(--gold); color:var(--navy); text-align:center; padding:.8rem; border-radius:2px; font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; text-decoration:none; }
+    .sidebar-booking-btn:hover { background:var(--gold-lt); }
+    .toc { list-style:none; padding:0; display:flex; flex-direction:column; gap:.4rem; }
+    .toc li a { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.5rem; transition:color .3s; text-decoration:none; }
+    .toc li a::before { content:'→'; color:var(--gold); font-size:.7rem; }
+    .toc li a:hover { color:var(--navy); }
+
+    /* ── RELATED ── */
+    .related-section { background:var(--warm); padding:5rem 5vw; }
+    .articles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; margin:2rem auto 0; }
+    .article-card { background:#fff; border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:box-shadow .25s, transform .25s; }
+    .article-card:hover { box-shadow:0 8px 28px rgba(26,43,76,.1); transform:translateY(-3px); }
+    .article-img { height:200px; background-size:cover; background-position:center; }
+    .article-body { padding:1.4rem; }
+    .article-tag { font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); font-weight:700; margin-bottom:.5rem; }
+    .article-title { font-family:var(--ff-head); font-size:1.05rem; font-weight:700; color:var(--navy); line-height:1.3; margin-bottom:.6rem; }
+    .article-excerpt { font-size:.83rem; color:var(--muted); line-height:1.6; margin-bottom:1rem; }
+    .article-footer { display:flex; justify-content:space-between; align-items:center; font-size:.75rem; color:var(--muted); }
+    .read-more { color:var(--gold); font-weight:700; text-decoration:none; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px) { .article-wrapper { grid-template-columns:1fr; } .article-sidebar { position:static; } .platos-grid { grid-template-columns:1fr; } .articles-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:600px) { .articles-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="gastronomia-europa.html" class="active">Gastronomía</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>/</span>
+        <span style="color:#fff">Gastronomía</span>
+      </div>
+      <h1>Gastronomía europea:<br/><em>los platos que debes probar</em></h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Europa · Gastronomía</span>
+        <span>📅 Actualizado mayo 2025</span>
+        <span>⏱ 11 min de lectura</span>
+        <span>👁 32.400 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADSENSE LEADERBOARD -->
+  <div class="ad-banner">
+    <div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <div class="article-wrapper">
+    <main class="article-main">
+      <div class="article-content">
+
+        <p>Viajar a Europa sin comer bien es como ir al Louvre con los ojos cerrados. La gastronomía europea no es solo comida: es historia en un plato, cultura en una receta, identidad en cada ingrediente. Esta guía te lleva por los platos imprescindibles de Francia, Italia, España y Portugal — con nombres concretos, restaurantes reales y todo lo que necesitas para comer como un local y no como un turista.</p>
+
+        <div class="tip-box">
+          <strong>🍽️ La regla de oro del viajero gastronómico</strong>
+          <p>Si el menú tiene fotos de los platos, está en 4 idiomas o hay un empleado en la puerta invitándote a entrar, da media vuelta. Los mejores restaurantes de Europa no necesitan ninguna de esas tres cosas.</p>
+        </div>
+
+        <!-- ══════════ FRANCIA ══════════ -->
+        <div class="country-banner">
+          <span class="country-flag">🇫🇷</span>
+          <div>
+            <div class="country-title">Francia — La cocina madre</div>
+            <div class="country-sub">París · Lyon · Burdeos · Provenza</div>
+          </div>
+        </div>
+
+        <h2 id="francia">Los platos imprescindibles de Francia</h2>
+
+        <p>La cocina francesa es la base sobre la que se construyó gran parte de la gastronomía occidental moderna. No es casualidad que el término <em>haute cuisine</em> sea francés, ni que el concepto de restaurante como lo conocemos hoy naciera en París en el siglo XVIII. Pero la cocina francesa no es solo lujo y complejidad — también es el croissant del desayuno, el steak frites del bistró de barrio y el tarte tatin que aparece en todas las mesas los domingos.</p>
+
+        <div class="platos-grid">
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥐 Desayuno</div>
+              <div class="plato-name">Croissant au beurre</div>
+              <div class="plato-desc">El auténtico lleva mantequilla de calidad y tiene las capas visibles al partirlo. Crujiente por fuera, hojaldrado y suave por dentro.</div>
+              <span class="plato-price">1,20–2,50€ en boulangerie</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1608855238293-a8853e7f7c98?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥩 Principal</div>
+              <div class="plato-name">Steak frites</div>
+              <div class="plato-desc">El plato más democrático de Francia. Entrecot a la plancha con patatas fritas doradas. Sencillo, perfecto, inimitable cuando está bien hecho.</div>
+              <span class="plato-price">16–28€ en bistró</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🐌 Clásico</div>
+              <div class="plato-name">Escargots de Bourgogne</div>
+              <div class="plato-desc">Caracoles al horno con mantequilla de ajo y perejil. El plato que más miedos genera y que más sorpresas da. Hay que probarlos al menos una vez.</div>
+              <span class="plato-price">12–18€ de entrante</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1606131731446-5568d87113aa?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🧀 Tabla</div>
+              <div class="plato-name">Plateau de fromages</div>
+              <div class="plato-desc">Una tabla de quesos franceses es una experiencia en sí misma. Camembert, Roquefort, Comté, Brie... cada región tiene el suyo y todos merecen un lugar en la mesa.</div>
+              <span class="plato-price">8–14€ de postre</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Dónde comer bien en París sin trampa turística</h3>
+
+        <ul class="rest-list">
+          <li>
+            <span class="rest-emoji">🍷</span>
+            <div class="rest-info">
+              <div class="rest-name">Bistrot Paul Bert — 11.º arrondissement</div>
+              <div class="rest-detail">El bistró parisino más auténtico según los propios parisinos. Carta corta, producto impecable, ambiente sin pretensiones. Reserva obligatoria.</div>
+            </div>
+            <span class="rest-price">35–50€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🥐</span>
+            <div class="rest-info">
+              <div class="rest-name">Du Pain et des Idées — Canal Saint-Martin</div>
+              <div class="rest-detail">Considerada la mejor boulangerie de París por los profesionales del sector. Llega antes de las 9 AM — los croissants se agotan antes de las 11.</div>
+            </div>
+            <span class="rest-price">2–6€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🧇</span>
+            <div class="rest-info">
+              <div class="rest-name">Marché d'Aligre — 12.º arrondissement</div>
+              <div class="rest-detail">El mercado de los chefs. Abierto todos los días excepto lunes. Quesos, charcutería, frutas y verduras a precios de barrio. Los domingos es especialmente animado.</div>
+            </div>
+            <span class="rest-price">Mercado libre</span>
+          </li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>💡 Truco para el menú del día en París</strong>
+          <p>Los bistrós tradicionales ofrecen <em>formule du déjeuner</em> de lunes a viernes: entrante + principal + postre por 14–18€. El mismo plato en la cena puede costar el doble. Come la comida principal al mediodía y cena algo más sencillo por las noches.</p>
+        </div>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&q=80" alt="Mercado parisino con productos frescos"/>
+        <p class="img-caption">Los mercados de barrio son la mejor ventana a la gastronomía francesa auténtica — Rue Mouffetard, París</p>
+
+        <!-- ══════════ ITALIA ══════════ -->
+        <div class="country-banner">
+          <span class="country-flag">🇮🇹</span>
+          <div>
+            <div class="country-title">Italia — La pasta, la pizza y mucho más</div>
+            <div class="country-sub">Roma · Nápoles · Bolonia · Florencia</div>
+          </div>
+        </div>
+
+        <h2 id="italia">Los platos imprescindibles de Italia</h2>
+
+        <p>La cocina italiana es probablemente la más imitada y menos comprendida del mundo. En México, Argentina o España hay versiones de la carbonara, la pizza napolitana o el tiramisú — pero probarlos en su lugar de origen es una experiencia completamente distinta. La cocina italiana es <strong>hiperlocal</strong>: lo que se come en Roma no es lo que se come en Milán, y lo que es auténtico en Nápoles puede ser una herejía en Bolonia.</p>
+
+        <div class="platos-grid">
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1612874742237-6526221588e3?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🍝 Roma</div>
+              <div class="plato-name">Carbonara auténtica</div>
+              <div class="plato-desc">Solo lleva: guanciale, huevo, Pecorino Romano y pimienta negra. Sin nata. Nunca. Si la tienen con nata, no es carbonara romana.</div>
+              <span class="plato-price">10–14€ en trattoria</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🍕 Nápoles</div>
+              <div class="plato-name">Pizza Margherita</div>
+              <div class="plato-desc">La pizza original: masa fermentada 24h, tomate San Marzano, mozzarella di bufala y albahaca fresca. Horneada en horno de leña a 485°C durante 90 segundos.</div>
+              <span class="plato-price">6–12€ en pizzería local</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🍨 Postre</div>
+              <div class="plato-name">Gelato artesanal</div>
+              <div class="plato-desc">El gelato auténtico tiene colores naturales (el pistacho es marrón verdoso, no verde brillante) y no está apilado en montañas. Busca las gelaterie que lo guardan tapado.</div>
+              <span class="plato-price">1,50–3,50€ por bola</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥩 Florencia</div>
+              <div class="plato-name">Bistecca alla Fiorentina</div>
+              <div class="plato-desc">El chuletón más famoso del mundo. Ternera Chianina, mínimo 1 kg, a la parrilla de leña. Solo con sal, aceite de oliva y pimienta. Se pide al punto o jugosa — nunca bien hecha.</div>
+              <span class="plato-price">45–80€ por kg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <strong>⚠️ Las trampas gastronómicas de Italia</strong>
+          <p>El <em>coperto</em> (cubierto) que te cobran solo por sentarte es legal pero evitable — busca trattorias sin coperto. El cappuccino después de las 11 AM te delata como turista: los italianos solo lo toman en el desayuno. Y nunca pidas parmesano sobre una pasta con marisco — es considerado una falta de respeto al cocinero.</p>
+        </div>
+
+        <h3>Dónde comer auténtico en Roma</h3>
+
+        <ul class="rest-list">
+          <li>
+            <span class="rest-emoji">🍝</span>
+            <div class="rest-info">
+              <div class="rest-name">Roscioli — Via dei Giubbonari, Roma</div>
+              <div class="rest-detail">Considerada la mejor carbonara de Roma. También tienen una selección de quesos y embutidos increíble. Cola de 30 minutos que vale cada segundo. Reserva online.</div>
+            </div>
+            <span class="rest-price">25–40€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🍕</span>
+            <div class="rest-info">
+              <div class="rest-name">L'Antica Pizzeria da Michele — Nápoles</div>
+              <div class="rest-detail">La pizzería más famosa del mundo. Solo tienen dos pizzas en la carta: Margherita y Marinara. La cola puede ser de 1 hora. Vale absolutamente la pena.</div>
+            </div>
+            <span class="rest-price">5–8€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🍨</span>
+            <div class="rest-info">
+              <div class="rest-name">Giolitti — Via degli Uffici del Vicario, Roma</div>
+              <div class="rest-detail">Gelateria histórica fundada en 1900. Más de 100 sabores. Elige siempre los sabores de temporada: son los más frescos y los que mejor representan la producción local.</div>
+            </div>
+            <span class="rest-price">2–5€</span>
+          </li>
+        </ul>
+
+        <!-- ══════════ ESPAÑA ══════════ -->
+        <div class="country-banner">
+          <span class="country-flag">🇪🇸</span>
+          <div>
+            <div class="country-title">España — Tapas, jamón y vino</div>
+            <div class="country-sub">Barcelona · San Sebastián · Sevilla · Madrid</div>
+          </div>
+        </div>
+
+        <h2 id="espana">Los platos imprescindibles de España</h2>
+
+        <p>La cocina española vive un momento de esplendor mundial — el País Vasco tiene más estrellas Michelin por habitante que ninguna otra región del planeta, y la cocina catalana encabezó durante años la vanguardia gastronómica mundial. Pero más allá de la alta cocina, lo que hace única a la gastronomía española es su cultura del tapeo: la forma más democrática de comer bien que existe.</p>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=1000&q=80" alt="Tapas variadas en bar español"/>
+        <p class="img-caption">El tapeo es mucho más que comida — es una forma de socializar que no existe en ningún otro país del mundo</p>
+
+        <div class="platos-grid">
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1579065488191-f99b427c5dc4?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥩 Nacional</div>
+              <div class="plato-name">Jamón Ibérico de Bellota</div>
+              <div class="plato-desc">El mejor jamón del mundo. El cerdo ibérico de bellota pasa meses caminando por dehesas comiendo bellotas. El resultado es un producto sin parangón en ninguna gastronomía.</div>
+              <span class="plato-price">4–12€ la ración</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🦑 Mediterráneo</div>
+              <div class="plato-name">Paella valenciana</div>
+              <div class="plato-desc">La auténtica lleva pollo, conejo, judías verdes y garrofón. Sin mariscos — eso es paella de marisco, una variante. El socarrat (arroz tostado del fondo) es la parte más deseada.</div>
+              <span class="plato-price">14–22€ en Valencia</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1541014741259-de529411b96a?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🍳 Andalucía</div>
+              <div class="plato-name">Gazpacho andaluz</div>
+              <div class="plato-desc">Sopa fría de tomate, pepino, ajo, pimiento y aceite de oliva. En Andalucía en agosto con 40°C es probablemente el plato más refrescante que existe.</div>
+              <span class="plato-price">3–6€ de entrante</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥔 Barcelona</div>
+              <div class="plato-name">Patatas bravas</div>
+              <div class="plato-desc">En Barcelona la salsa brava es roja y especiada. Muchos bares sirven también alioli. El debate eterno: ¿con alioli o sin alioli? No hay respuesta correcta.</div>
+              <span class="plato-price">4–7€ la ración</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>La ruta de tapas perfecta en Barcelona</h3>
+        <p>El barrio del Poble Sec concentra los mejores bares de tapas de Barcelona fuera del circuito turístico. La <strong>Calle Blai</strong> es conocida como la "calle de los pintxos" de Barcelona — decenas de bares donde cada pintxo cuesta entre 1,50 y 2,50€. Llega a partir de las 19:30h cuando los locales empiezan a salir del trabajo.</p>
+
+        <ul class="rest-list">
+          <li>
+            <span class="rest-emoji">🥔</span>
+            <div class="rest-info">
+              <div class="rest-name">Bar Tomás — Sarrià, Barcelona</div>
+              <div class="rest-detail">Las bravas más famosas de Barcelona según los barceloneses. Solo abren a mediodía. La cola empieza antes de que abran. Solo sirven bravas, alioli y cerveza. Perfecto.</div>
+            </div>
+            <span class="rest-price">5–8€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🦑</span>
+            <div class="rest-info">
+              <div class="rest-name">La Cova Fumada — Barceloneta</div>
+              <div class="rest-detail">El bar que inventó la bomba (croqueta gigante de patata y carne). Sin carta, sin carta de vinos, sin precio fijo. El cocinero decide qué hay cada día según el mercado.</div>
+            </div>
+            <span class="rest-price">15–25€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🍖</span>
+            <div class="rest-info">
+              <div class="rest-name">Quimet & Quimet — Poble Sec, Barcelona</div>
+              <div class="rest-detail">Bar de pie, sin mesas, abierto solo a mediodía. Los montaditos de conservas son legendarios. Con anchoa, ventresca y caviar de oricios. Solo para paladares curiosos.</div>
+            </div>
+            <span class="rest-price">2–4€ por montadito</span>
+          </li>
+        </ul>
+
+        <!-- ══════════ PORTUGAL ══════════ -->
+        <div class="country-banner">
+          <span class="country-flag">🇵🇹</span>
+          <div>
+            <div class="country-title">Portugal — Bacalao, vino verde y pasteles</div>
+            <div class="country-sub">Lisboa · Oporto · Alentejo · Algarve</div>
+          </div>
+        </div>
+
+        <h2 id="portugal">Los platos imprescindibles de Portugal</h2>
+
+        <p>La cocina portuguesa es una de las más subestimadas de Europa. Injustamente eclipsada por sus vecinos españoles e italianos, ofrece una gastronomía profunda, con influencias del Atlántico, del Mediterráneo y de siglos de exploraciones por África, Asia y América. El bacalao — que los portugueses llaman <em>o fiel amigo</em> (el fiel amigo) — tiene más de 365 recetas según la tradición: una para cada día del año.</p>
+
+        <div class="platos-grid">
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🐟 Nacional</div>
+              <div class="plato-name">Bacalhau à Brás</div>
+              <div class="plato-desc">Bacalao desmigado con patatas paja, cebolla, huevo y aceitunas. Una de las 365 recetas de bacalao. Reconfortante, sencillo y absolutamente adictivo.</div>
+              <span class="plato-price">12–18€ en tasca</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🥐 Lisboa</div>
+              <div class="plato-name">Pastel de nata</div>
+              <div class="plato-desc">Hojaldre crujiente relleno de crema de huevo caramelizada por encima. 1,20€. El mejor dulce de Europa al precio más democrático posible. Hay que comerlo caliente, recién salido del horno.</div>
+              <span class="plato-price">1,20–1,80€</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1551024739-78b8d4b4d7b3?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🍷 Oporto</div>
+              <div class="plato-name">Francesinha</div>
+              <div class="plato-desc">El sándwich más contundente del mundo: pan, jamón, linguiça, bifanas, cubierto de queso fundido y bañado en una salsa de cerveza y tomate. Solo en Oporto. Solo para valientes.</div>
+              <span class="plato-price">10–16€</span>
+            </div>
+          </div>
+          <div class="plato-card">
+            <div class="plato-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=500&q=75')"></div>
+            <div class="plato-body">
+              <div class="plato-flag">🐷 Nacional</div>
+              <div class="plato-name">Leitão à Bairrada</div>
+              <div class="plato-desc">Lechón asado de la región de Bairrada. La piel crujiente y la carne melosa son la combinación perfecta. Se come en las tascas de carretera entre Lisboa y Coímbra.</div>
+              <span class="plato-price">18–28€</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>🍷 El vino verde portugués — el secreto mejor guardado</strong>
+          <p>El <em>vinho verde</em> (vino verde) no se llama así por el color sino por ser joven. Es ligeramente efervescente, muy fresco y con muy bajo contenido alcohólico. Con marisco es una combinación perfecta. Precio en restaurante: 3–8€ la botella. En España cuesta el doble. En Portugal es el vino de diario de la gente.</p>
+        </div>
+
+        <h3>Dónde comer auténtico en Lisboa</h3>
+
+        <ul class="rest-list">
+          <li>
+            <span class="rest-emoji">🥐</span>
+            <div class="rest-info">
+              <div class="rest-name">Pastéis de Belém — Rua de Belém, 84</div>
+              <div class="rest-detail">La fábrica original desde 1837. Receta secreta. Cola de 20 minutos pero el espacio es enorme. Con canela y azúcar glas. Solo aquí pueden llamarse "Pastéis de Belém".</div>
+            </div>
+            <span class="rest-price">1,20€/unidad</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🐟</span>
+            <div class="rest-info">
+              <div class="rest-name">Solar dos Presuntos — Baixa, Lisboa</div>
+              <div class="rest-detail">El restaurante de cocina portuguesa tradicional más querido de Lisboa. Jamones colgados del techo, paredes llenas de historia y bacalao en todas sus formas.</div>
+            </div>
+            <span class="rest-price">25–40€</span>
+          </li>
+          <li>
+            <span class="rest-emoji">🦞</span>
+            <div class="rest-info">
+              <div class="rest-name">Cervejaria Ramiro — Intendente, Lisboa</div>
+              <div class="rest-detail">La mejor marisquería de Lisboa según los lisboetas. Gambas, percebes, sapateira y lagosta. Se termina siempre con una prego (sándwich de bistec). Reserva imprescindible.</div>
+            </div>
+            <span class="rest-price">35–60€</span>
+          </li>
+        </ul>
+
+        <!-- ══════════ TOURS GASTRONOMICOS ══════════ -->
+        <h2 id="tours">Tours gastronómicos — la mejor forma de entrar en la gastronomía local</h2>
+
+        <p>Si viajas por primera vez a una ciudad y quieres entender su gastronomía de verdad, un tour gastronómico es la inversión más inteligente que puedes hacer. En 3–4 horas conoces los mercados locales, pruebas 8–12 productos diferentes y tienes un guía local que te explica el contexto cultural de cada cosa que pruebas.</p>
+
+        <div data-gyg-href="https://widget.getyourguide.com/default/actividades.frame" data-gyg-locale-code="es-ES" data-gyg-widget="activities" data-gyg-number-of-items="4" data-gyg-partner-id="TU_PARTNER_ID" data-gyg-q="food tour europe gastronomia"></div>
+
+        <div class="tip-box">
+          <strong>🎟️ ¿Qué buscar en un buen tour gastronómico?</strong>
+          <p>Un buen tour incluye al menos 6–8 paradas, grupos de máximo 10–12 personas, guía local nativo (no solo anglófono) y visita a al menos un mercado o productor. Precio justo: 60–90€ por persona. Si cuesta menos de 40€, probablemente las degustaciones son muy pequeñas.</p>
+        </div>
+
+        <h2 id="consejos">Consejos prácticos para comer bien en Europa</h2>
+
+        <h3>Los horarios de comida europeos</h3>
+        <p>Uno de los errores más frecuentes del viajero latinoamericano en Europa es respetar sus propios horarios de comida. Cada país tiene los suyos y saltárselos tiene consecuencias:</p>
+        <ul>
+          <li><strong>Francia:</strong> Almuerzo 12–14h (los mejores menús del día solo a mediodía), cena 19:30–21:30h</li>
+          <li><strong>Italia:</strong> Almuerzo 13–14:30h, cena 20–22h. Si llegas a un restaurante a las 18h, puede que aún no hayan abierto.</li>
+          <li><strong>España:</strong> Almuerzo 14–16h (el más tardío de Europa), cena 21–23h. Los bares de tapas están en su mejor momento de 13–15h y de 20–22h.</li>
+          <li><strong>Portugal:</strong> Almuerzo 12:30–14:30h, cena 19:30–21:30h. El horario más similar al latinoamericano.</li>
+        </ul>
+
+        <h3>La propina en Europa</h3>
+        <p>En Europa la propina no es obligatoria como en México o Estados Unidos. En Francia y España se deja algo solo si el servicio fue excelente (5–10%). En Italia el <em>coperto</em> ya incluye el servicio. En Portugal cada vez es más habitual dejar 1–2€ en restaurantes locales. Nunca dejes propina con tarjeta — siempre en efectivo directamente al camarero.</p>
+
+        <div class="warning-box">
+          <strong>⚠️ Agua en los restaurantes europeos</strong>
+          <p>En Europa el agua del grifo es potable en prácticamente todos los países. Si pides "agua" en un restaurante sin especificar, te traerán agua embotellada y te la cobrarán (2–5€). Pide siempre <em>eau du robinet</em> (Francia), <em>acqua del rubinetto</em> (Italia), <em>agua del grifo</em> (España) o <em>água da torneira</em> (Portugal) si quieres gratuita.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <!-- TOC -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">📋 Contenido del artículo</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#francia">🇫🇷 Gastronomía francesa</a></li>
+            <li><a href="#italia">🇮🇹 Gastronomía italiana</a></li>
+            <li><a href="#espana">🇪🇸 Gastronomía española</a></li>
+            <li><a href="#portugal">🇵🇹 Gastronomía portuguesa</a></li>
+            <li><a href="#tours">🎟️ Tours gastronómicos</a></li>
+            <li><a href="#consejos">💡 Consejos prácticos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BOOKING -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🏨 Alojamiento en Europa</div>
+        <div class="sidebar-card-body">
+          <p>Encuentra el hotel perfecto cerca de los mejores restaurantes locales. Más de 1.2M propiedades con cancelación gratuita.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=6776&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Findex.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver hoteles en Europa →</a>
+        </div>
+      </div>
+
+      <!-- ADSENSE 300x250 -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-body" style="text-align:center;padding:1rem;">
+          <!-- ADSENSE 300×250 -->
+          <div class="ad-placeholder" style="width:300px;height:250px;display:flex;align-items:center;justify-content:center;">📢 AdSense 300×250</div>
+        </div>
+      </div>
+
+      <!-- TOURS GYG -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🍽️ Tours gastronómicos</div>
+        <div class="sidebar-card-body" style="padding:.8rem;">
+          <div data-gyg-href="https://widget.getyourguide.com/default/actividades.frame" data-gyg-locale-code="es-ES" data-gyg-widget="activities" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR" data-gyg-q="food tour gastronomia Europa"></div>
+        </div>
+      </div>
+
+      <!-- IATI SEGURO -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🛡️ Seguro de viaje</div>
+        <div class="sidebar-card-body">
+          <p>Viaja protegido con IATI Seguros — cobertura médica, cancelaciones y equipaje. 5% de descuento con este enlace.</p>
+          <a href="https://www.iatiseguros.com/?ref=TU_CODIGO_IATI" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn" style="background:#C62828;color:#fff;">Ver seguros IATI →</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header" style="text-align:center;margin-bottom:0;">
+        <p class="section-tag">Sigue explorando</p>
+        <h2 class="section-title">Artículos relacionados</h2>
+      </div>
+      <div class="articles-grid" style="margin-top:2rem;">
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=700&q=80')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Guía</p>
+            <h3 class="article-title">Guía completa de París para 2025</h3>
+            <p class="article-excerpt">Todo lo que necesitas: qué ver, dónde comer y los mejores barrios para alojarse.</p>
+            <div class="article-footer"><span>12 min · Mayo 2025</span><a href="paris.html" class="read-more">Leer más →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div>
+          <div class="article-body">
+            <p class="article-tag">Italia · Guía</p>
+            <h3 class="article-title">Guía completa de Roma para 2025</h3>
+            <p class="article-excerpt">Coliseo, Vaticano, carbonara auténtica y los barrios donde comen los romanos.</p>
+            <div class="article-footer"><span>13 min · Mayo 2025</span><a href="roma.html" class="read-more">Leer más →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=700&q=80')"></div>
+          <div class="article-body">
+            <p class="article-tag">Portugal · Hoteles</p>
+            <h3 class="article-title">Los mejores hoteles de Lisboa 2025</h3>
+            <p class="article-excerpt">Desde boutiques de lujo en Alfama hasta opciones con encanto en Chiado.</p>
+            <div class="article-footer"><span>8 min · Abril 2025</span><a href="lisboa.html" class="read-more">Leer más →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer"></footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros (Google AdSense, Awin, GetYourGuide, Tiqets) para mejorar tu experiencia y mostrarte publicidad personalizada. <a href="../privacidad.html">Política de privacidad</a></p>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="btn-primary" style="padding:.6rem 1.2rem;font-size:.8rem;">Aceptar</button>
+      <button onclick="dismissCookies()" style="background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.2rem;border-radius:2px;cursor:pointer;font-size:.8rem;">Solo necesarias</button>
+    </div>
+  </div>
+
+  <script>
+    // Nav scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+    // Mobile nav
+    document.getElementById('mobileBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    // Reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold:.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Cookies
+    const banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+  </script>
+</body>
+</html>
