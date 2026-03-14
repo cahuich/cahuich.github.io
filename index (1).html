@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voyage Lumière — Guía de Viaje Europea</title>
+  <meta name="description" content="Descubre los destinos más fascinantes de Europa. Guías completas, consejos de viaje y las mejores experiencias para viajeros exigentes."/>
+  <meta name="keywords" content="viajes europa, guía de viaje, París, Roma, Barcelona, turismo, hoteles"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── HERO ── */
+    .hero { position:relative; height:100vh; min-height:680px; display:flex; align-items:flex-end; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; background: linear-gradient(to bottom,rgba(26,43,76,.18) 0%,rgba(26,43,76,.65) 100%), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80') center/cover no-repeat; transform:scale(1.04); animation:heroZoom 14s ease-in-out infinite alternate; }
+    @keyframes heroZoom { from{transform:scale(1.04)} to{transform:scale(1.10)} }
+    .hero::before { content:''; position:absolute; left:4vw; top:0; bottom:0; width:1px; background:linear-gradient(to bottom,transparent,var(--gold),transparent); opacity:.5; z-index:2; }
+    .hero-content { position:relative; z-index:3; padding:0 8vw 10vh; max-width:760px; animation:fadeUp .9s ease-out both; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.6rem; color:var(--gold-lt); font-family:var(--ff-acc); font-size:1rem; font-style:italic; margin-bottom:1.2rem; }
+    .hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--gold); }
+    .hero h1 { font-family:var(--ff-head); font-size:clamp(2.8rem,6vw,5rem); font-weight:700; line-height:1.08; color:#fff; margin-bottom:1.5rem; }
+    .hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .hero-desc { font-size:1.08rem; line-height:1.75; color:rgba(255,255,255,.82); max-width:520px; margin-bottom:2.4rem; }
+    .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+    .hero-scroll { position:absolute; bottom:3rem; right:5vw; z-index:3; display:flex; flex-direction:column; align-items:center; gap:.5rem; color:rgba(255,255,255,.55); font-size:.7rem; text-transform:uppercase; letter-spacing:.15em; }
+    .hero-scroll-line { width:1px; height:48px; background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent); animation:shimmer 2s ease-in-out infinite; }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background:var(--navy); padding:2rem 5vw; }
+    .stats-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-around; flex-wrap:wrap; gap:1.5rem; }
+    .stat { text-align:center; }
+    .stat-num { font-family:var(--ff-head); font-size:2rem; font-weight:700; color:var(--gold); display:block; }
+    .stat-label { font-size:.75rem; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.5); }
+
+    /* ── DESTINATIONS ── */
+    #destinos { padding:6rem 5vw; background:var(--cream); }
+    .destinations-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:auto auto; gap:1.5rem; max-width:1280px; margin:0 auto; }
+    .dest-card { position:relative; border-radius:3px; overflow:hidden; cursor:pointer; }
+    .dest-card:first-child { grid-row:1/3; }
+    .dest-card:first-child .dest-img { height:100%; min-height:540px; }
+    .dest-img { height:260px; background-size:cover; background-position:center; transition:transform .7s cubic-bezier(.25,.46,.45,.94); }
+    .dest-card:hover .dest-img { transform:scale(1.06); }
+    .dest-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,43,76,.85) 0%,rgba(26,43,76,.1) 55%,transparent 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:1.8rem; }
+    .dest-cat { display:inline-block; background:var(--gold); color:var(--navy); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; padding:.25rem .7rem; border-radius:1px; margin-bottom:.75rem; align-self:flex-start; }
+    .dest-name { font-family:var(--ff-head); font-size:clamp(1.3rem,2vw,1.8rem); color:#fff; font-weight:600; line-height:1.2; margin-bottom:.5rem; }
+    .dest-meta { color:rgba(255,255,255,.65); font-size:.78rem; }
+    .dest-book { position:absolute; top:1rem; right:1rem; background:rgba(253,251,247,.9); color:var(--navy); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.3rem .75rem; border-radius:1px; border:1px solid var(--gold); transition:background .3s, color .3s; }
+    .dest-book:hover { background:var(--gold); color:#fff; }
+
+    /* ── PROMO BAND ── */
+    .promo-band { background:var(--navy); padding:5rem 5vw; }
+    .promo-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .promo-eyebrow { font-family:var(--ff-acc); font-style:italic; font-size:1rem; color:var(--gold); margin-bottom:1rem; }
+    .promo-title { font-family:var(--ff-head); font-size:clamp(1.8rem,3vw,2.6rem); font-weight:700; line-height:1.2; margin-bottom:1.2rem; color:#fff; }
+    .promo-desc { font-size:.95rem; line-height:1.75; color:rgba(255,255,255,.65); margin-bottom:2rem; }
+    .promo-partners { display:flex; gap:1rem; flex-wrap:wrap; }
+    .partner-btn { background:var(--gold); color:var(--navy); padding:.8rem 1.6rem; border-radius:2px; font-weight:700; font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; display:inline-block; }
+    .partner-btn:hover { background:var(--gold-lt); transform:translateY(-2px); }
+    .partner-btn.outline { background:transparent; border:1px solid rgba(255,255,255,.3); color:#fff; }
+    .partner-btn.outline:hover { background:rgba(255,255,255,.1); }
+    .promo-cards { display:flex; flex-direction:column; gap:1rem; }
+    .promo-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:3px; padding:1.4rem 1.6rem; display:flex; align-items:flex-start; gap:1rem; transition:background .3s; }
+    .promo-card:hover { background:rgba(255,255,255,.1); }
+    .promo-card-icon { width:44px; height:44px; flex-shrink:0; background:rgba(197,160,89,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+    .promo-card-title { font-family:var(--ff-head); font-size:.95rem; color:#fff; margin-bottom:.3rem; }
+    .promo-card-sub { font-size:.8rem; color:rgba(255,255,255,.5); line-height:1.5; }
+
+    /* ── NEWSLETTER ── */
+    #newsletter { padding:6rem 5vw; background:var(--warm); }
+    .newsletter-inner { max-width:600px; margin:0 auto; text-align:center; }
+    .newsletter-form { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; margin-top:2.5rem; }
+    .newsletter-input { flex:1; min-width:240px; padding:.9rem 1.4rem; border:1px solid var(--border); border-radius:2px; background:var(--cream); font-family:var(--ff-body); font-size:.9rem; color:var(--ink); outline:none; transition:border-color .3s; }
+    .newsletter-input:focus { border-color:var(--gold); }
+    .newsletter-input::placeholder { color:var(--muted); }
+    .newsletter-note { margin-top:1rem; font-size:.75rem; color:var(--muted); font-style:italic; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:900px) {
+      .destinations-grid { grid-template-columns:1fr 1fr; }
+      .dest-card:first-child { grid-column:1/-1; grid-row:auto; }
+      .dest-card:first-child .dest-img { min-height:320px; }
+      .promo-inner { grid-template-columns:1fr; }
+    }
+    @media (max-width:600px) {
+      .destinations-grid { grid-template-columns:1fr; }
+    }
+
+    /* ── TIQETS SECTION ── */
+    .tiq-tabs {
+      display:flex; gap:.5rem; flex-wrap:wrap;
+      margin-bottom:2rem; border-bottom:2px solid var(--border); padding-bottom:0;
+    }
+    .tiq-tab {
+      background:none; border:none; cursor:pointer;
+      font-family:var(--ff-head); font-size:.9rem; font-weight:600;
+      color:var(--muted); padding:.7rem 1.4rem;
+      border-bottom:2px solid transparent; margin-bottom:-2px;
+      transition:color .25s, border-color .25s;
+    }
+    .tiq-tab:hover { color:var(--navy); }
+    .tiq-tab.active { color:var(--navy); border-bottom-color:var(--gold); }
+
+    .tiq-panel { display:none; }
+    .tiq-panel.active { display:block; }
+
+    .tiq-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1.2rem;
+      margin-bottom:1.2rem;
+    }
+    .tiq-ticket-card {
+      background:#fff; border:1px solid var(--border); border-radius:3px;
+      overflow:hidden; text-decoration:none; color:inherit;
+      display:flex; flex-direction:column;
+      transition:transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .tiq-ticket-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(26,43,76,.12);
+      border-color:var(--gold);
+    }
+    .ttc-img {
+      height:160px; background-size:cover; background-position:center;
+      flex-shrink:0; position:relative;
+    }
+    .ttc-body {
+      padding:1rem 1.1rem; display:flex; flex-direction:column; flex:1;
+    }
+    .ttc-badge {
+      font-size:.65rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.1em; color:var(--gold); margin-bottom:.5rem; display:block;
+    }
+    .ttc-name {
+      font-family:var(--ff-head); font-size:1rem; font-weight:700;
+      color:var(--navy); line-height:1.25; margin-bottom:.4rem;
+    }
+    .ttc-desc {
+      font-size:.78rem; color:var(--muted); line-height:1.5;
+      flex:1; margin-bottom:.8rem;
+    }
+    .ttc-footer {
+      display:flex; justify-content:space-between; align-items:center;
+      border-top:1px solid var(--border); padding-top:.7rem; margin-top:auto;
+    }
+    .ttc-price {
+      font-family:var(--ff-head); font-size:1rem; font-weight:700;
+      color:var(--navy);
+    }
+    .ttc-cta {
+      font-size:.73rem; font-weight:700; color:var(--gold);
+      text-transform:uppercase; letter-spacing:.08em;
+      transition:letter-spacing .2s;
+    }
+    .tiq-ticket-card:hover .ttc-cta { letter-spacing:.14em; }
+
+    .tiq-panel-footer {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:.75rem; padding:.9rem 0;
+      border-top:1px solid var(--border);
+    }
+    .tiq-panel-footer a {
+      font-size:.83rem; font-weight:600; color:var(--gold);
+      border-bottom:1px solid transparent; transition:border-color .2s;
+    }
+    .tiq-panel-footer a:hover { border-color:var(--gold); }
+
+    @media(max-width:1024px) { .tiq-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:560px)  { .tiq-grid { grid-template-columns:1fr; } .tiq-tab { font-size:.8rem; padding:.6rem 1rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#destinos" class="active">Destinos</a></li>
+      <li><a href="#entradas">Entradas</a></li>
+      <li><a href="#articulos">Guías</a></li>
+      <li><a href="sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Guía de viaje editorial</p>
+      <h1>Europa, <em>descubierta<br/>con elegancia</em></h1>
+      <p class="hero-desc">Guías escritas por viajeros apasionados. Destinos seleccionados, consejos exclusivos y las experiencias que transforman un viaje en un recuerdo para toda la vida.</p>
+      <div class="hero-actions">
+        <a href="#destinos" class="btn-primary">Explorar destinos</a>
+        <a href="articles/paris.html" class="btn-outline">Leer guías</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat"><span class="stat-num">48</span><span class="stat-label">Destinos</span></div>
+      <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Guías publicadas</span></div>
+      <div class="stat"><span class="stat-num">12K</span><span class="stat-label">Viajeros suscritos</span></div>
+      <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Valoración media</span></div>
+    </div>
+  </div>
+
+  <!-- AD LEADERBOARD -->
+  <div class="ad-banner">
+    <div class="ad-placeholder">
+      <!-- ADSENSE: reemplaza con tu código de anuncio 728×90 -->
+      📢 Espacio publicitario · Google AdSense 728×90
+    </div>
+  </div>
+
+  <!-- DESTINOS -->
+  <section id="destinos">
+    <div class="section-header reveal">
+      <p class="section-tag">Selección editorial</p>
+      <h2 class="section-title">Destinos Imprescindibles</h2>
+      <p class="section-sub">Los rincones de Europa que todo viajero exigente debe conocer, con consejos prácticos y reservas directas.</p>
+    </div>
+    <div class="destinations-grid">
+      <div class="dest-card reveal">
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1431274172761-fcdab704a114?w=900&q=80')"></div>
+        <div class="dest-overlay">
+          <span class="dest-cat">Francia</span>
+          <h3 class="dest-name">París:<br/>La Ciudad Eterna</h3>
+          <p class="dest-meta">✦ Mejor época: Abr–Jun · 42 guías</p>
+        </div>
+        <a href="articles/paris.html" class="dest-book">Leer guía →</a>
+      </div>
+      <div class="dest-card reveal">
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&q=80')"></div>
+        <div class="dest-overlay">
+          <span class="dest-cat">Italia</span>
+          <h3 class="dest-name">Venecia</h3>
+          <p class="dest-meta">✦ Mar–May</p>
+        </div>
+        <!-- AFILIADO: reemplaza con tu link de Booking -->
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https://www.booking.com/city/it/venice.html" target="_blank" rel="sponsored"></a>
+      </div>
+      <div class="dest-card reveal">
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div>
+        <div class="dest-overlay">
+          <span class="dest-cat">España</span>
+          <h3 class="dest-name">Barcelona</h3>
+          <p class="dest-meta">✦ Sep–Nov</p>
+        </div>
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https://www.booking.com/city/es/barcelona.html" target="_blank" rel="sponsored">
+      </div>
+      <div class="dest-card reveal">
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=700&q=80')"></div>
+        <div class="dest-overlay">
+          <span class="dest-cat">Reino Unido</span>
+          <h3 class="dest-name">Londres</h3>
+          <p class="dest-meta">✦ May–Ago</p>
+        </div>
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https://www.booking.com/city/gb/london.html" target="_blank" rel="sponsored"></a>
+      </div>
+      <div class="dest-card reveal">
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=700&q=80')"></div>
+        <div class="dest-overlay">
+          <span class="dest-cat">Grecia</span>
+          <h3 class="dest-name">Santorini</h3>
+          <p class="dest-meta">✦ Jun–Sep</p>
+        </div>
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https://www.booking.com/island/gr/santorini.html" target="_blank" rel="sponsored"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTÍCULOS -->
+  <section id="articulos" style="padding:6rem 5vw; background:var(--warm);">
+    <div class="section-header reveal">
+      <p class="section-tag">Guías y consejos</p>
+      <h2 class="section-title">Últimas Publicaciones</h2>
+      <p class="section-sub">Artículos detallados para planificar tu viaje perfecto con total confianza.</p>
+    </div>
+    <div class="ad-rect-wrap reveal">
+      <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
+    </div>
+
+    <!-- FILA 1 — 3 artículos -->
+    <div class="articles-grid" style="margin-bottom:2rem;">
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Guía Completa</p>
+          <h3 class="article-title">Guía completa de París para 2025</h3>
+          <p class="article-excerpt">Todo lo que necesitas saber: la Torre Eiffel, el Louvre, dónde comer y los mejores barrios para alojarse.</p>
+          <div class="article-footer">
+            <span>12 min · Mayo 2025</span>
+            <a href="articles/paris.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Italia · Guía Completa</p>
+          <h3 class="article-title">Guía completa de Roma para 2025</h3>
+          <p class="article-excerpt">El Coliseo, el Vaticano, la carbonara auténtica y cómo moverse por la Ciudad Eterna sin perder tiempo.</p>
+          <div class="article-footer">
+            <span>13 min · Mayo 2025</span>
+            <a href="articles/roma.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">España · Ruta</p>
+          <h3 class="article-title">Qué ver en Barcelona en 3 días</h3>
+          <p class="article-excerpt">La ruta perfecta día a día: Gaudí, el Gótico, la Barceloneta y los mejores bares de tapas del Poble Sec.</p>
+          <div class="article-footer">
+            <span>10 min · Abril 2025</span>
+            <a href="articles/barcelona.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- FILA 2 — 3 artículos -->
+    <div class="articles-grid">
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Portugal · Hoteles</p>
+          <h3 class="article-title">Los mejores hoteles de Lisboa para 2025</h3>
+          <p class="article-excerpt">Desde boutiques de lujo en Alfama hasta opciones con encanto en Chiado, para todos los presupuestos.</p>
+          <div class="article-footer">
+            <span>8 min · Abril 2025</span>
+            <a href="articles/lisboa.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Europa · Consejos</p>
+          <h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3>
+          <p class="article-excerpt">Trucos reales para gastar menos de 60€ al día: vuelos baratos, alojamiento, comida y transporte.</p>
+          <div class="article-footer">
+            <span>9 min · Marzo 2025</span>
+            <a href="articles/presupuesto-europa.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88df5691cc37?w=700&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Europa · Temporada</p>
+          <h3 class="article-title">Mejores destinos europeos en primavera</h3>
+          <p class="article-excerpt">Los 8 destinos perfectos para visitar entre marzo y junio: tulipanes, cerezos en flor y sin multitudes.</p>
+          <div class="article-footer">
+            <span>11 min · Marzo 2025</span>
+            <a href="articles/primavera-europa.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- TIQETS — ENTRADAS DESTACADAS                          -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="entradas" style="padding:6rem 5vw; background:var(--cream);">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Salta las colas</p>
+      <h2 class="section-title">Entradas destacadas</h2>
+      <p class="section-sub">Reserva al instante tus visitas a los monumentos más icónicos de Europa.<br/>Ticket móvil · Confirmación inmediata · Cancela gratis.</p>
+    </div>
+
+    <!-- Tabs de ciudad -->
+    <div style="max-width:1280px;margin:0 auto;">
+
+      <div class="tiq-tabs">
+        <button class="tiq-tab active" onclick="switchTab(this,'paris')">🗼 París</button>
+        <button class="tiq-tab" onclick="switchTab(this,'roma')">🏟️ Roma</button>
+        <button class="tiq-tab" onclick="switchTab(this,'barcelona')">⛪ Barcelona</button>
+        <button class="tiq-tab" onclick="switchTab(this,'lisboa')">🏰 Lisboa</button>
+      </div>
+
+      <!-- ── PARIS ── -->
+      <div class="tiq-panel active" id="panel-paris">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏛️ Más popular</span>
+              <h3 class="ttc-name">Museo del Louvre</h3>
+              <p class="ttc-desc">Acceso prioritario · Sin colas · Ticket móvil</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 22€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">👑 Imprescindible</span>
+              <h3 class="ttc-name">Palacio de Versalles</h3>
+              <p class="ttc-desc">Acceso palacio + jardines · Cancela gratis</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 18€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/eiffel-tower/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🗼 Icónico</span>
+              <h3 class="ttc-name">Torre Eiffel</h3>
+              <p class="ttc-desc">Subida hasta la cima · Reserva anticipada</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 11€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🎨 Arte</span>
+              <h3 class="ttc-name">Musée d'Orsay</h3>
+              <p class="ttc-desc">Colección impresionista · Acceso prioritario</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 14€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en París →
+          </a>
+          <a href="articles/paris.html" style="color:var(--muted)">Leer guía completa de París</a>
+        </div>
+      </div>
+
+      <!-- ── ROMA ── -->
+      <div class="tiq-panel" id="panel-roma">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/colosseum-and-ancient-rome/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏟️ Más visitado</span>
+              <h3 class="ttc-name">Coliseo y Foro Romano</h3>
+              <p class="ttc-desc">Entrada combinada · Salta la cola · 2 días</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 16€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/vatican-museums-sistine-chapel/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Imprescindible</span>
+              <h3 class="ttc-name">Museos Vaticanos</h3>
+              <p class="ttc-desc">Capilla Sixtina · Acceso temprano 8AM</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 20€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/borghese-gallery/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🖼️ Arte</span>
+              <h3 class="ttc-name">Galería Borghese</h3>
+              <p class="ttc-desc">Bernini y Caravaggio · Reserva obligatoria</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 25€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/s/castel-santangelo/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏰 Vistas</span>
+              <h3 class="ttc-name">Castel Sant'Angelo</h3>
+              <p class="ttc-desc">Vistas panorámicas del Tíber · Sin esperas</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 12€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/rome-tickets-crome/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Roma →
+          </a>
+          <a href="articles/roma.html" style="color:var(--muted)">Leer guía completa de Roma</a>
+        </div>
+      </div>
+
+      <!-- ── BARCELONA ── -->
+      <div class="tiq-panel" id="panel-barcelona">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/sagrada-familia/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Más popular</span>
+              <h3 class="ttc-name">Sagrada Família</h3>
+              <p class="ttc-desc">Torres incluidas · Acceso prioritario Gaudí</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 26€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/casa-batllo/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🦎 Experiencia</span>
+              <h3 class="ttc-name">Casa Batlló</h3>
+              <p class="ttc-desc">Magic Nights · Audioguía incluida</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 35€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/park-guell/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🌿 Gaudí</span>
+              <h3 class="ttc-name">Park Güell</h3>
+              <p class="ttc-desc">Recinto monumental · Entrada limitada</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 10€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/s/camp-nou/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⚽ Deporte</span>
+              <h3 class="ttc-name">Camp Nou · FC Barcelona</h3>
+              <p class="ttc-desc">Tour del estadio + museo · Experiencia única</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 26€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/barcelona-tickets-cbarcelona/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Barcelona →
+          </a>
+          <a href="articles/barcelona.html" style="color:var(--muted)">Leer guía completa de Barcelona</a>
+        </div>
+      </div>
+
+      <!-- ── LISBOA ── -->
+      <div class="tiq-panel" id="panel-lisboa">
+        <div class="tiq-grid">
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/tower-of-belem/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1568454537842-d933259bb258?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏰 UNESCO</span>
+              <h3 class="ttc-name">Torre de Belém</h3>
+              <p class="ttc-desc">Patrimonio de la Humanidad · Sin esperas</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 6€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/jeronimos-monastery/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">⛪ Arte manuelino</span>
+              <h3 class="ttc-name">Monasterio de los Jerónimos</h3>
+              <p class="ttc-desc">Gótico manuelino · Ticket rápido online</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 10€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/oceanarium-of-lisbon/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1488330890490-c291ecf62571?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🐠 Familia</span>
+              <h3 class="ttc-name">Oceanario de Lisboa</h3>
+              <p class="ttc-desc">El mayor acuario de Europa · Recomendado</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 19€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/s/pena-palace-sintra/?partner=TU_TIQETS_PARTNER_ID"
+             target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1548164560-e04e2a42fce5?w=500&q=75')"></div>
+            <div class="ttc-body">
+              <span class="ttc-badge">🏯 Excursión</span>
+              <h3 class="ttc-name">Palacio de Sintra</h3>
+              <p class="ttc-desc">Día completo desde Lisboa · Incluye transporte</p>
+              <div class="ttc-footer">
+                <span class="ttc-price">Desde 14€</span>
+                <span class="ttc-cta">Reservar →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div class="tiq-panel-footer">
+          <a href="https://www.tiqets.com/es/lisbon-tickets-clisbon/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored">
+            Ver todas las entradas en Lisboa →
+          </a>
+          <a href="articles/lisboa.html" style="color:var(--muted)">Leer guía de hoteles en Lisboa</a>
+        </div>
+      </div>
+
+      <!-- Nota legal afiliado -->
+      <p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:1.5rem;">
+        Entradas en colaboración con <strong>Tiqets</strong> · Este sitio recibe una comisión por reservas completadas · Sin costo adicional para el usuario
+      </p>
+
+    </div>
+  </section>
+  <!-- /TIQETS -->
+
+  <!-- AFILIADOS BAND -->
+  <div class="promo-band">
+    <div class="promo-inner">
+      <div class="promo-text reveal">
+        <p class="promo-eyebrow">Herramientas para viajeros</p>
+        <h2 class="promo-title">Planifica tu viaje con los mejores precios</h2>
+        <p class="promo-desc">Hemos seleccionado las plataformas más confiables para que reserves con total seguridad. Comparamos precios en tiempo real para que siempre obtengas la mejor oferta.</p>
+        <div class="promo-partners">
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2F" target="_blank" rel="sponsored"></a>
+          <a href="https://www.skyscanner.es" target="_blank" rel="noopener" class="partner-btn outline">Comparar vuelos →</a>
+        </div>
+      </div>
+      <div class="promo-cards reveal">
+        <div class="promo-card"><div class="promo-card-icon">🏨</div><div><p class="promo-card-title">Hoteles con hasta 40% descuento</p><p class="promo-card-sub">Más de 1.2M propiedades. Cancela gratis en la mayoría.</p></div></div>
+        <div class="promo-card"><div class="promo-card-icon">✈️</div><div><p class="promo-card-title">Vuelos al mejor precio garantizado</p><p class="promo-card-sub">Comparamos cientos de aerolíneas para encontrarte la tarifa más económica.</p></div></div>
+        <div class="promo-card"><div class="promo-card-icon">🎟️</div><div><p class="promo-card-title">Entradas y tours sin colas</p><p class="promo-card-sub">Reserva online tus visitas guiadas y salta las colas en los monumentos.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="newsletter-inner reveal">
+      <p class="section-tag">Únete a nuestra comunidad</p>
+      <h2 class="section-title">Inspiración en tu bandeja de entrada</h2>
+      <p class="section-sub">Cada semana, nuestros editores seleccionan los mejores destinos, consejos y ofertas exclusivas para suscriptores.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="tu@email.com"/>
+        <button class="btn-primary" onclick="handleSubscribe(this)">Suscribirme →</button>
+      </div>
+      <p class="newsletter-note">✦ Sin spam. Baja cuando quieras. +12.000 viajeros suscritos.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes. Viaja con conocimiento, estilo y confianza.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">📌</a>
+          <a href="#" class="social-btn">▶</a>
+          <a href="#" class="social-btn">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="articles/paris.html">París</a></li><li><a href="articles/roma.html">Roma</a></li><li><a href="articles/barcelona.html">Barcelona</a></li><li><a href="articles/lisboa.html">Lisboa</a></li></ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="articles/primavera-europa.html">Europa en primavera</a></li><li><a href="articles/presupuesto-europa.html">Viaje económico</a></li><li><a href="articles/gastronomia-europa.html">Gastronomía</a></li><li><a href="#">Naturaleza</a></li></ul></div>
+      <div class="footer-col"><h4>Sobre nosotros</h4><ul><li><a href="sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Publicidad</a></li><li><a href="#">Contacto</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière · Todos los derechos reservados</span>
+      <div class="footer-legal"><a href="privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a><a href="#">Afiliados</a></div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros (Google AdSense, afiliados) para mejorar tu experiencia. <a href="#" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
+      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
+    </div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+
+    // Mobile menu
+    document.getElementById('mobileBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold:.12, rootMargin:'0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay=`${(i%4)*80}ms`; observer.observe(el); });
+
+    // Newsletter
+    function handleSubscribe(btn) {
+      const input = btn.previousElementSibling;
+      if(!input.value.includes('@')){ input.style.borderColor='#c0392b'; setTimeout(()=>input.style.borderColor='',1500); return; }
+      btn.textContent='✓ ¡Suscrito!'; btn.style.background='#2E7D32';
+      input.value=''; input.disabled=true; btn.disabled=true;
+    }
+
+    // Cookies
+    const banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+
+    // Tiqets City Tabs
+    function switchTab(btn, city) {
+      document.querySelectorAll('.tiq-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tiq-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + city).classList.add('active');
+    }
+  </script>
+</body>
+</html>
