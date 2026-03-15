@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Louvre en 3 horas: ruta optimizada para no perderte lo esencial · Voyage Lumière</title>
+  <meta name="description" content="Ruta optimizada para visitar el Louvre en 3 horas: las obras imprescindibles, el orden correcto y cómo evitar las colas. Guía práctica 2025."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%),url('https://picsum.photos/id/1050/1600/900') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
+    .breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .route-step{display:flex;gap:1.2rem;margin-bottom:1.5rem;align-items:flex-start}
+    .step-num{width:40px;height:40px;flex-shrink:0;background:var(--navy);color:var(--gold);font-family:var(--ff-head);font-size:1.1rem;font-weight:700;border-radius:2px;display:flex;align-items:center;justify-content:center}
+    .step-body{}
+    .step-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+    .step-desc{font-size:.88rem;color:#555;line-height:1.6;margin:0}
+    .step-time{display:inline-block;background:var(--warm);border:1px solid var(--border);font-size:.65rem;font-weight:700;color:var(--muted);padding:.15rem .5rem;border-radius:1px;margin-top:.4rem;text-transform:uppercase;letter-spacing:.08em}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+    .article-card{background:#fff;border:1px solid var(--border);border-radius:3px;overflow:hidden;transition:box-shadow .25s,transform .25s}
+    .article-card:hover{box-shadow:0 8px 28px rgba(26,43,76,.1);transform:translateY(-3px)}
+    .article-img{height:200px;background-size:cover;background-position:center}
+    .article-body{padding:1.4rem}
+    .article-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:.5rem}
+    .article-title{font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:.6rem}
+    .article-excerpt{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+    .article-footer{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted)}
+    .read-more{color:var(--gold);font-weight:700;text-decoration:none}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a><span>/</span>
+        <a href="paris.html">París</a><span>/</span>
+        <span style="color:#fff">El Louvre en 3 horas</span>
+      </div>
+      <h1>El Louvre en <em>3 horas</em>:<br/>ruta optimizada</h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">París · Cultura</span>
+        <span>📅 Mayo 2025</span><span>⏱ 5 min de lectura</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main class="article-main">
+      <div class="article-content">
+
+        <p>El Louvre tiene 35.000 obras expuestas en 72.000 m² de galerías. Si intentas verlo todo, acabas agotado y sin recordar nada. La clave es ir con una ruta clara, saber qué quieres ver y cuánto tiempo tienes. Esta guía está diseñada para 3 horas: el tiempo ideal para ver lo esencial sin agotarte.</p>
+
+        <div class="tip-box">
+          <strong>⏰ Antes de entrar — reserva obligatoria</strong>
+          <p>El Louvre requiere reserva previa en <strong>ticketlouvre.fr</strong>. El precio es 22€. Si vas miércoles o viernes, la apertura nocturna (hasta las 21:45h) tiene menos gente. Llega 15 minutos antes de tu hora reservada.</p>
+        </div>
+
+        <h2 id="ruta">La ruta de 3 horas — paso a paso</h2>
+        <p>Esta ruta empieza en la Puerta Richelieu (la menos congestionada) y sigue un recorrido lógico que evita ir y volver entre alas. Sigue el orden y no te detengas más de lo indicado en cada obra — hay tiempo para admirar, no para estudiar.</p>
+
+        <div class="route-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Victoria Alada de Samotracia</div>
+            <p class="step-desc">Al subir la escalera Daru te la encuentras de frente. Es la primera gran impresión del Louvre: 2,75 metros de mármol blanco sobre una proa de barco. Escultura helenística del siglo II a.C. Una de las esculturas más impresionantes que existen.</p>
+            <span class="step-time">⏱ 10 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Venus de Milo</div>
+            <p class="step-desc">Ala Sully, planta baja. La escultura más famosa del mundo antiguo. Sin brazos desde que fue descubierta en 1820. Rodéala completamente — la vista de espaldas es igual de impresionante que la frontal.</p>
+            <span class="step-time">⏱ 10 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">La Mona Lisa — Sala 711</div>
+            <p class="step-desc">Ala Denon, primera planta. Es más pequeña de lo que imaginas (77×53 cm) y estará rodeada de gente. Ve directo, pasa 5 minutos y sigue. El truco: llega a las 9:05 AM o después de las 16:00h cuando los grupos turísticos ya se han ido.</p>
+            <span class="step-time">⏱ 10 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Las Bodas de Caná — Sala 711</div>
+            <p class="step-desc">Justo enfrente de la Mona Lisa. Un óleo de Veronese de 10×7 metros: la pintura más grande del Louvre. La mayoría de los visitantes se dan la vuelta a ver la Mona Lisa y no miran esta obra, que es objetivamente más impresionante.</p>
+            <span class="step-time">⏱ 10 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">La Libertad guiando al pueblo — Delacroix</div>
+            <p class="step-desc">Ala Denon, primera planta, Sala 700. El cuadro más político del Louvre. Delacroix pintó en 1830 la Revolución de Julio con una figura femenina que representa a Francia. El detalle de los muertos en el suelo es brutal.</p>
+            <span class="step-time">⏱ 10 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-title">Galería de Apolo</div>
+            <p class="step-desc">Ala Denon, primera planta. La galería más fastuosa del Louvre: 60 metros de techo pintado, las joyas de la Corona francesa y la inspiración directa de Versalles. Si visitas el Louvre de noche (miércoles o viernes), esta sala iluminada artificialmente es irreal.</p>
+            <span class="step-time">⏱ 15 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">7</div>
+          <div class="step-body">
+            <div class="step-title">Antigüedades egipcias — Momias y esfinges</div>
+            <p class="step-desc">Ala Sully, planta baja. El Louvre tiene una de las colecciones egipcias más importantes del mundo fuera de El Cairo. Las salas de momias y sarcófagos son especialmente impresionantes. El escriba sentado (sala 635) es una de las esculturas más expresivas de la colección.</p>
+            <span class="step-time">⏱ 20 min</span>
+          </div>
+        </div>
+
+        <div class="route-step">
+          <div class="step-num">8</div>
+          <div class="step-body">
+            <div class="step-title">Las salas Richelieu — Esculturas francesas</div>
+            <p class="step-desc">Ala Richelieu, planta baja. Dos patios acristalados con esculturas monumentales francesas. Son los espacios más tranquilos del Louvre — la mayoría de visitantes no llega hasta aquí. Perfectos para terminar el recorrido con calma.</p>
+            <span class="step-time">⏱ 20 min</span>
+          </div>
+        </div>
+
+        <img class="article-img-full" src="https://picsum.photos/id/1050/1000/500" alt="Interior del Museo del Louvre"/>
+        <p class="img-caption">La Galería de Apolo — uno de los espacios más fastuosos del mundo</p>
+
+        <h2 id="consejos">Consejos prácticos</h2>
+
+        <h3>Dónde comer dentro del Louvre</h3>
+        <p>El Café Marly tiene las mejores vistas a la pirámide y los jardines del Palais Royal. Abre a las 8 AM — perfecto para desayunar antes de entrar. Precio medio: 15–25€. También hay un supermercado en el Carrousel du Louvre (el centro comercial subterráneo) para algo más económico.</p>
+
+        <h3>Lo que puedes saltarte sin remordimientos</h3>
+        <p>Las galerías de pinturas flamencas (Ala Richelieu, segunda planta) son excelentes pero requieren horas. Las antigüedades griegas arcaicas (antes de la Venus de Milo) pueden saltarse en una primera visita. La colección de artes decorativas del Louvre es enorme — reserva una visita específica si te interesa.</p>
+
+        <div class="tip-box">
+          <strong>📱 Descarga la app oficial antes de entrar</strong>
+          <p>La app del Louvre (gratuita) tiene un mapa interactivo con la ubicación exacta de cada obra. Imprescindible para no perderse. Descárgala con WiFi antes de entrar porque dentro la señal es mala.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">📋 En este artículo</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#ruta">🗺️ La ruta de 3 horas</a></li>
+            <li><a href="#consejos">💡 Consejos prácticos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🎟️ Entrada al Louvre</div>
+        <div class="sidebar-card-body">
+          <p>Reserva tu entrada con acceso prioritario. Sin colas, confirmación inmediata.</p>
+          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Comprar entrada →</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🏨 Hoteles en París</div>
+        <div class="sidebar-card-body">
+          <p>Alójate cerca del Louvre en Le Marais o el 1er arrondissement.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=6776&awinaffid=TU_ID&p=https://www.booking.com/city/fr/paris.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver hoteles →</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header" style="text-align:center;">
+        <p class="section-tag">Sigue explorando</p>
+        <h2 class="section-title">Más sobre París</h2>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1029/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Guía</p>
+            <h3 class="article-title">Guía completa de París para 2025</h3>
+            <p class="article-excerpt">Todo lo que necesitas: qué ver, dónde comer y los mejores barrios.</p>
+            <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1060/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Gastronomía</p>
+            <h3 class="article-title">Los mejores bistrós de París</h3>
+            <p class="article-excerpt">Donde comen los parisinos de verdad, lejos de las zonas turísticas.</p>
+            <div class="article-footer"><span>7 min</span><a href="paris-bistros.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1050/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Día trip</p>
+            <h3 class="article-title">Versalles desde París</h3>
+            <p class="article-excerpt">Guía completa para una excursión de un día al palacio más famoso del mundo.</p>
+            <div class="article-footer"><span>9 min</span><a href="paris-versalles.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <div class="cookie-banner hidden" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros. <a href="../privacidad.html">Política de privacidad</a></p>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="btn-primary" style="padding:.6rem 1.2rem;font-size:.8rem;">Aceptar</button>
+      <button onclick="dismissCookies()" style="background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.2rem;border-radius:2px;cursor:pointer;font-size:.8rem;">Solo necesarias</button>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+    const observer=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const banner=document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
+    function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden')}
+    function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden')}
+  </script>
+</body>
+</html>
