@@ -192,6 +192,14 @@
           <p>Si planeas visitar más de 3 museos, el <strong>Paris Museum Pass</strong> (de 2, 4 o 6 días) te da acceso ilimitado a más de 50 museos y monumentos con acceso prioritario sin colas. <a href="https://www.tiqets.com/en/things-to-do-in-paris-c66746/tickets-for-paris-museum-pass-p1090622/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored">Comprar Paris Museum Pass →</a></p>
         </div>
 
+            <div class="sidebar-card">
+        <div class="sidebar-card-header">🛡️ Seguro de viaje</div>
+        <div class="sidebar-card-body">
+          <p>Las actividades en naturaleza requieren cobertura especial. IATI cubre deportes de aventura y senderismo.</p>
+          <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn" style="background:#C62828;color:#fff;">Ver seguros IATI →</a>
+        </div>
+      </div>
+      
         <!-- TIQETS — Entradas París -->
         <div class="tiqets-inline-block">
           <div class="tiqets-inline-header">
@@ -294,6 +302,140 @@
           </div>
         </div>
       </div>
+
+      <!-- WIDGET: Conversor de monedas -->
+<div style="background:var(--warm);border:1px solid var(--border);
+     border-radius:3px;overflow:hidden;margin:2rem 0;">
+  <div style="background:var(--navy);padding:1rem 1.4rem;
+       display:flex;align-items:center;justify-content:space-between;">
+    <span style="font-family:var(--ff-head);color:#fff;
+          font-size:1rem;font-weight:600;">
+      💱 Conversor de monedas — tiempo real
+    </span>
+    <span style="font-size:.68rem;color:rgba(255,255,255,.4);
+          text-transform:uppercase;letter-spacing:.08em;">
+      Tipos BCE · Actualizado diariamente
+    </span>
+  </div>
+  <div style="padding:1.2rem;">
+
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;
+         gap:10px;align-items:end;margin-bottom:1rem;">
+      <div>
+        <label style="font-size:.72rem;color:var(--muted);
+               text-transform:uppercase;letter-spacing:.08em;
+               display:block;margin-bottom:.4rem;">Cantidad</label>
+        <input type="number" id="cvAmount" value="1000" min="0"
+          style="width:100%;padding:.65rem .9rem;font-size:.95rem;
+          font-weight:600;border:1px solid var(--border);
+          border-radius:2px;background:var(--cream);
+          color:var(--navy);box-sizing:border-box;"/>
+      </div>
+      <button onclick="cvSwap()"
+        style="padding:.65rem 1rem;border:1px solid var(--border);
+        border-radius:2px;background:var(--warm);cursor:pointer;
+        font-size:1rem;color:var(--navy);">⇄</button>
+      <div>
+        <label style="font-size:.72rem;color:var(--muted);
+               text-transform:uppercase;letter-spacing:.08em;
+               display:block;margin-bottom:.4rem;">Resultado</label>
+        <div style="padding:.65rem .9rem;background:var(--cream);
+             border:1px solid var(--gold);border-radius:2px;
+             font-size:.95rem;font-weight:700;color:var(--navy);
+             min-height:40px;" id="cvResult">—</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;
+         gap:10px;margin-bottom:1rem;">
+      <div>
+        <label style="font-size:.72rem;color:var(--muted);
+               display:block;margin-bottom:.4rem;">De</label>
+        <select id="cvFrom"
+          style="width:100%;padding:.6rem .8rem;
+          border:1px solid var(--border);border-radius:2px;
+          background:var(--cream);color:var(--navy);font-size:.85rem;">
+          <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
+          <option value="USD">🇺🇸 USD — Dólar</option>
+          <option value="EUR">🇪🇺 EUR — Euro</option>
+          <option value="GBP">🇬🇧 GBP — Libra</option>
+          <option value="ARS">🇦🇷 ARS — Peso argentino</option>
+          <option value="COP">🇨🇴 COP — Peso colombiano</option>
+          <option value="BRL">🇧🇷 BRL — Real</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:.72rem;color:var(--muted);
+               display:block;margin-bottom:.4rem;">A</label>
+        <select id="cvTo"
+          style="width:100%;padding:.6rem .8rem;
+          border:1px solid var(--border);border-radius:2px;
+          background:var(--cream);color:var(--navy);font-size:.85rem;">
+          <option value="EUR">🇪🇺 EUR — Euro</option>
+          <option value="GBP">🇬🇧 GBP — Libra</option>
+          <option value="CHF">🇨🇭 CHF — Franco suizo</option>
+          <option value="NOK">🇳🇴 NOK — Corona noruega</option>
+          <option value="SEK">🇸🇪 SEK — Corona sueca</option>
+          <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
+          <option value="USD">🇺🇸 USD — Dólar</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="background:var(--cream);border:1px solid var(--border);
+         border-radius:2px;padding:.75rem 1rem;font-size:.8rem;
+         color:var(--muted);display:flex;justify-content:space-between;
+         flex-wrap:wrap;gap:.5rem;">
+      <span id="cvRate">Cargando tipo de cambio...</span>
+      <span id="cvTime"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  let cvRates = {};
+  async function cvFetch(){
+    try {
+      const r = await fetch('https://api.frankfurter.app/latest?from=EUR');
+      const d = await r.json();
+      cvRates = d.rates; cvRates['EUR'] = 1;
+      document.getElementById('cvTime').textContent =
+        'Actualizado: ' + new Date().toLocaleTimeString('es-MX',
+        {hour:'2-digit',minute:'2-digit'});
+      cvConvert();
+    } catch(e) {
+      cvRates = {EUR:1,USD:1.08,GBP:0.86,MXN:18.5,
+        CHF:0.97,NOK:11.4,SEK:11.2,ARS:980,COP:4300,BRL:5.5};
+      document.getElementById('cvTime').textContent = 'Tipo orientativo';
+      cvConvert();
+    }
+  }
+  window.cvConvert = function(){
+    const from = document.getElementById('cvFrom').value;
+    const to   = document.getElementById('cvTo').value;
+    const amt  = parseFloat(document.getElementById('cvAmount').value)||0;
+    if(!cvRates[from]||!cvRates[to]) return;
+    const rate = cvRates[to] / cvRates[from];
+    const res  = amt * rate;
+    const fmt  = res >= 1000
+      ? res.toLocaleString('es-MX',{maximumFractionDigits:0})
+      : res.toFixed(2);
+    document.getElementById('cvResult').textContent = fmt + ' ' + to;
+    document.getElementById('cvRate').textContent =
+      '1 ' + from + ' = ' + (rate<0.01?rate.toFixed(4):rate.toFixed(2)) + ' ' + to;
+  };
+  window.cvSwap = function(){
+    const f=document.getElementById('cvFrom'),
+          t=document.getElementById('cvTo'),tmp=f.value;
+    f.value=t.value; t.value=tmp; cvConvert();
+  };
+  document.getElementById('cvFrom').addEventListener('change',cvConvert);
+  document.getElementById('cvTo').addEventListener('change',cvConvert);
+  document.getElementById('cvAmount').addEventListener('input',cvConvert);
+  cvFetch();
+})();
+</script>
 
       <div class="ad-rect-wrap" style="margin:2.5rem 0;">
         <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
