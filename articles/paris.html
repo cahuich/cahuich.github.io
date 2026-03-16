@@ -6,22 +6,24 @@
   <title>Guía completa de París 2025 — Voyage Lumière</title>
   <meta name="description" content="Todo lo que necesitas saber para visitar París: qué ver, dónde comer, dónde dormir y los mejores consejos para aprovechar al máximo tu viaje a la Ciudad de la Luz."/>
   <meta name="keywords" content="París guía viaje, qué ver en París, hoteles París, museos París, Torre Eiffel"/>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-52MYXE4VXP');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-52MYXE4VXP');
+  </script>
+
   <link rel="stylesheet" href="../css/style.css"/>
-  <!-- GetYourGuide Integration Analyzer (reemplaza 1ABLZMR con tu ID real de GYG) -->
+
+  <!-- GetYourGuide Widget Script -->
   <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
+
   <style>
-    /* ── ARTICLE HERO ── */
     .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
-    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.7) 100%), url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=1600&q=900') center/cover no-repeat; }
+    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.7) 100%), url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=1600&q=80')  center/cover no-repeat; }
     .article-hero-content { position:relative; z-index:2; padding:0 8vw 4rem; max-width:900px; animation:fadeUp .8s ease-out both; }
     .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.65); margin-bottom:1.2rem; }
     .breadcrumb a { color:rgba(255,255,255,.65); transition:color .3s; }
@@ -31,41 +33,9 @@
     .article-hero h1 em { font-style:italic; color:var(--gold-lt); }
     .article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; color:rgba(255,255,255,.7); font-size:.82rem; }
     .article-meta-tag { background:var(--gold); color:var(--navy); padding:.25rem .75rem; border-radius:1px; font-weight:700; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
-
-    <!-- Copia este bloque en paris.html, roma.html, etc. -->
-    <div style="background:var(--navy);border-radius:3px;
-     padding:1.2rem 1.5rem;margin:2rem 0;
-     display:flex;align-items:center;justify-content:space-between;
-     flex-wrap:wrap;gap:1rem;">
-    <div>
-    <p style="color:var(--gold);font-size:.7rem;text-transform:uppercase;
-       letter-spacing:.12em;font-weight:700;margin-bottom:.3rem;">
-       ✈️ Vuelos desde México
-    </p>
-    <p style="color:#fff;font-size:.95rem;font-weight:700;">
-       Compara vuelos a París desde Ciudad de México
-    </p>
-    <p style="color:rgba(255,255,255,.55);font-size:.78rem;margin-top:.2rem;">
-       800+ aerolíneas · Combinaciones únicas · Precio garantizado
-    </p>
-    </div>
-    <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340">
-    <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0">
-     target="_blank" rel="noopener sponsored"
-     style="background:var(--gold);color:var(--navy);
-     padding:.75rem 1.5rem;border-radius:2px;font-weight:700;
-     font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;
-     white-space:nowrap;text-decoration:none;">
-     Buscar vuelos →
-  </a>
-</div>
-    
-    /* ── ARTICLE LAYOUT ── */
     .article-wrapper { max-width:1200px; margin:0 auto; padding:4rem 5vw; display:grid; grid-template-columns:1fr 320px; gap:4rem; align-items:start; }
     .article-main {}
     .article-sidebar { position:sticky; top:96px; display:flex; flex-direction:column; gap:1.5rem; }
-
-    /* ── ARTICLE CONTENT ── */
     .article-content { font-size:1.05rem; line-height:1.85; color:#333; }
     .article-content h2 { font-family:var(--ff-head); font-size:1.75rem; font-weight:600; color:var(--navy); margin:2.5rem 0 1rem; padding-top:1rem; border-top:1px solid var(--border); }
     .article-content h3 { font-family:var(--ff-head); font-size:1.2rem; font-weight:600; color:var(--navy); margin:1.8rem 0 .75rem; }
@@ -75,26 +45,23 @@
     .article-content strong { color:var(--navy); font-weight:700; }
     .article-content a { color:var(--gold); border-bottom:1px solid rgba(197,160,89,.3); transition:border-color .3s; }
     .article-content a:hover { border-color:var(--gold); }
-
-    /* highlight box */
     .tip-box { background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15)); border-left:3px solid var(--gold); padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
     .tip-box strong { color:var(--navy); display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
     .tip-box p { margin:0; font-size:.93rem; color:#555; }
-
-    /* image in article */
     .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
     .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
 
+    /* KIWI BANNER */
+    .kiwi-banner { background:var(--navy); border-radius:3px; padding:1.2rem 1.5rem; margin:2rem 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .kiwi-banner-label { color:var(--gold); font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; margin-bottom:.3rem; }
+    .kiwi-banner-title { color:#fff; font-size:.95rem; font-weight:700; margin-bottom:.2rem; }
+    .kiwi-banner-sub { color:rgba(255,255,255,.55); font-size:.78rem; }
+    .kiwi-banner-btn { display:inline-block; background:var(--gold); color:var(--navy); padding:.75rem 1.5rem; border-radius:2px; font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; text-decoration:none; transition:background .2s; }
+    .kiwi-banner-btn:hover { background:var(--gold-lt); }
 
-    /* ── TIQETS WIDGET ── */
+    /* TIQETS */
     .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
-    .tiqets-row {
-      display:flex; align-items:center; gap:.7rem;
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:2px; padding:.65rem .8rem;
-      transition:background .25s, border-color .25s, transform .2s;
-      text-decoration:none; color:inherit;
-    }
+    .tiqets-row { display:flex; align-items:center; gap:.7rem; background:var(--warm); border:1px solid var(--border); border-radius:2px; padding:.65rem .8rem; transition:background .25s, border-color .25s, transform .2s; text-decoration:none; color:inherit; }
     .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
     .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
     .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
@@ -102,36 +69,12 @@
     .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
     .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
     .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
-
-    
-    <!-- START ADVERTISER: Kiwi MX from awin.com -->
-
-    <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340">
-    <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0">
-    </a>
-
-    <!-- END ADVERTISER: Kiwi MX from awin.com -->
-
-    /* ── TIQETS INLINE BLOCK ── */
-    .tiqets-inline-block {
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:3px; overflow:hidden; margin:2.5rem 0;
-    }
-    .tiqets-inline-header {
-      background:linear-gradient(135deg, var(--navy), #0d1e3a);
-      padding:1rem 1.4rem;
-      display:flex; align-items:center; justify-content:space-between;
-      flex-wrap:wrap; gap:.5rem;
-    }
+    .tiqets-inline-block { background:var(--warm); border:1px solid var(--border); border-radius:3px; overflow:hidden; margin:2.5rem 0; }
+    .tiqets-inline-header { background:linear-gradient(135deg, var(--navy), #0d1e3a); padding:1rem 1.4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
     .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
     .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
     .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
-    .tiqets-card-inline {
-      display:flex; align-items:center; gap:.9rem;
-      background:#fff; padding:.9rem 1.1rem;
-      text-decoration:none; color:inherit;
-      transition:background .2s;
-    }
+    .tiqets-card-inline { display:flex; align-items:center; gap:.9rem; background:#fff; padding:.9rem 1.1rem; text-decoration:none; color:inherit; transition:background .2s; }
     .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
     .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
     .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
@@ -140,49 +83,33 @@
     .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
     .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
     .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
-    .tiqets-inline-footer {
-      padding:.7rem 1.2rem;
-      display:flex; justify-content:space-between; align-items:center;
-      flex-wrap:wrap; gap:.5rem;
-      background:var(--warm); border-top:1px solid var(--border);
-    }
+    .tiqets-inline-footer { padding:.7rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; background:var(--warm); border-top:1px solid var(--border); }
     .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
     .tiqets-inline-footer a:hover { color:var(--navy); }
     .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
     @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
 
-
-    /* ── SIDEBAR WIDGETS ── */
+    /* SIDEBAR */
     .sidebar-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
     .sidebar-card-header { background:var(--navy); color:#fff; padding:1rem 1.2rem; font-family:var(--ff-head); font-size:.95rem; font-weight:600; }
     .sidebar-card-body { padding:1.2rem; }
     .sidebar-card-body p { font-size:.85rem; line-height:1.6; color:var(--muted); margin-bottom:1rem; }
-    .sidebar-booking-btn { display:block; background:var(--gold); color:var(--navy); text-align:center; padding:.8rem; border-radius:2px; font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+    .sidebar-booking-btn { display:block; background:var(--gold); color:var(--navy); text-align:center; padding:.8rem; border-radius:2px; font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; text-decoration:none; }
     .sidebar-booking-btn:hover { background:var(--gold-lt); }
-
     .toc { list-style:none; padding:0; display:flex; flex-direction:column; gap:.4rem; }
-    .toc li a { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.5rem; transition:color .3s; }
+    .toc li a { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.5rem; transition:color .3s; text-decoration:none; }
     .toc li a::before { content:'→'; color:var(--gold); font-size:.7rem; }
     .toc li a:hover { color:var(--navy); }
-
     .weather-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
     .weather-item { background:var(--warm); border-radius:2px; padding:.6rem .8rem; text-align:center; }
     .weather-month { font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
     .weather-temp { font-family:var(--ff-head); font-size:.95rem; color:var(--navy); font-weight:600; }
-
-    /* ── RELATED ARTICLES ── */
     .related-section { background:var(--warm); padding:5rem 5vw; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width:900px) {
-      .article-wrapper { grid-template-columns:1fr; }
-      .article-sidebar { position:static; }
-    }
+    @media(max-width:900px) { .article-wrapper { grid-template-columns:1fr; } .article-sidebar { position:static; } }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
@@ -194,14 +121,13 @@
     <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- HERO -->
   <div class="article-hero">
     <div class="article-hero-bg"></div>
     <div class="article-hero-content">
       <div class="breadcrumb">
         <a href="../index.html">Inicio</a>
         <span>/</span>
-        <a href="#">Francia</a>
+        <a href="paris.html">Francia</a>
         <span>/</span>
         <span style="color:#fff">París</span>
       </div>
@@ -215,18 +141,11 @@
     </div>
   </div>
 
-  <!-- AD LEADERBOARD -->
   <div class="ad-banner">
-    <div class="ad-placeholder">
-      <!-- ADSENSE: código 728×90 aquí -->
-      📢 Google AdSense 728×90
-    </div>
+    <div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div>
   </div>
 
-  <!-- ARTICLE BODY -->
   <div class="article-wrapper">
-
-    <!-- MAIN CONTENT -->
     <main class="article-main">
       <div class="article-content">
 
@@ -235,6 +154,18 @@
         <div class="tip-box">
           <strong>💡 Consejo de editor</strong>
           <p>La mejor época para visitar París es entre <strong>abril y junio</strong>: clima agradable, jardines en flor y menos turistas que en agosto. Evita agosto si puedes, ya que muchos parisinos están de vacaciones y algunos negocios cierran.</p>
+        </div>
+
+        <!-- KIWI BANNER -->
+        <div class="kiwi-banner">
+          <div>
+            <p class="kiwi-banner-label">✈️ Vuelos desde México</p>
+            <p class="kiwi-banner-title">Compara vuelos a París desde Ciudad de México</p>
+            <p class="kiwi-banner-sub">800+ aerolíneas · Combinaciones únicas · Precio garantizado</p>
+          </div>
+          <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340"
+             target="_blank" rel="noopener sponsored"
+             class="kiwi-banner-btn">Buscar vuelos →</a>
         </div>
 
         <h2 id="que-ver">¿Qué ver en París?</h2>
@@ -248,84 +179,53 @@
           <li>Picnic en el Champ de Mars: tradición parisina imprescindible</li>
         </ul>
 
-        <img class="article-img-full" src="https://aicdn.picsart.com/6a53b162-d444-4a4b-98b0-5eeb3640082a.jpg?w=700&q=80" alt="Torre Eiffel al atardecer"/>
+
+        <img class="article-img-full" src="https://aicdn.picsart.com/6a53b162-d444-4a4b-98b0-5eeb3640082a.jpg?w=700&q=500" alt="Torre Eiffel al atardecer"/>     
         <p class="img-caption">La Torre Eiffel vista desde el Champ de Mars al atardecer · © Unsplash</p>
 
-        <h3>🎨 El Louvre y el Museo d'Orsay</h3>
+       <h3>🎨 El Louvre y el Museo d'Orsay</h3>
         <p>El Louvre alberga más de 35.000 obras de arte y podría ocuparte semanas enteras. Planifica estratégicamente: decide qué quieres ver antes de llegar (la Mona Lisa, la Venus de Milo, la Victoria Alada de Samotracia) y sigue el mapa oficial. Reserva con antelación para evitar la cola.</p>
-        <p>El Musée d'Orsay, alojado en una antigua estación de tren, es muchos visitantes consideran superior al Louvre en experiencia: alberga la mayor colección impresionista del mundo, con obras de Monet, Renoir, Van Gogh y Degas.</p>
+        <p>El Musée d'Orsay, alojado en una antigua estación de tren, es para muchos visitantes superior al Louvre en experiencia: alberga la mayor colección impresionista del mundo, con obras de Monet, Renoir, Van Gogh y Degas.</p>
 
         <div class="tip-box">
           <strong>🎫 Paris Museum Pass</strong>
-          <p>Si planeas visitar más de 3 museos, el <strong>Paris Museum Pass</strong> (de 2, 4 o 6 días) te da acceso ilimitado a más de 50 museos y monumentos, incluyendo el Louvre, Versalles y el Musée d'Orsay, con acceso prioritario sin colas.</p>
+          <p>Si planeas visitar más de 3 museos, el <strong>Paris Museum Pass</strong> (de 2, 4 o 6 días) te da acceso ilimitado a más de 50 museos y monumentos con acceso prioritario sin colas. <a href="https://www.tiqets.com/en/things-to-do-in-paris-c66746/tickets-for-paris-museum-pass-p1090622/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored">Comprar Paris Museum Pass →</a></p>
         </div>
 
-        
-        <!-- ── Tiqets Inline Widget — París ───────────────── -->
+        <!-- TIQETS — Entradas París -->
         <div class="tiqets-inline-block">
           <div class="tiqets-inline-header">
             <span class="tiq-title">🎫 Entradas para las atracciones de París</span>
             <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
           </div>
           <div class="tiqets-cards-grid">
-          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🏛️</span>
-            <span class="tci-body">
-              <span class="tci-name">Museo del Louvre</span>
-              <span class="tci-desc">Acceso prioritario sin colas · Ticket móvil</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 22€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">👑</span>
-            <span class="tci-body">
-              <span class="tci-name">Palacio de Versalles</span>
-              <span class="tci-desc">Acceso a jardines y palacio · Cancela gratis</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 18€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🎨</span>
-            <span class="tci-body">
-              <span class="tci-name">Musée d'Orsay</span>
-              <span class="tci-desc">Colección impresionista · Sin esperas</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 14€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/eiffel-tower/?partner=TU_TIQETS_PARTNER_ID"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🗼</span>
-            <span class="tci-body">
-              <span class="tci-name">Torre Eiffel</span>
-              <span class="tci-desc">Subida hasta la cima · Reserva anticipada</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 11€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
+            <a href="https://www.tiqets.com/es/entradas-museo-del-louvre-l124297/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🏛️</span>
+              <span class="tci-body"><span class="tci-name">Museo del Louvre</span><span class="tci-desc">Acceso prioritario sin colas · Ticket móvil</span></span>
+              <span class="tci-price"><span class="tci-price-num">Desde 22€</span><span class="tci-cta">Reservar →</span></span>
+            </a>
+            <a href="https://www.tiqets.com/es/entradas-palacio-de-versalles-l141873/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">👑</span>
+              <span class="tci-body"><span class="tci-name">Palacio de Versalles</span><span class="tci-desc">Acceso a jardines y palacio · Cancela gratis</span></span>
+              <span class="tci-price"><span class="tci-price-num">Desde 18€</span><span class="tci-cta">Reservar →</span></span>
+            </a>
+            <a href="https://www.tiqets.com/es/entradas-musee-d-orsay-l141867/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🎨</span>
+              <span class="tci-body"><span class="tci-name">Musée d'Orsay</span><span class="tci-desc">Colección impresionista · Sin esperas</span></span>
+              <span class="tci-price"><span class="tci-price-num">Desde 14€</span><span class="tci-cta">Reservar →</span></span>
+            </a>
+            <a href="https://www.tiqets.com/es/entradas-torre-eiffel-l144586/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🗼</span>
+              <span class="tci-body"><span class="tci-name">Torre Eiffel</span><span class="tci-desc">Subida hasta la cima · Reserva anticipada</span></span>
+              <span class="tci-price"><span class="tci-price-num">Desde 11€</span><span class="tci-cta">Reservar →</span></span>
+            </a>
           </div>
           <div class="tiqets-inline-footer">
-            <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID"
-               target="_blank" rel="noopener sponsored">
-              Ver todas las entradas en París →
-            </a>
-            <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
+            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored">Ver todas las entradas en París →</a>
+            <span>En colaboración con <strong>Tiqets</strong> · Sin coste adicional para el usuario</span>
           </div>
         </div>
-        <!-- ── /Tiqets ──────────────────────────────────────────── -->
+
         <h2 id="donde-comer">¿Dónde comer en París?</h2>
         <p>La gastronomía parisina va mucho más allá de los croissants y el foie gras. La ciudad tiene una escena culinaria extraordinariamente diversa.</p>
 
@@ -338,7 +238,7 @@
         <h2 id="donde-dormir">¿Dónde dormir en París?</h2>
         <p>París tiene alojamiento para todos los presupuestos, aunque los precios son más altos que en otras ciudades europeas. El barrio donde te alojes determinará en gran medida tu experiencia.</p>
 
-        <h3>Barrios recomendados por zona</h3>
+        <h3>Barrios recomendados</h3>
         <ul>
           <li><strong>Le Marais (3.º y 4.º):</strong> Histórico, lleno de galerías, vida nocturna y buenos restaurantes. Ideal para primeras visitas.</li>
           <li><strong>Saint-Germain-des-Prés (6.º):</strong> El París literario y bohemio. Más tranquilo y elegante.</li>
@@ -346,10 +246,10 @@
           <li><strong>Bastille (11.º y 12.º):</strong> Auténtico y local, con precios más asequibles. Excelente conexión en metro.</li>
         </ul>
 
-        <img class="article-img-full" src="https://images.unsplash.com/photo-1662554651993-55c542cad371?w=700&q=80" alt="Calles de París"/>
+        <img class="article-img-full" src="https://plus.unsplash.com/premium_photo-1694475370053-e90ef86676ab?q=700&w=500" alt="Calles de París"/>
         <p class="img-caption">Los Campos Elíseos al atardecer · © Unsplash</p>
 
-        <h2 id="transporte">Cómo moverse por París</h2>
+       <h2 id="transporte">Cómo moverse por París</h2>
         <p>El metro de París es una de las redes de transporte público más eficientes del mundo. Con 16 líneas y más de 300 estaciones, puedes llegar a prácticamente cualquier punto de la ciudad en menos de 20 minutos.</p>
         <ul>
           <li><strong>Navigo Easy:</strong> tarjeta recargable para t+ individuales o en packs de 10</li>
@@ -371,43 +271,38 @@
           <li><strong>Presupuesto alto:</strong> 300€+/día (hoteles boutique, alta gastronomía, experiencias VIP)</li>
         </ul>
 
-      </div><!-- /article-content -->
+      </div>
 
-      <!-- GetYourGuide Widget — Actividades en París (ancho completo) -->
+      <!-- GYG Widget — Tours París -->
       <div style="margin:2.5rem 0;">
         <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
           <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
             <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en París</span>
-            <span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Comisión de afiliado · 8%</span>
+            <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
           </div>
           <div style="padding:1rem;">
-            <!-- Widget Activity GYG — París (location-id 16) -->
-            <!-- Reemplaza 1ABLZMR con tu ID real de GetYourGuide -->
             <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
                  data-gyg-location-id="16"
-                 data-gyg-locale="es"
-                 data-gyg-type="activities"
+                 data-gyg-locale-code="es-ES"
+                 data-gyg-widget="activities"
                  data-gyg-number-of-items="4"
                  data-gyg-partner-id="1ABLZMR">
             </div>
             <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
-              Actividades proporcionadas por <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+              Actividades en colaboración con <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
             </p>
           </div>
         </div>
       </div>
 
-      <!-- AD RECTANGLE en artículo -->
       <div class="ad-rect-wrap" style="margin:2.5rem 0;">
-        <div class="ad-rect">📢 AdSense 300×250</div>
+        <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
       </div>
 
     </main>
 
-    <!-- SIDEBAR -->
     <aside class="article-sidebar">
 
-      <!-- Tabla de contenidos -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">📋 Contenidos</div>
         <div class="sidebar-card-body">
@@ -421,17 +316,16 @@
         </div>
       </div>
 
-      <!-- Reservar hotel (AFILIADO) -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🏨 Reserva tu hotel en París</div>
         <div class="sidebar-card-body">
-          <p>Compara precios en más de 500 hoteles disponibles en París. Cancela gratis en la mayoría de opciones.</p>
-          <!-- AFILIADO: reemplaza con tu link de Booking.com -->
-          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Ffr%2Fparis.es.html" target="_blank" rel="sponsored"></a>
+          <p>Compara precios en más de 500 hoteles en París. Cancela gratis en la mayoría de opciones.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Ffr%2Fparis.es.html"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn">Ver hoteles en Booking →</a>
         </div>
       </div>
 
-      <!-- Clima -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🌤 Clima en París</div>
         <div class="sidebar-card-body">
@@ -446,92 +340,66 @@
         </div>
       </div>
 
-      <!-- Vuelos (AFILIADO) -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">✈️ Encuentra tu vuelo</div>
         <div class="sidebar-card-body">
-          <p>Compara precios de cientos de aerolíneas para volar a París al mejor precio.</p>
-          <a href="https://www.skyscanner.es/vuelos-baratos/paris.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff;">Comparar en Skyscanner →</a>
+          <p>Compara precios de más de 800 aerolíneas para volar a París al mejor precio.</p>
+          <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn" style="background:var(--navy);color:#fff;">Buscar vuelos en Kiwi →</a>
         </div>
       </div>
 
-      <!-- GetYourGuide Widget — París -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎟️ Tours y entradas en París</div>
         <div class="sidebar-card-body" style="padding:.8rem;">
-          <!-- Widget oficial GYG — City Widget París (location-id 16) -->
-          <!-- Reemplaza 1ABLZMR con tu Partner ID de GetYourGuide -->
           <div data-gyg-href="https://widget.getyourguide.com/default/city.frame"
                data-gyg-location-id="16"
-               data-gyg-locale="es"
-               data-gyg-type="city"
+               data-gyg-locale-code="es-ES"
+               data-gyg-widget="city"
                data-gyg-number-of-items="3"
                data-gyg-partner-id="1ABLZMR">
           </div>
           <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">
-            Actividades en colaboración con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            En colaboración con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
           </p>
         </div>
       </div>
 
-
-      <!-- ── Tiqets Entradas — París ───────────────────────────── -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎫 Entradas sin colas en París</div>
         <div class="sidebar-card-body" style="padding:.6rem .8rem;">
-          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">
-            Reserva tus entradas al instante. Ticket móvil · Confirmación inmediata.
-          </p>
+          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">Reserva tus entradas al instante. Ticket móvil · Confirmación inmediata.</p>
           <div class="tiqets-list">
-
-        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/louvre-museum/?partner=TU_TIQETS_PARTNER_ID"
-           target="_blank" rel="noopener sponsored"
-           class="tiqets-row">
-          <span class="tiqets-icon">🏛️</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Museo del Louvre</span>
-            <span class="tiqets-badge">Desde 22€ · Sin colas</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
-        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/palace-of-versailles/?partner=TU_TIQETS_PARTNER_ID"
-           target="_blank" rel="noopener sponsored"
-           class="tiqets-row">
-          <span class="tiqets-icon">👑</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Palacio de Versalles</span>
-            <span class="tiqets-badge">Desde 18€ · Entradas rápidas</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
-        <a href="https://www.tiqets.com/es/paris-tickets-cparis/s/musee-dorsay/?partner=TU_TIQETS_PARTNER_ID"
-           target="_blank" rel="noopener sponsored"
-           class="tiqets-row">
-          <span class="tiqets-icon">🎨</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Musée d'Orsay</span>
-            <span class="tiqets-badge">Desde 14€ · Acceso prioritario</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
+            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-del-louvre-entrada-acceso-alojado-a-mona-lisa-p1102684/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+              <span class="tiqets-icon">🏛️</span>
+              <span class="tiqets-info"><span class="tiqets-name">Museo del Louvre</span><span class="tiqets-badge">Desde 22€ · Sin colas</span></span>
+              <span class="tiqets-arrow">→</span>
+            </a>
+            <a href="https://www.tiqets.com/es/atracciones-versalles-c66594/entradas-para-palacio-de-versalles-entrada-jardines-y-dominio-del-trianon-p974127/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+              <span class="tiqets-icon">👑</span>
+              <span class="tiqets-info"><span class="tiqets-name">Palacio de Versalles</span><span class="tiqets-badge">Desde 18€ · Entradas rápidas</span></span>
+              <span class="tiqets-arrow">→</span>
+            </a>
+            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-de-orsay-renoir-y-el-amor-1865-1885-p1080858/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+              <span class="tiqets-icon">🎨</span>
+              <span class="tiqets-info"><span class="tiqets-name">Musée d'Orsay</span><span class="tiqets-badge">Desde 14€ · Acceso prioritario</span></span>
+              <span class="tiqets-arrow">→</span>
+            </a>
           </div>
-          <a href="https://www.tiqets.com/es/paris-tickets-cparis/?partner=TU_TIQETS_PARTNER_ID"
+          <a href="https://www.tiqets.com/es/atracciones-paris-c66746/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored"
              style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
             Ver todas las entradas en Tiqets →
           </a>
         </div>
       </div>
-      <!-- ── /Tiqets ──────────────────────────────────────────────── -->
-      <!-- AD 300×250 sidebar -->
-      <div class="ad-rect" style="width:100%;height:250px;">
-        📢 AdSense 300×250
-      </div>
+
+      <div class="ad-rect" style="width:100%;height:250px;"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
 
     </aside>
   </div>
 
-  <!-- ARTÍCULOS RELACIONADOS -->
   <section class="related-section">
     <div class="section-header reveal">
       <p class="section-tag">Sigue explorando</p>
@@ -539,8 +407,8 @@
     </div>
     <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1587648415693-4a5362b2ce41?w=700&q=80')"></div>
-        <div class="article-body">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1567942585146-33d62b775db0?w=700&q=80')"></div>
+           <div class="article-body">
           <p class="article-tag">París · Cultura</p>
           <h3 class="article-title">El Louvre en 3 horas: ruta optimizada para no perderte lo esencial</h3>
           <p class="article-excerpt">Una ruta diseñada para ver las piezas más importantes sin agotarte en el intento.</p>
@@ -548,7 +416,7 @@
         </div>
       </article>
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1709192248610-b83ee18067d2?w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1642486574545-509db153db60?w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">Francia · Gastronomía</p>
           <h3 class="article-title">Los mejores bistrós de París donde comen los parisinos de verdad</h3>
@@ -557,8 +425,8 @@
         </div>
       </article>
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1633117678642-7fcc7870f64a?w=700&q=80')"></div>
-        <div class="article-body">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1633117678842-5f3e65cf8ad1?w=700&q=80')"></div>
+         <div class="article-body">
           <p class="article-tag">Francia · Día trip</p>
           <h3 class="article-title">Versalles desde París: guía completa para una excursión de un día</h3>
           <p class="article-excerpt">Cómo llegar, cuánto tiempo dedicarle y qué no puedes dejar de ver en el palacio.</p>
@@ -568,7 +436,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
@@ -578,26 +445,47 @@
           <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="#">Roma</a></li><li><a href="#">Barcelona</a></li><li><a href="#">Lisboa</a></li></ul></div>
-      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="#">Naturaleza</a></li><li><a href="#">Ciudad</a></li></ul></div>
-      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Destinos</h4><ul>
+        <li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="paris-louvre.html">Cultura</a></li>
+        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="naturaleza-europa.html">Naturaleza</a></li>
+        <li><a href="gastronomia-europa.html">Ciudad</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul>
+        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="../sobre-nosotros.html">Colabora</a></li>
+        <li><a href="../sobre-nosotros.html">Contacto</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Voyage Lumière</span>
-      <div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+      </div>
     </div>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
-    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="#" style="color:var(--gold)">Más info</a></p>
-    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div>
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="../privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
+      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
+    </div>
   </div>
 
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
     document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), {threshold:.12});
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12});
     document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay=`${(i%4)*80}ms`; observer.observe(el); });
     const banner = document.getElementById('cookieBanner');
     if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');

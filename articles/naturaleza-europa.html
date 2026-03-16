@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naturaleza en Europa: los parques y paisajes más impresionantes · Voyage Lumière</title>
+  <meta name="description" content="Los parques nacionales, costas y paisajes naturales más espectaculares de Europa. De los fiordos noruegos a las Dolomitas italianas. Guía completa 2025."/>
+  <meta name="keywords" content="naturaleza europa, parques nacionales europa, fiordos noruega, dolomitas italia, plitvice croacia, naturaleza viaje"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.65) 100%),url('https://picsum.photos/id/1048/1600/900') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
+    .breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+
+    /* Destino cards */
+    .destino-card{background:#fff;border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:2rem;transition:box-shadow .25s}
+    .destino-card:hover{box-shadow:0 8px 24px rgba(26,43,76,.1)}
+    .destino-img{height:260px;background-size:cover;background-position:center;position:relative}
+    .destino-badge{position:absolute;top:1rem;left:1rem;background:var(--navy);color:var(--gold);font-family:var(--ff-head);font-size:1.8rem;font-weight:900;width:52px;height:52px;border-radius:2px;display:flex;align-items:center;justify-content:center}
+    .destino-body{padding:1.4rem 1.6rem}
+    .destino-country{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:700;margin-bottom:.4rem}
+    .destino-name{font-family:var(--ff-head);font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.6rem}
+    .destino-desc{font-size:.92rem;color:#555;line-height:1.75;margin-bottom:1rem}
+    .destino-meta{display:flex;gap:.5rem;flex-wrap:wrap}
+    .destino-chip{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.22rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted)}
+    .destino-chip.green{background:#E8F5E9;border-color:#A5D6A7;color:#2E7D32}
+    .destino-chip.blue{background:#E3F2FD;border-color:#90CAF9;color:#1565C0}
+
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+    .article-card{background:#fff;border:1px solid var(--border);border-radius:3px;overflow:hidden;transition:box-shadow .25s,transform .25s}
+    .article-card:hover{box-shadow:0 8px 28px rgba(26,43,76,.1);transform:translateY(-3px)}
+    .article-img{height:200px;background-size:cover;background-position:center}
+    .article-body{padding:1.4rem}
+    .article-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:.5rem}
+    .article-title{font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:.6rem}
+    .article-excerpt{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+    .article-footer{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted)}
+    .read-more{color:var(--gold);font-weight:700;text-decoration:none}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="naturaleza-europa.html" class="active">Naturaleza</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a><span>/</span>
+        <span style="color:#fff">Naturaleza</span>
+      </div>
+      <h1>Naturaleza en Europa:<br/><em>paisajes que quitan el aliento</em></h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Europa · Naturaleza</span>
+        <span>📅 Mayo 2025</span>
+        <span>⏱ 10 min de lectura</span>
+        <span>👁 21.800 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main class="article-main">
+      <div class="article-content">
+
+        <p>Europa no es solo ciudades históricas y museos. El continente tiene algunos de los paisajes naturales más espectaculares del planeta: fiordos esculpidos por glaciares milenarios, lagos de colores imposibles, volcanes activos, acantilados sobre el Atlántico y bosques primarios que no han cambiado en siglos. Esta guía recorre los 8 destinos naturales imprescindibles de Europa para viajeros que quieren salir de las ciudades.</p>
+
+        <div class="tip-box">
+          <strong>🌿 La mejor época para la naturaleza en Europa</strong>
+          <p>Mayo–junio y septiembre son los meses ideales: el paisaje está verde y vivo, los días son largos y los destinos naturales tienen menos visitantes que en el pico de verano. Para ver nieve y auroras boreales en Noruega, noviembre–febrero es imprescindible.</p>
+        </div>
+
+        <h2 id="destinos">Los 8 paisajes naturales imprescindibles</h2>
+
+        <!-- 1 FIORDOS -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1048/900/260')">
+            <div class="destino-badge">1</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇳🇴 Noruega</div>
+            <div class="destino-name">Los Fiordos Noruegos</div>
+            <p class="destino-desc">El Sognefjord, el Geirangerfjord y el Nærøyfjord son Patrimonio de la Humanidad por la UNESCO. Paredes de roca de 1.400 metros de altura que caen verticalmente al mar, cascadas que desaparecen en la niebla y pueblos de casas de colores al borde del agua. El crucero por el Geirangerfjord (2 horas desde Geiranger) es una de las experiencias naturales más impactantes de Europa. La ruta desde Bergen incluye el tren de montaña Flåmsbana, considerado uno de los más espectaculares del mundo.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Jun–Sep</span>
+              <span class="destino-chip blue">🚢 Crucero incluido</span>
+              <span class="destino-chip">UNESCO</span>
+              <span class="destino-chip">Senderismo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 PLITVICE -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1015/900/260')">
+            <div class="destino-badge">2</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇭🇷 Croacia</div>
+            <div class="destino-name">Lagos de Plitvice</div>
+            <p class="destino-desc">16 lagos escalonados de color turquesa y verde esmeralda conectados por 92 cascadas. El agua cambia de color según la hora del día, la estación y el ángulo del sol — de verde brillante a azul índigo o turquesa puro. Los paseos de madera sobre el agua permiten recorrer los lagos a nivel del suelo. Reserva la entrada online con semanas de antelación en temporada alta — las plazas son limitadas y se agotan.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Abr–Jun y Sep</span>
+              <span class="destino-chip blue">💧 16 lagos + 92 cascadas</span>
+              <span class="destino-chip">UNESCO</span>
+              <span class="destino-chip">Reserva obligatoria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 DOLOMITAS -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1043/900/260')">
+            <div class="destino-badge">3</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇮🇹 Italia</div>
+            <div class="destino-name">Las Dolomitas</div>
+            <p class="destino-desc">Las montañas más fotogénicas de los Alpes: picos de roca rojiza que se encienden de naranja y rojo al amanecer y al atardecer en el fenómeno llamado <em>enrosadira</em>. El lago di Braies (con sus barcas de madera rojas) y el Val di Funes (con las iglesias de San Giovanni ante los picos Odle) son dos de los paisajes más fotografiados de Europa. En invierno es uno de los mejores destinos de esquí del continente.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Jun–Sep y Dic–Mar</span>
+              <span class="destino-chip blue">🏔️ Enrosadira al amanecer</span>
+              <span class="destino-chip">UNESCO</span>
+              <span class="destino-chip">Esquí en invierno</span>
+            </div>
+          </div>
+        </div>
+
+        <img class="article-img-full" src="https://picsum.photos/id/1048/1000/500" alt="Paisaje natural europeo"/>
+        <p class="img-caption">Los paisajes naturales de Europa ofrecen experiencias que van mucho más allá del turismo urbano</p>
+
+        <!-- 4 AURORA BOREAL -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1019/900/260')">
+            <div class="destino-badge">4</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇫🇮 Finlandia / 🇮🇸 Islandia</div>
+            <div class="destino-name">Aurora Boreal</div>
+            <p class="destino-desc">El espectáculo natural más sobrenatural que existe: cortinas de luz verde, violeta y blanca que danzan en el cielo nocturno. Los mejores destinos para verla son Tromsø (Noruega), Laponia finlandesa y el norte de Islandia. La temporada va de septiembre a marzo — necesitas noches oscuras y cielos despejados. Las cabañas de cristal en Laponia (donde duermes mirando el cielo) son una de las experiencias más únicas de Europa.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Sep–Mar</span>
+              <span class="destino-chip blue">🌌 Cabañas de cristal disponibles</span>
+              <span class="destino-chip">Experiencia única</span>
+              <span class="destino-chip">Noche oscura necesaria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 ACANTILADOS MOHER -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1018/900/260')">
+            <div class="destino-badge">5</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇮🇪 Irlanda</div>
+            <div class="destino-name">Acantilados de Moher</div>
+            <p class="destino-desc">8 kilómetros de acantilados de hasta 214 metros de altura sobre el Atlántico. El viento, las olas y la luz cambiante del cielo irlandés crean un espectáculo en constante movimiento. Reconocibles como locación de varias películas (incluida Harry Potter). Visita recomendada a primera hora de la mañana cuando los autobuses turísticos aún no han llegado. Combina perfectamente con la Ruta del Burren y las Islas Aran.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: May–Sep</span>
+              <span class="destino-chip blue">🌊 214m sobre el Atlántico</span>
+              <span class="destino-chip">Senderismo costero</span>
+              <span class="destino-chip">Desde Galway</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 SELVA NEGRA -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1047/900/260')">
+            <div class="destino-badge">6</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇩🇪 Alemania</div>
+            <div class="destino-name">La Selva Negra</div>
+            <p class="destino-desc">El bosque más mítico de Europa: abetos milenarios, valles profundos con niebla matutina, cascadas ocultas entre la vegetación y pueblos de cuentos de hadas. El Parque Nacional de la Selva Negra protege los ecosistemas más salvajes. En otoño (octubre–noviembre) los colores son espectaculares. La Ruta de la Selva Negra en coche (Schwarzwald Hochstrasse) es uno de los recorridos panorámicos más bonitos de Europa.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: May–Jun y Oct</span>
+              <span class="destino-chip blue">🍂 Otoño espectacular</span>
+              <span class="destino-chip">Senderismo</span>
+              <span class="destino-chip">Desde Friburgo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 LOFOTEN -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1016/900/260')">
+            <div class="destino-badge">7</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇳🇴 Noruega</div>
+            <div class="destino-name">Islas Lofoten</div>
+            <p class="destino-desc">Un archipiélago ártico donde montañas de 1.000 metros emergen directamente del mar. Pueblos de pescadores con casas rojas sobre pilotes, playas de arena blanca con agua transparente y picos nevados de fondo — en pleno Círculo Polar Ártico. En verano hay sol de medianoche (24 horas de luz). En invierno, auroras boreales casi garantizadas. Una de las regiones más fotografiadas de Europa en Instagram.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Jun–Ago y Nov–Feb</span>
+              <span class="destino-chip blue">☀️ Sol de medianoche en verano</span>
+              <span class="destino-chip">Círculo Polar Ártico</span>
+              <span class="destino-chip">Fotografía</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 CINQUE TERRE -->
+        <div class="destino-card">
+          <div class="destino-img" style="background-image:url('https://picsum.photos/id/1039/900/260')">
+            <div class="destino-badge">8</div>
+          </div>
+          <div class="destino-body">
+            <div class="destino-country">🇮🇹 Italia</div>
+            <div class="destino-name">Cinque Terre</div>
+            <p class="destino-desc">Cinco pueblos de colores encaramados en acantilados sobre el Mar de Liguria. Viñedos en terrazas sobre el Mediterráneo, senderos entre pueblos con vistas imposibles y el agua más azul del norte de Italia. El sendero costal entre los cinco pueblos (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) es uno de los trekking más bonitos de Europa. Evita julio y agosto — es el destino más masificado de Italia en verano.</p>
+            <div class="destino-meta">
+              <span class="destino-chip green">✅ Mejor época: Abr–Jun y Sep–Oct</span>
+              <span class="destino-chip blue">🥾 Sendero costero 12km</span>
+              <span class="destino-chip">UNESCO</span>
+              <span class="destino-chip">Evitar agosto</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="consejos">Consejos para el viajero de naturaleza en Europa</h2>
+
+        <h3>Reserva siempre con antelación</h3>
+        <p>Los destinos naturales más populares de Europa (Plitvice, Dolomitas, Cinque Terre) tienen sistemas de acceso controlado con aforo limitado. En temporada alta (julio–agosto) las entradas se agotan días o semanas antes. Reserva siempre online con al menos una semana de antelación.</p>
+
+        <h3>Los mejores meses para cada tipo de paisaje</h3>
+        <ul>
+          <li><strong>Cascadas y ríos:</strong> mayo–junio, cuando el deshielo alimenta los caudales</li>
+          <li><strong>Flores y praderas alpinas:</strong> junio–julio en los Alpes y Pirineos</li>
+          <li><strong>Colores de otoño:</strong> octubre–noviembre en los bosques centroeuropeos</li>
+          <li><strong>Nieve y paisajes árticos:</strong> diciembre–febrero en Escandinavia</li>
+          <li><strong>Auroras boreales:</strong> septiembre–marzo, noches despejadas necesarias</li>
+        </ul>
+
+        <h3>Equipamiento básico para senderismo en Europa</h3>
+        <p>El tiempo en montaña europea es imprevisible incluso en verano. Llevar siempre: capas de abrigo, impermeable ligero, botas con suela antideslizante para senderos húmedos, protector solar (la altitud amplifica la radiación UV) y agua suficiente. Los refugios de montaña en los Alpes y Pirineos sirven comida caliente — reserva plaza con antelación en temporada alta.</p>
+
+        <div class="tip-box">
+          <strong>📱 Apps imprescindibles para naturaleza en Europa</strong>
+          <p><strong>AllTrails</strong> para mapas de senderos offline. <strong>Windy</strong> para previsión meteorológica de montaña en tiempo real. <strong>SpaceWeatherLive</strong> para alertas de auroras boreales. Las tres son gratuitas y funcionan sin conexión una vez descargados los mapas.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">📋 En este artículo</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#destinos">🌿 Los 8 paisajes</a></li>
+            <li><a href="#consejos">💡 Consejos prácticos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🏨 Alojamiento rural</div>
+        <div class="sidebar-card-body">
+          <p>Casas rurales, cabañas en la naturaleza y hoteles con vistas. Cancela gratis en la mayoría.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=6776&awinaffid=TU_ID&p=https://www.booking.com/index.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver alojamiento →</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🎟️ Tours de naturaleza</div>
+        <div class="sidebar-card-body">
+          <p>Excursiones guiadas a fiordos, parques naturales y rutas de senderismo en Europa.</p>
+          <a href="https://www.getyourguide.com/europe-l2/nature-tours-tc6/?partner_id=TU_PARTNER_ID" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver tours →</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🛡️ Seguro de viaje</div>
+        <div class="sidebar-card-body">
+          <p>Las actividades en naturaleza requieren cobertura especial. IATI cubre deportes de aventura y senderismo.</p>
+          <a href="https://www.iatiseguros.com/?ref=TU_CODIGO_IATI" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn" style="background:#C62828;color:#fff;">Ver seguros IATI →</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-body" style="text-align:center;padding:1rem;">
+          <div class="ad-placeholder" style="width:280px;height:250px;display:flex;align-items:center;justify-content:center;margin:0 auto;"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header" style="text-align:center;">
+        <p class="section-tag">Sigue explorando</p>
+        <h2 class="section-title">Artículos relacionados</h2>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1047/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Europa · Temporada</p>
+            <h3 class="article-title">Mejores destinos europeos en primavera</h3>
+            <p class="article-excerpt">Los 8 destinos perfectos para visitar entre marzo y junio: flores y sin multitudes.</p>
+            <div class="article-footer"><span>11 min</span><a href="primavera-europa.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1051/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Europa · Consejos</p>
+            <h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3>
+            <p class="article-excerpt">Trucos reales para gastar menos de 60€ al día incluyendo destinos de naturaleza.</p>
+            <div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://picsum.photos/id/1060/700/500')"></div>
+          <div class="article-body">
+            <p class="article-tag">Europa · Gastronomía</p>
+            <h3 class="article-title">Gastronomía europea: los platos que debes probar</h3>
+            <p class="article-excerpt">Francia, Italia, España y Portugal — lo mejor de cada cocina en una guía.</p>
+            <div class="article-footer"><span>11 min</span><a href="gastronomia-europa.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <div class="cookie-banner hidden" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros. <a href="../privacidad.html">Política de privacidad</a></p>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="btn-primary" style="padding:.6rem 1.2rem;font-size:.8rem;">Aceptar</button>
+      <button onclick="dismissCookies()" style="background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.2rem;border-radius:2px;cursor:pointer;font-size:.8rem;">Solo necesarias</button>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+    const observer=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const banner=document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
+    function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden')}
+    function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden')}
+  </script>
+</body>
+</html>

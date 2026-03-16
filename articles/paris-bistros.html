@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Los mejores bistrós de París donde comen los parisinos · Voyage Lumière</title>
+  <meta name="description" content="Los bistrós más auténticos de París: lejos de las trampas turísticas, donde los parisinos comen de verdad. Guía con direcciones y precios reales 2025."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%),url('https://picsum.photos/id/1060/1600/900') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
+    .breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .bistro-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1.4rem;margin-bottom:1.2rem;display:flex;gap:1.2rem;align-items:flex-start;transition:box-shadow .25s}
+    .bistro-card:hover{box-shadow:0 6px 20px rgba(26,43,76,.09)}
+    .bistro-num{width:36px;height:36px;flex-shrink:0;background:var(--navy);color:var(--gold);font-family:var(--ff-head);font-size:1rem;font-weight:700;border-radius:2px;display:flex;align-items:center;justify-content:center}
+    .bistro-info{flex:1}
+    .bistro-name{font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+    .bistro-address{font-size:.75rem;color:var(--muted);margin-bottom:.5rem}
+    .bistro-desc{font-size:.88rem;color:#555;line-height:1.6;margin-bottom:.6rem}
+    .bistro-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+    .bistro-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .55rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted)}
+    .bistro-price{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--gold);flex-shrink:0;white-space:nowrap}
+    .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
+    .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+    .article-card{background:#fff;border:1px solid var(--border);border-radius:3px;overflow:hidden;transition:box-shadow .25s,transform .25s}
+    .article-card:hover{box-shadow:0 8px 28px rgba(26,43,76,.1);transform:translateY(-3px)}
+    .article-img{height:200px;background-size:cover;background-position:center}
+    .article-body{padding:1.4rem}
+    .article-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:.5rem}
+    .article-title{font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:.6rem}
+    .article-excerpt{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+    .article-footer{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted)}
+    .read-more{color:var(--gold);font-weight:700;text-decoration:none}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="paris.html">París</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a><span>/</span>
+        <a href="paris.html">París</a><span>/</span>
+        <span style="color:#fff">Bistrós auténticos</span>
+      </div>
+      <h1>Los mejores <em>bistrós de París</em><br/>donde comen los parisinos</h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Francia · Gastronomía</span>
+        <span>📅 Mayo 2025</span><span>⏱ 7 min de lectura</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+
+  <div class="article-wrapper">
+    <main class="article-main">
+      <div class="article-content">
+
+        <p>Un bistró parisino auténtico no necesita anunciarse. No tiene empleado en la puerta, el menú no existe en inglés y la pizarra del día cambia según lo que llegó esa mañana al mercado. Estas son las señales de que estás en el lugar correcto. Esta guía recoge los bistrós que los propios parisinos consideran suyos — los que no aparecen en las guías turísticas masivas.</p>
+
+        <div class="tip-box">
+          <strong>🍷 La regla de oro del bistró parisino</strong>
+          <p>Busca siempre la pizarra con el <em>formule du jour</em>: entrante + plato + postre por 14–18€. Solo se sirve a mediodía (12–14h) de lunes a viernes. El mismo plato en la cena cuesta el doble. Come la comida principal al mediodía.</p>
+        </div>
+
+        <h2 id="bistrós">Los 8 bistrós imprescindibles</h2>
+
+        <div class="bistro-card">
+          <div class="bistro-num">1</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Bistrot Paul Bert</div>
+            <div class="bistro-address">18 Rue Paul Bert, 11.º arrondissement</div>
+            <p class="bistro-desc">El bistró más querido de París por los propios parisinos. Carta corta que cambia según la temporada, producto impecable y una carta de vinos natural extraordinaria. El steak tartare y el île flottante son leyenda. Reserva con al menos una semana de antelación.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Reserva obligatoria</span><span class="bistro-tag">Cocina francesa clásica</span><span class="bistro-tag">Carta de vinos excepcional</span></div>
+          </div>
+          <div class="bistro-price">35–55€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">2</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Le Baratin</div>
+            <div class="bistro-address">3 Rue Jouye-Rouve, 20.º arrondissement (Belleville)</div>
+            <p class="bistro-desc">La chef Raquel Carena lleva décadas cocinando en este pequeño bistró del 20.º. Los platos son directos, honestos y sin artificio. La carta cambia todos los días según el mercado. Zona bohemia y alejada del circuito turístico — exactamente donde debe estar un bistró así.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Cocina de mercado</span><span class="bistro-tag">Zona local</span><span class="bistro-tag">Vinos naturales</span></div>
+          </div>
+          <div class="bistro-price">30–45€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">3</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Septime</div>
+            <div class="bistro-address">80 Rue de Charonne, 11.º arrondissement</div>
+            <p class="bistro-desc">Uno de los restaurantes más influyentes de la nueva bistronomy parisina. Bertrand Grébaut lleva años con lista de espera. La reserva online abre con 3 semanas de antelación exactas — hay que estar al tanto. Producto local, cocina creativa sin perder la esencia bistró.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Lista de espera</span><span class="bistro-tag">Nueva bistronomy</span><span class="bistro-tag">Producto local</span></div>
+          </div>
+          <div class="bistro-price">55–80€</div>
+        </div>
+
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1740179434485-1390d99cb3e8?q=1000&w=500" alt="Bistró parisino con terraza"/>
+        <p class="img-caption">Las terrazas de los bistrós del 11.º arrondissement — el barrio más auténtico de París para comer</p>
+
+        <div class="bistro-card">
+          <div class="bistro-num">4</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Chez Georges</div>
+            <div class="bistro-address">1 Rue du Mail, 2.º arrondissement</div>
+            <p class="bistro-desc">El bistró más antiguo de París en funcionamiento continuo. Camareros con delantal blanco, espejos en las paredes, manteles de papel. La brandade de morue (bacalao con puré) y el confit de pato son los platos de siempre. Sin pretensiones, sin cambios desde 1964.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Histórico desde 1964</span><span class="bistro-tag">Cocina tradicional</span><span class="bistro-tag">Ambiente auténtico</span></div>
+          </div>
+          <div class="bistro-price">30–45€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">5</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Au Passage</div>
+            <div class="bistro-address">1 bis Passage Saint-Sébastien, 11.º arrondissement</div>
+            <p class="bistro-desc">Formato de pequeñas raciones para compartir — la versión francesa de los pintxos. Los charcuteros locales y queseros del barrio proveen directamente. La barra de vinos naturales es una de las más completas de París. Ambiente joven y sin protocolo.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Para compartir</span><span class="bistro-tag">Vinos naturales</span><span class="bistro-tag">Sin reserva</span></div>
+          </div>
+          <div class="bistro-price">25–40€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">6</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Le Comptoir du Relais</div>
+            <div class="bistro-address">9 Carrefour de l'Odéon, 6.º arrondissement</div>
+            <p class="bistro-desc">Yves Camdeborde es el padre de la bistronomy parisina. A mediodía sirve brasserie informal (sin reserva, 16–22€). Los viernes y sábados por la noche ofrece un menú gastronómico de 5 platos por 60€ con reserva obligatoria con meses de antelación.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Padre de la bistronomy</span><span class="bistro-tag">Mediodía sin reserva</span><span class="bistro-tag">Saint-Germain</span></div>
+          </div>
+          <div class="bistro-price">16–60€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">7</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Clown Bar</div>
+            <div class="bistro-address">114 Rue Amelot, 11.º arrondissement</div>
+            <p class="bistro-desc">Antigua cantina del Cirque d'Hiver (el circo de invierno de París), con decoración Art Nouveau de 1902 protegida como patrimonio. Los platos son atrevidos y creativos. Los vinos naturales entre los mejores de la ciudad. El espacio en sí ya vale la visita.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Patrimonio histórico</span><span class="bistro-tag">Art Nouveau</span><span class="bistro-tag">Cocina creativa</span></div>
+          </div>
+          <div class="bistro-price">40–60€</div>
+        </div>
+
+        <div class="bistro-card">
+          <div class="bistro-num">8</div>
+          <div class="bistro-info">
+            <div class="bistro-name">Frenchie</div>
+            <div class="bistro-address">5 Rue du Nil, 2.º arrondissement</div>
+            <p class="bistro-desc">Gregory Marchand (apodado "Frenchie" por Jamie Oliver) abrió este bistró en 2009 y revolucionó el barrio. La Rue du Nil se ha convertido en la calle más gastronómica de París: el bistró, el wine bar, la épicerie y el traiteur, todo en 50 metros.</p>
+            <div class="bistro-tags"><span class="bistro-tag">Referencia gastronómica</span><span class="bistro-tag">Rue du Nil</span><span class="bistro-tag">Reserva anticipada</span></div>
+          </div>
+          <div class="bistro-price">45–70€</div>
+        </div>
+
+        <h2 id="consejos">Cómo leer un menú de bistró</h2>
+        <p><strong>Entrée</strong> significa entrante (primer plato), no plato principal. Este es el error más común de los visitantes hispanohablantes. <strong>Plat</strong> es el plato principal. <strong>Dessert</strong> es el postre. La <strong>formule</strong> es el menú del día.</p>
+        <p>El <strong>vin maison</strong> (vino de la casa) en un buen bistró suele ser una selección de vino natural del propietario — generalmente excelente y mucho más barato que pedir por botella. Pide siempre una <em>carafe d'eau</em> (jarra de agua del grifo, gratuita) en lugar de agua embotellada.</p>
+
+        <div class="tip-box">
+          <strong>📍 El barrio del 11.º arrondissement</strong>
+          <p>La zona entre Oberkampf, Rue de la Roquette y Rue Saint-Maur concentra la mayor densidad de bistrós auténticos de París. A 20 minutos a pie del Marais, sin trampa turística. Si solo tienes una noche en París para cenar, ve al 11.º.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">📋 En este artículo</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#bistrós">🍷 Los 8 bistrós</a></li>
+            <li><a href="#consejos">💡 Cómo leer el menú</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🏨 Hoteles en París</div>
+        <div class="sidebar-card-body">
+          <p>Alójate en el 11.º para tener los mejores bistrós a pie de calle.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=6776&awinaffid=TU_ID&p=https://www.booking.com/city/fr/paris.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver hoteles →</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">🍽️ Tours gastronómicos</div>
+        <div class="sidebar-card-body">
+          <p>Descubre los sabores de París con un guía local experto en gastronomía.</p>
+          <a href="https://www.getyourguide.com/es-es/s/?q=Tours+gastronomicos%2C+Par%C3%ADs&searchSource=3&src=search_bar/?partner_id=1ABLZMR" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver tours →</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header" style="text-align:center;">
+        <p class="section-tag">Sigue explorando</p>
+        <h2 class="section-title">Más sobre París</h2>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=500&q=700')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Guía</p>
+            <h3 class="article-title">Guía completa de París para 2025</h3>
+            <p class="article-excerpt">Todo lo que necesitas saber para tu viaje a París.</p>
+            <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1587648415693-4a5362b2ce41?w=500&q=700')"></div>
+          <div class="article-body">
+            <p class="article-tag">París · Cultura</p>
+            <h3 class="article-title">El Louvre en 3 horas</h3>
+            <p class="article-excerpt">Ruta optimizada para ver lo esencial sin agotarte.</p>
+            <div class="article-footer"><span>5 min</span><a href="paris-louvre.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+        <article class="article-card reveal">
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1633117678642-7fcc7870f64a?w=500&q=700')"></div>
+          <div class="article-body">
+            <p class="article-tag">Francia · Día trip</p>
+            <h3 class="article-title">Versalles desde París</h3>
+            <p class="article-excerpt">Guía completa para la excursión de un día más famosa de Europa.</p>
+            <div class="article-footer"><span>9 min</span><a href="paris-versalles.html" class="read-more">Leer →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <div class="cookie-banner hidden" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros. <a href="../privacidad.html">Política de privacidad</a></p>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="btn-primary" style="padding:.6rem 1.2rem;font-size:.8rem;">Aceptar</button>
+      <button onclick="dismissCookies()" style="background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.2rem;border-radius:2px;cursor:pointer;font-size:.8rem;">Solo necesarias</button>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+    const observer=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const banner=document.getElementById('cookieBanner');
+    if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
+    function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden')}
+    function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden')}
+  </script>
+</body>
+</html>
