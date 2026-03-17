@@ -6,30 +6,36 @@
   <title>Guía completa de Roma 2025 — Voyage Lumière</title>
   <meta name="description" content="Todo lo que necesitas saber para visitar Roma: el Coliseo, el Vaticano, la gastronomía romana y los mejores consejos para aprovechar al máximo la Ciudad Eterna."/>
   <meta name="keywords" content="Roma guía viaje, qué ver en Roma, Coliseo Roma, Vaticano, hoteles Roma 2025"/>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-52MYXE4VXP');
+  </script>
 
-  gtag('config', 'G-52MYXE4VXP');
-</script>
   <link rel="stylesheet" href="../css/style.css"/>
 
   <!-- GetYourGuide Integration Analyzer -->
   <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
+
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
     .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
-    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
+    .breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{opacity:.5}
     .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
     .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
     .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
     .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
     .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-main{}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .article-content{font-size:1.05rem;line-height:1.85;color:#333}
     .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
     .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
@@ -37,6 +43,8 @@
     .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
     .article-content li{margin-bottom:.5rem}
     .article-content strong{color:var(--navy);font-weight:700}
+    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
+    .article-content a:hover{border-color:var(--gold)}
     .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
     .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
     .tip-box p{margin:0;font-size:.93rem;color:#555}
@@ -44,71 +52,44 @@
     .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
 
     /* ── TIQETS WIDGET ── */
-    .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
-    .tiqets-row {
-      display:flex; align-items:center; gap:.7rem;
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:2px; padding:.65rem .8rem;
-      transition:background .25s, border-color .25s, transform .2s;
-      text-decoration:none; color:inherit;
-    }
-    .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
-    .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
-    .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
-    .tiqets-name { font-size:.82rem; font-weight:600; color:var(--navy); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
-    .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
-    .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
+    .tiqets-list{display:flex;flex-direction:column;gap:.45rem}
+    .tiqets-row{display:flex;align-items:center;gap:.7rem;background:var(--warm);border:1px solid var(--border);border-radius:2px;padding:.65rem .8rem;transition:background .25s,border-color .25s,transform .2s;text-decoration:none;color:inherit}
+    .tiqets-row:hover{background:#fff;border-color:var(--gold);transform:translateX(3px)}
+    .tiqets-icon{font-size:1.1rem;flex-shrink:0;line-height:1}
+    .tiqets-info{display:flex;flex-direction:column;flex:1;min-width:0}
+    .tiqets-name{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tiqets-badge{font-size:.68rem;color:var(--gold);font-weight:600;margin-top:.1rem}
+    .tiqets-arrow{color:var(--gold);font-size:.85rem;flex-shrink:0;transition:transform .2s}
+    .tiqets-row:hover .tiqets-arrow{transform:translateX(3px)}
+    .tiqets-inline-block{background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2.5rem 0}
+    .tiqets-inline-header{background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+    .tiq-title{font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600}
+    .tiq-badge{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
+    .tiqets-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+    .tiqets-card-inline{display:flex;align-items:center;gap:.9rem;background:#fff;padding:.9rem 1.1rem;text-decoration:none;color:inherit;transition:background .2s}
+    .tiqets-card-inline:hover{background:rgba(197,160,89,.07)}
+    .tci-icon{font-size:1.4rem;line-height:1;flex-shrink:0}
+    .tci-body{display:flex;flex-direction:column;flex:1;min-width:0}
+    .tci-name{font-size:.85rem;font-weight:700;color:var(--navy);line-height:1.3}
+    .tci-desc{font-size:.72rem;color:var(--muted);margin-top:.15rem;line-height:1.4}
+    .tci-price{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0}
+    .tci-price-num{font-family:var(--ff-head);font-size:.95rem;font-weight:700;color:var(--navy);white-space:nowrap}
+    .tci-cta{font-size:.68rem;color:var(--gold);font-weight:700;white-space:nowrap;margin-top:.2rem}
+    .tiqets-inline-footer{padding:.7rem 1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;background:var(--warm);border-top:1px solid var(--border)}
+    .tiqets-inline-footer a{font-size:.78rem;color:var(--gold);font-weight:600;border:none}
+    .tiqets-inline-footer a:hover{color:var(--navy)}
+    .tiqets-inline-footer span{font-size:.68rem;color:var(--muted)}
+    @media(max-width:640px){.tiqets-cards-grid{grid-template-columns:1fr}}
 
-    /* ── TIQETS INLINE BLOCK ── */
-    .tiqets-inline-block {
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:3px; overflow:hidden; margin:2.5rem 0;
-    }
-    .tiqets-inline-header {
-      background:linear-gradient(135deg, var(--navy), #0d1e3a);
-      padding:1rem 1.4rem;
-      display:flex; align-items:center; justify-content:space-between;
-      flex-wrap:wrap; gap:.5rem;
-    }
-    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
-    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
-    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
-    .tiqets-card-inline {
-      display:flex; align-items:center; gap:.9rem;
-      background:#fff; padding:.9rem 1.1rem;
-      text-decoration:none; color:inherit;
-      transition:background .2s;
-    }
-    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
-    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
-    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
-    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
-    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
-    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
-    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
-    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
-    .tiqets-inline-footer {
-      padding:.7rem 1.2rem;
-      display:flex; justify-content:space-between; align-items:center;
-      flex-wrap:wrap; gap:.5rem;
-      background:var(--warm); border-top:1px solid var(--border);
-    }
-    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
-    .tiqets-inline-footer a:hover { color:var(--navy); }
-    .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
-    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
-
-
-    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    /* SIDEBAR */
     .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
     .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
     .sidebar-card-body{padding:1.2rem}
     .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
-    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
     .sidebar-booking-btn:hover{background:var(--gold-lt)}
     .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
-    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
     .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
     .toc li a:hover{color:var(--navy)}
     .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
@@ -120,6 +101,7 @@
   </style>
 </head>
 <body>
+
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
@@ -134,7 +116,8 @@
   <div class="article-hero">
     <div class="article-hero-bg"></div>
     <div class="article-hero-content">
-      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">Italia</a><span>/</span><span style="color:#fff">Roma</span></div>
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="#">Italia</a><span>/</span><span style="color:#fff">Roma</span>
+      </div>
       <h1>Guía completa de <em>Roma</em><br/>para 2025</h1>
       <div class="article-meta">
         <span class="article-meta-tag">Italia</span>
@@ -145,9 +128,13 @@
     </div>
   </div>
 
-  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+  <div class="ad-banner">
+    <div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div>
+  </div>
 
   <div class="article-wrapper">
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="article-main">
       <div class="article-content">
         <p>Roma es única. Ninguna otra ciudad del mundo concentra tanta historia, arte y belleza en tan poco espacio. Caminar por sus calles es moverse entre épocas: un imperio de 2.000 años convive con iglesias barrocas, mercados bulliciosos y la mejor pasta del mundo. Esta guía te ayuda a descubrirla sin perderte nada esencial.</p>
@@ -248,16 +235,10 @@
             <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
           </div>
         </div>
-              <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">✈️ Encuentra tu vuelo</div>
-        <div class="sidebar-card-body">
-          <p>Compara precios de más de 800 aerolíneas para volar a Roma al mejor precio.</p>
+              
           <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340"
-             target="_blank" rel="noopener sponsored"
-             class="sidebar-booking-btn" style="background:var(--navy);color:#fff;">Buscar vuelos en Kiwi →</a>
-        </div>
-      </div>
-        <!-- ── /Tiqets ──────────────────────────────────────────── -->
+             
+        
         <h2 id="gastronomia">Gastronomía romana: dónde y qué comer</h2>
         <p>La cocina romana es una de las más sabrosas y contundentes de Italia. Se basa en ingredientes sencillos y técnicas ancestrales. Conocerla es una parte fundamental de cualquier visita.</p>
 
@@ -293,6 +274,39 @@
           <li><strong>Autobús:</strong> la red más extensa. El 40 y el 64 conectan la Estación Termini con el Vaticano.</li>
           <li><strong>Taxi/Bolt:</strong> útiles de noche o con equipaje. Exige siempre el taxímetro.</li>
         </ul>
+  
+         <!-- TIQETS: Leonardo Express — Fiumicino -->
+        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
+          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
+            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
+            <div>
+              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Leonardo Express — Tren Fiumicino ↔ Roma Termini</p>
+              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Tiqets · Ticket móvil · Confirmación inmediata</p>
+            </div>
+          </div>
+          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
+            <div>
+              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Billete de ida y vuelta en el tren Leonardo Express entre el Aeropuerto de Fiumicino y Roma Termini. 32 minutos sin paradas. Asegura tu billete antes de salir y evita las colas en el aeropuerto.</p>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Ida y vuelta</span>
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ 32 min sin paradas</span>
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">Cada 30 min</span>
+              </div>
+            </div>
+            <div style="text-align:center;flex-shrink:0;">
+              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .2rem;">Desde</p>
+              <p style="font-size:1.5rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">36,50 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
+            </div>
+          </div>
+          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-aeropuerto-de-fiumicino-leonardo-express-tren-de-ida-y-vuelta-desde-hacia-roma-termini-p1048600/?partner=voyage_lumiere-184870"
+               target="_blank" rel="noopener sponsored"
+               style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+              Comprar en Tiqets →
+            </a>
+            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
+          </div>
+        </div>
 
         <div class="tip-box">
           <strong>🚆 Llegando a Roma</strong>
@@ -305,32 +319,32 @@
           <li><strong>Medio:</strong> 130–180€/día (hotel 3★, restaurantes locales, principales atracciones)</li>
           <li><strong>Alto:</strong> 280€+/día (hotel boutique en centro, restaurantes con estrella Michelin)</li>
         </ul>
-      </div>
-
-
-      <!-- GYG Inline Widget — Roma -->
+      
+      </div><!-- /article-content -->
+  
+     <!-- GYG Widget — Tours Roma -->
       <div style="margin:2.5rem 0;">
         <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
           <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
             <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en Roma</span>
-            <span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Afiliado · 8% comisión</span>
+            <a href="https://www.getyourguide.es/es-es/roma-l33/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
           </div>
           <div style="padding:1rem;">
             <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
-                 data-gyg-location-id="522"
-                 data-gyg-locale="es"
-                 data-gyg-type="activities"
+                 data-gyg-location-id="33"
+                 data-gyg-locale-code="es-ES"
+                 data-gyg-widget="activities"
                  data-gyg-number-of-items="4"
                  data-gyg-partner-id="1ABLZMR">
             </div>
             <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
-              Actividades por <a href="https://www.getyourguide.com/es-es/roma-l33/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+              Actividades en colaboración con <a href="https://www.getyourguide.es/roma-l522/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
             </p>
           </div>
         </div>
       </div>
-  
-      <!-- WIDGET: Conversor de monedas -->
+
+        <!-- WIDGET: Conversor de monedas -->
 <div style="background:var(--warm);border:1px solid var(--border);
      border-radius:3px;overflow:hidden;margin:2rem 0;">
   <div style="background:var(--navy);padding:1rem 1.4rem;
@@ -464,12 +478,16 @@
 })();
 </script>
 
-      <div class="ad-rect-wrap" style="margin:2.5rem 0">
+      <!-- AdSense 300×250 -->
+      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
         <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
       </div>
+
     </main>
 
+    <!-- SIDEBAR -->
     <aside class="article-sidebar">
+
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">📋 Contenidos</div>
         <div class="sidebar-card-body">
@@ -482,13 +500,17 @@
           </ul>
         </div>
       </div>
+
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🏨 Hoteles en Roma</div>
         <div class="sidebar-card-body">
           <p>Más de 800 hoteles disponibles en Roma. Cancela gratis en la mayoría de opciones.</p>
-         <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fit%2Frome.es.html" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Buscar hoteles →</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fit%2Frome.es.html"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn">Ver hoteles en Booking →</a>
         </div>
       </div>
+
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🌤 Clima en Roma</div>
         <div class="sidebar-card-body">
@@ -502,21 +524,34 @@
           </div>
         </div>
       </div>
+
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">✈️ Vuelos a Roma</div>
         <div class="sidebar-card-body">
-          <p>Compara precios de vuelos a Roma desde tu ciudad.</p>
-          <a href="https://www.skyscanner.es/" target="_blank" rel="noopener" class="sidebar-booking-btn" style="background:var(--navy);color:#fff">Comparar en Skyscanner →</a>
+          <p>Compara precios de más de 800 aerolíneas para volar a Roma al mejor precio.</p>
+          <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn" style="background:var(--navy);color:#fff;">Buscar vuelos en Kiwi →</a>
         </div>
       </div>
-      <!-- GYG Widget Roma -->
+
+      <!-- GYG City Widget Roma -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎟️ Tours y entradas en Roma</div>
         <div class="sidebar-card-body" style="padding:.8rem;">
-          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id="522" data-gyg-locale="es" data-gyg-type="city" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR"></div>
-          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">Actividades con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a></p>
+          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame"
+               data-gyg-location-id="33"
+               data-gyg-locale-code="es-ES"
+               data-gyg-widget="city"
+               data-gyg-number-of-items="3"
+               data-gyg-partner-id="1ABLZMR">
+          </div>
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">
+            En colaboración con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+          </p>
         </div>
       </div>
+
       <!-- Tiqets Widget — Roma -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎫 Entradas sin colas — Roma</div>
@@ -558,41 +593,94 @@
           </a>
         </div>
       </div>
+
       <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
+
     </aside>
   </div>
 
+  <!-- ARTÍCULOS RELACIONADOS -->
   <section class="related-section">
     <div class="section-header reveal">
       <p class="section-tag">Sigue explorando</p>
       <h2 class="section-title">Artículos relacionados</h2>
     </div>
-    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
       <article class="article-card reveal">
         <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1431274172761-fca41d930114?w=700&q=80')"></div>
-        <div class="article-body"><p class="article-tag">París · Guía completa</p><h3 class="article-title">Guía completa de París para 2025</h3><p class="article-excerpt">Todo lo que necesitas para aprovechar al máximo la Ciudad de la Luz.</p><div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div></div>
+        <div class="article-body">
+          <p class="article-tag">París · Guía completa</p>
+          <h3 class="article-title">Guía completa de París para 2025</h3>
+          <p class="article-excerpt">Todo lo que necesitas para aprovechar al máximo la Ciudad de la Luz.</p>
+          <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+        </div>
       </article>
       <article class="article-card reveal">
         <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div>
-        <div class="article-body"><p class="article-tag">España · Guía completa</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona en un fin de semana largo.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div>
+        <div class="article-body">
+          <p class="article-tag">España · Guía completa</p>
+          <h3 class="article-title">Qué ver en Barcelona en 3 días</h3>
+          <p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona en un fin de semana largo.</p>
+          <div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div>
+        </div>
       </article>
       <article class="article-card reveal">
         <div class="article-img" style="background-image:url('https://www.presentationgo.com/download/piggy-bank-financial-planning/?tmstv=1773543424?w=700&q=80')"></div>
-        <div class="article-body"><p class="article-tag">Europa · Consejos</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para recorrer Europa gastando menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div>
+        <div class="article-body">
+          <p class="article-tag">Europa · Consejos</p>
+          <h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3>
+          <p class="article-excerpt">Estrategias reales para recorrer Europa gastando menos de 60€ al día.</p>
+          <div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div>
+        </div>
       </article>
     </div>
   </section>
 
   <footer>
     <div class="footer-grid">
-      <div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div>
-      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div>
-      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="#">Cultura</a></li><li><a href="#">Gastronomía</a></li><li><a href="#">Naturaleza</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li></ul></div>
-      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="#">Colabora</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-brand">
+        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul>
+        <li><a href="paris.html">París</a></li>
+        <li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li>
+        <li><a href="lisboa.html">Lisboa</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="paris-louvre.html">Cultura</a></li>
+        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="naturaleza-europa.html">Naturaleza</a></li>
+        <li><a href="presupuesto-europa.html">Presupuesto</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul>
+        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="../sobre-nosotros.html">Colabora</a></li>
+        <li><a href="../sobre-nosotros.html">Contacto</a></li>
+      </ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></div></div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière</span>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+      </div>
+    </div>
   </footer>
-  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="../privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
+      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
+    </div>
+  </div>
+  
   <script>
     const navbar=document.getElementById('navbar');
     window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>40));
