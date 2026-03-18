@@ -505,13 +505,10 @@
         <div class="sidebar-card-header">🏨 Hoteles en Roma</div>
         <div class="sidebar-card-body">
           <p>Más de 800 hoteles disponibles en Roma. Cancela gratis en la mayoría de opciones.</p>
-<<<<<<< HEAD
           <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fit%2Frome.es.html"
              target="_blank" rel="noopener sponsored"
              class="sidebar-booking-btn">Ver hoteles en Booking →</a>
-=======
           <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fes%2Froma.es.html" target="_blank" rel="sponsored">/a>
->>>>>>> 8080811953af22a5f0f1ba03c8d1091494e4f70f
         </div>
       </div>
 
@@ -660,6 +657,7 @@
         <li><a href="gastronomia-europa.html">Gastronomía</a></li>
         <li><a href="naturaleza-europa.html">Naturaleza</a></li>
         <li><a href="presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="visa-schengen-mexico.html">Visa Schengen</li>
       </ul></div>
       <div class="footer-col"><h4>Nosotros</h4><ul>
         <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
@@ -695,6 +693,43 @@
     if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
     function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}
     function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+
+    // Conversor de monedas
+    (function(){
+      let cvRates = {};
+      async function cvFetch(){
+        try {
+          const r = await fetch('https://api.frankfurter.app/latest?from=EUR');
+          const d = await r.json();
+          cvRates = d.rates; cvRates['EUR'] = 1;
+          document.getElementById('cvTime').textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'});
+          cvConvert();
+        } catch(e) {
+          cvRates = {EUR:1,USD:1.08,GBP:0.86,MXN:18.5,CHF:0.97,NOK:11.4,SEK:11.2,ARS:980,COP:4300,BRL:5.5};
+          document.getElementById('cvTime').textContent = 'Tipo orientativo';
+          cvConvert();
+        }
+      }
+      window.cvConvert = function(){
+        const from = document.getElementById('cvFrom').value;
+        const to   = document.getElementById('cvTo').value;
+        const amt  = parseFloat(document.getElementById('cvAmount').value) || 0;
+        if(!cvRates[from] || !cvRates[to]) return;
+        const rate = cvRates[to] / cvRates[from];
+        const res  = amt * rate;
+        const fmt  = res >= 1000 ? res.toLocaleString('es-MX',{maximumFractionDigits:0}) : res.toFixed(2);
+        document.getElementById('cvResult').textContent = fmt + ' ' + to;
+        document.getElementById('cvRate').textContent = '1 ' + from + ' = ' + (rate < 0.01 ? rate.toFixed(4) : rate.toFixed(2)) + ' ' + to;
+      };
+      window.cvSwap = function(){
+        const f = document.getElementById('cvFrom'), t = document.getElementById('cvTo'), tmp = f.value;
+        f.value = t.value; t.value = tmp; cvConvert();
+      };
+      document.getElementById('cvFrom').addEventListener('change', cvConvert);
+      document.getElementById('cvTo').addEventListener('change', cvConvert);
+      document.getElementById('cvAmount').addEventListener('input', cvConvert);
+      cvFetch();
+    })();
   </script>
 </body>
 </html>
