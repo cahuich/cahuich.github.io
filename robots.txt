@@ -8,4 +8,4 @@ Disallow: /aviso-legal.html
 Disallow: /afiliados.html
 
 # Sitemap
-Sitemap: https://voyagelumiere.com/sitemap.xml
+Sitemap: https://cahuich.github.io/sitemap.xml
