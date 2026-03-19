@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Excluir páginas legales y de baja prioridad
+Disallow: /privacidad.html
+Disallow: /cookies.html
+Disallow: /aviso-legal.html
+Disallow: /afiliados.html
+
+# Sitemap
+Sitemap: https://voyagelumiere.com/sitemap.xml
