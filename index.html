@@ -138,7 +138,7 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .read-more:hover { color:var(--gold); gap:.65rem; }
 
 /* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:flex; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
@@ -375,6 +375,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   }
   </script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1029/900/506?w=400&q=60&fm=webp"/>
 </head>
 <body>
 </head>
@@ -440,7 +441,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     </div>
     <div class="destinations-grid">
       <div class="dest-card reveal">
-        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1565881606991-789a8dff9dbb?w=900&q=80')"></div>
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1565881606991-789a8dff9dbb?fm=webp&w=900&q=80')"></div>
         <div class="dest-overlay">
           <span class="dest-cat">Francia</span>
           <h3 class="dest-name">París:<br/>La Ciudad Eterna</h3>
@@ -449,7 +450,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <a href="articles/paris.html" class="dest-book">Leer guía →</a>
       </div>
       <div class="dest-card reveal">
-        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&h=500&fit=crop')"></div>
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="dest-overlay">
           <span class="dest-cat">Italia</span>
           <h3 class="dest-name">Venecia</h3>
@@ -459,7 +460,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fit%2Fvenice.html" target="_blank" rel="sponsored" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
-        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1630219694734-fe47ab76b15e?w=700&h=500&fit=crop')"></div>
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1630219694734-fe47ab76b15e?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="dest-overlay">
           <span class="dest-cat">España</span>
           <h3 class="dest-name">Barcelona</h3>
@@ -468,7 +469,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fes%2Fbarcelona.html" target="_blank" rel="sponsored" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
-        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=700&h=500&fit=crop')"></div>
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="dest-overlay">
           <span class="dest-cat">Reino Unido</span>
           <h3 class="dest-name">Londres</h3>
@@ -477,7 +478,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fgb%2Flondon.html" target="_blank" rel="sponsored" class="dest-book">Reservar →</a>
       </div>
       <div class="dest-card reveal">
-        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=700&h=500&fit=crop')"></div>
+        <div class="dest-img" style="background-image:url('https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="dest-overlay">
           <span class="dest-cat">Grecia</span>
           <h3 class="dest-name">Santorini</h3>
@@ -502,7 +503,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     <!-- FILA 1 — 3 artículos -->
     <div class="articles-grid" style="margin-bottom:2rem;">
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1565881606991-789a8dff9dbb?w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1565881606991-789a8dff9dbb?fm=webp&w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">Francia · Guía Completa</p>
           <h3 class="article-title">Guía completa de París para 2025</h3>
@@ -515,7 +516,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
       </article>
 
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1596627116790-af6f46dddbda?w=700&h=500&fit=crop')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1596627116790-af6f46dddbda?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="article-body">
           <p class="article-tag">Italia · Guía Completa</p>
           <h3 class="article-title">Guía completa de Roma para 2025</h3>
@@ -528,7 +529,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
       </article>
 
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=700&h=500&fit=crop')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1578912996078-305d92249aa6?fm=webp&w=700&h=500&fit=crop')"></div>
         <div class="article-body">
           <p class="article-tag">España · Ruta</p>
           <h3 class="article-title">Qué ver en Barcelona en 3 días</h3>
@@ -544,7 +545,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     <!-- FILA 2 — 3 artículos -->
     <div class="articles-grid">
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1585208798174-6cedd86e019a?fm=webp&w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">Portugal · Hoteles</p>
           <h3 class="article-title">Los mejores hoteles de Lisboa para 2025</h3>
@@ -557,7 +558,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
       </article>
 
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1680795561618-267bfb9694e5?w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1680795561618-267bfb9694e5?fm=webp&w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">Europa · Consejos</p>
           <h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3>
@@ -570,7 +571,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
       </article>
 
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1713791235484-f6b3ca26bbb5?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1713791235484-f6b3ca26bbb5?fm=webp&fit=crop&w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">Europa · Temporada</p>
           <h3 class="article-title">Mejores destinos europeos en primavera</h3>
@@ -586,7 +587,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     <!-- FILA 3 — Visa + Gastronomía + Naturaleza -->
     <div class="articles-grid" style="margin-top:1.5rem;">
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1723478557824-5d9b58da31af?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1723478557824-5d9b58da31af?fm=webp&fit=crop&w=700&q=80')"></div>
         <div class="article-body">
           <p class="article-tag">México · Trámites</p>
           <h3 class="article-title">Visa Schengen desde México: guía completa 2025</h3>
@@ -652,7 +653,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-museo-del-louvre-l124297/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1597923896141-d4de3119853e?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1597923896141-d4de3119853e?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🏛️ Más popular</span>
               <h3 class="ttc-name">Museo del Louvre</h3>
@@ -666,7 +667,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-palacio-de-versalles-l141873/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1602003472234-6a9fde86a446?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1602003472234-6a9fde86a446?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">👑 Imprescindible</span>
               <h3 class="ttc-name">Palacio de Versalles</h3>
@@ -680,7 +681,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-torre-eiffel-l144586/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1568402028652-297e5f6fd07d?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1568402028652-297e5f6fd07d?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🗼 Icónico</span>
               <h3 class="ttc-name">Torre Eiffel</h3>
@@ -694,7 +695,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-musee-d-orsay-l141867/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1632127255731-469370df58c3?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1632127255731-469370df58c3?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🎨 Arte</span>
               <h3 class="ttc-name">Musée d'Orsay</h3>
@@ -721,7 +722,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-coliseo-y-foro-romano-audioguia-p1111515/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661938399624-3495425e5027?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661938399624-3495425e5027?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🏟️ Más visitado</span>
               <h3 class="ttc-name">Coliseo y Foro Romano</h3>
@@ -735,7 +736,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-museos-vaticanos-y-capilla-sixtina-entrada-de-acceso-rapido-p1111450/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1617452171508-5a66544a9bbb?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1617452171508-5a66544a9bbb?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">⛪ Imprescindible</span>
               <h3 class="ttc-name">Museos Vaticanos</h3>
@@ -749,7 +750,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-galleria-borghese-l144780/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1626337201710-4f01572ba434?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1626337201710-4f01572ba434?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🖼️ Arte</span>
               <h3 class="ttc-name">Galería Borghese</h3>
@@ -763,7 +764,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-castillo-de-sant-angelo-tour-guiado-p1111506/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1512064444180-54b51a475aa7?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1512064444180-54b51a475aa7?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🏰 Vistas</span>
               <h3 class="ttc-name">Castel Sant'Angelo</h3>
@@ -790,7 +791,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-sagrada-familia-l133161/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1728249960363-13079cc2c6f6?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1728249960363-13079cc2c6f6?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">⛪ Más popular</span>
               <h3 class="ttc-name">Sagrada Família</h3>
@@ -804,7 +805,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-casa-batllo-l141895/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1650822554329-6afb33a837b4?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1650822554329-6afb33a837b4?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🦎 Experiencia</span>
               <h3 class="ttc-name">Casa Batlló</h3>
@@ -818,7 +819,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-park-guell-l141902/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1688680436936-0175962af721?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1688680436936-0175962af721?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🌿 Gaudí</span>
               <h3 class="ttc-name">Park Güell</h3>
@@ -832,7 +833,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/atracciones-barcelona-c66342/entradas-para-museo-del-fc-barcelona-entrada-p1058220/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1544366981-53db834f982a?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1544366981-53db834f982a?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">⚽ Deporte</span>
               <h3 class="ttc-name">Camp Nou · FC Barcelona</h3>
@@ -859,7 +860,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-torre-de-belem-l141937/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1697394491822-03097d89c898?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1697394491822-03097d89c898?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🏰 UNESCO</span>
               <h3 class="ttc-name">Torre de Belém</h3>
@@ -873,7 +874,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-monasterio-de-los-jeronimos-l145607/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1680126800710-255188bbd1ac?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1680126800710-255188bbd1ac?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">⛪ Arte manuelino</span>
               <h3 class="ttc-name">Monasterio de los Jerónimos</h3>
@@ -887,7 +888,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-oceanario-de-lisboa-l146378/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1584203968150-fe113b69ecbe?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1584203968150-fe113b69ecbe?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🐠 Familia</span>
               <h3 class="ttc-name">Oceanario de Lisboa</h3>
@@ -901,7 +902,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
           <a href="https://www.tiqets.com/es/entradas-palacio-nacional-da-pena-y-parque-l145615/?partner_id=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored" class="tiq-ticket-card">
-            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1565865735988-fd5752a02846?w=500&h=340&fit=crop')"></div>
+            <div class="ttc-img" style="background-image:url('https://images.unsplash.com/photo-1565865735988-fd5752a02846?fm=webp&w=500&h=340&fit=crop')"></div>
             <div class="ttc-body">
               <span class="ttc-badge">🏯 Excursión</span>
               <h3 class="ttc-name">Palacio de Sintra</h3>
@@ -1032,10 +1033,17 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
     // Cookies
     const banner = document.getElementById('cookieBanner');
-    if(localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+    // Mostrar banner después de LCP — no interfiere con el renderizado inicial
+    window.addEventListener('load', function() {
+      if(!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          banner.style.display = 'flex';
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }, 1200);
+      }
+    });
     function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
     function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
-
     // Tiqets City Tabs
     function switchTab(btn, city) {
       document.querySelectorAll('.tiq-tab').forEach(t => t.classList.remove('active'));
