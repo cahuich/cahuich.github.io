@@ -120,7 +120,7 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .read-more:hover { color:var(--gold); gap:.65rem; }
 
 /* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:flex; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
@@ -157,7 +157,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   </style>
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.65) 100%),url('https://images.unsplash.com/photo-1699365021576-65947e232016?w=1600&h=900&fit=crop') center/cover no-repeat}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.65) 100%),url('https://images.unsplash.com/photo-1699365021576-65947e232016?fm=webp&w=1600&h=900&fit=crop') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
     .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
@@ -220,6 +220,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .read-more{color:var(--gold);font-weight:700;text-decoration:none}
     @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
   </style>
 
   <!-- SEO: Open Graph -->
@@ -264,6 +269,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   }
   </script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1048/900/506?w=400&q=60&fm=webp"/>
 </head>
 <body>
 
@@ -313,7 +319,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 1 FIORDOS -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661963909951-17cfa4153bb7?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661963909951-17cfa4153bb7?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">1</div>
           </div>
           <div class="destino-body">
@@ -331,7 +337,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 2 PLITVICE -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661963465567-189e456382c4?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661963465567-189e456382c4?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">2</div>
           </div>
           <div class="destino-body">
@@ -349,7 +355,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 3 DOLOMITAS -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1604998103924-89e012e5265a?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1604998103924-89e012e5265a?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">3</div>
           </div>
           <div class="destino-body">
@@ -365,12 +371,12 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
         </div>
 
-        <img class="article-img-full" src="https://images.unsplash.com/photo-1699365021576-65947e232016?w=1000&h=500&fit=crop" alt="Paisaje natural europeo"/>
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1699365021576-65947e232016?fm=webp&w=1000&h=500&fit=crop" alt="Paisaje natural europeo"/>
         <p class="img-caption">Los paisajes naturales de Europa ofrecen experiencias que van mucho más allá del turismo urbano</p>
 
         <!-- 4 AURORA BOREAL -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1605286700104-15889419f60b?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1605286700104-15889419f60b?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">4</div>
           </div>
           <div class="destino-body">
@@ -388,7 +394,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 5 ACANTILADOS MOHER -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1575502420275-6ee9918c2221?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1575502420275-6ee9918c2221?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">5</div>
           </div>
           <div class="destino-body">
@@ -406,7 +412,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 6 SELVA NEGRA -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1597092644273-5a156712bb89?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1597092644273-5a156712bb89?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">6</div>
           </div>
           <div class="destino-body">
@@ -424,7 +430,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 7 LOFOTEN -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1542047078441-229be3aa1f12?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1542047078441-229be3aa1f12?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">7</div>
           </div>
           <div class="destino-body">
@@ -442,7 +448,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
         <!-- 8 CINQUE TERRE -->
         <div class="destino-card">
-          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1530735606451-8f5f13955328?w=900&h=260&fit=crop')">
+          <div class="destino-img" style="background-image:url('https://images.unsplash.com/photo-1530735606451-8f5f13955328?fm=webp&w=900&h=260&fit=crop')">
             <div class="destino-badge">8</div>
           </div>
           <div class="destino-body">
