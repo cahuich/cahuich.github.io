@@ -119,7 +119,7 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .read-more:hover { color:var(--gold); gap:.65rem; }
 
 /* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:flex; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
@@ -156,7 +156,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   </style>
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1633117678642-7fcc7870f64a?w=1600&q=900') center/cover no-repeat}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1633117678642-7fcc7870f64a?fm=webp&w=1600&q=900') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
     .breadcrumb a{color:rgba(255,255,255,.65)}
@@ -222,6 +222,12 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .read-more{color:var(--gold);font-weight:700;text-decoration:none}
     @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+
+   /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
   </style>
 
   <!-- SEO: Open Graph -->
@@ -266,6 +272,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   }
   </script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1029/900/506?w=400&q=60&fm=webp"/>
 </head>
 <body>
   <nav id="navbar" class="scrolled">
@@ -398,7 +405,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
         </div>
 
-        <img class="article-img-full" src="https://images.unsplash.com/photo-1585076491343-592f07930a99?fm=jpg?w=1000&q=500" alt="Jardines del Palacio de Versalles"/>
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1585076491343-592f07930a99?fm=webp&w=1000&q=500" alt="Jardines del Palacio de Versalles"/>
         <p class="img-caption">Los jardines de Versalles — 800 hectáreas que la mayoría de visitantes no llega a explorar del todo</p>
 
         <h2 id="consejos">Lo que no debes perderte</h2>
@@ -457,7 +464,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
       </div>
       <div class="articles-grid">
         <article class="article-card reveal">
-          <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=500&q=700')"></div>
+          <div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?fm=webp&fm=webp&w=500&q=700')"></div>
           <div class="article-body">
             <p class="article-tag">Francia · Guía</p>
             <h3 class="article-title">Guía completa de París para 2025</h3>
@@ -466,7 +473,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
         </article>
         <article class="article-card reveal">
-          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1587648415693-4a5362b2ce41?w=500&q=700')"></div>
+          <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1587648415693-4a5362b2ce41?fm=webp&w=500&q=700')"></div>
           <div class="article-body">
             <p class="article-tag">París · Cultura</p>
             <h3 class="article-title">El Louvre en 3 horas</h3>
@@ -501,7 +508,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     const observer=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
     const banner=document.getElementById('cookieBanner');
-    if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');
+    window.addEventListener('load',function(){
+      if(!localStorage.getItem('cookieConsent')){
+        setTimeout(()=>{banner.style.display='flex';requestAnimationFrame(()=>banner.classList.add('visible'));},1200);
+      }
+    });
     function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden')}
     function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden')}
   </script>
