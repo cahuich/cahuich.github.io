@@ -120,7 +120,7 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .read-more:hover { color:var(--gold); gap:.65rem; }
 
 /* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:flex; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
@@ -168,7 +168,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <!-- GetYourGuide Integration Analyzer -->
     <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=1600&q=80') center/cover no-repeat}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1585208798174-6cedd86e019a?fm=webp&w=1600&q=80') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
     .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
@@ -275,6 +275,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
     .related-section{background:var(--warm);padding:5rem 5vw}
     @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.hotel-card{grid-template-columns:1fr}}
+  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
   </style>
 
   <!-- SEO: Open Graph -->
@@ -319,6 +324,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   }
   </script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1044/900/506?w=400&q=60&fm=webp"/>
 </head>
 <body>
   <nav id="navbar" class="scrolled">
@@ -382,7 +388,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <div class="hotel-price"><span class="hotel-price-num">195€</span><span class="hotel-price-label">desde/noche</span></div>
         </div>
 
-        <img class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1000&q=80" alt="Lisboa vistas"/>
+        <img class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?fm=webp&w=1000&q=80" alt="Lisboa vistas"/>
         <p class="img-caption">Vistas al río Tejo desde los miradores de Lisboa · © Unsplash</p>
 
         <h2 id="medio">Hoteles de gama media (80–180€ noche)</h2>
@@ -734,17 +740,20 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <section class="related-section">
     <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
     <div class="articles-grid" style="max-width:1200px;margin:0 auto">
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Italia</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80')"></div><div class="article-body"><p class="article-tag">España</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div></article>
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1680795561618-267bfb9694e5?w=700&q=80')"></div><div class="article-body"><p class="article-tag">Europa</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para gastar menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=700&q=80')"></div><div class="article-body"><p class="article-tag">Italia</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?fm=webp&w=700&q=80')"></div><div class="article-body"><p class="article-tag">España</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1680795561618-267bfb9694e5?fm=webp&w=700&q=80')"></div><div class="article-body"><p class="article-tag">Europa</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para gastar menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
     </div>
   </section>
 
   <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="paris-louvre.html">Cultura</a></li><li><a href="gastronomia-europa.html">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li><li><a href="visa-schengen-mexico.html">Visa Schengen</li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="../sobre-nosotros.html">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="../cookies.html">Cookies</a></div></div></footer>
   <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
   <script>
+    <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="paris-louvre.html">Cultura</a></li><li><a href="gastronomia-europa.html">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li><li><a href="visa-schengen-mexico.html">Visa Schengen</li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="../sobre-nosotros.html">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="../cookies.html">Cookies</a></div></div></footer>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <script>
     const navbar=document.getElementById('navbar');let ticking=false;
-    window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{navbar.classList.toggle('scrolled',window.scrollY>40);ticking=false;});ticking=true;}},{passive:true});document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*80}ms`;observer.observe(el);});const banner=document.getElementById('cookieBanner');if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}
+    window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{navbar.classList.toggle('scrolled',window.scrollY>40);ticking=false;});ticking=true;}},{passive:true});document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));});const banner=document.getElementById('cookieBanner');if(localStorage.getItem('cookieConsent'))banner.classList.add('hidden');function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden');}function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden');}  
   </script>
   <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
 </body>
