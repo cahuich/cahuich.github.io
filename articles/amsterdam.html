@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ámsterdam: qué ver, hacer y dónde alojarse | Voyage Lumière</title>
+  <meta name="description" content="Guía completa para viajar a Ámsterdam: canales, museos, barrios y consejos prácticos para latinoamericanos. Todo lo que necesitas saber antes de ir." />
+  <link rel="canonical" href="https://cahuich.github.io/amsterdam.html" />
+  <meta property="og:title" content="Ámsterdam: qué ver, hacer y dónde alojarse" />
+  <meta property="og:description" content="Guía completa para viajar a Ámsterdam: canales, museos, barrios y consejos prácticos para latinoamericanos." />
+  <meta property="og:image" content="https://cahuich.github.io/images/og-amsterdam.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cahuich.github.io/amsterdam.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #C0392B;
+      --brand-dark: #96281B;
+      --brand-light: #FDECEA;
+      --accent: #E67E22;
+      --text: #1a1a2e;
+      --muted: #555;
+      --border: #e0ddd8;
+      --bg: #fdfbf8;
+      --white: #ffffff;
+      --radius: 10px;
+      --max: 780px;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brand); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(160deg, #1a3a5c 0%, #0f2540 60%, #2c1810 100%);
+      color: white;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=1400&q=80') center/cover no-repeat;
+      opacity: 0.25;
+    }
+    .hero-content { position: relative; max-width: var(--max); margin: 0 auto; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--brand);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .hero-meta span::before { margin-right: 5px; }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    article { padding: 3rem 0 4rem; }
+
+    /* ── TYPOGRAPHY ── */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.8rem 0 0.9rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--brand-light);
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.5rem;
+    }
+    p { margin-bottom: 1.1rem; color: var(--text); }
+    ul, ol { padding-left: 1.4rem; margin-bottom: 1.1rem; }
+    li { margin-bottom: 0.4rem; }
+    strong { color: var(--brand-dark); }
+    a { color: var(--brand); }
+
+    /* ── DATOS RÁPIDOS ── */
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      margin: 2rem 0;
+    }
+    .fact {
+      text-align: center;
+      padding: 0.5rem;
+    }
+    .fact-icon { font-size: 1.5rem; margin-bottom: 4px; }
+    .fact-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .fact-value { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-top: 2px; }
+
+    /* ── AFFILIATE BLOCKS ── */
+    .affiliate-block {
+      border-radius: var(--radius);
+      padding: 1.5rem 1.6rem;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .affiliate-block h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .affiliate-block p { margin: 0; font-size: 0.93rem; }
+    .affiliate-block .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0.3rem; }
+
+    .affiliate-block.flights { background: #EBF5FB; border: 1px solid #AED6F1; }
+    .affiliate-block.flights h3 { color: #1A5276; }
+    .affiliate-block.hotel { background: #EAF4FB; border: 1px solid #85C1E9; }
+    .affiliate-block.hotel h3 { color: #1A5276; }
+    .affiliate-block.activities { background: #FEF9E7; border: 1px solid #F9E79F; }
+    .affiliate-block.activities h3 { color: #7D6608; }
+    .affiliate-block.transport { background: #EAFAF1; border: 1px solid #A9DFBF; }
+    .affiliate-block.transport h3 { color: #1D6A39; }
+
+    .btn-affiliate {
+      display: inline-block;
+      background: var(--brand);
+      color: white;
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-affiliate:hover { background: var(--brand-dark); transform: translateY(-1px); color: white; }
+    .btn-affiliate.secondary {
+      background: var(--white);
+      color: var(--brand);
+      border: 2px solid var(--brand);
+    }
+    .btn-affiliate.secondary:hover { background: var(--brand-light); }
+
+    /* ── ATTRACTION CARDS ── */
+    .attraction-list { display: flex; flex-direction: column; gap: 1rem; margin: 1.2rem 0; }
+    .attraction {
+      display: flex;
+      gap: 1rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      align-items: flex-start;
+    }
+    .attraction-num {
+      min-width: 32px;
+      height: 32px;
+      background: var(--brand);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .attraction-body h3 { margin: 0 0 4px; font-size: 1rem; }
+    .attraction-body p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+
+    /* ── TIP BOX ── */
+    .tip-box {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.3rem;
+      margin: 1.5rem 0;
+      font-size: 0.93rem;
+    }
+    .tip-box strong { display: block; margin-bottom: 4px; color: var(--brand); }
+
+    /* ── BARRIOS ── */
+    .barrios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 1.2rem 0;
+    }
+    .barrio-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+    }
+    .barrio-card h3 { margin: 0 0 5px; font-size: 0.97rem; color: var(--brand-dark); }
+    .barrio-card p { margin: 0; font-size: 0.87rem; color: var(--muted); }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+      color: white;
+      border-radius: var(--radius);
+      padding: 2rem 1.8rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-final h2 {
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      margin: 0 0 0.7rem;
+      padding: 0;
+    }
+    .cta-final p { color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; font-size: 0.97rem; }
+    .cta-final .btn-affiliate { background: white; color: var(--brand); }
+    .cta-final .btn-affiliate:hover { background: var(--brand-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero { padding: 3.5rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="https://cahuich.github.io">✦ Voyage Lumière</a>
+  <div class="nav-links">
+    <a href="https://cahuich.github.io">Inicio</a>
+    <a href="#">Destinos</a>
+    <a href="#">Consejos</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">🇳🇱 Países Bajos · Europa</span>
+    <h1>Ámsterdam: la ciudad que te enamora canal por canal</h1>
+    <p class="hero-sub">Guía completa para latinoamericanos — qué ver, dónde dormir, cómo moverse y los tips que ninguna guía te cuenta.</p>
+    <div class="hero-meta">
+      <span>✍️ Por el equipo de Voyage Lumière</span>
+      <span>🗓️ Actualizado abril 2025</span>
+      <span>⏱️ Lectura: 8 min</span>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<div class="container">
+<article>
+
+  <!-- INTRO -->
+  <p>Hay ciudades que te impresionan. Y hay ciudades que te cambian. <strong>Ámsterdam es de las segundas.</strong></p>
+
+  <p>Desde el momento en que llegas y ves esas casas angostas y ligeramente inclinadas reflejándose en los canales, algo se activa en ti. No es solo que sea bonita — es que tiene una <em>personalidad</em> tan particular, tan libre y tan auténtica, que se te mete bajo la piel sin que te des cuenta.</p>
+
+  <p>Más canales que Venecia, más bicicletas que personas, museos de clase mundial, mercados llenos de color... y una actitud hacia la vida que, honestamente, todos deberíamos aprender un poco. Esta guía es todo lo que necesitas para planear tu viaje a Ámsterdam sin sorpresas.</p>
+
+  <!-- DATOS RÁPIDOS -->
+  <div class="quick-facts">
+    <div class="fact"><div class="fact-icon">🛂</div><div class="fact-label">Visa</div><div class="fact-value">Schengen</div></div>
+    <div class="fact"><div class="fact-icon">💶</div><div class="fact-label">Moneda</div><div class="fact-value">Euro (€)</div></div>
+    <div class="fact"><div class="fact-icon">🗣️</div><div class="fact-label">Idioma</div><div class="fact-value">Holandés / Inglés</div></div>
+    <div class="fact"><div class="fact-icon">🌡️</div><div class="fact-label">Mejor época</div><div class="fact-value">Abr – Sep</div></div>
+    <div class="fact"><div class="fact-icon">🕐</div><div class="fact-label">Huso horario</div><div class="fact-value">CET (UTC+1)</div></div>
+    <div class="fact"><div class="fact-icon">✈️</div><div class="fact-label">Aeropuerto</div><div class="fact-value">Schiphol (AMS)</div></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Sobre la visa Schengen</strong>
+    Para ciudadanos latinoamericanos, necesitarás visa Schengen antes de viajar. Aplica con al menos 3 meses de anticipación en el consulado holandés o en el VFS Global más cercano. Una vez aprobada, te sirve para viajar por 26 países europeos.
+  </div>
+
+  <!-- VUELOS -->
+  <h2>✈️ Cómo llegar a Ámsterdam</h2>
+
+  <p>El aeropuerto de Ámsterdam Schiphol (AMS) es uno de los hubs más importantes de Europa — bien conectado con el mundo y especialmente con América Latina. Desde México, Colombia, Argentina o Perú, encontrarás vuelos directos con KLM o con escalas en ciudades como Miami, Madrid o París.</p>
+
+  <p>Lo más importante: <strong>compara precios con tiempo</strong>. Los vuelos a Europa conviene buscarlos con 3 a 6 meses de anticipación. Ser flexible con las fechas puede ahorrarte cientos de dólares.</p>
+
+  <div class="affiliate-block flights">
+    <h3>✈️ Busca los mejores vuelos a Ámsterdam</h3>
+    <p>Compara precios en cientos de aerolíneas y encuentra la mejor opción para tu presupuesto.</p>
+    <div class="btn-row">
+      <a href="https://www.kiwi.com/es/" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Buscar vuelos en Kiwi →</a>
+    </div>
+  </div>
+
+  <!-- ALOJAMIENTO -->
+  <h2>🏨 Dónde alojarse en Ámsterdam</h2>
+
+  <p>Ámsterdam es compacta, lo que significa que casi cualquier barrio es una buena base para explorar. Dicho eso, el barrio donde te hospedes sí afecta bastante la experiencia — y el precio. Aquí te damos el mapa para elegir bien.</p>
+
+  <div class="barrios-grid">
+    <div class="barrio-card">
+      <h3>🌿 Jordaan</h3>
+      <p>El favorito de los viajeros con buen gusto. Canales tranquilos, mercados locales y ambiente auténtico. Ideal para primeras visitas.</p>
+    </div>
+    <div class="barrio-card">
+      <h3>🏛️ Museumkwartier</h3>
+      <p>Junto al Rijksmuseum y el Van Gogh. Perfecto si tu viaje gira en torno a la cultura. Más tranquilo que el centro.</p>
+    </div>
+    <div class="barrio-card">
+      <h3>🌉 De Pijp</h3>
+      <p>Joven, vibrante y multicultural. Hogar del Mercado Albert Cuyp y una escena gastronómica increíble.</p>
+    </div>
+    <div class="barrio-card">
+      <h3>🏙️ Centro histórico</h3>
+      <p>Máxima comodidad y acceso a todo. Más turístico y ruidoso, pero imposible aburrirse. Precios más altos.</p>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Tip de presupuesto</strong>
+    Los hoteles en Ámsterdam son más caros que el promedio europeo. Si viajas en pareja o en grupo, considera apartamentos en Booking — suelen salir más baratos y te dan cocina propia para ahorrar en comidas.
+  </div>
+
+  <div class="affiliate-block hotel">
+    <h3>🏨 Encuentra tu alojamiento ideal en Ámsterdam</h3>
+    <p>Desde boutique hotels en Jordaan hasta apartamentos con vistas al canal — con cancelación gratuita en la mayoría de opciones.</p>
+    <div class="btn-row">
+      <a href="https://www.booking.com/city/nl/amsterdam.html?aid=YOUR_AID" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Ver hoteles en Booking →</a>
+    </div>
+  </div>
+
+  <!-- QUÉ VER -->
+  <h2>🎯 Qué ver y hacer en Ámsterdam</h2>
+
+  <p>Podríamos llenar un libro con todo lo que tiene Ámsterdam para ofrecer. Pero si es tu primera vez, aquí están los imperdibles absolutos — los lugares que realmente valen cada minuto.</p>
+
+  <div class="attraction-list">
+    <div class="attraction">
+      <div class="attraction-num">1</div>
+      <div class="attraction-body">
+        <h3>Rijksmuseum</h3>
+        <p>El museo nacional holandés alberga más de un millón de objetos de arte y historia, incluyendo obras maestras de Rembrandt y Vermeer. Reserva tu entrada con semanas de anticipación — las colas sin reserva pueden ser de 2 horas.</p>
+      </div>
+    </div>
+    <div class="attraction">
+      <div class="attraction-num">2</div>
+      <div class="attraction-body">
+        <h3>Casa de Ana Frank</h3>
+        <p>Una de las visitas más emotivas de Europa. El escondite donde Ana Frank escribió su diario durante la Segunda Guerra Mundial. Las entradas se agotan días antes — reserva sí o sí con anticipación.</p>
+      </div>
+    </div>
+    <div class="attraction">
+      <div class="attraction-num">3</div>
+      <div class="attraction-body">
+        <h3>Paseo en barco por los canales</h3>
+        <p>La perspectiva desde el agua es completamente diferente. Los tours en barco de 1 hora te muestran la ciudad desde ángulos que no verás a pie. Hay opciones abiertas, cerradas, con cena y hasta de noche.</p>
+      </div>
+    </div>
+    <div class="attraction">
+      <div class="attraction-num">4</div>
+      <div class="attraction-body">
+        <h3>Keukenhof (temporada de tulipanes)</h3>
+        <p>Si vas entre mediados de marzo y mediados de mayo, los jardines de Keukenhof son un espectáculo visual sin igual. Siete millones de flores en flor. Está a 30 minutos de la ciudad en autobús. No hay muchos lugares así en el mundo.</p>
+      </div>
+    </div>
+    <div class="attraction">
+      <div class="attraction-num">5</div>
+      <div class="attraction-body">
+        <h3>Museo Van Gogh</h3>
+        <p>La colección más grande del mundo de obras de Vincent van Gogh. Aunque no seas muy de arte, este museo engancha — la historia personal de Van Gogh es fascinante y el museo la cuenta muy bien.</p>
+      </div>
+    </div>
+    <div class="attraction">
+      <div class="attraction-num">6</div>
+      <div class="attraction-body">
+        <h3>Barrio Jordaan y el Mercado del Agricultor</h3>
+        <p>El alma auténtica de Ámsterdam. Caminatas sin rumbo por callecitas con flores, galerías de arte independiente y el Noordermarkt los sábados. El tipo de experiencia que no viene en los tours.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVIDADES AFILIADOS -->
+  <div class="affiliate-block activities">
+    <h3>🎟️ Reserva tus entradas y tours sin colas</h3>
+    <p>El Rijksmuseum, la Casa de Ana Frank y Keukenhof se agotan con facilidad. Reservar online te ahorra horas de espera y garantiza tu lugar.</p>
+    <div class="btn-row">
+      <a href="https://www.tiqets.com/es/amsterdam/" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Ver entradas en Tiqets →</a>
+      <a href="https://www.getyourguide.es/amsterdam-l36/" target="_blank" rel="nofollow sponsored" class="btn-affiliate secondary">Tours en GetYourGuide →</a>
+    </div>
+  </div>
+
+  <!-- CÓMO MOVERSE -->
+  <h2>🚲 Cómo moverse por Ámsterdam</h2>
+
+  <p>Ámsterdam es una ciudad pensada para ir despacio. Y eso es lo mejor que tiene. Aquí te explicamos las formas más inteligentes (y más divertidas) de moverte.</p>
+
+  <h3>🚲 En bicicleta — la forma definitiva</h3>
+  <p>Ámsterdam tiene más bicicletas que personas. Rentar una el primer día no es solo práctico: <strong>es la experiencia más auténtica que puedes tener en la ciudad</strong>. Cuesta entre €10 y €15 al día. Eso sí — respeta los carriles bici y no camines en ellos: los locales no perdonan eso.</p>
+
+  <h3>🚌 Tranvía y metro</h3>
+  <p>El sistema de transporte público es excelente. Con la tarjeta OV-chipkaart o comprando tickets directamente, puedes moverte por toda la ciudad. El tranvía es especialmente cómodo para el centro histórico.</p>
+
+  <h3>🦶 A pie</h3>
+  <p>El centro de Ámsterdam es sorprendentemente compacto. Del Centraal Station a Museumkwartier son unos 30 minutos caminando. Muchas de las mejores experiencias de la ciudad suceden mientras caminas sin prisa.</p>
+
+  <h3>🚂 Excursiones desde Ámsterdam</h3>
+  <p>Desde Ámsterdam puedes hacer excursiones fáciles en tren a ciudades como Rotterdam (40 min), Delft, La Haya o Utrecht. Los trenes en Países Bajos son puntuales y frecuentes.</p>
+
+  <div class="affiliate-block transport">
+    <h3>🚂 Moverse por Holanda y Europa en tren</h3>
+    <p>Compara y reserva trenes, autobuses y más desde Ámsterdam hacia otras ciudades europeas.</p>
+    <div class="btn-row">
+      <a href="https://www.omio.es/trains/amsterdam" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Buscar trenes en Omio →</a>
+    </div>
+  </div>
+
+  <!-- DÓNDE COMER -->
+  <h2>🍽️ Dónde y qué comer en Ámsterdam</h2>
+
+  <p>La gastronomía holandesa no es mundialmente famosa (seamos honestos), pero Ámsterdam tiene una escena culinaria sorprendentemente rica gracias a su historia colonial y su cosmopolitismo. Aquí lo que no te puedes perder:</p>
+
+  <ul>
+    <li><strong>Stroopwafels recién hechos</strong> — en cualquier mercado. Nada que ver con los de bolsa.</li>
+    <li><strong>Haring (arenque crudo)</strong> — el snack callejero por excelencia. Sujétalo por la cola y muérdelo. Sí, en serio.</li>
+    <li><strong>Quesos en el Markt</strong> — Gouda, Edam, con comino o con trufa. Los mercados de queso son una experiencia en sí.</li>
+    <li><strong>Poffertjes</strong> — minicreps esponjosas con azúcar glass y mantequilla. El dulce de la calle en Ámsterdam.</li>
+    <li><strong>Cocina indonesia (Rijsttafel)</strong> — herencia colonial holandesa. Un banquete de pequeños platillos indonesios. Busca un buen restaurante y pide el rijsttafel para dos.</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>💡 Para comer bien sin gastar de más</strong>
+    El barrio De Pijp tiene la mejor relación calidad-precio de la ciudad. El Mercado Albert Cuyp (de lunes a sábado) es ideal para comer de pie, barato y rodeado de locales.
+  </div>
+
+  <!-- CONSEJOS PRÁCTICOS -->
+  <h2>💡 Consejos prácticos para tu viaje</h2>
+
+  <ul>
+    <li><strong>Reserva TODO con anticipación.</strong> Rijksmuseum, Ana Frank, Keukenhof — todos tienen cupo limitado. No improvises en Ámsterdam.</li>
+    <li><strong>Cuida tus pertenencias.</strong> El centro histórico tiene mucho turismo y, con él, carteristas. Bolso cruzado en el frente y nada en los bolsillos traseros.</li>
+    <li><strong>El canal es sagrado.</strong> No te sientes en los bordes de los canales si no quieres mojar el pasaporte. Pasa todos los años.</li>
+    <li><strong>Cuidado con los carriles bici.</strong> El mayor peligro para un turista en Ámsterdam no es el crimen — es que te atropelle una bicicleta. Siempre mira antes de cruzar.</li>
+    <li><strong>El I Amsterdam Card.</strong> Si vas a visitar varios museos, la tarjeta turística puede salirte más barata. Incluye transporte y entrada a decenas de atracciones.</li>
+    <li><strong>El mejor momento para las fotos.</strong> Los canales al amanecer o al atardecer son de película. Levántate temprano y tendrás la ciudad para ti solo.</li>
+    <li><strong>Lleva capas.</strong> El clima holandés cambia en minutos. Sol, lluvia y viento en el mismo día. Siempre trae una chamarra y algo impermeable.</li>
+  </ul>
+
+  <!-- CTA FINAL -->
+  <div class="cta-final">
+    <h2>¿Listo para descubrir Ámsterdam? 🌷</h2>
+    <p>El próximo paso es encontrar tu vuelo y reservar tu alojamiento antes de que se agoten las mejores opciones. Ámsterdam espera — y te lo vas a agradecer.</p>
+    <div class="btn-row" style="justify-content:center; gap: 12px;">
+      <a href="https://www.kiwi.com/es/" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Buscar vuelos →</a>
+      <a href="https://www.booking.com/city/nl/amsterdam.html?aid=YOUR_AID" target="_blank" rel="nofollow sponsored" class="btn-affiliate">Ver hoteles →</a>
+    </div>
+  </div>
+
+</article>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>✦ <strong style="color:rgba(255,255,255,0.8)">Voyage Lumière</strong> — Tu guía de viaje por Europa en español</p>
+  <p style="margin-top: 6px;"><a href="https://cahuich.github.io">cahuich.github.io</a> · Hecho con ❤️ desde México</p>
+  <p style="margin-top: 10px; font-size: 0.75rem; color: rgba(255,255,255,0.35);">Este artículo contiene enlaces de afiliados. Si reservas a través de ellos, recibimos una pequeña comisión sin costo adicional para ti. ¡Gracias por apoyar el blog!</p>
+</footer>
+
+</body>
+</html>
