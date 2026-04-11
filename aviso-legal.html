@@ -2,242 +2,214 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
-  <!-- Fuentes: preconnect + carga no bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
-  <!-- Preconnect para recursos externos -->
-  <link rel="preconnect" href="https://widget.getyourguide.com"/>
-  <link rel="preconnect" href="https://www.googletagmanager.com"/>
-  <link rel="dns-prefetch" href="https://www.tiqets.com"/>
-  <link rel="dns-prefetch" href="https://www.awin1.com"/>
-  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aviso Legal · Voyage Lumière</title>
-  <meta name="description" content="Aviso legal de Voyage Lumière. Información sobre el titular del sitio, condiciones de uso y propiedad intelectual."/>
+  <title>Aviso Legal — Voyage Lumière</title>
+  <meta name="description" content="Información legal del titular del sitio y condiciones de uso."/>
+  <meta name="robots" content="noindex, follow"/>
   <style id="critical-css">
-/* ── RESET & VARIABLES ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --navy:    #1A2B4C;
-  --gold:    #C5A059;
-  --gold-lt: #E8D5A3;
-  --cream:   #FDFBF7;
-  --warm:    #F5F0E8;
-  --ink:     #1A1A1A;
-  --muted:   #6B6460;
-  --border:  #E8E2D8;
-  --ff-head: 'Playfair Display', serif;
-  --ff-body: 'Lato', sans-serif;
-  --ff-acc:  'Cormorant Garamond', serif;
-}
-
-html { scroll-behavior: smooth; }
-body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
-img  { display: block; width: 100%; object-fit: cover; }
-a    { text-decoration: none; color: inherit; }
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--warm); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-
-.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
-
-/* ── NAV ── */
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:0 4vw; height:72px;
-  background:rgba(253,251,247,.93);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
-  transition:box-shadow .3s;
-}
-nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
-.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
-.nav-logo span { color:var(--gold); }
-.nav-links { display:flex; gap:2rem; list-style:none; }
-.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
-.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
-.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
-.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
-.nav-cta:hover { background:var(--gold) !important; }
-.nav-cta::after { display:none !important; }
-.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
-.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
-
-/* ── BUTTONS ── */
-.btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
-.btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
-.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
-.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
-.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
-.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
-
-/* ── SECTION COMMONS ── */
-.section-header { text-align:center; margin-bottom:4rem; }
-.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
-.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
-.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
-
-/* ── AD SPACES ── */
-.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
-.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
-.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-
-/* ── ARTICLE CARDS ── */
-.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
-.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
-.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
-.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
-.article-card:hover .article-img { transform:scale(1.04); }
-.article-body { padding:1.6rem; }
-.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
-.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
-.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
-.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
-.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
-.read-more:hover { color:var(--gold); gap:.65rem; }
-
-/* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
-.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
-.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
-.cookie-accept:hover { background:var(--gold-lt); }
-.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
-.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
-
-/* ── FOOTER ── */
-footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
-.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
-.footer-social { display:flex; gap:.75rem; }
-.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
-.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
-.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
-.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
-.footer-col a { font-size:.83rem; transition:color .3s; }
-.footer-col a:hover { color:var(--gold); }
-.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
-.footer-legal { display:flex; gap:1.5rem; }
-.footer-legal a:hover { color:var(--gold); }
-
-/* ── RESPONSIVE ── */
-@media (max-width:900px) {
-  .nav-links { display:none; }
-  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
-  .nav-mobile-btn { display:flex; }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
-@media (max-width:600px) {
-  .footer-grid { grid-template-columns:1fr; }
-}
-
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1A2B4C;--gold:#C5A059;--gold-lt:#E8D5A3;--cream:#FDFBF7;--warm:#F5F0E8;--ink:#1A1A1A;--muted:#6B6460;--border:#E8E2D8;--ff-head:'Playfair Display',serif;--ff-body:'Lato',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--warm)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:72px;background:rgba(253,251,247,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 24px rgba(26,43,76,.08)}
+.nav-logo{font-family:var(--ff-head);font-size:1.45rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--navy);color:#fff!important;padding:.52rem 1.4rem;border-radius:2px;font-size:.78rem!important;font-weight:600!important;letter-spacing:.1em!important;transition:background .3s}
+.nav-cta:hover{background:var(--gold)!important}
+.nav-cta::after{display:none!important}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.nav-mobile-btn span{display:block;width:24px;height:2px;background:var(--navy)}
+footer{background:#111820;color:rgba(255,255,255,.55);padding:5rem 5vw 2.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1280px;margin:0 auto 3.5rem}
+.footer-brand p{font-size:.84rem;line-height:1.7;max-width:280px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:.75rem}
+.social-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.85rem;transition:background .3s,border-color .3s,color .3s}
+.social-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.footer-col h4{font-family:var(--ff-head);font-size:.9rem;color:#fff;margin-bottom:1.2rem;font-weight:600}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col a{font-size:.83rem;transition:color .3s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.75rem}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a:hover{color:var(--gold)}
+.cookie-banner{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:200;background:var(--navy);color:rgba(255,255,255,.85);padding:1.1rem 1.8rem;border-radius:3px;display:none;align-items:center;gap:1.5rem;max-width:680px;width:calc(100% - 3rem);font-size:.82rem;line-height:1.55;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:opacity .4s,transform .4s}
+.cookie-banner.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+.cookie-banner.visible{opacity:1}
+.cookie-btns{display:flex;gap:.6rem;flex-shrink:0}
+.cookie-accept{background:var(--gold);color:var(--navy);border:none;cursor:pointer;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.75rem;text-transform:uppercase;transition:background .3s}
+.cookie-dismiss{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);cursor:pointer;padding:.55rem 1rem;border-radius:2px;font-size:.75rem}
+.legal-hero{background:var(--navy);padding:8rem 5vw 4rem;margin-top:72px}
+.legal-hero h1{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:700;margin-bottom:.75rem}
+.legal-hero p{color:rgba(255,255,255,.55);font-size:.85rem}
+.legal-content{max-width:860px;margin:0 auto;padding:4rem 5vw}
+.legal-content h2{font-family:var(--ff-head);font-size:1.4rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.legal-content h2:first-child{border-top:none;padding-top:0;margin-top:0}
+.legal-content h3{font-family:var(--ff-head);font-size:1.05rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem}
+.legal-content p{font-size:.95rem;line-height:1.85;color:#444;margin-bottom:1.1rem}
+.legal-content ul{padding-left:1.5rem;margin-bottom:1.1rem}
+.legal-content li{font-size:.95rem;line-height:1.75;color:#444;margin-bottom:.4rem}
+.legal-content strong{color:var(--navy)}
+.legal-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3)}
+.legal-content a:hover{border-color:var(--gold)}
+.info-box{background:var(--warm);border-left:3px solid var(--gold);border-radius:0 3px 3px 0;padding:1rem 1.4rem;margin:1.5rem 0}
+.info-box p{margin:0;font-size:.88rem;color:#555}
+.info-box strong{color:var(--navy)}
+.affiliate-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1rem 1.4rem;margin:.6rem 0;display:flex;align-items:flex-start;gap:1rem}
+.aff-icon{width:40px;height:40px;background:var(--warm);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.aff-body h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.aff-body p{font-size:.82rem;color:var(--muted);margin:0;line-height:1.5}
+@media(max-width:900px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:1.5rem 4vw;gap:1.2rem}.nav-mobile-btn{display:flex}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
   </style>
-  <style>
-    .legal-hero{background:var(--navy);padding:8rem 5vw 4rem;margin-top:72px}
-    .legal-hero h1{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:700}
-    .legal-hero h1 em{font-style:italic;color:var(--gold-lt)}
-    .legal-hero p{color:rgba(255,255,255,.55);font-size:.85rem;margin-top:.75rem}
-    .legal-body{max-width:860px;margin:0 auto;padding:4rem 5vw}
-    .legal-body h2{font-family:var(--ff-head);font-size:1.4rem;color:var(--navy);margin:2.5rem 0 .75rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-    .legal-body h2:first-child{border-top:none;padding-top:0;margin-top:0}
-    .legal-body p{font-size:.95rem;line-height:1.85;color:#444;margin-bottom:1.2rem}
-    .legal-body ul{padding-left:1.5rem;margin-bottom:1.2rem}
-    .legal-body li{font-size:.95rem;line-height:1.75;color:#444;margin-bottom:.4rem}
-    .legal-body strong{color:var(--navy)}
-    .legal-body a{color:var(--gold)}
-  </style>
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 </head>
 <body>
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html#destinos">Destinos</a></li>
+      <li><a href="articles/paris.html">París</a></li>
       <li><a href="sobre-nosotros.html">Nosotros</a></li>
-      <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
       <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
     <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
   </nav>
 
   <div class="legal-hero">
-    <h1>Aviso <em>Legal</em></h1>
-    <p>Última actualización: mayo 2025</p>
+    <h1>Aviso Legal</h1>
+    <p>Voyage Lumière · Philippe JOSEPH-ROSE · Cancún, Quintana Roo, México</p>
   </div>
 
-  <div class="legal-body">
+  <div class="legal-content">
 
-    <h2>1. Titular del sitio web</h2>
-    <p>En cumplimiento de la Ley de Servicios de la Sociedad de la Información, se informa que el presente sitio web <strong>voyagelumiere.com</strong> es titularidad de Voyage Lumière, con domicilio en México, y correo electrónico de contacto: <strong>contacto@voyagelumiere.com</strong>.</p>
+    <h2>1. Datos del titular</h2>
+    <div class="info-box">
+      <p><strong>Nombre:</strong> Philippe JOSEPH-ROSE<br/>
+      <strong>Nombre comercial:</strong> Voyage Lumière<br/>
+      <strong>Sitio web:</strong> https://cahuich.github.io<br/>
+      <strong>Domicilio:</strong> Cancún, Quintana Roo, México<br/>
+      <strong>Actividad:</strong> Blog editorial de viajes — contenido informativo y programa de afiliados</p>
+    </div>
 
-    <h2>2. Objeto y condiciones de uso</h2>
-    <p>El presente sitio web tiene por objeto ofrecer información editorial sobre viajes, destinos europeos, gastronomía y turismo. El acceso y uso del sitio web es gratuito y no requiere registro previo del usuario.</p>
-    <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios del sitio y a no emplearlos para realizar actividades ilícitas, contrarias a la buena fe o al ordenamiento jurídico.</p>
+    <h2>2. Objeto y alcance</h2>
+    <p>Voyage Lumière (<strong>https://cahuich.github.io</strong>) es un sitio web de contenido editorial sobre viajes a Europa, operado por Philippe JOSEPH-ROSE con domicilio en Cancún, Quintana Roo, México. El sitio está dirigido principalmente a viajeros mexicanos y latinoamericanos.</p>
+    <p>El acceso y uso de este sitio web implica la aceptación plena de este aviso legal, la <a href="privacidad.html">Política de Privacidad</a> y la <a href="cookies.html">Política de Cookies</a>.</p>
 
     <h2>3. Propiedad intelectual</h2>
-    <p>Todos los contenidos del sitio web —textos, fotografías, gráficos, logotipos, iconos, imágenes, diseño y código fuente— son propiedad exclusiva de Voyage Lumière o de sus autores y proveedores, y están protegidos por la legislación vigente en materia de propiedad intelectual e industrial.</p>
-    <p>Queda expresamente prohibida la reproducción, distribución, comunicación pública o transformación total o parcial de los contenidos sin autorización expresa y por escrito de Voyage Lumière.</p>
+    <p>Todos los textos, artículos, guías, itinerarios, diseño gráfico, logotipos, estructura y código del sitio son propiedad de Philippe JOSEPH-ROSE o cuentan con las licencias correspondientes. Queda prohibida su reproducción total o parcial sin autorización expresa por escrito.</p>
+    <p>Las imágenes utilizadas en el sitio provienen de <strong>Unsplash</strong> (licencia gratuita para uso comercial) y <strong>Picsum Photos</strong> (dominio público). Los banners publicitarios de afiliados (Kiwi.com, Booking.com) son propiedad de sus respectivos anunciantes.</p>
 
-    <h2>4. Contenido editorial e información turística</h2>
-    <p>La información publicada en este sitio tiene carácter meramente informativo. Voyage Lumière no garantiza la exactitud, integridad o actualización de los datos sobre precios, horarios, disponibilidad de entradas o condiciones de acceso a los destinos mencionados, que pueden cambiar sin previo aviso.</p>
-    <p>Se recomienda al usuario verificar la información directamente con los proveedores o fuentes oficiales antes de tomar cualquier decisión de viaje.</p>
+    <h2>4. Exención de responsabilidad</h2>
+    <h3>4.1 Exactitud de la información</h3>
+    <p>Voyage Lumière se esfuerza por mantener la información actualizada y precisa. Sin embargo, los precios, horarios, visados, condiciones de entrada y disponibilidad de atracciones turísticas pueden cambiar sin previo aviso. <strong>Siempre verifica la información en las fuentes oficiales antes de viajar.</strong></p>
+    <h3>4.2 Enlaces a terceros</h3>
+    <p>Este sitio contiene enlaces a sitios web de terceros (Booking.com, Tiqets, GetYourGuide, Kiwi.com, Omio, IATI Seguros). Voyage Lumière no es responsable del contenido, disponibilidad ni prácticas de privacidad de esos sitios. La inclusión de un enlace no implica endorsement.</p>
+    <h3>4.3 Programa de afiliados</h3>
+    <p>Voyage Lumière participa en programas de marketing de afiliados. Cuando realizas una compra a través de nuestros enlaces, podemos recibir una comisión sin ningún coste adicional para ti. Esto nos permite mantener el sitio de forma gratuita para los usuarios. Ver <a href="afiliados.html">Divulgación de Afiliados</a>.</p>
+    <h3>4.4 Disponibilidad del sitio</h3>
+    <p>El sitio está alojado en GitHub Pages. Philippe JOSEPH-ROSE no garantiza la disponibilidad continua del servicio ni se responsabiliza de posibles interrupciones causadas por la plataforma de alojamiento.</p>
 
-    <h2>5. Enlaces de afiliado</h2>
-    <p>Este sitio web participa en programas de afiliación con terceros (Booking.com, GetYourGuide, Tiqets, IATI Seguros, Awin y otros). Cuando el usuario hace clic en un enlace de afiliado y realiza una compra o reserva, Voyage Lumière puede percibir una comisión económica sin coste adicional para el usuario.</p>
-    <p>La presencia de enlaces de afiliado no influye en la independencia editorial del contenido publicado. Las recomendaciones se basan exclusivamente en criterios editoriales. Todos los enlaces de afiliado están debidamente señalados con el atributo <code>rel="sponsored"</code>.</p>
+    <h2>5. Legislación aplicable y jurisdicción</h2>
+    <p>Este aviso legal se rige por la legislación mexicana, en particular:</p>
+    <ul>
+      <li>Ley Federal de Protección al Consumidor</li>
+      <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</li>
+      <li>Ley Federal del Derecho de Autor</li>
+      <li>Código de Comercio</li>
+    </ul>
+    <p>Para cualquier controversia derivada del uso de este sitio, las partes se someten a la jurisdicción de los tribunales competentes de Cancún, Quintana Roo, México.</p>
 
-    <h2>6. Limitación de responsabilidad</h2>
-    <p>Voyage Lumière no se hace responsable de los daños o perjuicios que pudieran derivarse del uso de la información publicada en el sitio, ni de los servicios prestados por terceros a través de enlaces externos. El acceso a sitios web de terceros se realiza bajo la exclusiva responsabilidad del usuario.</p>
+    <h2>6. Contacto</h2>
+    <p>Para cualquier consulta legal, puedes contactarnos a través de la página <a href="sobre-nosotros.html">Sobre Nosotros</a>.</p>
 
-    <h2>7. Política de privacidad y cookies</h2>
-    <p>El tratamiento de los datos personales de los usuarios se rige por la <a href="privacidad.html">Política de Privacidad</a> del sitio. El uso de cookies se detalla en la <a href="cookies.html">Política de Cookies</a>.</p>
-
-    <h2>8. Legislación aplicable</h2>
-    <p>El presente aviso legal se rige por la legislación vigente en México. Para cualquier controversia derivada del uso del sitio web, las partes se someten a los tribunales competentes según la legislación aplicable.</p>
-
-    <h2>9. Contacto</h2>
-    <p>Para cualquier consulta relacionada con este aviso legal, puede contactar con nosotros en: <strong>legal@voyagelumiere.com</strong></p>
+    <div class="info-box" style="margin-top:2rem;">
+      <p><strong>Última actualización:</strong> 1 de junio de 2025 · <strong>Titular:</strong> Philippe JOSEPH-ROSE · Cancún, Quintana Roo, México</p>
+    </div>
 
   </div>
 
-  <footer id="footer">
+  <footer>
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
-        <p>Guía editorial de viajes europeos en español.</p>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a>
+        </div>
       </div>
       <div class="footer-col"><h4>Destinos</h4><ul>
         <li><a href="articles/paris.html">París</a></li>
         <li><a href="articles/roma.html">Roma</a></li>
         <li><a href="articles/barcelona.html">Barcelona</a></li>
         <li><a href="articles/lisboa.html">Lisboa</a></li>
+        <li><a href="articles/londres.html">Londres</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="articles/presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
+        <li><a href="articles/gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="articles/paris-ninos.html">París con niños</a></li>
       </ul></div>
       <div class="footer-col"><h4>Legal</h4><ul>
-        <li><a href="privacidad.html">Privacidad</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="aviso-legal.html">Aviso legal</a></li>
-        <li><a href="afiliados.html">Afiliados</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="cookies.html">Política de Cookies</a></li>
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="afiliados.html">Divulgación de Afiliados</a></li>
       </ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2025 Voyage Lumière · Todos los derechos reservados</span></div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière · Philippe JOSEPH-ROSE · Todos los derechos reservados</span>
+      <div class="footer-legal">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="afiliados.html">Afiliados</a>
+      </div>
+    </div>
   </footer>
 
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
+      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
+    </div>
+  </div>
+
   <script>
-    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
-    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => { navbar.classList.toggle('scrolled', window.scrollY > 40); ticking = false; });
+        ticking = true;
+      }
+    }, { passive: true });
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const banner = document.getElementById('cookieBanner');
+    window.addEventListener('load', function() {
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => { banner.style.display = 'flex'; requestAnimationFrame(() => banner.classList.add('visible')); }, 1200);
+      }
+    });
+    function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.add('hidden'); }
+    function dismissCookies() { localStorage.setItem('cookieConsent', 'dismissed'); banner.classList.add('hidden'); }
   </script>
 </body>
 </html>
