@@ -1,127 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ══ PÁGINA PRINCIPAL ══ -->
   <url>
-    <loc>https://cahuich.github.io/</loc>
+    <loc>https://voyagelumiere.indevs.in/</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ══ PÁGINAS INFORMATIVAS ══ -->
   <url>
-    <loc>https://cahuich.github.io/sobre-nosotros.html</loc>
+    <loc>https://voyagelumiere.indevs.in/sobre-nosotros.html</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
-  <!-- ══ GUÍAS POR CIUDAD ══ -->
   <url>
-    <loc>https://cahuich.github.io/articles/paris.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/paris.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/roma.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/roma.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/barcelona.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/barcelona.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/lisboa.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/lisboa.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- ══ ARTÍCULOS DE PARIS ══ -->
   <url>
-    <loc>https://cahuich.github.io/articles/paris-louvre.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-louvre.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/paris-bistros.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-bistros.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/paris-versalles.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-versalles.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ══ ARTÍCULOS DE EUROPA ══ -->
   <url>
-    <loc>https://cahuich.github.io/articles/gastronomia-europa.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/gastronomia-europa.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/naturaleza-europa.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/naturaleza-europa.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/primavera-europa.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/primavera-europa.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/presupuesto-europa.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/presupuesto-europa.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/visa-schengen-mexico.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+
   <url>
-    <loc>https://cahuich.github.io/voyage2/articles/londres.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/londres.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://cahuich.github.io/articles/paris-ninos.html</loc>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-ninos.html</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-   <url>
-    <loc>https://cahuich.github.io/articles/amsterdam.html</loc>
-    <lastmod>2025-05-01</lastmod>
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/amsterdam.html</loc>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
