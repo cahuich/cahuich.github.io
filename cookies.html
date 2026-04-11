@@ -2,293 +2,352 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
-  <!-- Fuentes: preconnect + carga no bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
-  <!-- Preconnect para recursos externos -->
-  <link rel="preconnect" href="https://widget.getyourguide.com"/>
-  <link rel="preconnect" href="https://www.googletagmanager.com"/>
-  <link rel="dns-prefetch" href="https://www.tiqets.com"/>
-  <link rel="dns-prefetch" href="https://www.awin1.com"/>
-  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Política de Cookies · Voyage Lumière</title>
-  <meta name="description" content="Política de cookies de Voyage Lumière. Información sobre los tipos de cookies utilizadas y cómo gestionarlas."/>
+  <title>Política de Cookies — Voyage Lumière</title>
+  <meta name="description" content="Qué cookies usamos, para qué y cómo puedes controlarlas."/>
+  <meta name="robots" content="noindex, follow"/>
   <style id="critical-css">
-/* ── RESET & VARIABLES ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --navy:    #1A2B4C;
-  --gold:    #C5A059;
-  --gold-lt: #E8D5A3;
-  --cream:   #FDFBF7;
-  --warm:    #F5F0E8;
-  --ink:     #1A1A1A;
-  --muted:   #6B6460;
-  --border:  #E8E2D8;
-  --ff-head: 'Playfair Display', serif;
-  --ff-body: 'Lato', sans-serif;
-  --ff-acc:  'Cormorant Garamond', serif;
-}
-
-html { scroll-behavior: smooth; }
-body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
-img  { display: block; width: 100%; object-fit: cover; }
-a    { text-decoration: none; color: inherit; }
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--warm); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-
-.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
-
-/* ── NAV ── */
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:0 4vw; height:72px;
-  background:rgba(253,251,247,.93);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
-  transition:box-shadow .3s;
-}
-nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
-.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
-.nav-logo span { color:var(--gold); }
-.nav-links { display:flex; gap:2rem; list-style:none; }
-.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
-.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
-.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
-.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
-.nav-cta:hover { background:var(--gold) !important; }
-.nav-cta::after { display:none !important; }
-.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
-.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
-
-/* ── BUTTONS ── */
-.btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
-.btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
-.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
-.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
-.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
-.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
-
-/* ── SECTION COMMONS ── */
-.section-header { text-align:center; margin-bottom:4rem; }
-.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
-.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
-.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
-
-/* ── AD SPACES ── */
-.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
-.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
-.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-
-/* ── ARTICLE CARDS ── */
-.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
-.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
-.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
-.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
-.article-card:hover .article-img { transform:scale(1.04); }
-.article-body { padding:1.6rem; }
-.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
-.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
-.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
-.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
-.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
-.read-more:hover { color:var(--gold); gap:.65rem; }
-
-/* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
-.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
-.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
-.cookie-accept:hover { background:var(--gold-lt); }
-.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
-.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
-
-/* ── FOOTER ── */
-footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
-.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
-.footer-social { display:flex; gap:.75rem; }
-.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
-.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
-.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
-.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
-.footer-col a { font-size:.83rem; transition:color .3s; }
-.footer-col a:hover { color:var(--gold); }
-.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
-.footer-legal { display:flex; gap:1.5rem; }
-.footer-legal a:hover { color:var(--gold); }
-
-/* ── RESPONSIVE ── */
-@media (max-width:900px) {
-  .nav-links { display:none; }
-  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
-  .nav-mobile-btn { display:flex; }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
-@media (max-width:600px) {
-  .footer-grid { grid-template-columns:1fr; }
-}
-
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1A2B4C;--gold:#C5A059;--gold-lt:#E8D5A3;--cream:#FDFBF7;--warm:#F5F0E8;--ink:#1A1A1A;--muted:#6B6460;--border:#E8E2D8;--ff-head:'Playfair Display',serif;--ff-body:'Lato',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--warm)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:72px;background:rgba(253,251,247,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 24px rgba(26,43,76,.08)}
+.nav-logo{font-family:var(--ff-head);font-size:1.45rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--navy);color:#fff!important;padding:.52rem 1.4rem;border-radius:2px;font-size:.78rem!important;font-weight:600!important;letter-spacing:.1em!important;transition:background .3s}
+.nav-cta:hover{background:var(--gold)!important}
+.nav-cta::after{display:none!important}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.nav-mobile-btn span{display:block;width:24px;height:2px;background:var(--navy)}
+footer{background:#111820;color:rgba(255,255,255,.55);padding:5rem 5vw 2.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1280px;margin:0 auto 3.5rem}
+.footer-brand p{font-size:.84rem;line-height:1.7;max-width:280px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:.75rem}
+.social-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.85rem;transition:background .3s,border-color .3s,color .3s}
+.social-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.footer-col h4{font-family:var(--ff-head);font-size:.9rem;color:#fff;margin-bottom:1.2rem;font-weight:600}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col a{font-size:.83rem;transition:color .3s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.75rem}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a:hover{color:var(--gold)}
+.cookie-banner{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:200;background:var(--navy);color:rgba(255,255,255,.85);padding:1.1rem 1.8rem;border-radius:3px;display:none;align-items:center;gap:1.5rem;max-width:680px;width:calc(100% - 3rem);font-size:.82rem;line-height:1.55;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:opacity .4s,transform .4s}
+.cookie-banner.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+.cookie-banner.visible{opacity:1}
+.cookie-btns{display:flex;gap:.6rem;flex-shrink:0}
+.cookie-accept{background:var(--gold);color:var(--navy);border:none;cursor:pointer;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.75rem;text-transform:uppercase;transition:background .3s}
+.cookie-dismiss{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);cursor:pointer;padding:.55rem 1rem;border-radius:2px;font-size:.75rem}
+.legal-hero{background:var(--navy);padding:8rem 5vw 4rem;margin-top:72px}
+.legal-hero h1{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:700;margin-bottom:.75rem}
+.legal-hero p{color:rgba(255,255,255,.55);font-size:.85rem}
+.legal-content{max-width:860px;margin:0 auto;padding:4rem 5vw}
+.legal-content h2{font-family:var(--ff-head);font-size:1.4rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.legal-content h2:first-child{border-top:none;padding-top:0;margin-top:0}
+.legal-content h3{font-family:var(--ff-head);font-size:1.05rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem}
+.legal-content p{font-size:.95rem;line-height:1.85;color:#444;margin-bottom:1.1rem}
+.legal-content ul{padding-left:1.5rem;margin-bottom:1.1rem}
+.legal-content li{font-size:.95rem;line-height:1.75;color:#444;margin-bottom:.4rem}
+.legal-content strong{color:var(--navy)}
+.legal-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3)}
+.legal-content a:hover{border-color:var(--gold)}
+.info-box{background:var(--warm);border-left:3px solid var(--gold);border-radius:0 3px 3px 0;padding:1rem 1.4rem;margin:1.5rem 0}
+.info-box p{margin:0;font-size:.88rem;color:#555}
+.info-box strong{color:var(--navy)}
+.affiliate-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:1rem 1.4rem;margin:.6rem 0;display:flex;align-items:flex-start;gap:1rem}
+.aff-icon{width:40px;height:40px;background:var(--warm);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.aff-body h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.aff-body p{font-size:.82rem;color:var(--muted);margin:0;line-height:1.5}
+@media(max-width:900px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:1.5rem 4vw;gap:1.2rem}.nav-mobile-btn{display:flex}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
   </style>
-  <style>
-    .legal-hero{background:var(--navy);padding:8rem 5vw 4rem;margin-top:72px}
-    .legal-hero h1{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:700}
-    .legal-hero h1 em{font-style:italic;color:var(--gold-lt)}
-    .legal-hero p{color:rgba(255,255,255,.55);font-size:.85rem;margin-top:.75rem}
-    .legal-body{max-width:860px;margin:0 auto;padding:4rem 5vw}
-    .legal-body h2{font-family:var(--ff-head);font-size:1.4rem;color:var(--navy);margin:2.5rem 0 .75rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-    .legal-body h2:first-child{border-top:none;padding-top:0;margin-top:0}
-    .legal-body p{font-size:.95rem;line-height:1.85;color:#444;margin-bottom:1.2rem}
-    .legal-body ul{padding-left:1.5rem;margin-bottom:1.2rem}
-    .legal-body li{font-size:.95rem;line-height:1.75;color:#444;margin-bottom:.4rem}
-    .legal-body strong{color:var(--navy)}
-    .legal-body a{color:var(--gold)}
-    .cookie-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
-    .cookie-table th{background:var(--navy);color:#fff;padding:.7rem 1rem;text-align:left;font-family:var(--ff-head);font-weight:600}
-    .cookie-table td{padding:.65rem 1rem;border-bottom:1px solid var(--border);vertical-align:top}
-    .cookie-table tr:nth-child(even) td{background:var(--warm)}
-    .cookie-table tr:last-child td{border-bottom:none}
-    .btn-gestionar{display:inline-block;background:var(--gold);color:var(--navy);padding:.75rem 1.5rem;border-radius:2px;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;margin-top:1rem;cursor:pointer;border:none}
-    .btn-gestionar:hover{background:var(--gold-lt)}
-  </style>
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 </head>
 <body>
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html#destinos">Destinos</a></li>
+      <li><a href="articles/paris.html">París</a></li>
       <li><a href="sobre-nosotros.html">Nosotros</a></li>
-      <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
       <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
     <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
   </nav>
 
+
   <div class="legal-hero">
-    <h1>Política de <em>Cookies</em></h1>
-    <p>Última actualización: mayo 2025</p>
+    <h1>Política de Cookies</h1>
+    <p>Actualizada el 3 de abril de 2026 · Philippe JOSEPH-ROSE · Cancún, Quintana Roo, México</p>
   </div>
 
-  <div class="legal-body">
+  <div class="legal-content">
+
+    <div class="info-box">
+      <p>Esta página explica qué cookies usa Voyage Lumière, para qué sirve cada una y cómo puedes controlarlas o eliminarlas. Somos transparentes sobre esto porque creemos que tienes derecho a saber exactamente qué ocurre con tu navegador cuando visitas nuestro sitio.</p>
+    </div>
 
     <h2>¿Qué son las cookies?</h2>
-    <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en el dispositivo del usuario cuando este los visita. Permiten que el sitio recuerde información sobre la visita para mejorar la experiencia de navegación y ofrecer contenido personalizado.</p>
+    <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo (ordenador, móvil o tablet) cuando los visitas. No son programas ni ejecutables — son simplemente archivos de texto que contienen información como un identificador único o una preferencia guardada.</p>
+    <p>Hay cookies que son completamente necesarias para que el sitio funcione correctamente (por ejemplo, recordar si has aceptado el banner de cookies), y hay otras que son opcionales y que puedes rechazar sin que el sitio deje de funcionar.</p>
+    <p>También existen cookies propias (que instala Voyage Lumière directamente) y cookies de terceros (que instalan los servicios externos que usamos, como Google Analytics o los programas de afiliados).</p>
 
-    <h2>Cookies que utilizamos</h2>
+    <h2>1. Cookies propias (Voyage Lumière)</h2>
+    <p>Voyage Lumière instala una sola cookie propia, estrictamente necesaria para recordar tus preferencias sobre el banner de cookies:</p>
 
-    <table class="cookie-table">
-      <thead>
-        <tr><th>Cookie</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>cookieConsent</strong></td>
-          <td>Propia · Necesaria</td>
-          <td>Guarda tu preferencia sobre el uso de cookies para no mostrar el banner en cada visita</td>
-          <td>1 año</td>
-        </tr>
-        <tr>
-          <td><strong>_ga, _ga_*</strong></td>
-          <td>Terceros · Analítica</td>
-          <td>Google Analytics — mide el número de visitantes, páginas vistas y comportamiento de navegación de forma anónima</td>
-          <td>2 años</td>
-        </tr>
-        <tr>
-          <td><strong>google_adsense</strong></td>
-          <td>Terceros · Publicidad</td>
-          <td>Google AdSense — muestra anuncios relevantes basados en el historial de navegación del usuario</td>
-          <td>13 meses</td>
-        </tr>
-        <tr>
-          <td><strong>awin_*</strong></td>
-          <td>Terceros · Afiliado</td>
-          <td>Awin / Booking.com — rastrea los clics en enlaces de afiliado para atribuir comisiones correctamente</td>
-          <td>30 días</td>
-        </tr>
-        <tr>
-          <td><strong>gyg_*</strong></td>
-          <td>Terceros · Afiliado</td>
-          <td>GetYourGuide — rastrea reservas realizadas desde este sitio para atribuir comisiones</td>
-          <td>31 días</td>
-        </tr>
-        <tr>
-          <td><strong>tiqets_*</strong></td>
-          <td>Terceros · Afiliado</td>
-          <td>Tiqets — rastrea compras de entradas realizadas desde este sitio</td>
-          <td>30 días</td>
-        </tr>
-        <tr>
-          <td><strong>iati_*</strong></td>
-          <td>Terceros · Afiliado</td>
-          <td>IATI Seguros — rastrea contrataciones de seguros realizadas desde este sitio</td>
-          <td>30 días</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="affiliate-card">
+      <div class="aff-icon">🍪</div>
+      <div class="aff-body">
+        <h4>cookieConsent</h4>
+        <p>
+          <strong>Tipo:</strong> Funcional (necesaria) &nbsp;·&nbsp; <strong>Duración:</strong> 1 año<br/>
+          <strong>Valor:</strong> "accepted" o "dismissed"<br/>
+          <strong>Finalidad:</strong> almacena tu decisión sobre las cookies opcionales. Sin esta cookie, el banner de consentimiento aparecería en cada visita, lo que sería molesto. Esta cookie NO rastrea tu navegación, NO contiene datos personales y expira automáticamente al año de ser creada.<br/>
+          <strong>Instalada por:</strong> Voyage Lumière (código propio, visible en el código fuente de la página)
+        </p>
+      </div>
+    </div>
 
-    <h2>Cookies necesarias vs. opcionales</h2>
-    <p><strong>Cookies necesarias:</strong> son imprescindibles para el funcionamiento básico del sitio (como recordar tu preferencia de cookies). No requieren consentimiento y no pueden desactivarse.</p>
-    <p><strong>Cookies opcionales:</strong> incluyen las de analítica, publicidad y afiliados. Solo se activan si das tu consentimiento mediante el banner de cookies al acceder al sitio.</p>
+    <h2>2. Cookies de análisis — Google Analytics 4</h2>
+    <p>Usamos Google Analytics 4 con el ID de medición <strong>G-52MYXE4VXP</strong> para entender cómo los visitantes usan el sitio: qué artículos leen más, desde qué países acceden, qué dispositivos usan y cuánto tiempo pasan en cada página. Esta información nos ayuda a mejorar el contenido editorial.</p>
+    <p>Google Analytics no puede identificarte como persona individual — trabaja con identificadores anónimos y datos agregados. No vemos tu nombre ni tu email a través de Analytics.</p>
+    <p>Estas cookies solo se instalan si has aceptado las cookies en el banner. Si las has rechazado, Google Analytics no se carga.</p>
 
-    <h2>Cómo gestionar tus cookies</h2>
-    <p>Puedes retirar tu consentimiento en cualquier momento o gestionar las cookies directamente desde la configuración de tu navegador:</p>
+    <div class="affiliate-card">
+      <div class="aff-icon">📊</div>
+      <div class="aff-body">
+        <h4>_ga</h4>
+        <p><strong>Tipo:</strong> Analítica &nbsp;·&nbsp; <strong>Duración:</strong> 2 años<br/>
+        Contiene un identificador único aleatorio (ejemplo: GA1.1.123456789.1234567890) que distingue a usuarios diferentes. Google usa este ID para contabilizar visitas únicas sin poder identificarte personalmente.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">📊</div>
+      <div class="aff-body">
+        <h4>_ga_52MYXE4VXP</h4>
+        <p><strong>Tipo:</strong> Analítica &nbsp;·&nbsp; <strong>Duración:</strong> 2 años<br/>
+        Cookie específica de la propiedad GA4 del sitio. Registra el estado de la sesión actual (páginas vistas en esta visita, duración, eventos). Es la cookie principal de Google Analytics 4.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">📊</div>
+      <div class="aff-body">
+        <h4>_gid</h4>
+        <p><strong>Tipo:</strong> Analítica &nbsp;·&nbsp; <strong>Duración:</strong> 24 horas<br/>
+        Distingue usuarios únicos durante la misma jornada. Se elimina automáticamente a las 24 horas. Complementa a _ga para el análisis de visitas del mismo día.</p>
+      </div>
+    </div>
+
+    <h2>3. Cookies de publicidad — Google AdSense</h2>
+    <p>Google AdSense está <strong>pendiente de activación</strong> en Voyage Lumière (en proceso de aprobación por parte de Google). Cuando esté activo, Google usará las siguientes cookies para mostrar anuncios relevantes:</p>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">📢</div>
+      <div class="aff-body">
+        <h4>IDE (DoubleClick)</h4>
+        <p><strong>Tipo:</strong> Publicidad &nbsp;·&nbsp; <strong>Duración:</strong> 13 meses<br/>
+        Usada por Google para registrar y medir interacciones con anuncios y mostrar anuncios personalizados basados en tu historial de navegación.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">📢</div>
+      <div class="aff-body">
+        <h4>DSID, FLC, AID, TAID</h4>
+        <p><strong>Tipo:</strong> Publicidad &nbsp;·&nbsp; <strong>Duración:</strong> Variable (días a meses)<br/>
+        Cookies auxiliares de Google usadas para limitar la frecuencia con la que ves el mismo anuncio, medir la efectividad de campañas y sincronizar preferencias entre dispositivos Google.<br/>
+        <strong>Control:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener">Gestionar preferencias de anuncios de Google →</a></p>
+      </div>
+    </div>
+
+    <h2>4. Cookies de afiliados</h2>
+    <p>Cuando haces clic en cualquier enlace de afiliado de Voyage Lumière (botones de "Reservar en Booking", "Comprar entradas en Tiqets", "Buscar en Omio", etc.), el servicio destino instala una cookie en tu dispositivo. Esta cookie sirve únicamente para que el servicio recuerde que llegaste desde nuestro sitio y, si realizas una compra en los días siguientes, podamos recibir la comisión correspondiente.</p>
+    <p><strong>Importante:</strong> estas cookies no instalan nada hasta que tú haces clic voluntariamente en el enlace. Si no haces clic, no se instala ninguna cookie de afiliado. Si haces clic pero no compras, la cookie expira pasado el periodo de seguimiento sin que nada ocurra.</p>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">🏨</div>
+      <div class="aff-body">
+        <h4>Booking.com a través de Awin — aw_source, aw_[campaña]</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> awin1.com<br/>
+        Se instala al hacer clic en cualquier enlace o botón de Booking.com en Voyage Lumière. Atribuye la reserva de hotel a nuestro sitio si la realizas dentro de los 30 días siguientes al clic. Booking.com puede instalar sus propias cookies adicionales según su política.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">🎫</div>
+      <div class="aff-body">
+        <h4>Tiqets — tiqets_affiliate_id, tiqets_session</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> tiqets.com<br/>
+        Se instala al hacer clic en entradas de monumentos de Tiqets. Atribuye la compra de entradas a Voyage Lumière durante 30 días.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">🗺️</div>
+      <div class="aff-body">
+        <h4>GetYourGuide — gyg_partner_id, _gyg_session</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> getyourguide.com / widget.getyourguide.com<br/>
+        El widget de GetYourGuide que mostramos en los artículos carga contenido directamente desde los servidores de GetYourGuide, lo que puede instalar cookies de sesión incluso sin hacer clic. Si has rechazado cookies en nuestro banner, el widget no se carga.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">✈️</div>
+      <div class="aff-body">
+        <h4>Kiwi.com a través de Awin — aw_source</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> awin1.com<br/>
+        El banner publicitario de Kiwi.com carga una imagen desde los servidores de Awin, lo que puede registrar tu IP. Si haces clic en el banner, Awin instala la cookie de seguimiento para atribuir la reserva de vuelo.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">🚆</div>
+      <div class="aff-body">
+        <h4>Omio a través de Impact.com — irclickid, _imp_appr</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> omio.sjv.io (Impact.com)<br/>
+        Las páginas que incluyen el bloque de Omio cargan un píxel de imagen invisible (1×1 píxeles) requerido por Impact.com para contabilizar impresiones. Este píxel comunica tu IP a los servidores de Impact.com aunque no hagas clic. Si haces clic en "Buscar en Omio", Impact instala la cookie irclickid para atribuir la reserva.</p>
+      </div>
+    </div>
+
+    <div class="affiliate-card">
+      <div class="aff-icon">🛡️</div>
+      <div class="aff-body">
+        <h4>IATI Seguros — iati_ref, iati_session</h4>
+        <p><strong>Duración:</strong> 30 días &nbsp;·&nbsp; <strong>Instalada por:</strong> iatiseguros.com<br/>
+        Se instala al hacer clic en los enlaces de seguro de viaje IATI. Atribuye la contratación de la póliza a Voyage Lumière durante 30 días.</p>
+      </div>
+    </div>
+
+    <h2>5. Resumen de todas las cookies</h2>
+    <div style="overflow-x:auto;margin:1rem 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+        <thead>
+          <tr style="background:var(--navy);color:#fff;">
+            <th style="padding:.6rem .8rem;text-align:left;font-weight:700;">Cookie</th>
+            <th style="padding:.6rem .8rem;text-align:left;font-weight:700;">Origen</th>
+            <th style="padding:.6rem .8rem;text-align:left;font-weight:700;">Tipo</th>
+            <th style="padding:.6rem .8rem;text-align:left;font-weight:700;">Duración</th>
+            <th style="padding:.6rem .8rem;text-align:left;font-weight:700;">Necesaria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">cookieConsent</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Voyage Lumière</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Funcional</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">1 año</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#2E7D32;font-weight:700;">Sí</td></tr>
+          <tr style="background:var(--warm);"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">_ga</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Google Analytics</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Analítica</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">2 años</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">_ga_52MYXE4VXP</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Google Analytics</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Analítica</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">2 años</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:var(--warm);"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">_gid</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Google Analytics</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Analítica</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">24 horas</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">IDE, DSID, FLC</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Google AdSense</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Publicidad</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Hasta 13 meses</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:var(--warm);"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">aw_source (Booking)</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Awin / Booking.com</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Afiliado</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">30 días</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">tiqets_affiliate_id</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Tiqets</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Afiliado</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">30 días</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:var(--warm);"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">gyg_partner_id</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">GetYourGuide</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Afiliado</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">30 días</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">aw_source (Kiwi)</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Awin / Kiwi.com</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Afiliado</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">30 días</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:var(--warm);"><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">irclickid</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Impact.com / Omio</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">Afiliado</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);">30 días</td><td style="padding:.5rem .8rem;border-bottom:1px solid var(--border);color:#C62828;font-weight:700;">No</td></tr>
+          <tr style="background:#fff;"><td style="padding:.5rem .8rem;">iati_ref</td><td style="padding:.5rem .8rem;">IATI Seguros</td><td style="padding:.5rem .8rem;">Afiliado</td><td style="padding:.5rem .8rem;">30 días</td><td style="padding:.5rem .8rem;color:#C62828;font-weight:700;">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>6. Cómo gestionar o eliminar las cookies</h2>
+
+    <h3>Desde el banner de Voyage Lumière</h3>
+    <p>Al entrar al sitio por primera vez verás un banner en la parte inferior con las opciones <strong>Aceptar</strong> o <strong>Rechazar</strong>. Si rechazas, no se instalan las cookies analíticas, publicitarias ni de afiliados (salvo las de la lista de afiliados cuando hagas clic tú directamente). La única cookie que se instala al rechazar es <em>cookieConsent</em> con valor "dismissed" para no mostrarte el banner de nuevo.</p>
+    <p>Si cambias de opinión: borra las cookies de este sitio desde la configuración de tu navegador y el banner volverá a aparecer en tu próxima visita.</p>
+
+    <h3>Desde la configuración de tu navegador</h3>
     <ul>
-      <li><strong>Google Chrome:</strong> Ajustes → Privacidad y seguridad → Cookies</li>
-      <li><strong>Mozilla Firefox:</strong> Preferencias → Privacidad y seguridad</li>
-      <li><strong>Safari:</strong> Preferencias → Privacidad → Gestionar datos de sitios web</li>
-      <li><strong>Microsoft Edge:</strong> Configuración → Cookies y permisos del sitio</li>
+      <li><strong>Google Chrome:</strong> Configuración → Privacidad y seguridad → Cookies y otros datos de sitios → Ver todas las cookies y datos del sitio</li>
+      <li><strong>Mozilla Firefox:</strong> Ajustes → Privacidad y seguridad → Cookies y datos del sitio → Gestionar datos</li>
+      <li><strong>Safari (Mac/iOS):</strong> Preferencias → Privacidad → Gestionar datos de sitios web</li>
+      <li><strong>Microsoft Edge:</strong> Configuración → Cookies y permisos del sitio → Administrar y eliminar cookies</li>
+      <li><strong>Opera:</strong> Configuración → Privacidad y seguridad → Cookies</li>
     </ul>
-    <p>Ten en cuenta que deshabilitar ciertas cookies puede afectar al funcionamiento o la experiencia de navegación en este sitio.</p>
 
-    <button class="btn-gestionar" onclick="resetCookies()">🔄 Restablecer preferencias de cookies</button>
+    <h3>Herramientas de opt-out específicas</h3>
+    <ul>
+      <li><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Complemento de inhabilitación de Google Analytics</a> — para todos los sitios que usen Analytics</li>
+      <li><a href="https://adssettings.google.com" target="_blank" rel="noopener">Configuración de anuncios de Google</a> — para gestionar la publicidad personalizada de Google</li>
+      <li><a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">Your Online Choices</a> — para gestionar cookies de publicidad comportamental de múltiples empresas</li>
+      <li><a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener">Network Advertising Initiative Opt-Out</a> — para redes publicitarias norteamericanas</li>
+    </ul>
 
-    <h2>Transferencia internacional de datos</h2>
-    <p>Algunas de las cookies de terceros listadas (Google, Awin) pueden implicar transferencias de datos a servidores ubicados fuera de México o de la Unión Europea. Estas transferencias se realizan con las garantías adecuadas según la normativa de protección de datos aplicable.</p>
+    <h2>7. Actualizaciones de esta política</h2>
+    <p>Esta política de cookies puede actualizarse cuando añadamos nuevos servicios, cambiemos los existentes o cuando los servicios de terceros modifiquen sus propias cookies. La fecha al inicio del documento siempre refleja la última revisión.</p>
 
-    <h2>Más información</h2>
-    <p>Para más información sobre cómo tratamos tus datos personales, consulta nuestra <a href="privacidad.html">Política de Privacidad</a>. Para dudas sobre esta política de cookies, escríbenos a <strong>privacidad@voyagelumiere.com</strong>.</p>
+    <div class="info-box" style="margin-top:2rem;">
+      <p><strong>Última actualización:</strong> 3 de abril de 2026 &nbsp;·&nbsp; <strong>Responsable:</strong> Philippe JOSEPH-ROSE &nbsp;·&nbsp; Cancún, Quintana Roo, México</p>
+    </div>
 
   </div>
-
-  <footer id="footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
-        <p>Guía editorial de viajes europeos en español.</p>
-      </div>
+        <li><a href="articles/lisboa.html">Lisboa</a></li>
+        <li><a href="articles/londres.html">Londres</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="articles/presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
+        <li><a href="articles/gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="articles/paris-ninos.html">París con niños</a></li>
+      </ul></div>
       <div class="footer-col"><h4>Legal</h4><ul>
-        <li><a href="privacidad.html">Privacidad</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="aviso-legal.html">Aviso legal</a></li>
-        <li><a href="afiliados.html">Afiliados</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="cookies.html">Política de Cookies</a></li>
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="afiliados.html">Divulgación de Afiliados</a></li>
       </ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2025 Voyage Lumière</span></div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière · Philippe JOSEPH-ROSE · Todos los derechos reservados</span>
+      <div class="footer-legal">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="afiliados.html">Afiliados</a>
+      </div>
+    </div>
   </footer>
 
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
+      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
+    </div>
+  </div>
+
   <script>
-    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
-    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-    function resetCookies(){
-      localStorage.removeItem('cookieConsent');
-      alert('Preferencias restablecidas. Recarga la página para ver el banner de cookies.');
-    }
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => { navbar.classList.toggle('scrolled', window.scrollY > 40); ticking = false; });
+        ticking = true;
+      }
+    }, { passive: true });
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const banner = document.getElementById('cookieBanner');
+    window.addEventListener('load', function() {
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => { banner.style.display = 'flex'; requestAnimationFrame(() => banner.classList.add('visible')); }, 1200);
+      }
+    });
+    function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.add('hidden'); }
+    function dismissCookies() { localStorage.setItem('cookieConsent', 'dismissed'); banner.classList.add('hidden'); }
   </script>
 </body>
 </html>
