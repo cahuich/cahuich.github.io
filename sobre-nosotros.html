@@ -2,229 +2,420 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sobre mí — Voyage Lumière</title>
-  <meta name="description" content="Conoce a Philippe, el viajero detrás de Voyage Lumière, y descubre su visión sobre los viajes inteligentes por Europa."/>
-  <!-- Brevo Fonts & Styles -->
-<style>
-  @font-face {
-    font-display: block;
-    font-family: Roboto;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-  }
-  @font-face {
-    font-display: fallback;
-    font-family: Roboto;
-    font-weight: 700;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-  }
-  #sib-container input::placeholder { font-family: Helvetica, sans-serif; color: #c0ccda; }
-  #sib-container a { text-decoration: underline; color: #2BB2FC; }
-</style>
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-  <!-- Fuentes -->
+  <!-- Fuentes: preconnect + carga no bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  <!-- Preconnect para recursos externos -->
+  <link rel="preconnect" href="https://widget.getyourguide.com"/>
+  <link rel="preconnect" href="https://www.googletagmanager.com"/>
+  <link rel="dns-prefetch" href="https://www.tiqets.com"/>
+  <link rel="dns-prefetch" href="https://www.awin1.com"/>
+  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros — Voyage Lumière</title>
+  <meta name="description" content="Conoce al equipo detrás de Voyage Lumière, la guía de viaje editorial dedicada a los mejores destinos de Europa."/>
+  <style id="critical-css">
+/* ── RESET & VARIABLES ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <style>
-    /* ── VARIABLES & RESET ── */
-    :root {
-      --navy:    #1A2B4C;
-      --gold:    #C5A059;
-      --gold-lt: #E8D5A3;
-      --cream:   #FDFBF7;
-      --warm:    #F5F0E8;
-      --ink:     #1A1A1A;
-      --muted:   #6B6460;
-      --border:  #E8E2D8;
-      --ff-head: 'Playfair Display', serif;
-      --ff-body: 'Lato', sans-serif;
-    }
+:root {
+  --navy:    #1A2B4C;
+  --gold:    #C5A059;
+  --gold-lt: #E8D5A3;
+  --cream:   #FDFBF7;
+  --warm:    #F5F0E8;
+  --ink:     #1A1A1A;
+  --muted:   #6B6460;
+  --border:  #E8E2D8;
+  --ff-head: 'Playfair Display', serif;
+  --ff-body: 'Lato', sans-serif;
+  --ff-acc:  'Cormorant Garamond', serif;
+}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
-    a { text-decoration: none; color: inherit; transition: .3s; }
-    ul { list-style: none; }
-    img { max-width: 100%; display: block; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
+img  { display: block; width: 100%; object-fit: cover; }
+a    { text-decoration: none; color: inherit; }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 4vw; height: 72px; background: rgba(253,251,247,.95);
-      backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { font-family: var(--ff-head); font-size: 1.4rem; font-weight: 700; color: var(--navy); }
-    .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); }
-    .nav-links a.active { color: var(--gold); border-bottom: 2px solid var(--gold); }
-    .nav-cta { background: var(--navy); color: #fff !important; padding: .6rem 1.2rem; border-radius: 2px; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--warm); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
-    /* ── HERO SECTION ── */
-    .hero {
-      margin-top: 72px; background: var(--navy); color: #fff;
-      padding: 6rem 5vw; position: relative; overflow: hidden;
-    }
-    .hero-content {
-      max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;
-    }
-    .hero-image-wrap { flex: 1; min-width: 280px; display: flex; justify-content: center; }
-    .hero-image {
-      width: 280px; height: 280px; border-radius: 50%; object-fit: cover;
-      border: 6px solid rgba(197,160,89,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-    .hero-text { flex: 2; min-width: 300px; }
-    .hero-text h1 { font-family: var(--ff-head); font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; line-height: 1.1; }
-    .hero-text h1 span { color: var(--gold-lt); font-style: italic; }
-    .hero-text p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin-bottom: 1.5rem; }
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
 
-    /* ── CONTENT SECTION ── */
-    .content-section { padding: 5rem 5vw; max-width: 900px; margin: 0 auto; }
-    .content-section h2 { font-family: var(--ff-head); font-size: 2rem; color: var(--navy); margin-bottom: 1.5rem; }
-    .content-section p { margin-bottom: 1.5rem; font-size: 1.05rem; color: #444; }
-    .highlight-box {
-      background: var(--warm); border-left: 4px solid var(--gold);
-      padding: 2rem; margin: 2.5rem 0; border-radius: 0 4px 4px 0;
-    }
+.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
 
-    /* ── CONTACT / COLLAB ── */
-    .collab-section { background: var(--navy); color: #fff; padding: 5rem 5vw; text-align: center; }
-    .collab-inner { max-width: 600px; margin: 0 auto; }
-    .collab-inner h2 { font-family: var(--ff-head); font-size: 2.2rem; margin-bottom: 1rem; }
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; text-align: left; }
-    .form-input {
-      width: 100%; padding: 1rem; background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #fff; outline: none;
-    }
-    .form-input:focus { border-color: var(--gold); }
-    .btn-primary {
-      background: var(--gold); color: var(--navy); padding: 1rem 2rem;
-      border: none; border-radius: 2px; font-weight: 700; cursor: pointer; text-transform: uppercase;
-    }
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 4vw; height:72px;
+  background:rgba(253,251,247,.93);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
+.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
+.nav-logo span { color:var(--gold); }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
+.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
+.nav-cta:hover { background:var(--gold) !important; }
+.nav-cta::after { display:none !important; }
+.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
+.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
 
-    /* ── FOOTER ── */
-    footer { background: #111820; color: rgba(255,255,255,0.5); padding: 4rem 5vw 2rem; font-size: 0.9rem; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; max-width: 1100px; margin: 0 auto 3rem; }
-    .footer-col h4 { color: #fff; margin-bottom: 1.2rem; font-family: var(--ff-head); }
-    .footer-col ul li { margin-bottom: 0.6rem; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; }
+/* ── BUTTONS ── */
+.btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
+.btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
+.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
+.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
+.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
+.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hero-content { text-align: center; flex-direction: column; }
-      .hero-text p { margin: 0 auto 1.5rem; }
-    }
+/* ── SECTION COMMONS ── */
+.section-header { text-align:center; margin-bottom:4rem; }
+.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
+.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
+.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
+.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
+
+/* ── AD SPACES ── */
+.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
+.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
+.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+
+/* ── ARTICLE CARDS ── */
+.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
+.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
+.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
+.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
+.article-card:hover .article-img { transform:scale(1.04); }
+.article-body { padding:1.6rem; }
+.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
+.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
+.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
+.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
+.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
+.read-more:hover { color:var(--gold); gap:.65rem; }
+
+/* ── COOKIE BANNER ── */
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
+  .cookie-banner.visible { opacity:1; }
+.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
+.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+.cookie-accept:hover { background:var(--gold-lt); }
+.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
+.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
+
+/* ── FOOTER ── */
+footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
+.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
+.footer-social { display:flex; gap:.75rem; }
+.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
+.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
+.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+.footer-col a { font-size:.83rem; transition:color .3s; }
+.footer-col a:hover { color:var(--gold); }
+.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
+.footer-legal { display:flex; gap:1.5rem; }
+.footer-legal a:hover { color:var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .nav-links { display:none; }
+  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
+  .nav-mobile-btn { display:flex; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:600px) {
+  .footer-grid { grid-template-columns:1fr; }
+}
+
   </style>
-</head>
-  <!-- Brevo Script -->
-<script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Elija un código de país';
-  window.LOCALE = 'es';
-  window.EMAIL_INVALID_MESSAGE = "La información no es válida. Compruebe el formato e inténtelo de nuevo.";
-  window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío.";
-  window.GENERIC_INVALID_MESSAGE = "La información no es válida. Compruebe el formato e inténtelo de nuevo.";
-  window.translation = {
-    common: {
-      selectedList: '{quantity} lista seleccionada',
-      selectedLists: '{quantity} listas seleccionadas',
+  <style>
+    .page-hero { margin-top:72px; background:var(--navy); padding:7rem 5vw 5rem; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; right:-10%; top:-30%; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(197,160,89,.12),transparent 70%); pointer-events:none; }
+    .page-hero-inner { max-width:700px; animation:fadeUp .8s ease-out both; }
+    .page-hero p.eyebrow { font-family:var(--ff-acc); font-style:italic; color:var(--gold); font-size:1.1rem; margin-bottom:1rem; }
+    .page-hero h1 { font-family:var(--ff-head); font-size:clamp(2.5rem,5vw,4rem); font-weight:700; color:#fff; line-height:1.1; margin-bottom:1.5rem; }
+    .page-hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .page-hero p.lead { font-size:1.1rem; line-height:1.75; color:rgba(255,255,255,.7); max-width:580px; }
+
+    /* MISSION */
+    .mission-section { padding:6rem 5vw; background:var(--cream); }
+    .mission-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .mission-img { height:480px; border-radius:3px; background:url('https://picsum.photos/id/1036/800/500') center/cover no-repeat; position:relative; }
+    .mission-img::after { content:''; position:absolute; inset:0; border-radius:3px; box-shadow:inset 0 0 0 1px rgba(197,160,89,.3); }
+    .mission-badge { position:absolute; bottom:-1.5rem; right:-1.5rem; background:var(--gold); color:var(--navy); width:110px; height:110px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:var(--ff-head); text-align:center; box-shadow:0 8px 24px rgba(197,160,89,.4); }
+    .mission-badge span:first-child { font-size:1.8rem; font-weight:700; line-height:1; }
+    .mission-badge span:last-child { font-size:.6rem; text-transform:uppercase; letter-spacing:.1em; opacity:.8; }
+    .mission-text h2 { font-family:var(--ff-head); font-size:clamp(1.8rem,3vw,2.4rem); color:var(--navy); margin-bottom:1.2rem; }
+    .mission-text p { font-size:.97rem; line-height:1.8; color:#444; margin-bottom:1.2rem; }
+    .mission-pillars { display:flex; flex-direction:column; gap:.75rem; margin-top:1.5rem; }
+    .pillar { display:flex; align-items:flex-start; gap:.85rem; }
+    .pillar-icon { width:36px; height:36px; flex-shrink:0; background:rgba(197,160,89,.12); border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+    .pillar-text strong { display:block; font-size:.9rem; color:var(--navy); margin-bottom:.15rem; }
+    .pillar-text span { font-size:.82rem; color:var(--muted); line-height:1.5; }
+
+    /* VALUES */
+    .values-section { padding:6rem 5vw; background:var(--warm); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1100px; margin:0 auto; }
+    .value-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; padding:2rem; transition:transform .4s, box-shadow .4s; }
+    .value-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(26,43,76,.08); }
+    .value-icon { font-size:2.2rem; margin-bottom:1.2rem; }
+    .value-title { font-family:var(--ff-head); font-size:1.1rem; color:var(--navy); margin-bottom:.75rem; }
+    .value-desc { font-size:.875rem; line-height:1.7; color:var(--muted); }
+
+    /* TEAM */
+    .team-section { padding:6rem 5vw; background:var(--cream); }
+    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1100px; margin:0 auto; }
+    .team-card { text-align:center; }
+    .team-photo { width:140px; height:140px; border-radius:50%; margin:0 auto 1.2rem; background-size:cover; background-position:center; border:3px solid var(--gold-lt); }
+    .team-name { font-family:var(--ff-head); font-size:1.1rem; color:var(--navy); margin-bottom:.2rem; }
+    .team-role { font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); margin-bottom:.75rem; }
+    .team-bio { font-size:.84rem; line-height:1.65; color:var(--muted); max-width:260px; margin:0 auto; }
+
+    /* COLLABORATE */
+    .collab-section { background:var(--navy); padding:5rem 5vw; text-align:center; }
+    .collab-inner { max-width:640px; margin:0 auto; }
+    .collab-inner h2 { font-family:var(--ff-head); font-size:clamp(1.8rem,3vw,2.5rem); color:#fff; margin-bottom:1rem; }
+    .collab-inner p { font-size:.97rem; line-height:1.75; color:rgba(255,255,255,.65); margin-bottom:2.5rem; }
+    .collab-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+    /* CONTACT FORM */
+    .contact-form { display:flex; flex-direction:column; gap:1rem; max-width:480px; margin:0 auto; text-align:left; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-input { width:100%; padding:.85rem 1.2rem; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15); border-radius:2px; color:#fff; font-family:var(--ff-body); font-size:.9rem; outline:none; transition:border-color .3s; }
+    .form-input:focus { border-color:var(--gold); }
+    .form-input::placeholder { color:rgba(255,255,255,.35); }
+    textarea.form-input { resize:vertical; min-height:120px; }
+
+    @media(max-width:900px){
+      .mission-inner { grid-template-columns:1fr; }
+      .mission-img { height:300px; }
+      .values-grid, .team-grid { grid-template-columns:1fr 1fr; }
     }
-  };
-  var AUTOHIDE = Boolean(0);
-</script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    @media(max-width:600px){
+      .values-grid, .team-grid { grid-template-columns:1fr; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  
+  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
+  </style>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+</head>
 <body>
 
-  <nav>
+  <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#destinos">Destinos</a></li>
       <li><a href="articles/paris.html">París</a></li>
-      <li><a href="sobre-nosotros.html" class="active">Sobre mí</a></li>
+      <li><a href="sobre-nosotros.html" class="active">Nosotros</a></li>
       <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
       <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
+    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <div class="hero-image-wrap">
-        <img src="https://cdn.abacus.ai/images/4caccb1d-50bf-4365-814e-1928d6f2ee8e.png" alt="Philippe" class="hero-image">
-      </div>
-      <div class="hero-text">
-        <h1>Hola, soy <span>Philippe</span></h1>
-        <p>Un viajero apasionado que escribe para quienes buscan descubrir Europa de forma inteligente, auténtica y sin gastar de más.</p>
-      </div>
-    </div>
-  </header>
-
-  <main class="content-section">
-    <h2>Mi historia</h2>
-    <p>Nací cerca de París y pasé la mitad de mi vida recorriendo Europa. En esos años, aproveché cada oportunidad para perderme en las calles de <strong>Reino Unido, Suiza, Bélgica, España, Francia, Italia, Marruecos y Alemania</strong>.</p>
-
-    <div class="highlight-box">
-      <p style="margin-bottom:0; font-weight:bold; color:var(--navy);">"Vengo de una familia modesta, por lo que aprendí desde muy joven que viajar no tiene por qué ser un lujo inalcanzable."</p>
-    </div>
-
-    <p>Entiendo perfectamente la importancia de <strong>ahorrar dinero</strong> sin sacrificar la experiencia: sé dónde buscar, qué evitar y cómo estirar el presupuesto para que el viaje dure más y se disfrute mejor.</p>
-
-    <p>La otra mitad de mi vida la estoy viviendo en <strong>México</strong>. Esta mezcla de culturas me permite ver a Europa con ojos locales pero entender perfectamente lo que un viajero latinoamericano necesita saber antes de cruzar el charco.</p>
-
-    <h2>¿Por qué Voyage Lumière?</h2>
-    <p>Creé este espacio para compartir guías honestas. Aquí no encontrarás recomendaciones patrocinadas que no me gusten; solo consejos reales basados en mis propios pasos por el viejo continente.</p>
-
-    <!-- Newsletter Brevo -->
-<section style="background-color: #f4f7f6; padding: 60px 20px; text-align: center; margin: 40px 0;">
-  <div style="max-width: 600px; margin: 0 auto;">
-    <h3 style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 10px;">¿Planeando tu próximo viaje a Europa?</h3>
-    <p style="color: #555; font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">
-      Únete a mi comunidad y recibe consejos exclusivos, guías prácticas y tips que solo un local conoce. ¡Sin spam, solo inspiración!
-    </p>
-
-    <!-- Formulario oficial Brevo -->
-    <div class="sib-form" style="text-align: center; background-color: transparent;">
-      <div id="sib-form-container" class="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949; max-width:540px;">
-          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"><path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"/></svg>
-            <span class="sib-form-message-panel__inner-text">No hemos podido validar su suscripción.</span>
-          </div>
-        </div>
-        <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66; max-width:540px;">
-          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/></svg>
-            <span class="sib-form-message-panel__inner-text">✅ ¡Bienvenido a bordo! Philippe te escribirá pronto.</span>
-          </div>
-        </div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:8px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr; margin: 0 auto;">
-          <form id="sib-form" method="POST" action="https://182e0120.sibforms.com/serve/MUIFACzuQ1cP6y8bP01fzs2jXizAYGqwQlfGS4kSo0RcaURLuxn6OZlOANUoP6QGWFQH3pQpCLYyS1bX7ixwuOa4jUz74tWIy339reTN766Yr9O3TOk55L56nMg1wmRnUIKr0DkeRSqXCpZTZWDG8wk-xdi9-AAZIPV8mMsORNAGTIUb9wa09n0N4gr46UjdnyIp9rGLSGS-aowk3w==" data-type="subscription">
-            <div style="padding: 8px 0;">
-              <div class="sib-input sib-form-block">
-                <div class="form__entry entry_block">
-                  <div class="form__label-row">
-                    <div class="entry__field">
-                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Tu mejor correo electrónico" data-required="true" required />
-                    </div>
-                  </div>
-                  <label class="entry__error entry__error--primary" style="font-size:14px; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
-                </div>
-              </div>
-            </div>
-            <div style="padding: 8px 0;">
-              <div class="sib-form-block" style="text-align: center;">
-                <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#2c3e50; border-radius:6px; border-width:0px; padding: 14px 30px; cursor:pointer; width:100%;" form="sib-form" type="submit">
-                  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"><path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/></svg>
-                  ¡Sí, quiero viajar mejor!
-                </button>
-              </div>
-            </div>
-            <input type="text" name="email_address_check" value="" class="input--hidden">
-            <input type="hidden" name="locale" value="es">
-          </form>
-        </div>
-      </div>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Quiénes somos</p>
+      <h1>Viajeros que <em>escriben<br/>para viajeros</em></h1>
+      <p class="lead">Voyage Lumière nació de una convicción simple: los mejores consejos de viaje vienen de personas que realmente han estado allí, que conocen los rincones secretos, los errores que no debes cometer y las experiencias que transforman un viaje.</p>
     </div>
   </div>
-</section>
+
+  <!-- MISSION -->
+  <section class="mission-section">
+    <div class="mission-inner">
+      <div class="mission-img reveal">
+        <div class="mission-badge">
+          <span>2019</span>
+          <span>Fundada</span>
+        </div>
+      </div>
+      <div class="mission-text reveal">
+        <p class="section-tag" style="display:inline-flex;margin-bottom:.75rem;">Nuestra misión</p>
+        <h2>Inspirar viajes más inteligentes y memorables</h2>
+        <p>Somos un equipo de periodistas de viaje, fotógrafos y entusiastas del turismo europeo. Cada artículo que publicamos está basado en visitas reales, no en comunicados de prensa ni en contenido patrocinado no declarado.</p>
+        <p>Creemos que viajar bien no es cuestión de presupuesto, sino de información. Con la guía correcta, cualquier persona puede tener la experiencia que antes parecía reservada para unos pocos.</p>
+        <div class="mission-pillars">
+          <div class="pillar"><div class="pillar-icon">✍️</div><div class="pillar-text"><strong>Contenido editorial independiente</strong><span>Nuestros autores viajan por su cuenta. Ningún artículo está pagado por hoteles o destinos.</span></div></div>
+          <div class="pillar"><div class="pillar-icon">🔄</div><div class="pillar-text"><strong>Actualización constante</strong><span>Revisamos nuestras guías cada temporada para asegurar que la información sea precisa.</span></div></div>
+          <div class="pillar"><div class="pillar-icon">🌍</div><div class="pillar-text"><strong>Perspectiva local</strong><span>Colaboramos con residentes y guías locales en cada destino que cubrimos.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AD BANNER -->
+  <div class="ad-banner">
+    <div class="ad-placeholder">📢 Google AdSense 728×90</div>
+  </div>
+
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Lo que nos guía</p>
+      <h2 class="section-title">Nuestros valores</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">🧭</div>
+        <h3 class="value-title">Autenticidad ante todo</h3>
+        <p class="value-desc">Solo recomendamos lo que nosotros mismos usaríamos. Nuestra credibilidad vale más que cualquier comisión.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">📚</div>
+        <h3 class="value-title">Profundidad de contenido</h3>
+        <p class="value-desc">Nos negamos a publicar listas genéricas. Cada guía es el resultado de investigación real y visitas sobre el terreno.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">♿</div>
+        <h3 class="value-title">Viaje para todos</h3>
+        <p class="value-desc">Incluimos información de accesibilidad, opciones de bajo presupuesto y alternativas para viajeros con necesidades especiales.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🌱</div>
+        <h3 class="value-title">Turismo responsable</h3>
+        <p class="value-desc">Promovemos prácticas de viaje sostenibles y el respeto por las comunidades y entornos que visitamos.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">💬</div>
+        <h3 class="value-title">Comunidad activa</h3>
+        <p class="value-desc">Nuestros lectores son parte de la redacción. Sus experiencias enriquecen y actualizan nuestras guías continuamente.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">🔍</div>
+        <h3 class="value-title">Transparencia total</h3>
+        <p class="value-desc">Declaramos siempre cuando existe una relación de afiliado. Nuestra opinión editorial nunca está en venta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Las personas detrás</p>
+      <h2 class="section-title">Nuestro equipo</h2>
+      <p class="section-sub">Periodistas, viajeros y apasionados del mundo que dedican su vida a descubrir y compartir lo mejor de Europa.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://picsum.photos/id/1036/300/500')"></div>
+        <h3 class="team-name">Sophie Mercier</h3>
+        <p class="team-role">Directora Editorial</p>
+        <p class="team-bio">Periodista de viaje con 15 años de experiencia. Ha visitado más de 60 países y vivido en París, Berlín y Lisboa.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://picsum.photos/id/1036/300/500')"></div>
+        <h3 class="team-name">Marco Ferretti</h3>
+        <p class="team-role">Editor Italia & Sur de Europa</p>
+        <p class="team-bio">Romano de nacimiento y viajero de vocación. Especialista en gastronomía mediterránea y turismo cultural.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo" style="background-image:url('https://picsum.photos/id/1036/300/500')"></div>
+        <h3 class="team-name">Ana Vidal</h3>
+        <p class="team-role">Editora España & Portugal</p>
+        <p class="team-bio">Madrileña apasionada por los caminos menos transitados. Experta en rutas de naturaleza y turismo rural.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATE / CONTACT -->
+  <section class="collab-section">
+    <div class="collab-inner reveal">
+      <p class="section-tag" style="color:var(--gold);justify-content:center;">Trabaja con nosotros</p>
+      <h2>¿Tienes algo que contar?</h2>
+      <p>Colaboramos con escritores freelance, fotógrafos y expertos locales. Si tienes una historia de viaje única o conoces un destino como nadie, nos encantaría saber de ti.</p>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="Tu nombre" required/>
+          <input type="email" class="form-input" placeholder="tu@email.com" required/>
+        </div>
+        <input type="text" class="form-input" placeholder="Asunto (ej. Propuesta de colaboración)"/>
+        <textarea class="form-input" placeholder="Cuéntanos sobre ti y tu propuesta..."></textarea>
+        <button type="submit" class="btn-primary" style="align-self:flex-start;">Enviar mensaje →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul><li><a href="articles/paris.html">París</a></li><li><a href="articles/roma.html">Roma</a></li><li><a href="articles/barcelona.html">Barcelona</a></li><li><a href="articles/lisboa.html">Lisboa</a></li></ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul><li><a href="articles/paris-louvre.html">Cultura</a></li><li><a href="articles/gastronomia-europa.html">Gastronomía</a></li><li><a href="articles/naturaleza-europa.html">Naturaleza</a></li><li><a href="articles/gastronomia-europa.html">Ciudad</a></li></ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul><li><a href="sobre-nosotros.html">Quiénes somos</a></li><li><a href="sobre-nosotros.html">Colabora</a></li><li><a href="sobre-nosotros.html">Contacto</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Voyage Lumière</span>
+      <div class="footer-legal"><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="aviso-legal.html">Aviso legal</a></div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="#" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          navbar.classList.toggle('scrolled', window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const banner = document.getElementById('cookieBanner');
+    // Mostrar banner después de LCP — no interfiere con el renderizado inicial
+    window.addEventListener('load', function() {
+      if(!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          banner.style.display = 'flex';
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }, 1200);
+      }
+    });
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+    function handleContact(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Mensaje enviado'; btn.style.background = '#2E7D32';
+      e.target.reset(); btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
