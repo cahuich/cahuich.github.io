@@ -419,8 +419,12 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         }, 1200);
       }
     });
-    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
-    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
+    function hideBanner(){
+      banner.classList.add('hidden');
+      setTimeout(function(){ banner.style.display='none'; }, 420);
+    }
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); hideBanner(); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); hideBanner(); }
     function handleContact(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button');
