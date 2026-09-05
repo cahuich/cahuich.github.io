@@ -322,6 +322,10 @@
     window.addEventListener('load', function(){ gtag('event', 'page_view'); });
   </script>
   <meta name="google-adsense-account" content="ca-pub-4594535933040491">
+
+  <!-- Klaviyo SDK -->
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
+  <!-- /Klaviyo SDK -->
 </head>
 <body>
 
@@ -330,8 +334,8 @@
   <a class="nav-logo" href="https://voyagelumiere.indevs.in">✦ Voyage Lumière</a>
   <div class="nav-links">
     <a href="https://voyagelumiere.indevs.in">Inicio</a>
-    <a href="https://voyagelumiere.indevs.in/#destinos">Destinos</a>
-    <a href="https://voyagelumiere.indevs.in/#articulos">Consejos</a>
+    <a href="#">Destinos</a>
+    <a href="#">Consejos</a>
   </div>
 </nav>
 
@@ -482,7 +486,7 @@
     <h3>🎟️ Reserva tus entradas y tours sin colas</h3>
     <p>El Rijksmuseum, la Casa de Ana Frank y Keukenhof se agotan con facilidad. Reservar online te ahorra horas de espera y garantiza tu lugar.</p>
     <div class="btn-row">
-      <a href="https://www.tiqets.com/es/search?q=Amsterdam&partner=voyage_lumiere-184870" target="_blank" rel="sponsored noopener" class="btn-affiliate">Ver entradas en Tiqets →</a>
+      <a href="https://www.tiqets.com/es/atracciones-amsterdam-c66/?partner=voyage_lumiere-184870" target="_blank" rel="sponsored noopener" class="btn-affiliate">Ver entradas en Tiqets →</a>
       <a href="https://www.getyourguide.es/amsterdam-l36/?partner=1ABLZMR" target="_blank" rel="sponsored noopener" class="btn-affiliate secondary">Tours en GetYourGuide →</a>
     </div>
   </div>
@@ -563,5 +567,20 @@
   <p style="margin-top: 10px; font-size: 0.75rem; color: rgba(255,255,255,0.35);">Este artículo contiene enlaces de afiliados. Si reservas a través de ellos, recibimos una pequeña comisión sin costo adicional para ti. ¡Gracias por apoyar el blog!</p>
 </footer>
 
+
+  <!-- Klaviyo — Viewed Product tracking -->
+  <script>
+    window.addEventListener('load', function() {
+      if (typeof klaviyo !== 'undefined') {
+        klaviyo.push(['track', 'Viewed Product', {
+          "Name":       "Guía de Ámsterdam 2025",
+          "URL":        "https://voyagelumiere.indevs.in/articles/amsterdam.html",
+          "Categories": ["Europa", "Países Bajos", "Ciudades"],
+          "ImageURL":   "https://voyagelumiere.indevs.in/og-amsterdam.jpg"
+        }]);
+      }
+    });
+  </script>
+  <!-- /Klaviyo -->
 </body>
 </html>
