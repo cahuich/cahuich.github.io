@@ -33,6 +33,232 @@
     window.addEventListener('load', function(){ gtag('event', 'page_view'); });
   </script>
 
+  <style id="critical-css">
+/* ── RESET & VARIABLES ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:    #1A2B4C;
+  --gold:    #C5A059;
+  --gold-lt: #E8D5A3;
+  --cream:   #FDFBF7;
+  --warm:    #F5F0E8;
+  --ink:     #1A1A1A;
+  --muted:   #6B6460;
+  --border:  #E8E2D8;
+  --ff-head: 'Playfair Display', serif;
+  --ff-body: 'Lato', sans-serif;
+  --ff-acc:  'Cormorant Garamond', serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
+img  { display: block; width: 100%; object-fit: cover; }
+a    { text-decoration: none; color: inherit; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--warm); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
+
+.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 4vw; height:72px;
+  background:rgba(253,251,247,.93);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
+.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
+.nav-logo span { color:var(--gold); }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
+.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
+.nav-cta:hover { background:var(--gold) !important; }
+.nav-cta::after { display:none !important; }
+.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
+.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
+
+/* ── BUTTONS ── */
+.btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
+.btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
+.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
+.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
+.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
+.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
+
+/* ── SECTION COMMONS ── */
+.section-header { text-align:center; margin-bottom:4rem; }
+.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
+.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
+.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
+.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
+
+/* ── AD SPACES ── */
+.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
+.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
+.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+
+/* ── ARTICLE CARDS ── */
+.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
+.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
+.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
+.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
+.article-card:hover .article-img { transform:scale(1.04); }
+.article-body { padding:1.6rem; }
+.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
+.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
+.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
+.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
+.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
+.read-more:hover { color:var(--gold); gap:.65rem; }
+
+/* ── COOKIE BANNER ── */
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
+  .cookie-banner.visible { opacity:1; }
+.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
+.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+.cookie-accept:hover { background:var(--gold-lt); }
+.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
+.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
+
+/* ── FOOTER ── */
+footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
+.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
+.footer-social { display:flex; gap:.75rem; }
+.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
+.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
+.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+.footer-col a { font-size:.83rem; transition:color .3s; }
+.footer-col a:hover { color:var(--gold); }
+.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
+.footer-legal { display:flex; gap:1.5rem; }
+.footer-legal a:hover { color:var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .nav-links { display:none; }
+  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
+  .nav-mobile-btn { display:flex; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:600px) {
+  .footer-grid { grid-template-columns:1fr; }
+}
+
+  </style>
+
+  <!-- GetYourGuide Widget Script -->
+
+  <style>
+    .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
+    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.7) 100%), url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=900&q=65&fm=webp&fit=crop') center/cover no-repeat; }
+    .article-hero-content { position:relative; z-index:2; padding:0 8vw 4rem; max-width:900px; animation:fadeUp .8s ease-out both; }
+    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.65); margin-bottom:1.2rem; }
+    .breadcrumb a { color:rgba(255,255,255,.65); transition:color .3s; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { opacity:.5; }
+    .article-hero h1 { font-family:var(--ff-head); font-size:clamp(2.2rem,5vw,3.8rem); font-weight:700; line-height:1.1; color:#fff; margin-bottom:1.2rem; }
+    .article-hero h1 em { font-style:italic; color:var(--gold-lt); }
+    .article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; color:rgba(255,255,255,.7); font-size:.82rem; }
+    .article-meta-tag { background:var(--gold); color:var(--navy); padding:.25rem .75rem; border-radius:1px; font-weight:700; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
+    .article-wrapper { max-width:1200px; margin:0 auto; padding:4rem 5vw; display:grid; grid-template-columns:1fr 320px; gap:4rem; align-items:start; }
+    .article-main {}
+    .article-sidebar { position:sticky; top:96px; display:flex; flex-direction:column; gap:1.5rem; }
+    .article-content { font-size:1.05rem; line-height:1.85; color:#333; }
+    .article-content h2 { font-family:var(--ff-head); font-size:1.75rem; font-weight:600; color:var(--navy); margin:2.5rem 0 1rem; padding-top:1rem; border-top:1px solid var(--border); }
+    .article-content h3 { font-family:var(--ff-head); font-size:1.2rem; font-weight:600; color:var(--navy); margin:1.8rem 0 .75rem; }
+    .article-content p { margin-bottom:1.3rem; }
+    .article-content ul, .article-content ol { padding-left:1.5rem; margin-bottom:1.3rem; }
+    .article-content li { margin-bottom:.5rem; }
+    .article-content strong { color:var(--navy); font-weight:700; }
+    .article-content a { color:var(--gold); border-bottom:1px solid rgba(197,160,89,.3); transition:border-color .3s; }
+    .article-content a:hover { border-color:var(--gold); }
+    .tip-box { background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15)); border-left:3px solid var(--gold); padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
+    .tip-box strong { color:var(--navy); display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
+    .tip-box p { margin:0; font-size:.93rem; color:#555; }
+    .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
+    .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
+
+    /* KIWI BANNER */
+    .kiwi-banner { background:var(--navy); border-radius:3px; padding:1.2rem 1.5rem; margin:2rem 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .kiwi-banner-label { color:var(--gold); font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; margin-bottom:.3rem; }
+    .kiwi-banner-title { color:#fff; font-size:.95rem; font-weight:700; margin-bottom:.2rem; }
+    .kiwi-banner-sub { color:rgba(255,255,255,.55); font-size:.78rem; }
+    .kiwi-banner-btn { display:inline-block; background:var(--gold); color:var(--navy); padding:.75rem 1.5rem; border-radius:2px; font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; text-decoration:none; transition:background .2s; }
+    .kiwi-banner-btn:hover { background:var(--gold-lt); }
+
+    /* TIQETS */
+    .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
+    .tiqets-row { display:flex; align-items:center; gap:.7rem; background:var(--warm); border:1px solid var(--border); border-radius:2px; padding:.65rem .8rem; transition:background .25s, border-color .25s, transform .2s; text-decoration:none; color:inherit; }
+    .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
+    .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
+    .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tiqets-name { font-size:.82rem; font-weight:600; color:var(--navy); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
+    .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
+    .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
+    .tiqets-inline-block { background:var(--warm); border:1px solid var(--border); border-radius:3px; overflow:hidden; margin:2.5rem 0; }
+    .tiqets-inline-header { background:linear-gradient(135deg, var(--navy), #0d1e3a); padding:1rem 1.4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
+    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
+    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
+    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+    .tiqets-card-inline { display:flex; align-items:center; gap:.9rem; background:#fff; padding:.9rem 1.1rem; text-decoration:none; color:inherit; transition:background .2s; }
+    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
+    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
+    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
+    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
+    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
+    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
+    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
+    .tiqets-inline-footer { padding:.7rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; background:var(--warm); border-top:1px solid var(--border); }
+    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
+    .tiqets-inline-footer a:hover { color:var(--navy); }
+    .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
+    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
+
+    /* SIDEBAR */
+    .sidebar-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+    .sidebar-card-header { background:var(--navy); color:#fff; padding:1rem 1.2rem; font-family:var(--ff-head); font-size:.95rem; font-weight:600; }
+    .sidebar-card-body { padding:1.2rem; }
+    .sidebar-card-body p { font-size:.85rem; line-height:1.6; color:var(--muted); margin-bottom:1rem; }
+    .sidebar-booking-btn { display:block; background:var(--gold); color:var(--navy); text-align:center; padding:.8rem; border-radius:2px; font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; text-decoration:none; }
+    .sidebar-booking-btn:hover { background:var(--gold-lt); }
+    .toc { list-style:none; padding:0; display:flex; flex-direction:column; gap:.4rem; }
+    .toc li a { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.5rem; transition:color .3s; text-decoration:none; }
+    .toc li a::before { content:'→'; color:var(--gold); font-size:.7rem; }
+    .toc li a:hover { color:var(--navy); }
+    .weather-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+    .weather-item { background:var(--warm); border-radius:2px; padding:.6rem .8rem; text-align:center; }
+    .weather-month { font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+    .weather-temp { font-family:var(--ff-head); font-size:.95rem; color:var(--navy); font-weight:600; }
+    .related-section { background:var(--warm); padding:5rem 5vw; }
+    @media(max-width:900px) { .article-wrapper { grid-template-columns:1fr; } .article-sidebar { position:static; } }
+  
+  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
+  </style>
+
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris.html"/>
@@ -85,201 +311,13 @@
     }
   }
   </script>
-
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-  <link rel="preload" as="image" fetchpriority="high" href="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?fm=webp&w=900&q=65&fit=crop"/>
-
-  <style id="critical-css">
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --navy:    #1A2B4C;
-  --gold:    #C5A059;
-  --gold-lt: #E8D5A3;
-  --cream:   #FDFBF7;
-  --warm:    #F5F0E8;
-  --ink:     #1A1A1A;
-  --muted:   #6B6460;
-  --border:  #E8E2D8;
-  --ff-head: 'Playfair Display', serif;
-  --ff-body: 'Lato', sans-serif;
-  --ff-acc:  'Cormorant Garamond', serif;
-}
-html { scroll-behavior: smooth; }
-body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
-img  { display: block; width: 100%; object-fit: cover; }
-a    { text-decoration: none; color: inherit; }
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--warm); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
-.reveal:nth-child(4n+1){transition-delay:0ms}
-.reveal:nth-child(4n+2){transition-delay:80ms}
-.reveal:nth-child(4n+3){transition-delay:160ms}
-.reveal:nth-child(4n+4){transition-delay:240ms}
-nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 4vw; height:72px; background:rgba(253,251,247,.93); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); transition:box-shadow .3s; }
-nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
-.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
-.nav-logo span { color:var(--gold); }
-.nav-links { display:flex; gap:2rem; list-style:none; }
-.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
-.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
-.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
-.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
-.nav-cta:hover { background:var(--gold) !important; }
-.nav-cta::after { display:none !important; }
-.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
-.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
-.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
-.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
-.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
-.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
-.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
-.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
-.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
-.article-card:hover .article-img { transform:scale(1.04); }
-.article-body { padding:1.6rem; }
-.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
-.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
-.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
-.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
-.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
-.read-more:hover { color:var(--gold); gap:.65rem; }
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
-.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-.cookie-banner.visible { opacity:1; }
-.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
-.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
-.cookie-accept:hover { background:var(--gold-lt); }
-.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
-.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
-footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
-.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
-.footer-social { display:flex; gap:.75rem; }
-.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
-.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
-.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
-.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
-.footer-col a { font-size:.83rem; transition:color .3s; }
-.footer-col a:hover { color:var(--gold); }
-.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
-.footer-legal { display:flex; gap:1.5rem; }
-.footer-legal a:hover { color:var(--gold); }
-@media (max-width:900px) {
-  .nav-links { display:none; }
-  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
-  .nav-mobile-btn { display:flex; }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
-@media (max-width:600px) { .footer-grid { grid-template-columns:1fr; } }
-  </style>
-
-  <style>
-    .article-hero { position:relative; height:70vh; min-height:500px; display:flex; align-items:flex-end; overflow:hidden; margin-top:72px; }
-    .article-hero-bg { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.7) 100%), url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?fm=webp&w=900&q=65&fit=crop') center/cover no-repeat; }
-    .article-hero-content { position:relative; z-index:2; padding:0 8vw 4rem; max-width:900px; animation:fadeUp .8s ease-out both; }
-    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.65); margin-bottom:1.2rem; }
-    .breadcrumb a { color:rgba(255,255,255,.65); transition:color .3s; }
-    .breadcrumb a:hover { color:var(--gold); }
-    .breadcrumb span { opacity:.5; }
-    .article-hero h1 { font-family:var(--ff-head); font-size:clamp(2.2rem,5vw,3.8rem); font-weight:700; line-height:1.1; color:#fff; margin-bottom:1.2rem; }
-    .article-hero h1 em { font-style:italic; color:var(--gold-lt); }
-    .article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; color:rgba(255,255,255,.7); font-size:.82rem; }
-    .article-meta-tag { background:var(--gold); color:var(--navy); padding:.25rem .75rem; border-radius:1px; font-weight:700; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
-    .article-wrapper { max-width:1200px; margin:0 auto; padding:4rem 5vw; display:grid; grid-template-columns:1fr 320px; gap:4rem; align-items:start; }
-    .article-main {}
-    .article-sidebar { position:sticky; top:96px; display:flex; flex-direction:column; gap:1.5rem; }
-    .article-content { font-size:1.05rem; line-height:1.85; color:#333; }
-    .article-content h2 { font-family:var(--ff-head); font-size:1.75rem; font-weight:600; color:var(--navy); margin:2.5rem 0 1rem; padding-top:1rem; border-top:1px solid var(--border); }
-    .article-content h3 { font-family:var(--ff-head); font-size:1.2rem; font-weight:600; color:var(--navy); margin:1.8rem 0 .75rem; }
-    .article-content p { margin-bottom:1.3rem; }
-    .article-content ul, .article-content ol { padding-left:1.5rem; margin-bottom:1.3rem; }
-    .article-content li { margin-bottom:.5rem; }
-    .article-content strong { color:var(--navy); font-weight:700; }
-    .article-content a { color:var(--gold); border-bottom:1px solid rgba(197,160,89,.3); transition:border-color .3s; }
-    .article-content a:hover { border-color:var(--gold); }
-    .tip-box { background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15)); border-left:3px solid var(--gold); padding:1.2rem 1.5rem; border-radius:0 3px 3px 0; margin:2rem 0; }
-    .tip-box strong { color:var(--navy); display:block; margin-bottom:.4rem; font-family:var(--ff-head); }
-    .tip-box p { margin:0; font-size:.93rem; color:#555; }
-    .article-img-full { width:100%; height:380px; object-fit:cover; border-radius:3px; margin:2rem 0; }
-    .img-caption { text-align:center; font-size:.78rem; color:var(--muted); font-style:italic; margin-top:-.75rem; margin-bottom:2rem; }
-
-    /* TABLA TRANSPORTE */
-    .pt-block{border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0}
-    .pt-header{background:var(--navy);padding:.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-    .pt-header-title{color:#fff;font-weight:700;font-size:.95rem}
-    .pt-header-badge{font-size:.65rem;background:var(--gold);color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.2rem .6rem;border-radius:1px}
-    .pt-table{width:100%;border-collapse:collapse;font-size:.84rem}
-    .pt-table th{background:var(--warm);color:var(--navy);font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--border)}
-    .pt-table th:not(:first-child){text-align:center}
-    .pt-table td{padding:.75rem 1rem;border-bottom:1px solid var(--border);color:var(--ink);vertical-align:middle}
-    .pt-table td:not(:first-child){text-align:center}
-    .pt-table tr:last-child td{border-bottom:none}
-    .pt-table tr:hover td{background:rgba(197,160,89,.06);transition:background .2s}
-    .pt-name{font-weight:700;color:var(--navy);display:block;line-height:1.3;font-family:var(--ff-head)}
-    .pt-sub{font-size:.72rem;color:var(--muted);margin-top:.1rem;display:block}
-    .pt-price{font-weight:700;color:var(--navy);font-size:.95rem;font-family:var(--ff-head)}
-    .pt-day{font-size:.78rem;color:var(--muted)}
-    .pt-yes{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:#E8F5E9;border-radius:50%;color:#2E7D32;font-size:.75rem;font-weight:700}
-    .pt-no{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:#FCE4EC;border-radius:50%;color:#C62828;font-size:.75rem;font-weight:700}
-    .pt-chip{font-size:.68rem;background:var(--warm);border:1px solid var(--border);border-radius:1px;padding:.15rem .5rem;color:var(--muted);white-space:nowrap}
-    .pt-row-best td{background:rgba(197,160,89,.07)}
-    .pt-row-best .pt-name{color:#0f5c2e}
-    .pt-footer{background:var(--warm);padding:.65rem 1.1rem;font-size:.72rem;color:var(--muted);border-top:1px solid var(--border);line-height:1.65}
-    @media(max-width:680px){.pt-table{font-size:.76rem}.pt-table th,.pt-table td{padding:.55rem .6rem}.pt-chip{display:none}}
-
-    /* TIQETS */
-    .tiqets-list{display:flex;flex-direction:column;gap:.45rem}
-    .tiqets-row{display:flex;align-items:center;gap:.7rem;background:var(--warm);border:1px solid var(--border);border-radius:2px;padding:.65rem .8rem;transition:background .25s,border-color .25s,transform .2s;text-decoration:none;color:inherit}
-    .tiqets-row:hover{background:#fff;border-color:var(--gold);transform:translateX(3px)}
-    .tiqets-icon{font-size:1.1rem;flex-shrink:0;line-height:1}
-    .tiqets-info{display:flex;flex-direction:column;flex:1;min-width:0}
-    .tiqets-name{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tiqets-badge{font-size:.68rem;color:var(--gold);font-weight:600;margin-top:.1rem}
-    .tiqets-arrow{color:var(--gold);font-size:.85rem;flex-shrink:0;transition:transform .2s}
-    .tiqets-row:hover .tiqets-arrow{transform:translateX(3px)}
-    .tiqets-inline-block{background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2.5rem 0}
-    .tiqets-inline-header{background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-    .tiq-title{font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600}
-    .tiq-badge{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
-    .tiqets-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
-    .tiqets-card-inline{display:flex;align-items:center;gap:.9rem;background:#fff;padding:.9rem 1.1rem;text-decoration:none;color:inherit;transition:background .2s}
-    .tiqets-card-inline:hover{background:rgba(197,160,89,.07)}
-    .tci-icon{font-size:1.4rem;line-height:1;flex-shrink:0}
-    .tci-body{display:flex;flex-direction:column;flex:1;min-width:0}
-    .tci-name{font-size:.85rem;font-weight:700;color:var(--navy);line-height:1.3}
-    .tci-desc{font-size:.72rem;color:var(--muted);margin-top:.15rem;line-height:1.4}
-    .tci-price{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0}
-    .tci-price-num{font-family:var(--ff-head);font-size:.95rem;font-weight:700;color:var(--navy);white-space:nowrap}
-    .tci-cta{font-size:.68rem;color:var(--gold);font-weight:700;white-space:nowrap;margin-top:.2rem}
-    .tiqets-inline-footer{padding:.7rem 1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;background:var(--warm);border-top:1px solid var(--border)}
-    .tiqets-inline-footer a{font-size:.78rem;color:var(--gold);font-weight:600;border:none}
-    .tiqets-inline-footer a:hover{color:var(--navy)}
-    .tiqets-inline-footer span{font-size:.68rem;color:var(--muted)}
-    @media(max-width:640px){.tiqets-cards-grid{grid-template-columns:1fr}}
-
-    /* SIDEBAR */
-    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
-    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
-    .sidebar-card-body{padding:1.2rem}
-    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
-    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
-    .sidebar-booking-btn:hover{background:var(--gold-lt)}
-    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
-    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
-    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
-    .toc li a:hover{color:var(--navy)}
-    .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-    .weather-item{background:var(--warm);border-radius:2px;padding:.6rem .8rem;text-align:center}
-    .weather-month{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
-    .related-section{background:var(--warm);padding:5rem 5vw}
-    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
-  </style>
+  <link rel="sitemap" type="application/xml" href="/voyage2/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=900&q=65&fm=webp&fit=crop"/>
   <meta name="google-adsense-account" content="ca-pub-4594535933040491">
+
+  <!-- Klaviyo SDK -->
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
+  <!-- /Klaviyo SDK -->
 </head>
 <body>
 
@@ -297,13 +335,13 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
   <div class="article-hero">
     <div class="article-hero-bg"></div>
-    <img src="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?fm=webp&w=900&q=65&fit=crop"
-         fetchpriority="high" decoding="async" alt="" aria-hidden="true"
-         style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;"/>
+    <img src="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=900&q=65&fm=webp&fit=crop" fetchpriority="high" decoding="async" alt="" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;"/>
     <div class="article-hero-content">
       <div class="breadcrumb">
-        <a href="../index.html">Inicio</a><span>/</span>
-        <a href="paris.html">Francia</a><span>/</span>
+        <a href="../index.html">Inicio</a>
+        <span>/</span>
+        <a href="paris.html">Francia</a>
+        <span>/</span>
         <span style="color:#fff">París</span>
       </div>
       <h1>Guía completa de <em>París</em><br/>para 2025</h1>
@@ -331,6 +369,20 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <p>La mejor época para visitar París es entre <strong>abril y junio</strong>: clima agradable, jardines en flor y menos turistas que en agosto. Evita agosto si puedes, ya que muchos parisinos están de vacaciones y algunos negocios cierran.</p>
         </div>
 
+        <!-- KIWI BANNER — Awin -->
+        <div style="margin:2rem 0;">
+          <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">✈️ Publicidad · Vuelos con Kiwi.com</p>
+          <!-- START ADVERTISER: Kiwi MX from awin.com -->
+          <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340" target="_blank">
+            <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0" loading="lazy" decoding="async" alt="Kiwi.com — Busca vuelos baratos desde México" style="display:block;width:100%;height:auto;border-radius:3px;"/>
+          </a>
+          <!-- END ADVERTISER: Kiwi MX from awin.com -->
+        </div>
+          <a href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340"
+             target="_blank" rel="noopener sponsored"
+             class="kiwi-banner-btn">Buscar vuelos →</a>
+        </div>
+
         <h2 id="que-ver">¿Qué ver en París?</h2>
         <p>París tiene tantos atractivos que es fácil sentirse abrumado. Para facilitar la planificación, dividimos la ciudad en zonas temáticas que puedes explorar en un día cada una.</p>
 
@@ -342,7 +394,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <li>Picnic en el Champ de Mars: tradición parisina imprescindible</li>
         </ul>
 
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://img.freepik.com/fotos-premium/torre-eiffel-parque-champ-mars-al-atardecer-paris-francia_104337-6220.jpg?w=700&h=420" alt="Torre Eiffel vista desde el Champ de Mars"/>
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/id/1029/700/420" alt="Torre Eiffel vista desde el Champ de Mars"/>
         <p class="img-caption">La Torre Eiffel vista desde el Champ de Mars al atardecer</p>
 
         <h3>🎨 El Louvre y el Museo d'Orsay</h3>
@@ -361,29 +413,29 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
             <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
           </div>
           <div class="tiqets-cards-grid">
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-del-louvre-entrada-acceso-alojado-a-mona-lisa-p1102684/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
               <span class="tci-icon">🏛️</span>
               <span class="tci-body"><span class="tci-name">Museo del Louvre</span><span class="tci-desc">Acceso prioritario sin colas · Ticket móvil</span></span>
               <span class="tci-price"><span class="tci-price-num">Desde 22€</span><span class="tci-cta">Reservar →</span></span>
             </a>
-            <a href="https://www.tiqets.com/es/atracciones-versalles-c66594/entradas-para-palacio-de-versalles-entrada-jardines-y-dominio-del-trianon-p974127/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <a href="https://www.tiqets.com/es/versailles-c75184/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
               <span class="tci-icon">👑</span>
               <span class="tci-body"><span class="tci-name">Palacio de Versalles</span><span class="tci-desc">Acceso a jardines y palacio · Cancela gratis</span></span>
               <span class="tci-price"><span class="tci-price-num">Desde 18€</span><span class="tci-cta">Reservar →</span></span>
             </a>
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-de-orsay-renoir-y-el-amor-1865-1885-p1080858/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
               <span class="tci-icon">🎨</span>
               <span class="tci-body"><span class="tci-name">Musée d'Orsay</span><span class="tci-desc">Colección impresionista · Sin esperas</span></span>
               <span class="tci-price"><span class="tci-price-num">Desde 14€</span><span class="tci-cta">Reservar →</span></span>
             </a>
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-torre-eiffel-p974084/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
               <span class="tci-icon">🗼</span>
               <span class="tci-body"><span class="tci-name">Torre Eiffel</span><span class="tci-desc">Subida hasta la cima · Reserva anticipada</span></span>
               <span class="tci-price"><span class="tci-price-num">Desde 11€</span><span class="tci-cta">Reservar →</span></span>
             </a>
           </div>
           <div class="tiqets-inline-footer">
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored">Ver todas las entradas en París →</a>
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored">Ver todas las entradas en París →</a>
             <span>En colaboración con <strong>Tiqets</strong> · Sin coste adicional para el usuario</span>
           </div>
         </div>
@@ -408,7 +460,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <li><strong>Bastille (11.º y 12.º):</strong> Auténtico y local, con precios más asequibles. Excelente conexión en metro.</li>
         </ul>
 
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://img.freepik.com/fotos-premium/francia-paris-trafico-denso-campos-eliseos-arco-triunfal-atardecer-dorado_356860-357.jpg?w=700&h=420" alt="Los Campos Elíseos al atardecer"/>
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/id/1050/700/420" alt="Los Campos Elíseos al atardecer"/>
         <p class="img-caption">Los Campos Elíseos al atardecer</p>
 
         <h2 id="transporte">Cómo moverse por París</h2>
@@ -417,89 +469,8 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <li><strong>Navigo Easy:</strong> tarjeta recargable para t+ individuales o en packs de 10</li>
           <li><strong>Navigo Semaine:</strong> pase semanal ilimitado (Lunes–Domingo), rentable si te quedas 4+ días</li>
           <li><strong>Vélib':</strong> sistema de bicicletas compartidas, ideal para trayectos cortos</li>
-          <li><strong>Taxis y Uber:</strong> disponibles pero más caros. Útiles de noche o con equipaje</li>
+          <li>Taxis y Uber: disponibles pero más caros. Útiles de noche o con equipaje</li>
         </ul>
-
-        <!-- TABLA TARIFAS TRANSPORTE -->
-        <div class="pt-block">
-          <div class="pt-header">
-            <span class="pt-header-title">🚇 Tarifas de transporte en París</span>
-            <span class="pt-header-badge">Precios oficiales 2025</span>
-          </div>
-          <table class="pt-table">
-            <thead>
-              <tr>
-                <th>Título</th>
-                <th>Duración</th>
-                <th>Precio</th>
-                <th>Coste/día</th>
-                <th>Aeropuerto</th>
-                <th>Formato</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="pt-name">Paris Visite</span></td>
-                <td><span style="font-size:.82rem">1 día</span></td>
-                <td><span class="pt-price">29,90 €</span></td>
-                <td><span class="pt-day">29,90 €</span></td>
-                <td><span class="pt-yes">✓</span></td>
-                <td><span class="pt-chip">Móvil / Easy</span></td>
-              </tr>
-              <tr>
-                <td><span class="pt-name">Paris Visite</span></td>
-                <td><span style="font-size:.82rem">3 días</span></td>
-                <td><span class="pt-price">62,30 €</span></td>
-                <td><span class="pt-day">20,77 €</span></td>
-                <td><span class="pt-yes">✓</span></td>
-                <td><span class="pt-chip">Móvil / Easy</span></td>
-              </tr>
-              <tr>
-                <td><span class="pt-name">Paris Visite</span></td>
-                <td><span style="font-size:.82rem">5 días</span></td>
-                <td><span class="pt-price">76,25 €</span></td>
-                <td><span class="pt-day">15,25 €</span></td>
-                <td><span class="pt-yes">✓</span></td>
-                <td><span class="pt-chip">Móvil / Easy</span></td>
-              </tr>
-              <tr class="pt-row-best">
-                <td>
-                  <span class="pt-name">Navigo Découverte ★</span>
-                  <span class="pt-sub">Válido lun–dom</span>
-                </td>
-                <td><span style="font-size:.82rem">1 semana</span></td>
-                <td><span class="pt-price">31,60 €</span></td>
-                <td><span class="pt-day" style="color:#0f5c2e;font-weight:700">4,51 €</span></td>
-                <td><span class="pt-yes">✓</span></td>
-                <td><span class="pt-chip">Tarjeta nominativa</span></td>
-              </tr>
-              <tr>
-                <td><span class="pt-name">Navigo Day Pass</span></td>
-                <td><span style="font-size:.82rem">1 día</span></td>
-                <td><span class="pt-price">12,00 €</span></td>
-                <td><span class="pt-day">12,00 €</span></td>
-                <td><span class="pt-no">✗</span></td>
-                <td><span class="pt-chip">Móvil / Easy</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="pt-name">Ticket t+</span>
-                  <span class="pt-sub">1 viaje sencillo</span>
-                </td>
-                <td><span style="font-size:.82rem">—</span></td>
-                <td><span class="pt-price">2,50 €</span></td>
-                <td><span class="pt-day">—</span></td>
-                <td><span class="pt-no">✗</span></td>
-                <td><span class="pt-chip">Móvil †</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="pt-footer">
-            ★ El <strong>Navigo Découverte</strong> es la opción más económica si te quedas 5 o más días ·
-            * Coste/día orientativo · † Cartón magnético retirado a finales de 2025 ·
-            Aeropuerto CDG incluido en Paris Visite y Navigo con complemento RER B
-          </div>
-        </div>
 
         <div class="tip-box">
           <strong>✈️ Desde el aeropuerto</strong>
@@ -514,86 +485,10 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           <li><strong>Presupuesto alto:</strong> 300€+/día (hoteles boutique, alta gastronomía, experiencias VIP)</li>
         </ul>
 
-      </div><!-- /article-content -->
-
-      <!-- GYG Widget — Tours París -->
-      <div style="margin:2.5rem 0;">
-        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
-          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en París</span>
-            <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
-          </div>
-          <div style="padding:1rem;">
-            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
-                 data-gyg-location-id="16"
-                 data-gyg-locale-code="es-ES"
-                 data-gyg-widget="activities"
-                 data-gyg-number-of-items="4"
-                 data-gyg-partner-id="1ABLZMR">
-            </div>
-            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
-              Actividades en colaboración con <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
-            </p>
-          </div>
-        </div>
       </div>
 
-      <!-- Conversor de monedas -->
-      <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-        <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">💱 Conversor de monedas — tiempo real</span>
-          <span style="font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;">Tipos BCE · Actualizado diariamente</span>
-        </div>
-        <div style="padding:1.2rem;">
-          <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end;margin-bottom:1rem;">
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:.4rem;">Cantidad</label>
-              <input type="number" id="cvAmount" value="1000" min="0" style="width:100%;padding:.65rem .9rem;font-size:.95rem;font-weight:600;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);box-sizing:border-box;"/>
-            </div>
-            <button onclick="cvSwap()" style="padding:.65rem 1rem;border:1px solid var(--border);border-radius:2px;background:var(--warm);cursor:pointer;font-size:1rem;color:var(--navy);">⇄</button>
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:.4rem;">Resultado</label>
-              <div style="padding:.65rem .9rem;background:var(--cream);border:1px solid var(--gold);border-radius:2px;font-size:.95rem;font-weight:700;color:var(--navy);min-height:40px;" id="cvResult">—</div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem;">
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);display:block;margin-bottom:.4rem;">De</label>
-              <select id="cvFrom" style="width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);font-size:.85rem;">
-                <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
-                <option value="USD">🇺🇸 USD — Dólar</option>
-                <option value="EUR">🇪🇺 EUR — Euro</option>
-                <option value="GBP">🇬🇧 GBP — Libra</option>
-                <option value="ARS">🇦🇷 ARS — Peso argentino</option>
-                <option value="COP">🇨🇴 COP — Peso colombiano</option>
-                <option value="BRL">🇧🇷 BRL — Real</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);display:block;margin-bottom:.4rem;">A</label>
-              <select id="cvTo" style="width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);font-size:.85rem;">
-                <option value="EUR">🇪🇺 EUR — Euro</option>
-                <option value="GBP">🇬🇧 GBP — Libra</option>
-                <option value="CHF">🇨🇭 CHF — Franco suizo</option>
-                <option value="NOK">🇳🇴 NOK — Corona noruega</option>
-                <option value="SEK">🇸🇪 SEK — Corona sueca</option>
-                <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
-                <option value="USD">🇺🇸 USD — Dólar</option>
-              </select>
-            </div>
-          </div>
-          <div style="background:var(--cream);border:1px solid var(--border);border-radius:2px;padding:.75rem 1rem;font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <span id="cvRate">Cargando tipo de cambio...</span>
-            <span id="cvTime"></span>
-          </div>
-        </div>
-      </div>
 
-      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
-        <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
-      </div>
-
-    <!-- OMIO — Trenes y buses Europa -->
+        <!-- OMIO — Trenes y buses Europa -->
         <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
           <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
             <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
@@ -618,9 +513,8 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
           <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
             <h3 id="1698061" style="margin:0;font-size:0;line-height:0;">
-              <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385"
-                 target="_blank"
-                 style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;transition:background .2s;">
+              <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
+                 style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
                 Buscar en Omio →
               </a>
             </h3>
@@ -628,9 +522,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
             <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
           </div>
         </div>
-        <!-- /OMIO -->
 
-            <!-- HOTMART: Audioguía Turística: París -->
+      <!-- /OMIO -->
+
+
+        <!-- HOTMART: Audioguía Turística: París -->
         <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
           <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
             <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎧</div>
@@ -687,10 +583,35 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
         </div>
         <!-- /HOTMART -->
-      
+
+      <!-- GYG Widget — Tours París -->
+      <div style="margin:2.5rem 0;">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en París</span>
+            <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
+          </div>
+          <div style="padding:1rem;">
+            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                 data-gyg-location-id="16"
+                 data-gyg-locale-code="es-ES"
+                 data-gyg-widget="activities"
+                 data-gyg-number-of-items="4"
+                 data-gyg-partner-id="1ABLZMR">
+            </div>
+            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+              Actividades en colaboración con <a href="https://www.getyourguide.es/paris-l16/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
+        <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
+      </div>
+
     </main>
 
-    <!-- SIDEBAR -->
     <aside class="article-sidebar">
 
       <div class="sidebar-card reveal">
@@ -706,15 +627,6 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         </div>
       </div>
 
-      <!-- Kiwi Vuelos Widget — París -->
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">✈️ Vuelos a París</div>
-        <div class="sidebar-card-body" style="padding:.8rem;">
-          <script async src="https://tpwidg.com/content?currency=mxn&trs=505816&shmarker=709104&from_name=MEX&to_name=paris_fr&locale=es&powered_by=true&limit=4&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411" charset="utf-8"></script>
-          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;margin-bottom:0;">Vuelos en colaboración con <strong>Kiwi.com</strong></p>
-        </div>
-      </div>
-      
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🏨 Reserva tu hotel en París</div>
         <div class="sidebar-card-body">
@@ -739,6 +651,18 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         </div>
       </div>
 
+            <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">✈️ Vuelos con Kiwi.com</div>
+        <div class="sidebar-card-body" style="padding:.8rem;">
+          <!-- START ADVERTISER: Kiwi MX from awin.com -->
+          <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340" target="_blank">
+            <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0" loading="lazy" decoding="async" alt="Kiwi.com — Busca vuelos baratos" style="display:block;width:100%;height:auto;border-radius:2px;"/>
+          </a>
+          <!-- END ADVERTISER: Kiwi MX from awin.com -->
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;margin-bottom:0;">Publicidad · Kiwi.com</p>
+        </div>
+      </div>
+
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎟️ Tours y entradas en París</div>
         <div class="sidebar-card-body" style="padding:.8rem;">
@@ -760,36 +684,27 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <div class="sidebar-card-body" style="padding:.6rem .8rem;">
           <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">Reserva tus entradas al instante. Ticket móvil · Confirmación inmediata.</p>
           <div class="tiqets-list">
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-del-louvre-entrada-acceso-alojado-a-mona-lisa-p1102684/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
               <span class="tiqets-icon">🏛️</span>
               <span class="tiqets-info"><span class="tiqets-name">Museo del Louvre</span><span class="tiqets-badge">Desde 22€ · Sin colas</span></span>
               <span class="tiqets-arrow">→</span>
             </a>
-            <a href="https://www.tiqets.com/es/atracciones-versalles-c66594/entradas-para-palacio-de-versalles-entrada-jardines-y-dominio-del-trianon-p974127/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+            <a href="https://www.tiqets.com/es/versailles-c75184/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
               <span class="tiqets-icon">👑</span>
               <span class="tiqets-info"><span class="tiqets-name">Palacio de Versalles</span><span class="tiqets-badge">Desde 18€ · Entradas rápidas</span></span>
               <span class="tiqets-arrow">→</span>
             </a>
-            <a href="https://www.tiqets.com/es/atracciones-paris-c66746/entradas-para-museo-de-orsay-renoir-y-el-amor-1865-1885-p1080858/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
+            <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870" target="_blank" rel="noopener sponsored" class="tiqets-row">
               <span class="tiqets-icon">🎨</span>
               <span class="tiqets-info"><span class="tiqets-name">Musée d'Orsay</span><span class="tiqets-badge">Desde 14€ · Acceso prioritario</span></span>
               <span class="tiqets-arrow">→</span>
             </a>
           </div>
-          <a href="https://www.tiqets.com/es/atracciones-paris-c66746/?partner=voyage_lumiere-184870"
+          <a href="https://www.tiqets.com/es/paris-c75080/?partner=voyage_lumiere-184870"
              target="_blank" rel="noopener sponsored"
              style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
             Ver todas las entradas en Tiqets →
           </a>
-        </div>
-      </div>
-
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🛡️ Seguro de viaje</div>
-        <div class="sidebar-card-body">
-          <p>Seguro médico con mínimo 30.000€ de cobertura, obligatorio para entrar a Europa. 5% de descuento con este enlace.</p>
-          <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored"
-             class="sidebar-booking-btn" style="background:#C62828;color:#fff;">Ver seguros IATI →</a>
         </div>
       </div>
 
@@ -799,13 +714,13 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   </div>
 
   <section class="related-section">
-    <div class="section-header reveal" style="text-align:center;margin-bottom:3rem;">
-      <p class="section-tag" style="display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:.95rem;font-style:italic;margin-bottom:.75rem;">Sigue explorando</p>
-      <h2 style="font-family:var(--ff-head);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:var(--navy);">Artículos relacionados</h2>
+    <div class="section-header reveal">
+      <p class="section-tag">Sigue explorando</p>
+      <h2 class="section-title">Artículos relacionados</h2>
     </div>
     <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1567942585146-33d62b775db0?fm=webp&w=480&q=65')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1567942585146-33d62b775db0?w=400&q=60&fm=webp')"></div>
         <div class="article-body">
           <p class="article-tag">París · Cultura</p>
           <h3 class="article-title">El Louvre en 3 horas: ruta optimizada para no perderte lo esencial</h3>
@@ -814,7 +729,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         </div>
       </article>
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1642486574545-509db153db60?fm=webp&w=480&q=65')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1642486574545-509db153db60?w=400&q=60&fm=webp')"></div>
         <div class="article-body">
           <p class="article-tag">Francia · Gastronomía</p>
           <h3 class="article-title">Los mejores bistrós de París donde comen los parisinos de verdad</h3>
@@ -823,7 +738,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         </div>
       </article>
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1633117678842-5f3e65cf8ad1?fm=webp&w=480&q=65')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1633117678842-5f3e65cf8ad1?w=400&q=60&fm=webp')"></div>
         <div class="article-body">
           <p class="article-tag">Francia · Día trip</p>
           <h3 class="article-title">Versalles desde París: guía completa para una excursión de un día</h3>
@@ -844,10 +759,8 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         </div>
       </div>
       <div class="footer-col"><h4>Destinos</h4><ul>
-        <li><a href="paris.html">París</a></li>
-        <li><a href="roma.html">Roma</a></li>
-        <li><a href="barcelona.html">Barcelona</a></li>
-        <li><a href="lisboa.html">Lisboa</a></li>
+        <li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li>
         <li><a href="londres.html">Londres</a></li>
         <li><a href="amsterdam.html">Ámsterdam</a></li>
       </ul></div>
@@ -856,8 +769,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         <li><a href="paris-ninos.html">París con niños</a></li>
         <li><a href="gastronomia-europa.html">Gastronomía</a></li>
         <li><a href="naturaleza-europa.html">Naturaleza</a></li>
-        <li><a href="presupuesto-europa.html">Presupuesto</a></li>
-        <li><a href="visa-schengen-mexico.html">Visa Schengen</a></li>
+        <li><a href="gastronomia-europa.html">Ciudad</a></li>
       </ul></div>
       <div class="footer-col"><h4>Nosotros</h4><ul>
         <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
@@ -883,9 +795,6 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     </div>
   </div>
 
-  <!-- GYG script — SOLO aquí, antes de </body>, una sola vez -->
-  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
-
   <script>
     const navbar = document.getElementById('navbar');
     let ticking = false;
@@ -904,6 +813,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     }), {threshold:.12});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     const banner = document.getElementById('cookieBanner');
+    // Mostrar banner después de LCP — no interfiere con el renderizado inicial
     window.addEventListener('load', function() {
       if(!localStorage.getItem('cookieConsent')) {
         setTimeout(() => {
@@ -912,46 +822,28 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
         }, 1200);
       }
     });
-    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); banner.classList.add('hidden'); }
-    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); banner.classList.add('hidden'); }
-
-    // Conversor de monedas
-    (function(){
-      let cvRates = {};
-      async function cvFetch(){
-        try {
-          const r = await fetch('https://api.frankfurter.app/latest?from=EUR');
-          const d = await r.json();
-          cvRates = d.rates; cvRates['EUR'] = 1;
-          document.getElementById('cvTime').textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'});
-          cvConvert();
-        } catch(e) {
-          cvRates = {EUR:1,USD:1.08,GBP:0.86,MXN:18.5,CHF:0.97,NOK:11.4,SEK:11.2,ARS:980,COP:4300,BRL:5.5};
-          document.getElementById('cvTime').textContent = 'Tipo orientativo';
-          cvConvert();
-        }
-      }
-      window.cvConvert = function(){
-        const from = document.getElementById('cvFrom').value;
-        const to   = document.getElementById('cvTo').value;
-        const amt  = parseFloat(document.getElementById('cvAmount').value)||0;
-        if(!cvRates[from]||!cvRates[to]) return;
-        const rate = cvRates[to] / cvRates[from];
-        const res  = amt * rate;
-        const fmt  = res >= 1000 ? res.toLocaleString('es-MX',{maximumFractionDigits:0}) : res.toFixed(2);
-        document.getElementById('cvResult').textContent = fmt + ' ' + to;
-        document.getElementById('cvRate').textContent = '1 ' + from + ' = ' + (rate<0.01?rate.toFixed(4):rate.toFixed(2)) + ' ' + to;
-      };
-      window.cvSwap = function(){
-        const f=document.getElementById('cvFrom'), t=document.getElementById('cvTo'), tmp=f.value;
-        f.value=t.value; t.value=tmp; cvConvert();
-      };
-      document.getElementById('cvFrom').addEventListener('change',cvConvert);
-      document.getElementById('cvTo').addEventListener('change',cvConvert);
-      document.getElementById('cvAmount').addEventListener('input',cvConvert);
-      cvFetch();
-    })();
+    function hideBanner(){
+      banner.classList.add('hidden');
+      setTimeout(function(){ banner.style.display='none'; }, 420);
+    }
+    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); hideBanner(); }
+    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); hideBanner(); }
   </script>
-  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" " data-gyg-partner-id="1ABLZMR"></script>
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" " data-gyg-partner-id="1ABLZMR">></script>
+
+  <!-- Klaviyo — Viewed Product tracking -->
+  <script>
+    window.addEventListener('load', function() {
+      if (typeof klaviyo !== 'undefined') {
+        klaviyo.push(['track', 'Viewed Product', {
+          "Name":       "Guía de París 2025",
+          "URL":        "https://voyagelumiere.indevs.in/articles/paris.html",
+          "Categories": ["Europa", "Francia", "Ciudades"],
+          "ImageURL":   "https://voyagelumiere.indevs.in/og-paris.jpg"
+        }]);
+      }
+    });
+  </script>
+  <!-- /Klaviyo -->
 </body>
 </html>
