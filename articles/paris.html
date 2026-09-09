@@ -319,6 +319,18 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
   <!-- /Klaviyo SDK -->
 </head>
+  <script>
+window.addEventListener('load', function() {
+  if (typeof klaviyo !== 'undefined') {
+    klaviyo.push(['track', 'Viewed Product', {
+      "Name":       "Guía de París 2025",
+      "URL":        "https://voyagelumiere.indevs.in/articles/paris.html",
+      "Categories": ["Europa", "Francia", "Ciudades"],
+      "ImageURL":   "https://voyagelumiere.indevs.in/og-paris.jpg"
+    }]);
+  }
+});
+</script>
 <body>
 
   <nav id="navbar" class="scrolled">
