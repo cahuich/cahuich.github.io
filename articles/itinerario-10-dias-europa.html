@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <!-- Fuentes: preconnect + carga no bloqueante -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  
+  <!-- Preconnect para recursos externos -->
+  <link rel="preconnect" href="https://widget.getyourguide.com"/>
+  <link rel="preconnect" href="https://www.googletagmanager.com"/>
+  <link rel="dns-prefetch" href="https://www.tiqets.com"/>
+  <link rel="dns-prefetch" href="https://www.awin1.com"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Título optimizado para CTR -->
+  <title>Itinerario de 10 días en Europa: París, Suiza y Roma 2026 | Voyage Lumière</title>
+  
+  <!-- Meta descripción optimizada -->
+  <meta name="description" content="El viaje soñado hecho realidad: descubre cómo recorrer París, los Alpes suizos y Roma en 10 días. Itinerario optimizado, presupuestos reales y tips de transporte en tren.">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html"/>
+
+  <!-- Schema FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Es posible visitar varios países de Europa en 10 días?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, es totalmente posible si te enfocas en destinos cercanos conectados por trenes de alta velocidad. Un itinerario clásico es París-Suiza-Roma o París-Barcelona-Roma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la mejor forma de moverse entre ciudades europeas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para distancias medias, el tren de alta velocidad (como el TGV o Frecciarossa) es la opción más cómoda y rápida. Para trayectos largos, los autobuses nocturnos o vuelos low-cost pueden ser más económicos."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Google Analytics -->
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP';
+      document.head.appendChild(s);
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-52MYXE4VXP', {'send_page_view': false});
+    window.addEventListener('load', function(){ gtag('event', 'page_view'); });
+  </script>
+
+  <style id="critical-css">
+/* ── RESET & VARIABLES ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:    #1A2B4C;
+  --gold:    #C5A059;
+  --gold-lt: #E8D5A3;
+  --cream:   #FDFBF7;
+  --warm:    #F5F0E8;
+  --ink:     #1A1A1A;
+  --muted:   #6B6460;
+  --border:  #E8E2D8;
+  --ff-head: 'Playfair Display', serif;
+  --ff-body: 'Lato', sans-serif;
+  --ff-acc:  'Cormorant Garamond', serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
+img  { display: block; width: 100%; object-fit: cover; }
+a    { text-decoration: none; color: inherit; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--warm); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+.reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 4vw; height:72px;
+  background:rgba(253,251,247,.93);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
+.nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); letter-spacing:-.02em; }
+.nav-logo span { color:var(--gold); }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); position:relative; padding-bottom:2px; }
+.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .3s; }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; font-weight:600 !important; letter-spacing:.1em !important; transition:background .3s; }
+.nav-cta:hover { background:var(--gold) !important; }
+.nav-cta::after { display:none !important; }
+.nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
+.nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
+
+/* ── BUTTONS ── */
+.btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
+.btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
+
+/* ── SECTION COMMONS ── */
+.section-header { text-align:center; margin-bottom:4rem; }
+.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
+.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
+.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
+
+/* ── AD SPACES ── */
+.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
+.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
+.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+
+/* ── ARTICLE CARDS ── */
+.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
+.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
+.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
+.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
+.article-card:hover .article-img { transform:scale(1.04); }
+.article-body { padding:1.6rem; }
+.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
+.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
+.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
+.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
+.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
+.read-more:hover { color:var(--gold); gap:.65rem; }
+
+/* ── COOKIE BANNER ── */
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
+.cookie-banner.visible { opacity:1; }
+.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
+.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+.cookie-accept:hover { background:var(--gold-lt); }
+.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
+.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
+
+/* ── FOOTER ── */
+footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
+.footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
+.footer-social { display:flex; gap:.75rem; }
+.social-btn { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); border-radius:2px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); font-size:.85rem; transition:background .3s, border-color .3s, color .3s; }
+.social-btn:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
+.footer-col h4 { font-family:var(--ff-head); font-size:.9rem; color:#fff; margin-bottom:1.2rem; font-weight:600; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+.footer-col a { font-size:.83rem; transition:color .3s; }
+.footer-col a:hover { color:var(--gold); }
+.footer-bottom { max-width:1280px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; }
+.footer-legal { display:flex; gap:1.5rem; }
+.footer-legal a:hover { color:var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .nav-links { display:none; }
+  .nav-links.open { display:flex; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:var(--cream); border-bottom:1px solid var(--border); padding:1.5rem 4vw; gap:1.2rem; }
+  .nav-mobile-btn { display:flex; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:600px) {
+  .footer-grid { grid-template-columns:1fr; }
+}
+  </style>
+
+  <style>
+    .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.75) 100%),url('https://picsum.photos/id/1015/900/506') center/cover no-repeat}
+    .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
+    .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
+    .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
+    .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
+    .article-content{font-size:1.05rem;line-height:1.85;color:#333}
+    .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
+    .article-content p{margin-bottom:1.3rem}
+    .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--navy);font-weight:700}
+    .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
+    .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
+    .tip-box p{margin:0;font-size:.93rem;color:#555}
+    .day-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;margin:2rem 0;overflow:hidden}
+    .day-card-header{background:var(--navy);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    .day-num{font-family:var(--ff-head);font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+    .day-title{font-family:var(--ff-head);font-size:1rem;color:#fff}
+    .day-card-body{padding:1.5rem}
+    .day-card-body p{font-size:.93rem;margin-bottom:1rem;color:#444}
+    .day-card-body ul{padding-left:1.2rem}
+    .day-card-body li{font-size:.9rem;margin-bottom:.4rem;color:#444}
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
+    .sidebar-card-body{padding:1.2rem}
+    .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
+    .sidebar-booking-btn:hover{background:var(--gold-lt)}
+    .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
+    .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
+    .toc li a:hover{color:var(--navy)}
+    .related-section{background:var(--warm);padding:5rem 5vw}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
+  
+  /* Reveal delays */
+  .reveal:nth-child(4n+1){transition-delay:0ms}
+  .reveal:nth-child(4n+2){transition-delay:80ms}
+  .reveal:nth-child(4n+3){transition-delay:160ms}
+  .reveal:nth-child(4n+4){transition-delay:240ms}
+  </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html"/>
+  <meta property="og:title" content="Itinerario de 10 días en Europa: París, Suiza y Roma 2026 | Voyage Lumière"/>
+  <meta property="og:description" content="El viaje soñado hecho realidad: descubre cómo recorrer París, los Alpes suizos y Roma en 10 días. Itinerario optimizado, presupuestos reales y tips de transporte en tren."/>
+  <meta property="og:image" content="https://voyagelumiere.indevs.in/og-itinerario-europa.jpg"/>
+  <meta property="og:site_name" content="Voyage Lumière"/>
+  <meta property="og:locale" content="es_MX"/>
+
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Itinerario de 10 días en Europa: París, Suiza y Roma 2026 | Voyage Lumière"/>
+  <meta name="twitter:description" content="El viaje soñado hecho realidad: descubre cómo recorrer París, los Alpes suizos y Roma en 10 días. Itinerario optimizado, presupuestos reales y tips de transporte en tren."/>
+  <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-itinerario-europa.jpg"/>
+
+  <!-- SEO: Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Itinerario de 10 días en Europa: París, Suiza y Roma 2026",
+    "description": "Guía completa para recorrer tres destinos europeos en 10 días usando trenes de alta velocidad.",
+    "image": "https://voyagelumiere.indevs.in/og-itinerario-europa.jpg",
+    "url": "https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html",
+    "inLanguage": "es",
+    "dateModified": "2026-09-12",
+    "datePublished": "2026-09-12",
+    "author": {
+      "@type": "Organization",
+      "name": "Voyage Lumière",
+      "url": "https://voyagelumiere.indevs.in/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Voyage Lumière",
+      "url": "https://voyagelumiere.indevs.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://voyagelumiere.indevs.in/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html"
+    }
+  }
+  </script>
+  
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1015/900/506?w=400&q=60&fm=webp"/>
+  <meta name="google-adsense-account" content="ca-pub-4594535933040491">
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#destinos">Destinos</a></li>
+      <li><a href="presupuesto-europa.html">Consejos</a></li>
+      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+      <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a><span>/</span>
+        <a href="presupuesto-europa.html">Consejos</a><span>/</span>
+        <span style="color:#fff">Itinerario 10 Días</span>
+      </div>
+      <h1>Tu sueño europeo:<br/><em>10 días en París, Suiza y Roma</em></h1>
+      <div class="article-meta">
+        <span class="article-meta-tag">Europa · Multi-destino</span>
+        <span>📅 Actualizado septiembre 2026</span>
+        <span>⏱ 12 min de lectura</span>
+        <span>👁 12.400 visitas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-banner">
+    <div class="ad-placeholder">📢 Google AdSense 728×90</div>
+  </div>
+
+  <div class="article-wrapper">
+    <main class="article-main">
+      <div class="article-content">
+
+        <!-- CAJA DE RESUMEN RÁPIDO -->
+        <div class="tip-box">
+          <strong>💡 Resumen del Itinerario Express:</strong>
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem; margin-bottom: 1rem;">
+            <li><strong>Días 1-3:</strong> París (Francia) – Arte, romance y gastronomía.</li>
+            <li><strong>Días 4-6:</strong> Interlaken/Zermatt (Suiza) – Los Alpes más impresionantes.</li>
+            <li><strong>Días 7-10:</strong> Roma (Italia) – Historia antigua y la mejor pasta del mundo.</li>
+            <li><strong>Transporte:</strong> Trenes de alta velocidad (TGV y Frecciarossa).</li>
+          </ul>
+          <p style="margin:0;">👉 <a href="#dia1" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Ver el plan día por día</a></p>
+        </div>
+
+        <p>Recorrer Europa en 10 días puede parecer una locura, pero con la planificación correcta es la aventura de tu vida. Este itinerario está diseñado para viajeros mexicanos que quieren probar lo mejor de tres culturas distintas sin pasar todo el viaje dentro de un aeropuerto.</p>
+        <p>Antes de empezar, asegúrate de tener tu documentación en orden. Si planeas estudiar o trabajar, revisa nuestra <a href="visa-schengen-mexico.html">Guía completa de la Visa Schengen para mexicanos 2026</a>.</p>
+
+        <h2 id="dia1">Días 1-3: París, la Ciudad de la Luz</h2>
+        <p>Aterrizas en Charles de Gaulle. Tu primera parada es la capital mundial del arte y la moda.</p>
+        
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">1-3</div><div class="day-title">París Esencial</div></div>
+          <div class="day-card-body">
+            <ul>
+              <li><strong>Día 1:</strong> Llegada, check-in y paseo por el Seno al atardecer. Cena en un bistró clásico.</li>
+              <li><strong>Día 2:</strong> Mañana en el Louvre (reserva entrada online). Tarde en Montmartre y la Basílica del Sacré-Cœur.</li>
+              <li><strong>Día 3:</strong> Torre Eiffel (sube hasta la cima) y paseo por los Campos Elíseos. Noche de despedida francesa.</li>
+            </ul>
+            <p>Para más detalles, consulta nuestra <a href="paris.html">Guía completa de París</a>.</p>
+          </div>
+        </div>
+
+        <h2 id="dia4">Días 4-6: Suiza, el refugio alpino</h2>
+        <p>Toma un tren TGV Lyria o un vuelo low-cost hacia Suiza. El contraste con París será total: naturaleza pura y aire limpio.</p>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">4-6</div><div class="day-title">Los Alpes Suizos</div></div>
+          <div class="day-card-body">
+            <ul>
+              <li><strong>Día 4:</strong> Traslado a Interlaken. Paseo en barco por el lago Thun.</li>
+              <li><strong>Día 5:</strong> Excursión a Jungfraujoch, el "techo de Europa". Las vistas son inolvidables.</li>
+              <li><strong>Día 6:</strong> Tren panorámico hacia Zermatt para ver el Matterhorn. Fondue suizo para cerrar el día.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- OMIO — Trenes y buses Europa -->
+        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2.5rem 0;">
+          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
+            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
+            <div>
+              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Muevete por Europa con Omio</p>
+              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
+            </div>
+          </div>
+          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
+            <div>
+              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
+                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
+              </div>
+            </div>
+            <div style="text-align:center;flex-shrink:0;">
+              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
+              <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
+            </div>
+          </div>
+          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+            <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
+               style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+              Buscar en Omio →
+            </a>
+            <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" alt="" border="0"/>
+            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
+          </div>
+        </div>
+
+        <h2 id="dia7">Días 7-10: Roma, la Ciudad Eterna</h2>
+        <p>Cruza los Alpes hacia Italia. Roma es un museo al aire libre donde cada esquina tiene 2,000 años de historia.</p>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">7-10</div><div class="day-title">Roma Clásica</div></div>
+          <div class="day-card-body">
+            <ul>
+              <li><strong>Día 7:</strong> Llegada a Roma. Tarde en el Panteón y la Piazza Navona.</li>
+              <li><strong>Día 8:</strong> El Coliseo, el Foro Romano y la Colina Palatina. Imprescindible reservar entrada prioritaria.</li>
+              <li><strong>Día 9:</strong> Ciudad del Vaticano: Museos Vaticanos y la Capilla Sixtina. Tarde libre para compras.</li>
+              <li><strong>Día 10:</strong> Fontana di Trevi y Plaza de España. Última cena de pasta antes del vuelo de regreso.</li>
+            </ul>
+            <p>Si quieres profundizar, lee nuestra guía de <a href="roma.html">Roma en 4 días</a>.</p>
+          </div>
+        </div>
+
+        <h2 id="presupuesto">Presupuesto estimado para 10 días</h2>
+        <p>Este es un presupuesto "realista" para un viajero mexicano que busca confort sin lujos excesivos:</p>
+        <ul>
+          <li><strong>Vuelos internos/Trenes:</strong> $8,000 - $12,000 MXN</li>
+          <li><strong>Alojamiento (9 noches):</strong> $15,000 - $20,000 MXN</li>
+          <li><strong>Comida y actividades:</strong> $12,000 - $15,000 MXN</li>
+          <li><strong>Total aproximado:</strong> $35,000 - $47,000 MXN (sin contar vuelo internacional desde México).</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>💡 Consejo de Voyage Lumière:</strong>
+          <p>No olvides contratar un seguro de viaje médico obligatorio para todo el periodo. Puedes cotizar el tuyo con nuestros aliados de <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored">IATI Seguros</a>.</p>
+        </div>
+
+      </div>
+
+      <!-- GYG Widget — Tours Europa -->
+      <div style="margin:2.5rem 0;">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours imperdibles en este itinerario</span>
+            <a href="https://www.getyourguide.es/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
+          </div>
+          <div style="padding:1rem;">
+            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                 data-gyg-locale-code="es-ES"
+                 data-gyg-widget="activities"
+                 data-gyg-number-of-items="4"
+                 data-gyg-partner-id="1ABLZMR"
+                 data-gyg-q="Europe tour highlights">
+            </div>
+            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+              Actividades en colaboración con <a href="https://www.getyourguide.es/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
+        <div class="ad-rect">📢 AdSense 300×250</div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">📋 Contenidos</div>
+        <div class="sidebar-card-body">
+          <ul class="toc">
+            <li><a href="#dia1">Días 1-3: París</a></li>
+            <li><a href="#dia4">Días 4-6: Suiza</a></li>
+            <li><a href="#dia7">Días 7-10: Roma</a></li>
+            <li><a href="#presupuesto">Presupuesto real</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Checklist rápida -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">✅ Checklist multi-destino</div>
+        <div class="sidebar-card-body">
+          <ul class="checklist-mini">
+            <li>Pasaporte vigente (+3 meses)</li>
+            <li>Seguro de viaje Schengen</li>
+            <li>Adaptadores de corriente (Tipo C/E)</li>
+            <li>Reservas de trenes anticipadas</li>
+            <li>Zapatos muy cómodos para caminar</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seguro IATI -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🛡️ Seguro médico obligatorio</div>
+        <div class="sidebar-card-body">
+          <p>IATI Seguros cubre los 30.000€ mínimos requeridos. Válido en todo el Espacio Schengen. 5% de descuento con este enlace.</p>
+          <a href="https://www.iatiseguros.com/?ref=34462984428636"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn" style="background:#C62828;color:#fff;">Ver seguros IATI →</a>
+        </div>
+      </div>
+
+      <!-- Hoteles -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🏨 Reserva tu hotel</div>
+        <div class="sidebar-card-body">
+          <p>Para un viaje de 10 días, te recomendamos alojamientos con cancelación gratuita por si cambias de planes.</p>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Findex.es.html"
+             target="_blank" rel="noopener sponsored"
+             class="sidebar-booking-btn">Ver hoteles en Booking →</a>
+        </div>
+      </div>
+
+      <div class="ad-rect" style="width:100%;height:250px;">📢 AdSense 300×250</div>
+
+    </aside>
+  </div>
+
+  <!-- ARTÍCULOS RELACIONADOS -->
+  <section class="related-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Sigue explorando</p>
+      <h2 class="section-title">Artículos relacionados</h2>
+    </div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://picsum.photos/id/1036/480/340')"></div>
+        <div class="article-body">
+          <p class="article-tag">México · Trámites</p>
+          <h3 class="article-title">Visa Schengen desde México 2026</h3>
+          <p class="article-excerpt">Todo lo que necesitas saber sobre requisitos, citas y seguros médicos para entrar a Europa.</p>
+          <div class="article-footer"><span>8 min</span><a href="visa-schengen-mexico.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://picsum.photos/id/1029/480/340')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Guía</p>
+          <h3 class="article-title">Guía completa de París para 2026</h3>
+          <p class="article-excerpt">Qué ver, dónde comer y los mejores barrios para alojarse en la Ciudad de la Luz.</p>
+          <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://picsum.photos/id/1040/480/340')"></div>
+        <div class="article-body">
+          <p class="article-tag">España · Guía</p>
+          <h3 class="article-title">Qué ver en Barcelona en 3 días</h3>
+          <p class="article-excerpt">Sagrada Familia, Park Güell, el Born y la Barceloneta en un itinerario optimizado.</p>
+          <div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+          <a href="#" class="social-btn" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul>
+        <li><a href="paris.html">París</a></li>
+        <li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li>
+        <li><a href="lisboa.html">Lisboa</a></li>
+        <li><a href="londres.html">Londres</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="paris-louvre.html">Cultura</a></li>
+        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="visa-schengen-mexico.html">Visa Schengen</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul>
+        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="../sobre-nosotros.html">Contacto</a></li>
+        <li><a href="../afiliados.html">Afiliados</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Voyage Lumière</span>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="../privacidad.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" id="cookieAccept">Aceptar</button>
+      <button class="cookie-dismiss" id="cookieDismiss">Rechazar</button>
+    </div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          navbar.classList.toggle('scrolled', window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('cookieAccept');
+    const dismissBtn = document.getElementById('cookieDismiss');
+
+    window.addEventListener('load', function() {
+      if(!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          banner.style.display = 'flex';
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }, 1200);
+      }
+    });
+
+    function hideBanner(){
+      banner.classList.add('hidden');
+      setTimeout(function(){ banner.style.display='none'; }, 420);
+    }
+    
+    acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','accepted'); hideBanner(); });
+    dismissBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','dismissed'); hideBanner(); });
+
+    // Klaviyo — Viewed Product tracking
+    window.addEventListener('load', function() {
+      window.klaviyo = window.klaviyo || [];
+      if (typeof klaviyo !== 'undefined' && Array.isArray(klaviyo)) {
+        klaviyo.push(['track', 'Viewed Product', {
+          "Name":       "Itinerario 10 días Europa",
+          "URL":        "https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html",
+          "Categories": ["Europa", "Itinerarios", "Multi-destino"],
+          "ImageURL":   "https://voyagelumiere.indevs.in/og-itinerario-europa.jpg"
+        }]);
+      }
+    });
+  </script>
+  
+  <!-- GetYourGuide Script -->
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
+</body>
+</html>
