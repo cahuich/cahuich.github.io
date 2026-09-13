@@ -7,18 +7,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  
   <!-- Preconnect para recursos externos -->
   <link rel="preconnect" href="https://widget.getyourguide.com"/>
   <link rel="preconnect" href="https://www.googletagmanager.com"/>
   <link rel="dns-prefetch" href="https://www.tiqets.com"/>
   <link rel="dns-prefetch" href="https://www.awin1.com"/>
-  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guía completa de Roma 2025: Coliseo, Vaticano y más</title>
-  <meta name="description" content="Visita Roma sin colas: Coliseo, Vaticano, gastronomía romana y los mejores barrios para alojarse. Guía actualizada con precios y trucos de viaje."/>
-  <meta name="keywords" content="Roma guía viaje, qué ver en Roma, Coliseo Roma, Vaticano, hoteles Roma 2025"/>
+  
+  <!-- Título optimizado para CTR -->
+  <title>Guía completa de Roma 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
+  
+  <!-- Meta descripción optimizada -->
+  <meta name="description" content="La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano, y presupuestos reales."/>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/roma.html"/>
 
-  <!-- Google Analytics — defer para no bloquear render -->
+  <!-- Schema FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos días se necesitan para visitar Roma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para ver lo esencial (Coliseo, Vaticano, Centro Histórico) se recomiendan mínimo 4 días completos. Si quieres incluir museos menos conocidos o excursiones, 5 o 6 días es lo ideal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es necesario reservar entradas para el Coliseo con anticipación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, es altamente recomendable. Las entradas se agotan con semanas de antelación, especialmente en temporada alta. Comprar online te permite saltar la fila de la taquilla."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Google Analytics -->
   <script>
     window.addEventListener('load', function() {
       var s = document.createElement('script');
@@ -36,7 +69,6 @@
   <style id="critical-css">
 /* ── RESET & VARIABLES ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --navy:    #1A2B4C;
   --gold:    #C5A059;
@@ -50,21 +82,16 @@
   --ff-body: 'Lato', sans-serif;
   --ff-acc:  'Cormorant Garamond', serif;
 }
-
 html { scroll-behavior: smooth; }
 body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
 img  { display: block; width: 100%; object-fit: cover; }
 a    { text-decoration: none; color: inherit; }
-
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--warm); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-
 .reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
@@ -94,17 +121,12 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 /* ── BUTTONS ── */
 .btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
 .btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
-.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
-.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
-.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
-.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
 
 /* ── SECTION COMMONS ── */
 .section-header { text-align:center; margin-bottom:4rem; }
 .section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
 .section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
 .section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
 
 /* ── AD SPACES ── */
 .ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
@@ -129,7 +151,7 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 /* ── COOKIE BANNER ── */
 .cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-  .cookie-banner.visible { opacity:1; }
+.cookie-banner.visible { opacity:1; }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
 .cookie-accept:hover { background:var(--gold-lt); }
@@ -161,26 +183,20 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 @media (max-width:600px) {
   .footer-grid { grid-template-columns:1fr; }
 }
-
   </style>
-
-  <!-- GetYourGuide -->
 
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=60&fm=webp') center/cover no-repeat}
+    /* IMAGEN HERO REALISTA DE ROMA */
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.75) 100%),url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=1600&q=80') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
-    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}
-    .breadcrumb a:hover{color:var(--gold)}
-    .breadcrumb span{opacity:.5}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
     .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
     .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
     .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
     .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
     .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
-    .article-main{}
-    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .article-content{font-size:1.05rem;line-height:1.85;color:#333}
     .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
     .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
@@ -188,45 +204,33 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
     .article-content li{margin-bottom:.5rem}
     .article-content strong{color:var(--navy);font-weight:700}
-    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
-    .article-content a:hover{border-color:var(--gold)}
     .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
     .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
     .tip-box p{margin:0;font-size:.93rem;color:#555}
     .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
     .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
 
-    /* TIQETS */
-    .tiqets-list{display:flex;flex-direction:column;gap:.45rem}
-    .tiqets-row{display:flex;align-items:center;gap:.7rem;background:var(--warm);border:1px solid var(--border);border-radius:2px;padding:.65rem .8rem;transition:background .25s,border-color .25s,transform .2s;text-decoration:none;color:inherit}
-    .tiqets-row:hover{background:#fff;border-color:var(--gold);transform:translateX(3px)}
-    .tiqets-icon{font-size:1.1rem;flex-shrink:0;line-height:1}
-    .tiqets-info{display:flex;flex-direction:column;flex:1;min-width:0}
-    .tiqets-name{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tiqets-badge{font-size:.68rem;color:var(--gold);font-weight:600;margin-top:.1rem}
-    .tiqets-arrow{color:var(--gold);font-size:.85rem;flex-shrink:0;transition:transform .2s}
-    .tiqets-row:hover .tiqets-arrow{transform:translateX(3px)}
-    .tiqets-inline-block{background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2.5rem 0}
-    .tiqets-inline-header{background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-    .tiq-title{font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600}
-    .tiq-badge{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
-    .tiqets-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
-    .tiqets-card-inline{display:flex;align-items:center;gap:.9rem;background:#fff;padding:.9rem 1.1rem;text-decoration:none;color:inherit;transition:background .2s}
-    .tiqets-card-inline:hover{background:rgba(197,160,89,.07)}
-    .tci-icon{font-size:1.4rem;line-height:1;flex-shrink:0}
-    .tci-body{display:flex;flex-direction:column;flex:1;min-width:0}
-    .tci-name{font-size:.85rem;font-weight:700;color:var(--navy);line-height:1.3}
-    .tci-desc{font-size:.72rem;color:var(--muted);margin-top:.15rem;line-height:1.4}
-    .tci-price{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0}
-    .tci-price-num{font-family:var(--ff-head);font-size:.95rem;font-weight:700;color:var(--navy);white-space:nowrap}
-    .tci-cta{font-size:.68rem;color:var(--gold);font-weight:700;white-space:nowrap;margin-top:.2rem}
-    .tiqets-inline-footer{padding:.7rem 1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;background:var(--warm);border-top:1px solid var(--border)}
-    .tiqets-inline-footer a{font-size:.78rem;color:var(--gold);font-weight:600;border:none}
-    .tiqets-inline-footer a:hover{color:var(--navy)}
-    .tiqets-inline-footer span{font-size:.68rem;color:var(--muted)}
-    @media(max-width:640px){.tiqets-cards-grid{grid-template-columns:1fr}}
+    /* TIQETS WIDGETS */
+    .tiqets-inline-block { background:var(--warm); border:1px solid var(--border); border-radius:3px; overflow:hidden; margin:2.5rem 0; }
+    .tiqets-inline-header { background:linear-gradient(135deg, var(--navy), #0d1e3a); padding:1rem 1.4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
+    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
+    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
+    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+    .tiqets-card-inline { display:flex; align-items:center; gap:.9rem; background:#fff; padding:.9rem 1.1rem; text-decoration:none; color:inherit; transition:background .2s; }
+    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
+    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
+    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
+    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
+    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
+    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
+    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
+    .tiqets-inline-footer { padding:.7rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; background:var(--warm); border-top:1px solid var(--border); }
+    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
+    .tiqets-inline-footer a:hover { color:var(--navy); }
+    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
 
-    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
     .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
     .sidebar-card-body{padding:1.2rem}
@@ -241,10 +245,18 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .weather-item{background:var(--warm);border-radius:2px;padding:.6rem .8rem;text-align:center}
     .weather-month{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
     .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
+    .day-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;margin:2rem 0;overflow:hidden}
+    .day-card-header{background:var(--navy);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    .day-num{font-family:var(--ff-head);font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+    .day-title{font-family:var(--ff-head);font-size:1rem;color:#fff}
+    .day-card-body{padding:1.5rem}
+    .day-card-body p{font-size:.93rem;margin-bottom:1rem;color:#444}
+    .day-card-body ul{padding-left:1.2rem}
+    .day-card-body li{font-size:.9rem;margin-bottom:.4rem;color:#444}
     .related-section{background:var(--warm);padding:5rem 5vw}
     @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
   
-  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  /* Reveal delays */
   .reveal:nth-child(4n+1){transition-delay:0ms}
   .reveal:nth-child(4n+2){transition-delay:80ms}
   .reveal:nth-child(4n+3){transition-delay:160ms}
@@ -254,35 +266,30 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/roma.html"/>
-  <meta property="og:title" content="Guía completa de Roma 2025: Coliseo, Vaticano y más"/>
-  <meta property="og:description" content="Visita Roma sin colas: Coliseo, Vaticano, gastronomía romana y los mejores barrios para alojarse. Guía actualizada con precios y trucos de viaje."/>
-  <meta property="og:image" content="https://voyagelumiere.indevs.in/og-roma.jpg"/>
+  <meta property="og:title" content="Guía completa de Roma 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
+  <meta property="og:description" content="La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano, y presupuestos reales."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=1200&q=80"/>
   <meta property="og:site_name" content="Voyage Lumière"/>
   <meta property="og:locale" content="es_MX"/>
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Guía completa de Roma 2025 — Voyage Lumière"/>
-  <meta name="twitter:description" content="Visita Roma sin colas: Coliseo, Vaticano, gastronomía romana y los mejores barrios para alojarse. Guía actualizada con precios y trucos de viaje."/>
-  <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-roma.jpg"/>
+  <meta name="twitter:title" content="Guía completa de Roma 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
+  <meta name="twitter:description" content="La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano, y presupuestos reales."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=1200&q=80"/>
 
-  <!-- SEO: Canonical -->
-  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/roma.html"/>
-
-  <!-- SEO: Robots -->
-  <meta name="robots" content="index, follow"/>
-  <!-- SEO: Schema.org -->
+  <!-- SEO: Schema.org Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Guía completa de Roma 2025 — Voyage Lumière",
-    "description": "Visita Roma sin colas: Coliseo, Vaticano, gastronomía romana y los mejores barrios para alojarse. Guía actualizada con precios y trucos de viaje.",
-    "image": "https://voyagelumiere.indevs.in/og-roma.jpg",
+    "headline": "Guía completa de Roma 2026: Qué ver, dónde comer y trucos",
+    "description": "La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=1200&q=80",
     "url": "https://voyagelumiere.indevs.in/articles/roma.html",
     "inLanguage": "es",
-    "dateModified": "2025-05-01",
-    "datePublished": "2025-03-01",
+    "dateModified": "2026-09-12",
+    "datePublished": "2024-03-01",
     "author": {
       "@type": "Organization",
       "name": "Voyage Lumière",
@@ -303,699 +310,60 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     }
   }
   </script>
-  <link rel="sitemap" type="application/xml" href="/voyage2/sitemap.xml"/>
-  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=60&fm=webp"/>
+  
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=800&q=60"/>
   <meta name="google-adsense-account" content="ca-pub-4594535933040491">
-
-  <!-- Klaviyo SDK -->
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
-  <!-- /Klaviyo SDK -->
 </head>
 <body>
-
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html#destinos">Destinos</a></li>
       <li><a href="paris.html">París</a></li>
+      <li><a href="barcelona.html">Barcelona</a></li>
       <li><a href="roma.html" class="active">Roma</a></li>
       <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
-    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú"><span></span><span></span><span></span></button>
   </nav>
 
   <div class="article-hero">
     <div class="article-hero-bg"></div>
-    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=60&fm=webp" fetchpriority="high" decoding="async" alt="" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;"/>
     <div class="article-hero-content">
-      <div class="breadcrumb">
-        <a href="../index.html">Inicio</a><span>/</span>
-        <a href="roma.html">Italia</a><span>/</span>
-        <span style="color:#fff">Roma</span>
-      </div>
-      <h1>Guía completa de <em>Roma</em><br/>para 2025</h1>
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="roma.html">Italia</a><span>/</span><span style="color:#fff">Roma</span></div>
+      <h1>Guía completa de <em>Roma</em><br/>para 2026</h1>
       <div class="article-meta">
         <span class="article-meta-tag">Italia</span>
-        <span>📅 Actualizado mayo 2025</span>
+        <span>📅 Actualizado septiembre 2026</span>
         <span>⏱ 13 min de lectura</span>
-        <span>👁 52.400 visitas</span>
+        <span>👁 48.500 visitas</span>
       </div>
     </div>
   </div>
 
-  <div class="ad-banner">
-    <div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div>
-  </div>
+  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
 
   <div class="article-wrapper">
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="article-main">
+    <main>
       <div class="article-content">
-
-        <p>Roma es única. Ninguna otra ciudad del mundo concentra tanta historia, arte y belleza en tan poco espacio. Caminar por sus calles es moverse entre épocas: un imperio de 2.000 años convive con iglesias barrocas, mercados bulliciosos y la mejor pasta del mundo. Esta guía te ayuda a descubrirla sin perderte nada esencial.</p>
-
+        
+        <!-- CAJA DE RESUMEN RÁPIDO -->
         <div class="tip-box">
-          <strong>💡 Mejor época para visitar Roma</strong>
-          <p>Abril, mayo, septiembre y octubre son los meses ideales: temperaturas agradables (18–25°C) y menos turistas que en verano. Evita agosto: calor extremo, precios altos y muchos negocios locales cerrados.</p>
-        </div>
-
-        <h2 id="que-ver">¿Qué ver en Roma?</h2>
-        <p>Roma tiene tantos monumentos que podrías pasar semanas sin agotar su oferta cultural. Estos son los imprescindibles, organizados por zonas para optimizar tu tiempo.</p>
-
-        <h3>🏟️ El Coliseo y el Foro Romano</h3>
-        <p>El anfiteatro más grande jamás construido sigue siendo el símbolo más poderoso de Roma. Construido entre el 70 y el 80 d.C., llegó a albergar hasta 80.000 espectadores. <strong>Reserva siempre online</strong> con antelación: las colas sin reserva pueden superar las 3 horas en temporada alta.</p>
-        <ul>
-          <li>La entrada combinada incluye el Coliseo, el Foro Romano y el Palatino (válida 2 días)</li>
-          <li>La visita nocturna al Coliseo es una experiencia completamente distinta y muy recomendable</li>
-          <li>El Arco de Tito y la Basílica de Majencio son joyas del Foro que mucha gente pasa por alto</li>
-        </ul>
-
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/id/1031/700/420" alt="Coliseo de Roma"/>
-        <p class="img-caption">El Coliseo al atardecer, el símbolo más reconocible de Roma</p>
-
-        <h3>⛪ El Vaticano y la Capilla Sixtina</h3>
-        <p>El Estado más pequeño del mundo es también uno de los más visitados. Los Museos Vaticanos albergan más de 70.000 obras, aunque la gran mayoría de visitantes va directamente a la Capilla Sixtina para ver el techo pintado por Miguel Ángel entre 1508 y 1512.</p>
-
-        <div class="tip-box">
-          <strong>⏰ Truco para evitar las colas en el Vaticano</strong>
-          <p>Reserva la entrada para las <strong>8:00 AM</strong>, justo al abrir. Los grupos organizados llegan a partir de las 10:00 AM. Así tendrás la Capilla Sixtina prácticamente para ti solo durante la primera hora.</p>
-        </div>
-
-        <h3>⛲ La Fontana de Trevi y el Panteón</h3>
-        <p>La Fontana di Trevi es el lugar más fotografiado de Roma. Para la experiencia más auténtica, visítala de madrugada (entre las 6:00 y las 8:00 AM): la iluminación nocturna sigue encendida, no hay turistas y el silencio hace la magia aún más especial.</p>
-        <p>El Panteón es el edificio romano mejor conservado del mundo. Construido en el año 125 d.C., su cúpula de 43 metros de diámetro sigue siendo un prodigio de ingeniería. La entrada cuesta solo 5€. Los miércoles a las 5:00 PM hay una misa a la que puede asistir cualquier visitante.</p>
-
-        <!-- TIQETS — Entradas Roma -->
-        <div class="tiqets-inline-block">
-          <div class="tiqets-inline-header">
-            <span class="tiq-title">🎫 Entradas para las atracciones de Roma</span>
-            <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
-          </div>
-          <div class="tiqets-cards-grid">
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-coliseo-y-foro-romano-audioguia-p1111515/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-              <span class="tci-icon">🏟️</span>
-              <span class="tci-body">
-                <span class="tci-name">Coliseo y Foro Romano</span>
-                <span class="tci-desc">Entrada combinada · Salta la cola</span>
-              </span>
-              <span class="tci-price">
-                <span class="tci-price-num">Desde 16€</span>
-                <span class="tci-cta">Reservar →</span>
-              </span>
-            </a>
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-museos-vaticanos-y-capilla-sixtina-entrada-de-acceso-rapido-p1111450/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-              <span class="tci-icon">⛪</span>
-              <span class="tci-body">
-                <span class="tci-name">Museos Vaticanos</span>
-                <span class="tci-desc">Capilla Sixtina incluida · Acceso temprano</span>
-              </span>
-              <span class="tci-price">
-                <span class="tci-price-num">Desde 20€</span>
-                <span class="tci-cta">Reservar →</span>
-              </span>
-            </a>
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-galleria-borghese-entrada-reservada-p1111462/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-              <span class="tci-icon">🖼️</span>
-              <span class="tci-body">
-                <span class="tci-name">Galería Borghese</span>
-                <span class="tci-desc">Reserva obligatoria · Guía incluida</span>
-              </span>
-              <span class="tci-price">
-                <span class="tci-price-num">Desde 25€</span>
-                <span class="tci-cta">Reservar →</span>
-              </span>
-            </a>
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-coliseo-foro-romano-y-museos-vaticanos-audioguia-de-la-ciudad-p1058037/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-              <span class="tci-icon">🏰</span>
-              <span class="tci-body">
-                <span class="tci-name">Castillo Sant'Angelo</span>
-                <span class="tci-desc">Vistas panorámicas · Sin colas</span>
-              </span>
-              <span class="tci-price">
-                <span class="tci-price-num">Desde 12€</span>
-                <span class="tci-cta">Reservar →</span>
-              </span>
-            </a>
-          </div>
-          <div class="tiqets-inline-footer">
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored">Ver todas las entradas en Roma →</a>
-            <span>En colaboración con <strong>Tiqets</strong> · Sin coste adicional para el usuario</span>
-          </div>
-        </div>
-
-        <h2 id="gastronomia">Gastronomía romana: dónde y qué comer</h2>
-        <p>La cocina romana es una de las más sabrosas y contundentes de Italia. Se basa en ingredientes sencillos y técnicas ancestrales. Conocerla es una parte fundamental de cualquier visita.</p>
-
-        <h3>🍝 Los platos que no puedes dejar de probar</h3>
-        <ul>
-          <li><strong>Cacio e pepe:</strong> pasta con queso Pecorino y pimienta negra. Simple, intensa y adictiva.</li>
-          <li><strong>Carbonara auténtica:</strong> solo huevo, guanciale, Pecorino y pimienta. Sin nata, nunca.</li>
-          <li><strong>Supplì:</strong> croquetas de arroz con mozzarella fundida, el snack callejero romano por excelencia.</li>
-          <li><strong>Coda alla vaccinara:</strong> rabo de toro estofado, plato de la cocina popular romana.</li>
-          <li><strong>Maritozzo:</strong> brioche relleno de nata, el desayuno romano tradicional.</li>
-        </ul>
-
-        <h3>🍕 Comer bien sin arruinarse</h3>
-        <p>La regla de oro en Roma: aléjate 3 calles de los monumentos principales. Los restaurantes pegados al Coliseo o a la Fontana de Trevi suelen ser caros y mediocres. Busca los locales donde comen los empleados de oficinas locales a mediodía: menú completo por 10–14€ que incluye primo, secondo y bebida.</p>
-
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/id/1060/700/420" alt="Gastronomía romana — carbonara auténtica"/>
-        <p class="img-caption">La auténtica carbonara romana: sin nata, con guanciale y Pecorino Romano</p>
-
-        <h2 id="donde-dormir">¿Dónde dormir en Roma?</h2>
-        <p>La elección del barrio marcará profundamente tu experiencia en Roma. Estos son los más recomendables según el tipo de viajero.</p>
-        <ul>
-          <li><strong>Centro Storico:</strong> máxima comodidad, a pie de los monumentos. El más caro pero el más práctico para primeras visitas.</li>
-          <li><strong>Trastevere:</strong> el barrio más auténtico y fotogénico. Calles empedradas, ambiente bohemio, restaurantes locales. Ideal para parejas.</li>
-          <li><strong>Prati (cerca del Vaticano):</strong> tranquilo, bien comunicado, precios más razonables. Perfecto si tu prioridad es visitar el Vaticano.</li>
-          <li><strong>Testaccio:</strong> el barrio de la cocina romana tradicional. Auténtico, sin turistas masivos, muy bien comunicado.</li>
-        </ul>
-
-        <h2 id="transporte">Cómo moverse por Roma</h2>
-        <p>Roma es sorprendentemente caminable en su centro histórico. La mayoría de monumentos principales están a menos de 30 minutos a pie entre sí. Para distancias más largas, el metro tiene solo 3 líneas pero conecta los puntos más visitados.</p>
-        <ul>
-          <li><strong>A pie:</strong> la mejor opción para el centro. Roma se descubre caminando y perdiéndose.</li>
-          <li><strong>Metro:</strong> Líneas A, B y C. El billete sencillo cuesta 1,50€ y es válido 100 minutos en todos los transportes.</li>
-          <li><strong>Autobús:</strong> la red más extensa. El 40 y el 64 conectan la Estación Termini con el Vaticano.</li>
-          <li><strong>Taxi/Bolt:</strong> útiles de noche o con equipaje. Exige siempre el taxímetro.</li>
-        </ul>
-
-        <!-- TIQETS: Leonardo Express — Fiumicino -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
-            <div>
-              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Leonardo Express — Tren Fiumicino ↔ Roma Termini</p>
-              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Tiqets · Ticket móvil · Confirmación inmediata</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
-            <div>
-              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Billete de ida y vuelta en el tren Leonardo Express entre el Aeropuerto de Fiumicino y Roma Termini. 32 minutos sin paradas. Asegura tu billete antes de salir y evita las colas en el aeropuerto.</p>
-              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Ida y vuelta</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ 32 min sin paradas</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">Cada 30 min</span>
-              </div>
-            </div>
-            <div style="text-align:center;flex-shrink:0;">
-              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .2rem;">Desde</p>
-              <p style="font-size:1.5rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">36,50 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-aeropuerto-de-fiumicino-leonardo-express-tren-de-ida-y-vuelta-desde-hacia-roma-termini-p1048600/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Comprar en Tiqets →
-            </a>
-            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
-          </div>
-        </div>
-
-        <div class="tip-box">
-          <strong>🚆 Llegando a Roma</strong>
-          <p>El aeropuerto principal es <strong>Fiumicino (FCO)</strong>. El tren Leonardo Express conecta con la Estación Termini en 32 minutos. Es la opción más rápida y cómoda. Evita los taxis no oficiales que abordan en la terminal de llegadas.</p>
-        </div>
-
-        <h2 id="presupuesto">Presupuesto orientativo para Roma</h2>
-        <ul>
-          <li><strong>Bajo:</strong> 70–90€/día (hostal, supermercado + trattoria local, museos con descuento)</li>
-          <li><strong>Medio:</strong> 130–180€/día (hotel 3★, restaurantes locales, principales atracciones)</li>
-          <li><strong>Alto:</strong> 280€+/día (hotel boutique en centro, restaurantes con estrella Michelin)</li>
-        </ul>
-
-      </div><!-- /article-content -->
-
-
-        <!-- OMIO — Trenes y buses Europa -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
-            <div>
-              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
-              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
-            <div>
-              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
-              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
-              </div>
-            </div>
-            <div style="text-align:center;flex-shrink:0;">
-              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
-              <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
-            <h3 id="1698061" style="margin:0;font-size:0;line-height:0;">
-              <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
-                 style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-                Buscar en Omio →
-              </a>
-            </h3>
-            <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" border="0"/>
-            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
-          </div>
-        </div>
-
-      <!-- /OMIO -->
-
-
-        <!-- HOTMART: Audioguía Turística: Roma -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎧</div>
-            <div style="flex:1">
-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Audioguía Turística: Roma</p>
-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
-            </div>
-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $197 MXN</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
-            <div style="flex:1">
-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">Recorre el Coliseo, el Vaticano, la Fontana di Trevi y el Trastevere con esta audioguía en español. Historia viva de la ciudad eterna.</p>
-              
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <a rel="sponsored" href="https://go.hotmart.com/C105319542I" target="_blank"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Ver en Hotmart →
-            </a>
-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días · Sin suscripción</span>
-          </div>
-        </div>
-        <!-- /HOTMART -->
-
-        <!-- HOTMART: Inglés para el Alma Viajera -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🗣️</div>
-            <div style="flex:1">
-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Inglés para el Alma Viajera</p>
-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
-            </div>
-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $197 MXN</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
-            <div style="flex:1">
-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">El inglés que necesitas para moverte por Roma, pedir en restaurantes y comunicarte con otros viajeros en la ciudad más visitada de Italia.</p>
-              
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <a rel="sponsored" href="https://go.hotmart.com/G105319552T" target="_blank"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Ver en Hotmart →
-            </a>
-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días · Sin suscripción</span>
-          </div>
-        </div>
-        <!-- /HOTMART -->
-
-      <!-- GYG Widget — Tours Roma -->
-      <div style="margin:2.5rem 0;">
-        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
-          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades recomendadas en Roma</span>
-            <a href="https://www.getyourguide.es/roma-l522/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
-          </div>
-          <div style="padding:1rem;">
-            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
-                 data-gyg-location-id="522"
-                 data-gyg-locale-code="es-ES"
-                 data-gyg-widget="activities"
-                 data-gyg-number-of-items="4"
-                 data-gyg-partner-id="1ABLZMR">
-            </div>
-            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
-              Actividades en colaboración con <a href="https://www.getyourguide.es/roma-l522/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Conversor de monedas -->
-      <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-        <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">💱 Conversor de monedas — tiempo real</span>
-          <span style="font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;">Tipos BCE · Actualizado diariamente</span>
-        </div>
-        <div style="padding:1.2rem;">
-          <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end;margin-bottom:1rem;">
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:.4rem;">Cantidad</label>
-              <input type="number" id="cvAmount" value="1000" min="0"
-                style="width:100%;padding:.65rem .9rem;font-size:.95rem;font-weight:600;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);box-sizing:border-box;"/>
-            </div>
-            <button onclick="cvSwap()" style="padding:.65rem 1rem;border:1px solid var(--border);border-radius:2px;background:var(--warm);cursor:pointer;font-size:1rem;color:var(--navy);">⇄</button>
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:.4rem;">Resultado</label>
-              <div style="padding:.65rem .9rem;background:var(--cream);border:1px solid var(--gold);border-radius:2px;font-size:.95rem;font-weight:700;color:var(--navy);min-height:40px;" id="cvResult">—</div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem;">
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);display:block;margin-bottom:.4rem;">De</label>
-              <select id="cvFrom" style="width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);font-size:.85rem;">
-                <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
-                <option value="USD">🇺🇸 USD — Dólar</option>
-                <option value="EUR">🇪🇺 EUR — Euro</option>
-                <option value="GBP">🇬🇧 GBP — Libra</option>
-                <option value="ARS">🇦🇷 ARS — Peso argentino</option>
-                <option value="COP">🇨🇴 COP — Peso colombiano</option>
-                <option value="BRL">🇧🇷 BRL — Real</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:.72rem;color:var(--muted);display:block;margin-bottom:.4rem;">A</label>
-              <select id="cvTo" style="width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:2px;background:var(--cream);color:var(--navy);font-size:.85rem;">
-                <option value="EUR">🇪🇺 EUR — Euro</option>
-                <option value="GBP">🇬🇧 GBP — Libra</option>
-                <option value="CHF">🇨🇭 CHF — Franco suizo</option>
-                <option value="NOK">🇳🇴 NOK — Corona noruega</option>
-                <option value="SEK">🇸🇪 SEK — Corona sueca</option>
-                <option value="MXN">🇲🇽 MXN — Peso mexicano</option>
-                <option value="USD">🇺🇸 USD — Dólar</option>
-              </select>
-            </div>
-          </div>
-          <div style="background:var(--cream);border:1px solid var(--border);border-radius:2px;padding:.75rem 1rem;font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <span id="cvRate">Cargando tipo de cambio...</span>
-            <span id="cvTime"></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AdSense 300×250 -->
-      <div class="ad-rect-wrap" style="margin:2.5rem 0;">
-        <div class="ad-rect"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
-      </div>
-
-    </main>
-
-    <!-- SIDEBAR -->
-    <aside class="article-sidebar">
-
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">📋 Contenidos</div>
-        <div class="sidebar-card-body">
-          <ul class="toc">
-            <li><a href="#que-ver">¿Qué ver en Roma?</a></li>
-            <li><a href="#gastronomia">Gastronomía romana</a></li>
-            <li><a href="#donde-dormir">¿Dónde dormir?</a></li>
-            <li><a href="#transporte">Cómo moverse</a></li>
-            <li><a href="#presupuesto">Presupuesto</a></li>
+          <strong>💡 Lo esencial de Roma en un vistazo:</strong>
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem; margin-bottom: 1rem;">
+            <li><strong>Mejor época:</strong> Abril-Junio y Septiembre-Octubre (clima ideal y menos multitudes).</li>
+            <li><strong>Museos imperdibles:</strong> Museos Vaticanos, Coliseo y Galería Borghese. Reserva online siempre.</li>
+            <li><strong>Transporte:</strong> El metro es limitado pero útil. Caminar es la mejor forma de descubrir la ciudad.</li>
+            <li><strong>Presupuesto:</strong> Roma puede ser cara, pero hay miles de opciones gratuitas (iglesias, plazas, fuentes).</li>
           </ul>
+          <p style="margin:0;">👉 <a href="#itinerario" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Ver itinerario día por día</a></p>
         </div>
-      </div>
 
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🏨 Hoteles en Roma</div>
-        <div class="sidebar-card-body">
-          <p>Más de 800 hoteles disponibles en Roma. Cancela gratis en la mayoría de opciones.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fit%2Frome.es.html"
-             target="_blank" rel="noopener sponsored"
-             class="sidebar-booking-btn">Ver hoteles en Booking →</a>
-        </div>
-      </div>
+        <p>Roma no necesita presentación. Es la ciudad eterna, del arte, de la historia y de la gastronomía. Pero Roma también puede ser abrumadora si no sabes por dónde empezar. En esta guía actualizada para 2026, te llevamos más allá del Coliseo para que descubras la verdadera esencia de la capital italiana.</p>
+        <p>Antes de reservar tus vuelos, asegúrate de revisar nuestra <a href="visa-schengen-mexico.html">Guía de la Visa Schengen para mexicanos</a> para tener todos tus documentos en orden.</p>
 
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🌤 Clima en Roma</div>
-        <div class="sidebar-card-body">
-          <div class="weather-grid">
-            <div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">10°C</div></div>
-            <div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">15°C</div></div>
-            <div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">22°C</div></div>
-            <div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">32°C</div></div>
-            <div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">26°C</div></div>
-            <div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">14°C</div></div>
-          </div>
-        </div>
-      </div>
-
-            <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">✈️ Vuelos con Kiwi.com</div>
-        <div class="sidebar-card-body" style="padding:.8rem;">
-          <!-- START ADVERTISER: Kiwi MX from awin.com -->
-          <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340" target="_blank">
-            <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0" loading="lazy" decoding="async" alt="Kiwi.com — Busca vuelos baratos" style="display:block;width:100%;height:auto;border-radius:2px;"/>
-          </a>
-          <!-- END ADVERTISER: Kiwi MX from awin.com -->
-          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;margin-bottom:0;">Publicidad · Kiwi.com</p>
-        </div>
-      </div>
-
-      <!-- GYG City Widget Roma -->
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🎟️ Tours y entradas en Roma</div>
-        <div class="sidebar-card-body" style="padding:.8rem;">
-          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame"
-               data-gyg-location-id="522"
-               data-gyg-locale-code="es-ES"
-               data-gyg-widget="city"
-               data-gyg-number-of-items="3"
-               data-gyg-partner-id="1ABLZMR">
-          </div>
-          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">
-            En colaboración con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Tiqets sidebar Roma -->
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🎫 Entradas sin colas — Roma</div>
-        <div class="sidebar-card-body" style="padding:.6rem .8rem;">
-          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">Ticket móvil · Confirmación inmediata · Sin esperar en taquilla.</p>
-          <div class="tiqets-list">
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-coliseo-y-foro-romano-audioguia-p1111515/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-row">
-              <span class="tiqets-icon">🏟️</span>
-              <span class="tiqets-info">
-                <span class="tiqets-name">Coliseo y Foro Romano</span>
-                <span class="tiqets-badge">Desde 16€ · Salta la cola</span>
-              </span>
-              <span class="tiqets-arrow">→</span>
-            </a>
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-museos-vaticanos-y-capilla-sixtina-entrada-de-acceso-rapido-p1111450/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-row">
-              <span class="tiqets-icon">⛪</span>
-              <span class="tiqets-info">
-                <span class="tiqets-name">Museos Vaticanos</span>
-                <span class="tiqets-badge">Desde 20€ · Acceso temprano</span>
-              </span>
-              <span class="tiqets-arrow">→</span>
-            </a>
-            <a href="https://www.tiqets.com/es/atracciones-roma-c71631/entradas-para-galleria-borghese-entrada-reservada-p1111462/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored" class="tiqets-row">
-              <span class="tiqets-icon">🖼️</span>
-              <span class="tiqets-info">
-                <span class="tiqets-name">Galería Borghese</span>
-                <span class="tiqets-badge">Desde 25€ · Reserva obligatoria</span>
-              </span>
-              <span class="tiqets-arrow">→</span>
-            </a>
-          </div>
-          <a href="https://www.tiqets.com/es/atracciones-roma-c71631/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored"
-             style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
-            Ver todas las entradas en Tiqets →
-          </a>
-        </div>
-      </div>
-
-      <div class="ad-rect" style="width:100%;height:250px;"><!-- ADSENSE 300×250 -->📢 AdSense 300×250</div>
-
-    </aside>
-  </div>
-
-  <!-- ARTÍCULOS RELACIONADOS -->
-  <section class="related-section">
-    <div class="section-header reveal">
-      <p class="section-tag">Sigue explorando</p>
-      <h2 class="section-title">Artículos relacionados</h2>
-    </div>
-    <div class="articles-grid" style="max-width:1200px;margin:0 auto;">
-      <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://picsum.photos/id/1029/480/340')"></div>
-        <div class="article-body">
-          <p class="article-tag">París · Guía completa</p>
-          <h3 class="article-title">Guía completa de París para 2025</h3>
-          <p class="article-excerpt">Todo lo que necesitas para aprovechar al máximo la Ciudad de la Luz.</p>
-          <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
-        </div>
-      </article>
-      <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://picsum.photos/id/1040/480/340')"></div>
-        <div class="article-body">
-          <p class="article-tag">España · Guía completa</p>
-          <h3 class="article-title">Qué ver en Barcelona en 3 días</h3>
-          <p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona en un fin de semana largo.</p>
-          <div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div>
-        </div>
-      </article>
-      <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://picsum.photos/id/1051/480/340')"></div>
-        <div class="article-body">
-          <p class="article-tag">Europa · Consejos</p>
-          <h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3>
-          <p class="article-excerpt">Estrategias reales para recorrer Europa gastando menos de 60€ al día.</p>
-          <div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
-        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
-        <div class="footer-social">
-          <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a>
-        </div>
-      </div>
-      <div class="footer-col"><h4>Destinos</h4><ul>
-        <li><a href="paris.html">París</a></li>
-        <li><a href="roma.html">Roma</a></li>
-        <li><a href="barcelona.html">Barcelona</a></li>
-        <li><a href="lisboa.html">Lisboa</a></li>
-        <li><a href="londres.html">Londres</a></li>
-        <li><a href="amsterdam.html">Ámsterdam</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Categorías</h4><ul>
-        <li><a href="paris-louvre.html">Cultura</a></li>
-        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
-        <li><a href="naturaleza-europa.html">Naturaleza</a></li>
-        <li><a href="presupuesto-europa.html">Presupuesto</a></li><li><a href="visa-schengen-mexico.html">Visa Schengen</li>
-      </ul></div>
-      <div class="footer-col"><h4>Nosotros</h4><ul>
-        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
-        <li><a href="../sobre-nosotros.html">Colabora</a></li>
-        <li><a href="../sobre-nosotros.html">Contacto</a></li>
-      </ul></div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 Voyage Lumière</span>
-      <div class="footer-legal">
-        <a href="../privacidad.html">Privacidad</a>
-        <a href="../cookies.html">Cookies</a>
-        <a href="../aviso-legal.html">Aviso legal</a>
-      </div>
-    </div>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner">
-    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="../privacidad.html" style="color:var(--gold)">Más info</a></p>
-    <div class="cookie-btns">
-      <button class="cookie-accept" onclick="acceptCookies()">Aceptar</button>
-      <button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button>
-    </div>
-  </div>
-
-  <script>
-    const navbar = document.getElementById('navbar');
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          navbar.classList.toggle('scrolled', window.scrollY > 40);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-    const observer = new IntersectionObserver(entries => entries.forEach(e => {
-      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
-    }), {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    const banner = document.getElementById('cookieBanner');
-    // Mostrar banner después de LCP — no interfiere con el renderizado inicial
-    window.addEventListener('load', function() {
-      if(!localStorage.getItem('cookieConsent')) {
-        setTimeout(() => {
-          banner.style.display = 'flex';
-          requestAnimationFrame(() => banner.classList.add('visible'));
-        }, 1200);
-      }
-    });
-    function hideBanner(){
-      banner.classList.add('hidden');
-      setTimeout(function(){ banner.style.display='none'; }, 420);
-    }
-    function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); hideBanner(); }
-    function dismissCookies(){ localStorage.setItem('cookieConsent','dismissed'); hideBanner(); }
-
-    // Conversor de monedas
-    (function(){
-      let cvRates = {};
-      async function cvFetch(){
-        try {
-          const r = await fetch('https://api.frankfurter.app/latest?from=EUR');
-          const d = await r.json();
-          cvRates = d.rates; cvRates['EUR'] = 1;
-          document.getElementById('cvTime').textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'});
-          cvConvert();
-        } catch(e) {
-          cvRates = {EUR:1,USD:1.08,GBP:0.86,MXN:18.5,CHF:0.97,NOK:11.4,SEK:11.2,ARS:980,COP:4300,BRL:5.5};
-          document.getElementById('cvTime').textContent = 'Tipo orientativo';
-          cvConvert();
-        }
-      }
-      window.cvConvert = function(){
-        const from = document.getElementById('cvFrom').value;
-        const to   = document.getElementById('cvTo').value;
-        const amt  = parseFloat(document.getElementById('cvAmount').value) || 0;
-        if(!cvRates[from] || !cvRates[to]) return;
-        const rate = cvRates[to] / cvRates[from];
-        const res  = amt * rate;
-        const fmt  = res >= 1000 ? res.toLocaleString('es-MX',{maximumFractionDigits:0}) : res.toFixed(2);
-        document.getElementById('cvResult').textContent = fmt + ' ' + to;
-        document.getElementById('cvRate').textContent = '1 ' + from + ' = ' + (rate < 0.01 ? rate.toFixed(4) : rate.toFixed(2)) + ' ' + to;
-      };
-      window.cvSwap = function(){
-        const f = document.getElementById('cvFrom'), t = document.getElementById('cvTo'), tmp = f.value;
-        f.value = t.value; t.value = tmp; cvConvert();
-      };
-      document.getElementById('cvFrom').addEventListener('change', cvConvert);
-      document.getElementById('cvTo').addEventListener('change', cvConvert);
-      document.getElementById('cvAmount').addEventListener('input', cvConvert);
-      cvFetch();
-    })();
-  </script>
-  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" " data-gyg-partner-id="1ABLZMR">></script>
-
-  <!-- Klaviyo — Viewed Product tracking -->
-  <script>
-    window.addEventListener('load', function() {
-      if (typeof klaviyo !== 'undefined') {
-        klaviyo.push(['track', 'Viewed Product', {
-          "Name":       "Guía de Roma 2025",
-          "URL":        "https://voyagelumiere.indevs.in/articles/roma.html",
-          "Categories": ["Europa", "Italia", "Ciudades"],
-          "ImageURL":   "https://voyagelumiere.indevs.in/og-roma.jpg"
-        }]);
-      }
-    });
-  </script>
-  <!-- /Klaviyo -->
-</body>
-</html>
+        <h2 id="itinerario">Itinerario sugerido: 4 días en Roma</h2>
+        
+        <div class="day-card">
