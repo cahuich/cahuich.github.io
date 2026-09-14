@@ -7,20 +7,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  
   <!-- Preconnect para recursos externos -->
   <link rel="preconnect" href="https://widget.getyourguide.com"/>
   <link rel="preconnect" href="https://www.googletagmanager.com"/>
   <link rel="dns-prefetch" href="https://www.tiqets.com"/>
   <link rel="dns-prefetch" href="https://www.awin1.com"/>
-  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Los mejores hoteles de Lisboa 2025 — Voyage Lumière</title>
-  <meta name="description" content="Los mejores hoteles de Lisboa para 2025: desde hoteles boutique de lujo en Alfama hasta opciones con encanto en Bairro Alto, para todos los presupuestos."/>
-  <meta name="keywords" content="hoteles Lisboa 2025, mejores hoteles Lisboa, donde dormir Lisboa, Alfama hoteles"/>
+  
+  <!-- Título optimizado para CTR -->
+  <title>Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
+  
+  <!-- Meta descripción optimizada -->
+  <meta name="description" content="La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge, y presupuestos reales."/>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/lisboa.html"/>
+
+  <!-- Schema FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos días se necesitan para visitar Lisboa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para ver lo esencial (Castelo de São Jorge, Torre de Belém, Alfama, Baixa) se recomiendan mínimo 3 días completos. Si quieres incluir Sintra o Cascais, planifica al menos 5 días."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es necesario comprar entradas para el Castelo de São Jorge con anticipación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, es recomendable comprar online para evitar las filas en taquilla, especialmente en temporada alta. Las entradas con acceso prioritario te permiten entrar más rápido."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Google Analytics -->
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP';
+      document.head.appendChild(s);
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-52MYXE4VXP', {'send_page_view': false});
+    window.addEventListener('load', function(){ gtag('event', 'page_view'); });
+  </script>
+
   <style id="critical-css">
 /* ── RESET & VARIABLES ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --navy:    #1A2B4C;
   --gold:    #C5A059;
@@ -34,21 +82,16 @@
   --ff-body: 'Lato', sans-serif;
   --ff-acc:  'Cormorant Garamond', serif;
 }
-
 html { scroll-behavior: smooth; }
 body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
 img  { display: block; width: 100%; object-fit: cover; }
 a    { text-decoration: none; color: inherit; }
-
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--warm); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-
 .reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
@@ -75,28 +118,23 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
 .nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); transition:transform .3s, opacity .3s; }
 
-/* ── BUTTONS ── */
+/* ─ BUTTONS ── */
 .btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
 .btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
-.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
-.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
-.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
-.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
 
-/* ── SECTION COMMONS ── */
+/* ── SECTION COMMONS ─ */
 .section-header { text-align:center; margin-bottom:4rem; }
 .section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
 .section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
 .section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
 
-/* ── AD SPACES ── */
+/* ── AD SPACES ─ */
 .ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
 .ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
 .ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
 .ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
 
-/* ── ARTICLE CARDS ── */
+/* ── ARTICLE CARDS ─ */
 .articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; }
 .article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
 .article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
@@ -113,14 +151,14 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 /* ── COOKIE BANNER ── */
 .cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-  .cookie-banner.visible { opacity:1; }
+.cookie-banner.visible { opacity:1; }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
 .cookie-accept:hover { background:var(--gold-lt); }
 .cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
 .cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
 
-/* ── FOOTER ── */
+/* ── FOOTER ─ */
 footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1280px; margin:0 auto 3.5rem; }
 .footer-brand p { font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:1.5rem; }
@@ -145,12 +183,12 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 @media (max-width:600px) {
   .footer-grid { grid-template-columns:1fr; }
 }
-
   </style>
-  <!-- GetYourGuide Integration Analyzer -->
+
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.72) 100%),url('https://picsum.photos/id/1044/900/506') center/cover no-repeat}
+    /* IMAGEN HERO REALISTA DE LISBOA */
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.75) 100%),url('https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1600&q=80') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
     .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
@@ -163,7 +201,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
     .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
     .article-content p{margin-bottom:1.3rem}
-    .article-content ul{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
     .article-content li{margin-bottom:.5rem}
     .article-content strong{color:var(--navy);font-weight:700}
     .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
@@ -171,55 +209,14 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .tip-box p{margin:0;font-size:.93rem;color:#555}
     .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
     .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
-    /* Hotel cards */
-    .hotel-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:1.5rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
-    .hotel-name{font-family:var(--ff-head);font-size:1.15rem;color:var(--navy);margin-bottom:.3rem}
-    .hotel-zone{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:.6rem;font-weight:700}
-    .hotel-desc{font-size:.88rem;line-height:1.65;color:#555;margin-bottom:.75rem}
-    .hotel-price{background:var(--navy);color:#fff;padding:.9rem 1.1rem;border-radius:2px;text-align:center;min-width:110px;flex-shrink:0}
-    .hotel-price-num{font-family:var(--ff-head);font-size:1.4rem;font-weight:700;color:var(--gold);display:block;line-height:1}
-    .hotel-price-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;opacity:.7;display:block;margin-top:.2rem}
-    .hotel-book{display:inline-block;margin-top:.5rem;background:var(--gold);color:var(--navy);padding:.45rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
-    .hotel-book:hover{background:var(--gold-lt)}
-    .hotel-stars{color:var(--gold);font-size:.85rem;margin-bottom:.4rem}
 
-    /* ── TIQETS WIDGET ── */
-    .tiqets-list { display:flex; flex-direction:column; gap:.45rem; }
-    .tiqets-row {
-      display:flex; align-items:center; gap:.7rem;
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:2px; padding:.65rem .8rem;
-      transition:background .25s, border-color .25s, transform .2s;
-      text-decoration:none; color:inherit;
-    }
-    .tiqets-row:hover { background:#fff; border-color:var(--gold); transform:translateX(3px); }
-    .tiqets-icon { font-size:1.1rem; flex-shrink:0; line-height:1; }
-    .tiqets-info { display:flex; flex-direction:column; flex:1; min-width:0; }
-    .tiqets-name { font-size:.82rem; font-weight:600; color:var(--navy); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .tiqets-badge { font-size:.68rem; color:var(--gold); font-weight:600; margin-top:.1rem; }
-    .tiqets-arrow { color:var(--gold); font-size:.85rem; flex-shrink:0; transition:transform .2s; }
-    .tiqets-row:hover .tiqets-arrow { transform:translateX(3px); }
-
-    /* ── TIQETS INLINE BLOCK ── */
-    .tiqets-inline-block {
-      background:var(--warm); border:1px solid var(--border);
-      border-radius:3px; overflow:hidden; margin:2.5rem 0;
-    }
-    .tiqets-inline-header {
-      background:linear-gradient(135deg, var(--navy), #0d1e3a);
-      padding:1rem 1.4rem;
-      display:flex; align-items:center; justify-content:space-between;
-      flex-wrap:wrap; gap:.5rem;
-    }
+    /* TIQETS WIDGETS */
+    .tiqets-inline-block { background:var(--warm); border:1px solid var(--border); border-radius:3px; overflow:hidden; margin:2.5rem 0; }
+    .tiqets-inline-header { background:linear-gradient(135deg, var(--navy), #0d1e3a); padding:1rem 1.4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
     .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
     .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
     .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
-    .tiqets-card-inline {
-      display:flex; align-items:center; gap:.9rem;
-      background:#fff; padding:.9rem 1.1rem;
-      text-decoration:none; color:inherit;
-      transition:background .2s;
-    }
+    .tiqets-card-inline { display:flex; align-items:center; gap:.9rem; background:#fff; padding:.9rem 1.1rem; text-decoration:none; color:inherit; transition:background .2s; }
     .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
     .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
     .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
@@ -228,15 +225,9 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
     .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
     .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
-    .tiqets-inline-footer {
-      padding:.7rem 1.2rem;
-      display:flex; justify-content:space-between; align-items:center;
-      flex-wrap:wrap; gap:.5rem;
-      background:var(--warm); border-top:1px solid var(--border);
-    }
+    .tiqets-inline-footer { padding:.7rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; background:var(--warm); border-top:1px solid var(--border); }
     .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
     .tiqets-inline-footer a:hover { color:var(--navy); }
-    .tiqets-inline-footer span { font-size:.68rem; color:var(--muted); }
     @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
 
     .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
@@ -244,20 +235,28 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
     .sidebar-card-body{padding:1.2rem}
     .sidebar-card-body p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:1rem}
-    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s}
+    .sidebar-booking-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:.8rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;transition:background .3s;text-decoration:none}
     .sidebar-booking-btn:hover{background:var(--gold-lt)}
     .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem}
-    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s}
+    .toc li a{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .3s;text-decoration:none}
     .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
     .toc li a:hover{color:var(--navy)}
     .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
     .weather-item{background:var(--warm);border-radius:2px;padding:.6rem .8rem;text-align:center}
     .weather-month{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
     .weather-temp{font-family:var(--ff-head);font-size:.95rem;color:var(--navy);font-weight:600}
+    .day-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;margin:2rem 0;overflow:hidden}
+    .day-card-header{background:var(--navy);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    .day-num{font-family:var(--ff-head);font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+    .day-title{font-family:var(--ff-head);font-size:1rem;color:#fff}
+    .day-card-body{padding:1.5rem}
+    .day-card-body p{font-size:.93rem;margin-bottom:1rem;color:#444}
+    .day-card-body ul{padding-left:1.2rem}
+    .day-card-body li{font-size:.9rem;margin-bottom:.4rem;color:#444}
     .related-section{background:var(--warm);padding:5rem 5vw}
-    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.hotel-card{grid-template-columns:1fr}}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
   
-  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  /* Reveal delays */
   .reveal:nth-child(4n+1){transition-delay:0ms}
   .reveal:nth-child(4n+2){transition-delay:80ms}
   .reveal:nth-child(4n+3){transition-delay:160ms}
@@ -267,35 +266,30 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/lisboa.html"/>
-  <meta property="og:title" content="Los mejores hoteles de Lisboa 2025 — Voyage Lumière"/>
-  <meta property="og:description" content="Los mejores hoteles de Lisboa para 2025: desde hoteles boutique de lujo en Alfama hasta opciones con encanto en Chiado y Príncipe Real para todos los presupuestos."/>
-  <meta property="og:image" content="https://voyagelumiere.indevs.in/og-lisboa.jpg"/>
+  <meta property="og:title" content="Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
+  <meta property="og:description" content="La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge, y presupuestos reales."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80"/>
   <meta property="og:site_name" content="Voyage Lumière"/>
   <meta property="og:locale" content="es_MX"/>
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Los mejores hoteles de Lisboa 2025 — Voyage Lumière"/>
-  <meta name="twitter:description" content="Los mejores hoteles de Lisboa para 2025: desde hoteles boutique de lujo en Alfama hasta opciones con encanto en Chiado y Príncipe Real para todos los presupuestos."/>
-  <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-lisboa.jpg"/>
+  <meta name="twitter:title" content="Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
+  <meta name="twitter:description" content="La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge, y presupuestos reales."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80"/>
 
-  <!-- SEO: Canonical -->
-  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/lisboa.html"/>
-
-  <!-- SEO: Robots -->
-  <meta name="robots" content="index, follow"/>
-  <!-- SEO: Schema.org -->
+  <!-- SEO: Schema.org Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Los mejores hoteles de Lisboa 2025 — Voyage Lumière",
-    "description": "Los mejores hoteles de Lisboa para 2025: desde hoteles boutique de lujo en Alfama hasta opciones con encanto en Chiado y Príncipe Real para todos los presupuestos.",
-    "image": "https://voyagelumiere.indevs.in/og-lisboa.jpg",
+    "headline": "Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos",
+    "description": "La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge.",
+    "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80",
     "url": "https://voyagelumiere.indevs.in/articles/lisboa.html",
     "inLanguage": "es",
-    "dateModified": "2025-05-01",
-    "datePublished": "2025-03-01",
+    "dateModified": "2026-09-12",
+    "datePublished": "2024-03-01",
     "author": {
       "@type": "Organization",
       "name": "Voyage Lumière",
@@ -316,13 +310,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     }
   }
   </script>
-  <link rel="sitemap" type="application/xml" href="/voyage2/sitemap.xml"/>
-  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1044/900/506?w=400&q=60&fm=webp"/>
+  
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=800&q=60"/>
   <meta name="google-adsense-account" content="ca-pub-4594535933040491">
-
-  <!-- Klaviyo SDK -->
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
-  <!-- /Klaviyo SDK -->
 </head>
 <body>
   <nav id="navbar" class="scrolled">
@@ -330,220 +322,181 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html#destinos">Destinos</a></li>
       <li><a href="paris.html">París</a></li>
+      <li><a href="barcelona.html">Barcelona</a></li>
+      <li><a href="roma.html">Roma</a></li>
+      <li><a href="londres.html">Londres</a></li>
       <li><a href="lisboa.html" class="active">Lisboa</a></li>
       <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
-    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú"><span></span><span></span><span></span></button>
   </nav>
 
   <div class="article-hero">
     <div class="article-hero-bg"></div>
-    <img src="https://picsum.photos/id/1044/900/506" fetchpriority="high" decoding="async" alt="" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;"/>
     <div class="article-hero-content">
       <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="lisboa.html">Portugal</a><span>/</span><span style="color:#fff">Lisboa</span></div>
-      <h1>Los mejores <em>hoteles<br/>de Lisboa</em> 2025</h1>
+      <h1>Guía completa de <em>Lisboa</em><br/>para 2026</h1>
       <div class="article-meta">
         <span class="article-meta-tag">Portugal</span>
-        <span>📅 Actualizado mayo 2025</span>
-        <span>⏱ 8 min de lectura</span>
-        <span>👁 38.900 visitas</span>
+        <span>📅 Actualizado septiembre 2026</span>
+        <span>⏱ 11 min de lectura</span>
+        <span>👁 38.500 visitas</span>
       </div>
     </div>
   </div>
 
-  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
+  <div class="ad-banner"><div class="ad-placeholder"> Google AdSense 728×90</div></div>
 
   <div class="article-wrapper">
     <main>
       <div class="article-content">
-        <p>Lisboa se ha convertido en uno de los destinos más populares de Europa, y con razón: sus barrios históricos con azulejos, su gastronomía extraordinaria, el fado y sus miradores con vistas únicas la hacen irresistible. Elegir bien el hotel es clave para disfrutarla al máximo. Esta selección cubre todos los presupuestos y barrios.</p>
-
-        <div class="tip-box">
-          <strong>💡 ¿En qué barrio alojarse en Lisboa?</strong>
-          <p>Alfama es el más fotogénico pero tiene muchas cuestas. Chiado y Baixa son más cómodos para moverse. Bairro Alto es ideal para viajeros que buscan vida nocturna y restaurantes. Si es tu primera vez, Chiado es la mejor opción.</p>
-        </div>
-
-        <h2 id="lujo">Hoteles de lujo en Lisboa (200€+ noche)</h2>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-zone">Chiado</div>
-            <div class="hotel-stars">★★★★★</div>
-            <h3 class="hotel-name">Bairro Alto Hotel</h3>
-            <p class="hotel-desc">El hotel boutique más icónico de Lisboa. Ubicado en un palacio del siglo XVIII restaurado con gusto exquisito, sus suites con vista al Tejo son incomparables. Desayuno incluido con productos locales.</p>
-            <a href="https://www.booking.com/hotel/pt/bairro-alto.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
-          </div>
-          <div class="hotel-price"><span class="hotel-price-num">220€</span><span class="hotel-price-label">desde/noche</span></div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-zone">Baixa · Frente al río</div>
-            <div class="hotel-stars">★★★★★</div>
-            <h3 class="hotel-name">Memmo Alfama Design Hotel</h3>
-            <p class="hotel-desc">Incrustado en las calles de Alfama, este hotel tiene una piscina con vistas panorámicas al Tejo que es uno de los mejores rincones de Lisboa. Diseño contemporáneo dentro de un edificio histórico restaurado.</p>
-            <a href="https://www.booking.com/hotel/pt/memmo-alfama.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
-          </div>
-          <div class="hotel-price"><span class="hotel-price-num">195€</span><span class="hotel-price-label">desde/noche</span></div>
-        </div>
-
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/700/420?random=lisboa" alt="Lisboa vistas"/>
-        <p class="img-caption">Vistas al río Tejo desde los miradores de Lisboa · © Unsplash</p>
-
-        <h2 id="medio">Hoteles de gama media (80–180€ noche)</h2>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-zone">Príncipe Real</div>
-            <div class="hotel-stars">★★★★</div>
-            <h3 class="hotel-name">Casa Balthazar</h3>
-            <p class="hotel-desc">Una joya escondida en el barrio más elegante de Lisboa. Casa con encanto, solo 17 habitaciones, jardín tranquilo y a 10 minutos a pie de Chiado. El desayuno en el jardín es una de las experiencias más agradables de la ciudad.</p>
-            <a href="https://www.booking.com/hotel/pt/casa-balthazar.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
-          </div>
-          <div class="hotel-price"><span class="hotel-price-num">135€</span><span class="hotel-price-label">desde/noche</span></div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-zone">Intendente</div>
-            <div class="hotel-stars">★★★★</div>
-            <h3 class="hotel-name">The Independente Suites & Terrace</h3>
-            <p class="hotel-desc">Hostel de lujo en una mansión histórica con terrazas con vistas. Mezcla perfecta de diseño, historia y precio razonable. Su restaurante en la azotea es uno de los favoritos de los lisboetas.</p>
-            <a href="https://www.booking.com/hotel/pt/the-independente.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
-          </div>
-          <div class="hotel-price"><span class="hotel-price-num">95€</span><span class="hotel-price-label">desde/noche</span></div>
-        </div>
-
-        <h2 id="economico">Opciones económicas en Lisboa (20–75€ noche)</h2>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-zone">Baixa · Centro</div>
-            <div class="hotel-stars">★★★</div>
-            <h3 class="hotel-name">Yes! Lisbon Hostel</h3>
-            <p class="hotel-desc">Reconocido durante años como uno de los mejores hostales del mundo. Ubicación perfecta, personal excepcional, ambiente social increíble. Las habitaciones privadas tienen baño propio y son una ganga para el precio.</p>
-            <a href="https://www.booking.com/hotel/pt/yes-lisbon-hostel.html?aid=TU_ID" target="_blank" rel="noopener" class="hotel-book">Ver disponibilidad →</a>
-          </div>
-          <div class="hotel-price"><span class="hotel-price-num">45€</span><span class="hotel-price-label">desde/noche</span></div>
-        </div>
-
-        <div class="tip-box">
-          <strong>📅 ¿Cuándo reservar hotel en Lisboa?</strong>
-          <p>Lisboa es muy popular entre mayo y octubre. Para conseguir los mejores precios y disponibilidad, reserva con <strong>al menos 6–8 semanas de antelación</strong> en temporada alta. En noviembre y febrero los precios bajan hasta un 40% y la ciudad tiene mucho encanto.</p>
-        </div>
-
         
-        <!-- ── Tiqets Inline Widget — Lisboa ───────────────── -->
+        <!-- CAJA DE RESUMEN RÁPIDO -->
+        <div class="tip-box">
+          <strong>💡 Lo esencial de Lisboa en un vistazo:</strong>
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem; margin-bottom: 1rem;">
+            <li><strong>Mejor época:</strong> Marzo-Mayo y Septiembre-Octubre (clima agradable y menos turistas).</li>
+            <li><strong>Imprescindibles:</strong> Castelo de São Jorge, Torre de Belém, Alfama y los pasteles de Belém.</li>
+            <li><strong>Transporte:</strong> El tranvía 28 es icónico pero turístico. Usa el metro y los elevadores (Santa Justa, Gloria).</li>
+            <li><strong>Presupuesto:</strong> Lisboa es más económica que otras capitales europeas. Aprovecha los miradores gratuitos.</li>
+          </ul>
+          <p style="margin:0;">👉 <a href="#itinerario" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Ver itinerario día por día</a></p>
+        </div>
+
+        <p>Lisboa es una ciudad que enamora con sus calles empedradas, sus tranvías amarillos subiendo colinas empinadas y sus miradores con vistas panorámicas al río Tajo. La capital portuguesa combina historia, cultura y una gastronomía excepcional a precios accesibles. En esta guía actualizada para 2026, te llevamos más allá de los lugares turísticos para que descubras el verdadero encanto de Lisboa.</p>
+        <p>Antes de reservar tus vuelos, asegúrate de revisar nuestra <a href="visa-schengen-mexico.html">Guía de la Visa Schengen para mexicanos</a> para tener todos tus documentos en orden.</p>
+
+        <h2 id="itinerario">Itinerario sugerido: 3 días en Lisboa</h2>
+        
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">1</div><div class="day-title">Alfama y el Castillo de São Jorge</div></div>
+          <div class="day-card-body">
+            <p>Empieza por el barrio más antiguo de Lisboa. Alfama es un laberinto de callejuelas estrechas, ropa tendida y fado sonando en las tabernas.</p>
+            <ul>
+              <li><strong>Mañana:</strong> Castelo de São Jorge (reserva entrada online) y vistas panorámicas.</li>
+              <li><strong>Tarde:</strong> Sé de Lisboa (Catedral), Alfama y el mirador de Santa Luzia.</li>
+              <li><strong>Noche:</strong> Cena con espectáculo de fado en Alfama.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- IMAGEN DEL CASTILLO DE SÃO JORGE -->
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80" alt="Vista del Castillo de São Jorge en Lisboa"/>
+        <p class="img-caption">El Castelo de São Jorge domina la ciudad desde lo alto de la colina, ofreciendo las mejores vistas de Lisboa · © Unsplash</p>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">2</div><div class="day-title">Belém y los Monumentos Históricos</div></div>
+          <div class="day-card-body">
+            <p>Dedica el segundo día a la zona de Belém, donde partieron los grandes navegantes portugueses en la Era de los Descubrimientos.</p>
+            <ul>
+              <li><strong>Mañana:</strong> Torre de Belém y Mosteiro dos Jerónimos (reserva entradas).</li>
+              <li><strong>Mediodía:</strong> Pasteis de Belém (los originales, ¡haz fila!).</li>
+              <li><strong>Tarde:</strong> Padrão dos Descobrimentos y MAAT (Museo de Arte, Arquitectura y Tecnología).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- IMAGEN DE LA TORRE DE BELÉM -->
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80" alt="Torre de Belém junto al río Tajo"/>
+        <p class="img-caption">La Torre de Belém, símbolo de la Era de los Descubrimientos portuguesa · © Unsplash</p>
+
+        <div class="day-card">
+          <div class="day-card-header"><div class="day-num">3</div><div class="day-title">Baixa, Chiado y los Miradores</div></div>
+          <div class="day-card-body">
+            <p>El tercer día es para explorar el centro de Lisboa, sus plazas emblemáticas y los famosos miradores (miradouros).</p>
+            <ul>
+              <li><strong>Mañana:</strong> Praça do Comércio, Arco da Rua Augusta y Baixa.</li>
+              <li><strong>Tarde:</strong> Chiado, Elevador de Santa Justa y Miradouro da Senhora do Monte.</li>
+              <li><strong>Noche:</strong> Bairro Alto para ver el ambiente nocturno lisboeta.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TIQETS INLINE WIDGET -->
         <div class="tiqets-inline-block">
           <div class="tiqets-inline-header">
-            <span class="tiq-title">🎫 Entradas para las atracciones de Lisboa</span>
-            <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin taquilla</span>
+            <span class="tiq-title">🎫 Entradas imprescindibles en Lisboa</span>
+            <span class="tiq-badge">Ticket móvil · Confirmación inmediata · Sin colas</span>
           </div>
           <div class="tiqets-cards-grid">
-          <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🏰</span>
-            <span class="tci-body">
-              <span class="tci-name">Torre de Belém</span>
-              <span class="tci-desc">Patrimonio UNESCO · Sin esperas</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 6€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">⛪</span>
-            <span class="tci-body">
-              <span class="tci-name">Monasterio de los Jerónimos</span>
-              <span class="tci-desc">Gótico manuelino · Ticket rápido</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 10€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🐠</span>
-            <span class="tci-body">
-              <span class="tci-name">Oceanario de Lisboa</span>
-              <span class="tci-desc">El mayor de Europa · Recomendado</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 19€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
-          <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
-            <span class="tci-icon">🏯</span>
-            <span class="tci-body">
-              <span class="tci-name">Palacio de Sintra</span>
-              <span class="tci-desc">Excursión desde Lisboa · Incluye tren</span>
-            </span>
-            <span class="tci-price">
-              <span class="tci-price-num">Desde 14€</span>
-              <span class="tci-cta">Reservar →</span>
-            </span>
-          </a>
+            <a href="https://www.tiqets.com/en/lisbon-l14547/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🏰</span>
+              <span class="tci-body">
+                <span class="tci-name">Castelo de São Jorge</span>
+                <span class="tci-desc">Vistas panorámicas · Historia medieval</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde €12</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/en/lisbon-l14547/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🗼</span>
+              <span class="tci-body">
+                <span class="tci-name">Torre de Belém</span>
+                <span class="tci-desc">Patrimonio UNESCO · Era de los Descubrimientos</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde €8</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/en/lisbon-l14547/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">⛪</span>
+              <span class="tci-body">
+                <span class="tci-name">Mosteiro dos Jerónimos</span>
+                <span class="tci-desc">Arquitectura manuelina · Tumba de Vasco da Gama</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde €12</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/en/lisbon-l14547/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon"></span>
+              <span class="tci-body">
+                <span class="tci-name">Tranvía 28</span>
+                <span class="tci-desc">Recorrido histórico · Icono de Lisboa</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde €3</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
           </div>
           <div class="tiqets-inline-footer">
-            <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-               target="_blank" rel="noopener sponsored">
-              Ver todas las entradas en Lisboa →
-            </a>
+            <a href="https://www.tiqets.com/en/lisbon-l14547/" target="_blank" rel="noopener sponsored">Ver todas las entradas en Lisboa →</a>
             <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
           </div>
         </div>
-        <!-- ── /Tiqets ──────────────────────────────────────────── -->
-        <h2 id="consejos">Consejos para reservar hotel en Lisboa</h2>
+
+        <h2 id="gastronomia">Qué comer en Lisboa (sin arruinarte)</h2>
+        
+        <!-- IMAGEN DE GASTRONOMÍA LISBOETA -->
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80" alt="Pasteles de Belém tradicionales"/>
+        <p class="img-caption">Los Pasteis de Belém son el dulce más famoso de Lisboa, con una receta secreta desde 1837 · © Unsplash</p>
+
+        <p>Lisboa es un paraíso para los amantes de la comida. Desde los famosos pasteles de Belém hasta el bacalao en todas sus formas, la gastronomía portuguesa es reconfortante y deliciosa.</p>
         <ul>
-          <li><strong>Evita los hoteles en Alfama si tienes problemas de movilidad:</strong> las calles son muy empinadas y adoquinadas.</li>
-          <li><strong>Pregunta siempre por el desayuno:</strong> en Lisboa suele ser extraordinario y muchos hoteles lo incluyen.</li>
-          <li><strong>Los hoteles cerca del metro son muy cómodos:</strong> las líneas Azul y Verde conectan todo el centro.</li>
-          <li><strong>Compara siempre entre Booking y la web del hotel:</strong> a veces el precio directo es mejor e incluye ventajas adicionales.</li>
-          <li><strong>Los apartamentos en Chiado o Príncipe Real</strong> son una excelente alternativa para estancias de 4+ noches.</li>
+          <li><strong>Pasteis de Belém:</strong> Los originales están en Belém. Crujientes por fuera, cremosos por dentro.</li>
+          <li><strong>Bacalhau:</strong> Bacalao preparado de mil formas. Prueba el bacalhau à brás o com bacalhau.</li>
+          <li><strong>Francesinha:</strong> Sándwich portugués con carne, queso fundido y salsa picante. ¡Muy contundente!</li>
+          <li><strong>Vinho Verde:</strong> Vino joven y refrescante, perfecto para acompañar las comidas.</li>
+          <li><strong>Polvo à Lagareiro:</strong> Pulpo a la plancha con patatas y aceite de oliva. Delicioso.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>🚇 Transporte en Lisboa</strong>
+          <p>Lisboa tiene 7 colinas, así que prepárate para caminar mucho. Usa el metro (es eficiente y limpio), los tranvías históricos (el 28 es turístico pero bonito) y los elevadores (Santa Justa, Gloria, Lavra). Compra la tarjeta Viva Viagem para ahorrar.</p>
+        </div>
+
+        <h2 id="presupuesto">Presupuesto para 3 días en Lisboa</h2>
+        <ul>
+          <li><strong>Bajo:</strong> 50–70€/día (hostal, comida en mercados locales, museos gratuitos).</li>
+          <li><strong>Medio:</strong> 100–140€/día (hotel 3★, restaurantes locales, principales atracciones).</li>
+          <li><strong>Alto:</strong> 200€+/día (hotel boutique, gastronomía fina, tours privados).</li>
         </ul>
       </div>
-
-
-        <!-- OMIO — Trenes y buses Europa -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
-            <div>
-              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
-              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
-            <div>
-              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
-              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
-              </div>
-            </div>
-            <div style="text-align:center;flex-shrink:0;">
-              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
-              <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
-            <h3 id="1698061" style="margin:0;font-size:0;line-height:0;">
-              <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
-                 style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-                Buscar en Omio →
-              </a>
-            </h3>
-            <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" border="0"/>
-            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
-          </div>
-        </div>
-        <!-- /OMIO -->
 
       <!-- GYG Inline Widget — Lisboa -->
       <div style="margin:2.5rem 0;">
@@ -554,141 +507,87 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
           </div>
           <div style="padding:1rem;">
             <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
-                 data-gyg-location-id="2236"
+                 data-gyg-location-id="148"
                  data-gyg-locale="es"
                  data-gyg-type="activities"
                  data-gyg-number-of-items="4"
                  data-gyg-partner-id="1ABLZMR">
             </div>
             <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
-              Actividades por <a href="https://www.getyourguide.es/lisboa-l2236/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+              Actividades por <a href="https://www.getyourguide.es/lisboa-l148/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
             </p>
           </div>
         </div>
       </div>
+      
+      <!-- OMIO — Trenes y buses Europa -->
+      <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
+        <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
+          <div>
+            <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
+            <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
+          </div>
+        </div>
+        <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
+          <div>
+            <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0;">
+            <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
+            <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
+          </div>
+        </div>
+        <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+          <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+            Buscar en Omio →
+          </a>
+          <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" alt="" border="0"/>
+          <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
+        </div>
+      </div>
+
       <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
     </main>
 
     <aside class="article-sidebar">
-      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#lujo">Hoteles de lujo</a></li><li><a href="#medio">Gama media</a></li><li><a href="#economico">Opciones económicas</a></li><li><a href="#consejos">Consejos para reservar</a></li></ul></div></div>
-      <div class="sidebar-card reveal"><div class="sidebar-card-header">🏨 Todos los hoteles en Lisboa</div><div class="sidebar-card-body"><p>Compara más de 600 hoteles disponibles en Lisboa con cancelación gratuita.</p><a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2802340&ued=https%3A%2F%2Fwww.booking.com%2Fcity%2Fpt%2Flisbon.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver en Booking →</a></div></div>
-      <div class="sidebar-card reveal"><div class="sidebar-card-header">🌤 Clima en Lisboa</div><div class="sidebar-card-body"><div class="weather-grid"><div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">15°C</div></div><div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">17°C</div></div><div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">22°C</div></div><div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">29°C</div></div><div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">26°C</div></div><div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">17°C</div></div></div></div></div>
-      <!-- Kiwi Vuelos Widget — Lisboa -->
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#itinerario">Itinerario 3 días</a></li><li><a href="#gastronomia">Qué comer</a></li><li><a href="#presupuesto">Presupuesto</a></li></ul></div></div>
+      
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header"> Hoteles en Lisboa</div>
+        <div class="sidebar-card-body">
+          <p>Más de 1.000 hoteles disponibles. Cancela gratis en la mayoría.</p>
+          <a href="https://www.booking.com/city/es/lisbon.html?aid=TU_ID" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver en Booking →</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">🌤 Clima en Lisboa</div><div class="sidebar-card-body"><div class="weather-grid"><div class="weather-item"><div class="weather-month">Ene</div><div class="weather-temp">11°C</div></div><div class="weather-item"><div class="weather-month">Mar</div><div class="weather-temp">14°C</div></div><div class="weather-item"><div class="weather-month">May</div><div class="weather-temp">19°C</div></div><div class="weather-item"><div class="weather-month">Jul</div><div class="weather-temp">24°C</div></div><div class="weather-item"><div class="weather-month">Sep</div><div class="weather-temp">22°C</div></div><div class="weather-item"><div class="weather-month">Nov</div><div class="weather-temp">14°C</div></div></div></div></div>
+      
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">✈️ Vuelos a Lisboa</div>
         <div class="sidebar-card-body" style="padding:.8rem;">
-          <script async src="https://tpwidg.com/content?currency=mxn&trs=505816&shmarker=709104&from_name=MEX&to_name=lisbon_pt&locale=es&powered_by=true&limit=4&primary_color=00AE98&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=3411" charset="utf-8"></script>
-          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;margin-bottom:0;">Vuelos en colaboración con <strong>Kiwi.com</strong></p>
+          <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2702007&v=20563&q=395850&r=2802340" target="_blank">
+            <img src="https://www.awin1.com/cshow.php?s=2702007&v=20563&q=395850&r=2802340" border="0" loading="lazy" decoding="async" alt="Kiwi.com — Busca vuelos baratos" style="display:block;width:100%;height:auto;border-radius:2px;"/>
+          </a>
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;margin-bottom:0;">Publicidad · Kiwi.com</p>
         </div>
       </div>
-
-        <!-- HOTMART: Mapas de Ciudad — Europa -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🗺️</div>
-            <div style="flex:1">
-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Mapas de Ciudad — Europa</p>
-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
-            </div>
-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $97 MXN</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
-            <div style="flex:1">
-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">Mapas detallados de Lisboa: Alfama, Belém, Chiado y el sistema de tranvías para moverte con confianza sin depender de internet.</p>
-              
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <a rel="sponsored" href="https://go.hotmart.com/V105321370X" target="_blank"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Ver en Hotmart →
-            </a>
-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días · Sin suscripción</span>
-          </div>
-        </div>
-        <!-- /HOTMART -->
-
-        <!-- HOTMART: Europa: Guía para Organizar tu Viaje -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🗺️</div>
-            <div style="flex:1">
-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Europa: Guía para Organizar tu Viaje</p>
-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
-            </div>
-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $247 MXN</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
-            <div style="flex:1">
-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">Portugal es uno de los destinos más asequibles de Europa. Aprende a organizarlo todo desde México: vuelos, alojamiento y ruta óptima.</p>
-              
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <a rel="sponsored" href="https://go.hotmart.com/T105319530C" target="_blank"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Ver en Hotmart →
-            </a>
-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días · Sin suscripción</span>
-          </div>
-        </div>
-        <!-- /HOTMART -->
 
       <!-- GYG Widget Lisboa -->
       <div class="sidebar-card reveal">
         <div class="sidebar-card-header">🎟️ Tours y entradas en Lisboa</div>
         <div class="sidebar-card-body" style="padding:.8rem;">
-          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id="2236" data-gyg-locale="es" data-gyg-type="city" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR"></div>
+          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id="148" data-gyg-locale="es" data-gyg-type="city" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR"></div>
           <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">Actividades con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a></p>
         </div>
       </div>
-      <!-- Tiqets Widget — Lisboa -->
-      <div class="sidebar-card reveal">
-        <div class="sidebar-card-header">🎫 Entradas sin colas — Lisboa</div>
-        <div class="sidebar-card-body" style="padding:.6rem .8rem;">
-          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem;line-height:1.5;">Ticket móvil · Confirmación inmediata · Sin esperar en taquilla.</p>
-          <div class="tiqets-list">
-        <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-           target="_blank" rel="noopener sponsored" class="tiqets-row">
-          <span class="tiqets-icon">🏰</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Torre de Belém</span>
-            <span class="tiqets-badge">Desde 6€ · Patrimonio UNESCO</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
-        <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-           target="_blank" rel="noopener sponsored" class="tiqets-row">
-          <span class="tiqets-icon">⛪</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Monasterio de los Jerónimos</span>
-            <span class="tiqets-badge">Desde 10€ · Sin esperas</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
-        <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-           target="_blank" rel="noopener sponsored" class="tiqets-row">
-          <span class="tiqets-icon">🐠</span>
-          <span class="tiqets-info">
-            <span class="tiqets-name">Oceanario de Lisboa</span>
-            <span class="tiqets-badge">Desde 19€ · El mejor de Europa</span>
-          </span>
-          <span class="tiqets-arrow">→</span>
-        </a>
-          </div>
-          <a href="https://www.tiqets.com/es/lisbon-c182/?partner=voyage_lumiere-184870"
-             target="_blank" rel="noopener sponsored"
-             style="display:block;text-align:center;font-size:.72rem;color:var(--gold);margin-top:.75rem;border:none;">
-            Ver todas las entradas en Tiqets →
-          </a>
-        </div>
-      </div>
+      
       <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
     </aside>
   </div>
@@ -696,57 +595,138 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <section class="related-section">
     <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
     <div class="articles-grid" style="max-width:1200px;margin:0 auto">
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://picsum.photos/id/1044/480/340')"></div><div class="article-body"><p class="article-tag">Italia</p><h3 class="article-title">Guía completa de Roma para 2025</h3><p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo.</p><div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div></div></article>
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://picsum.photos/id/1044/480/340')"></div><div class="article-body"><p class="article-tag">España</p><h3 class="article-title">Qué ver en Barcelona en 3 días</h3><p class="article-excerpt">La ruta perfecta para conocer lo mejor de Barcelona.</p><div class="article-footer"><span>10 min</span><a href="barcelona.html" class="read-more">Leer →</a></div></div></article>
-      <article class="article-card reveal"><div class="article-img" style="background-image:url('https://picsum.photos/id/1044/480/340')"></div><div class="article-body"><p class="article-tag">Europa</p><h3 class="article-title">Cómo viajar a Europa con presupuesto bajo</h3><p class="article-excerpt">Estrategias reales para gastar menos de 60€ al día.</p><div class="article-footer"><span>9 min</span><a href="presupuesto-europa.html" class="read-more">Leer →</a></div></div></article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Guía completa</p>
+          <h3 class="article-title">Guía completa de París para 2026</h3>
+          <p class="article-excerpt">El Louvre, Montmartre y los mejores bistrós te esperan en la Ciudad de la Luz.</p>
+          <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Italia · Guía completa</p>
+          <h3 class="article-title">Guía completa de Roma para 2026</h3>
+          <p class="article-excerpt">El Coliseo, el Vaticano y la mejor pasta del mundo te esperan.</p>
+          <div class="article-footer"><span>13 min</span><a href="roma.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Europa · Multi-destino</p>
+          <h3 class="article-title">Itinerario de 10 días: París, Suiza y Roma</h3>
+          <p class="article-excerpt">El viaje soñado hecho realidad: descubre cómo recorrer tres destinos europeos en 10 días.</p>
+          <div class="article-footer"><span>12 min</span><a href="itinerario-10-dias-europa.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <footer><div class="footer-grid"><div class="footer-brand"><a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a><p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p><div class="footer-social"><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">📌</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">𝕏</a></div></div><div class="footer-col"><h4>Destinos</h4><ul><li><a href="paris.html">París</a></li><li><a href="roma.html">Roma</a></li><li><a href="barcelona.html">Barcelona</a></li><li><a href="lisboa.html">Lisboa</a></li></ul></div><div class="footer-col"><h4>Categorías</h4><ul><li><a href="paris-louvre.html">Cultura</a></li><li><a href="gastronomia-europa.html">Gastronomía</a></li><li><a href="presupuesto-europa.html">Presupuesto</a></li><li><a href="visa-schengen-mexico.html">Visa Schengen</li></ul></div><div class="footer-col"><h4>Nosotros</h4><ul><li><a href="../sobre-nosotros.html">Quiénes somos</a></li><li><a href="../sobre-nosotros.html">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Voyage Lumière</span><div class="footer-legal"><a href="../privacidad.html">Privacidad</a><a href="../cookies.html">Cookies</a></div></div></footer>
-  <div class="cookie-banner" id="cookieBanner"><p>Usamos cookies propias y de terceros. <a href="#" style="color:var(--gold)">Más info</a></p><div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Aceptar</button><button class="cookie-dismiss" onclick="dismissCookies()">Rechazar</button></div></div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+          <a href="#" class="social-btn" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul>
+        <li><a href="paris.html">París</a></li>
+        <li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li>
+        <li><a href="lisboa.html">Lisboa</a></li>
+        <li><a href="londres.html">Londres</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="paris-louvre.html">Cultura</a></li>
+        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="visa-schengen-mexico.html">Visa Schengen</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul>
+        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="../sobre-nosotros.html">Contacto</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Voyage Lumière</span>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros. <a href="../cookies.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" id="cookieAccept">Aceptar</button>
+      <button class="cookie-dismiss" id="cookieDismiss">Rechazar</button>
+    </div>
+  </div>
+
   <script>
     const navbar = document.getElementById('navbar');
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
-        requestAnimationFrame(() => { navbar.classList.toggle('scrolled', window.scrollY > 40); ticking = false; });
+        requestAnimationFrame(() => {
+          navbar.classList.toggle('scrolled', window.scrollY > 40);
+          ticking = false;
+        });
         ticking = true;
       }
     }, { passive: true });
-
-    document.getElementById('mobileBtn').addEventListener('click', () =>
-      document.getElementById('navLinks').classList.toggle('open')
-    );
-
+    
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    
     const observer = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    }), { threshold: .12 });
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+    
     const banner = document.getElementById('cookieBanner');
-    window.addEventListener('load', function () {
-      if (!localStorage.getItem('cookieConsent')) {
-        setTimeout(() => { banner.style.display = 'flex'; requestAnimationFrame(() => banner.classList.add('visible')); }, 1200);
+    const acceptBtn = document.getElementById('cookieAccept');
+    const dismissBtn = document.getElementById('cookieDismiss');
+
+    window.addEventListener('load', function() {
+      if(!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          banner.style.display = 'flex';
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }, 1200);
       }
     });
-    function acceptCookies()  { localStorage.setItem('cookieConsent', 'accepted');  banner.classList.add('hidden'); }
-    function dismissCookies() { localStorage.setItem('cookieConsent', 'dismissed'); banner.classList.add('hidden'); }
-  </script>
-  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
 
-  <!-- Klaviyo — Viewed Product tracking -->
-  <script>
+    function hideBanner(){
+      banner.classList.add('hidden');
+      setTimeout(function(){ banner.style.display='none'; }, 420);
+    }
+    
+    acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','accepted'); hideBanner(); });
+    dismissBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','dismissed'); hideBanner(); });
+
+    // Klaviyo — Viewed Product tracking
     window.addEventListener('load', function() {
-      if (typeof klaviyo !== 'undefined') {
+      window.klaviyo = window.klaviyo || [];
+      if (typeof klaviyo !== 'undefined' && Array.isArray(klaviyo)) {
         klaviyo.push(['track', 'Viewed Product', {
-          "Name":       "Guía de Lisboa 2025",
+          "Name":       "Guía de Lisboa 2026",
           "URL":        "https://voyagelumiere.indevs.in/articles/lisboa.html",
           "Categories": ["Europa", "Portugal", "Ciudades"],
-          "ImageURL":   "https://voyagelumiere.indevs.in/og-lisboa.jpg"
+          "ImageURL":   "https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80"
         }]);
       }
     });
   </script>
-  <!-- /Klaviyo -->
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
 </body>
 </html>
