@@ -7,19 +7,76 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  
   <!-- Preconnect para recursos externos -->
   <link rel="preconnect" href="https://widget.getyourguide.com"/>
   <link rel="preconnect" href="https://www.googletagmanager.com"/>
   <link rel="dns-prefetch" href="https://www.tiqets.com"/>
   <link rel="dns-prefetch" href="https://www.awin1.com"/>
-  <link rel="dns-prefetch" href="https://api.frankfurter.app"/>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Versalles desde París: guía completa día trip 2025</title>
-  <meta name="description" content="Cómo visitar Versalles desde París en un día: cómo llegar en RER, precios 2025, itinerario hora a hora y los secretos del Hameau de la Reine."/>
+  
+  <!-- Título optimizado para CTR -->
+  <title>Excursión a Versalles desde París 2026: Guía completa y trucos | Voyage Lumière</title>
+  
+  <!-- Meta descripción optimizada -->
+  <meta name="description" content="Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio."/>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/paris-versalles.html"/>
+
+  <!-- Schema FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo se necesita para visitar Versalles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se recomienda dedicar un día completo (mínimo 6-7 horas) para ver el Palacio, los Jardines y la finca de María Antonieta. Si vas con poco tiempo, calcula al menos 4 horas solo para el Palacio y los jardines principales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo ir de París a Versalles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La forma más rápida y económica es el tren RER C (línea amarilla) desde el centro de París. Debes bajar en la estación 'Versailles Château Rive Gauche'. El viaje dura unos 40 minutos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Vale la pena comprar el Passport de Versalles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, el Passport es la entrada más completa. Incluye acceso al Palacio, los Jardines (incluso durante los días de Fuentes Musicales), el Parque, y los Dominios de Trianón y María Antonieta."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Google Analytics -->
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-52MYXE4VXP';
+      document.head.appendChild(s);
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-52MYXE4VXP', {'send_page_view': false});
+    window.addEventListener('load', function(){ gtag('event', 'page_view'); });
+  </script>
+
   <style id="critical-css">
 /* ── RESET & VARIABLES ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --navy:    #1A2B4C;
   --gold:    #C5A059;
@@ -33,21 +90,16 @@
   --ff-body: 'Lato', sans-serif;
   --ff-acc:  'Cormorant Garamond', serif;
 }
-
 html { scroll-behavior: smooth; }
 body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
 img  { display: block; width: 100%; object-fit: cover; }
 a    { text-decoration: none; color: inherit; }
-
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--warm); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-
 .reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
@@ -77,19 +129,14 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 /* ── BUTTONS ── */
 .btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
 .btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
-.btn-navy { background:var(--navy); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s; border:none; cursor:pointer; display:inline-block; }
-.btn-navy:hover { background:#243d6b; transform:translateY(-2px); }
-.btn-outline { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:.9rem 2.2rem; border-radius:2px; font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, border-color .3s; cursor:pointer; display:inline-block; }
-.btn-outline:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.8); }
 
 /* ── SECTION COMMONS ── */
 .section-header { text-align:center; margin-bottom:4rem; }
 .section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
 .section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
 .section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
 
-/* ── AD SPACES ── */
+/* ─ AD SPACES ── */
 .ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
 .ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
 .ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
@@ -109,10 +156,10 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
 .read-more:hover { color:var(--gold); gap:.65rem; }
 
-/* ── COOKIE BANNER ── */
+/* ─ COOKIE BANNER ── */
 .cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
 .cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-  .cookie-banner.visible { opacity:1; }
+.cookie-banner.visible { opacity:1; }
 .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
 .cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
 .cookie-accept:hover { background:var(--gold-lt); }
@@ -144,53 +191,54 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 @media (max-width:600px) {
   .footer-grid { grid-template-columns:1fr; }
 }
-
   </style>
+
   <style>
     .article-hero{position:relative;height:70vh;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;margin-top:72px}
-    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.05) 0%,rgba(26,43,76,.72) 100%),url('https://picsum.photos/id/1029/900/506') center/cover no-repeat}
+    /* IMAGEN HERO REALISTA DE VERSALLES */
+    .article-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,43,76,.1) 0%,rgba(26,43,76,.75) 100%),url('https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1600&q=80') center/cover no-repeat}
     .article-hero-content{position:relative;z-index:2;padding:0 8vw 4rem;max-width:900px;animation:fadeUp .8s ease-out both}
     .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:1.2rem}
-    .breadcrumb a{color:rgba(255,255,255,.65)}
-    .breadcrumb a:hover{color:var(--gold)}
-    .breadcrumb span{opacity:.5}
+    .breadcrumb a{color:rgba(255,255,255,.65);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{opacity:.5}
     .article-hero h1{font-family:var(--ff-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:1.2rem}
     .article-hero h1 em{font-style:italic;color:var(--gold-lt)}
     .article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.82rem}
     .article-meta-tag{background:var(--gold);color:var(--navy);padding:.25rem .75rem;border-radius:1px;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}
     .article-wrapper{max-width:1200px;margin:0 auto;padding:4rem 5vw;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start}
-    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .article-content{font-size:1.05rem;line-height:1.85;color:#333}
     .article-content h2{font-family:var(--ff-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
     .article-content h3{font-family:var(--ff-head);font-size:1.2rem;font-weight:600;color:var(--navy);margin:1.8rem 0 .75rem}
     .article-content p{margin-bottom:1.3rem}
-    .article-content ul,ol{padding-left:1.5rem;margin-bottom:1.3rem}
+    .article-content ul,.article-content ol{padding-left:1.5rem;margin-bottom:1.3rem}
     .article-content li{margin-bottom:.5rem}
     .article-content strong{color:var(--navy);font-weight:700}
-    .article-content a{color:var(--gold);border-bottom:1px solid rgba(197,160,89,.3);transition:border-color .3s}
     .tip-box{background:linear-gradient(135deg,rgba(197,160,89,.08),rgba(197,160,89,.15));border-left:3px solid var(--gold);padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
     .tip-box strong{color:var(--navy);display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
     .tip-box p{margin:0;font-size:.93rem;color:#555}
-    .warning-box{background:rgba(198,40,40,.05);border-left:3px solid #C62828;padding:1.2rem 1.5rem;border-radius:0 3px 3px 0;margin:2rem 0}
-    .warning-box strong{color:#C62828;display:block;margin-bottom:.4rem;font-family:var(--ff-head)}
-    .warning-box p{margin:0;font-size:.93rem;color:#555}
-    .itinerary{display:flex;flex-direction:column;gap:0}
-    .itin-step{display:grid;grid-template-columns:80px 1fr;gap:1.2rem;position:relative;padding-bottom:1.5rem}
-    .itin-step::before{content:'';position:absolute;left:39px;top:44px;bottom:0;width:2px;background:var(--border)}
-    .itin-step:last-child::before{display:none}
-    .itin-time{text-align:center;padding-top:.2rem}
-    .itin-hour{font-family:var(--ff-head);font-size:.95rem;font-weight:700;color:var(--navy)}
-    .itin-dot{width:14px;height:14px;background:var(--gold);border-radius:50%;margin:.4rem auto 0}
-    .itin-body{}
-    .itin-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
-    .itin-desc{font-size:.88rem;color:#555;line-height:1.6;margin:0}
-    .price-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
-    .price-table th{background:var(--navy);color:#fff;padding:.7rem 1rem;text-align:left;font-family:var(--ff-head);font-weight:600}
-    .price-table td{padding:.65rem 1rem;border-bottom:1px solid var(--border)}
-    .price-table tr:last-child td{border-bottom:none}
-    .price-table tr:nth-child(even) td{background:var(--warm)}
     .article-img-full{width:100%;height:380px;object-fit:cover;border-radius:3px;margin:2rem 0}
     .img-caption{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin-top:-.75rem;margin-bottom:2rem}
+    
+    /* TIQETS WIDGETS */
+    .tiqets-inline-block { background:var(--warm); border:1px solid var(--border); border-radius:3px; overflow:hidden; margin:2.5rem 0; }
+    .tiqets-inline-header { background:linear-gradient(135deg, var(--navy), #0d1e3a); padding:1rem 1.4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
+    .tiq-title { font-family:var(--ff-head); color:#fff; font-size:1rem; font-weight:600; }
+    .tiq-badge { font-size:.68rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; }
+    .tiqets-cards-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+    .tiqets-card-inline { display:flex; align-items:center; gap:.9rem; background:#fff; padding:.9rem 1.1rem; text-decoration:none; color:inherit; transition:background .2s; }
+    .tiqets-card-inline:hover { background:rgba(197,160,89,.07); }
+    .tci-icon { font-size:1.4rem; line-height:1; flex-shrink:0; }
+    .tci-body { display:flex; flex-direction:column; flex:1; min-width:0; }
+    .tci-name { font-size:.85rem; font-weight:700; color:var(--navy); line-height:1.3; }
+    .tci-desc { font-size:.72rem; color:var(--muted); margin-top:.15rem; line-height:1.4; }
+    .tci-price { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; }
+    .tci-price-num { font-family:var(--ff-head); font-size:.95rem; font-weight:700; color:var(--navy); white-space:nowrap; }
+    .tci-cta { font-size:.68rem; color:var(--gold); font-weight:700; white-space:nowrap; margin-top:.2rem; }
+    .tiqets-inline-footer { padding:.7rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; background:var(--warm); border-top:1px solid var(--border); }
+    .tiqets-inline-footer a { font-size:.78rem; color:var(--gold); font-weight:600; border:none; }
+    .tiqets-inline-footer a:hover { color:var(--navy); }
+    @media(max-width:640px) { .tiqets-cards-grid { grid-template-columns:1fr; } }
+
+    .article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:1.5rem}
     .sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:3px;overflow:hidden}
     .sidebar-card-header{background:var(--navy);color:#fff;padding:1rem 1.2rem;font-family:var(--ff-head);font-size:.95rem;font-weight:600}
     .sidebar-card-body{padding:1.2rem}
@@ -202,20 +250,9 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     .toc li a::before{content:'→';color:var(--gold);font-size:.7rem}
     .toc li a:hover{color:var(--navy)}
     .related-section{background:var(--warm);padding:5rem 5vw}
-    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
-    .article-card{background:#fff;border:1px solid var(--border);border-radius:3px;overflow:hidden;transition:box-shadow .25s,transform .25s}
-    .article-card:hover{box-shadow:0 8px 28px rgba(26,43,76,.1);transform:translateY(-3px)}
-    .article-img{height:200px;background-size:cover;background-position:center}
-    .article-body{padding:1.4rem}
-    .article-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:.5rem}
-    .article-title{font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:.6rem}
-    .article-excerpt{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
-    .article-footer{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted)}
-    .read-more{color:var(--gold);font-weight:700;text-decoration:none}
-    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}.articles-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}}
+    @media(max-width:900px){.article-wrapper{grid-template-columns:1fr}.article-sidebar{position:static}}
   
-  /* Reveal delays — CSS puro, sin JS style writes (evita reflow forzado) */
+  /* Reveal delays */
   .reveal:nth-child(4n+1){transition-delay:0ms}
   .reveal:nth-child(4n+2){transition-delay:80ms}
   .reveal:nth-child(4n+3){transition-delay:160ms}
@@ -225,35 +262,30 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris-versalles.html"/>
-  <meta property="og:title" content="Versalles desde París: guía completa día trip 2025"/>
-  <meta property="og:description" content="Cómo visitar Versalles desde París en un día: cómo llegar en RER, precios 2025, itinerario hora a hora y los secretos del Hameau de la Reine."/>
-  <meta property="og:image" content="https://voyagelumiere.indevs.in/og-versalles.jpg"/>
+  <meta property="og:title" content="Excursión a Versalles desde París 2026: Guía completa y trucos | Voyage Lumière"/>
+  <meta property="og:description" content="Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1200&q=80"/>
   <meta property="og:site_name" content="Voyage Lumière"/>
   <meta property="og:locale" content="es_MX"/>
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Versalles desde París: guía completa día trip 2025"/>
-  <meta name="twitter:description" content="Cómo visitar Versalles desde París en un día: cómo llegar en RER, precios 2025, itinerario hora a hora y los secretos del Hameau de la Reine."/>
-  <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-versalles.jpg"/>
+  <meta name="twitter:title" content="Excursión a Versalles desde París 2026: Guía completa y trucos | Voyage Lumière"/>
+  <meta name="twitter:description" content="Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1200&q=80"/>
 
-  <!-- SEO: Canonical -->
-  <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/paris-versalles.html"/>
-
-  <!-- SEO: Robots -->
-  <meta name="robots" content="index, follow"/>
-  <!-- SEO: Schema.org -->
+  <!-- SEO: Schema.org Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Versalles desde París: guía completa día trip 2025",
-    "description": "Cómo visitar Versalles desde París en un día: cómo llegar en RER, precios 2025, itinerario hora a hora y los secretos del Hameau de la Reine.",
-    "image": "https://voyagelumiere.indevs.in/og-versalles.jpg",
+    "headline": "Excursión a Versalles desde París 2026: Guía completa y trucos",
+    "description": "Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio.",
+    "image": "https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1200&q=80",
     "url": "https://voyagelumiere.indevs.in/articles/paris-versalles.html",
     "inLanguage": "es",
-    "dateModified": "2025-05-01",
-    "datePublished": "2025-03-01",
+    "dateModified": "2026-09-14",
+    "datePublished": "2024-03-01",
     "author": {
       "@type": "Organization",
       "name": "Voyage Lumière",
@@ -274,338 +306,404 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
     }
   }
   </script>
-  <link rel="sitemap" type="application/xml" href="/voyage2/sitemap.xml"/>
-  <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1029/900/506?w=400&q=60&fm=webp"/>
+  
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=800&q=60"/>
   <meta name="google-adsense-account" content="ca-pub-4594535933040491">
-
-  <!-- Klaviyo SDK -->
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UrzaWD"></script>
-  <!-- /Klaviyo SDK -->
 </head>
 <body>
   <nav id="navbar" class="scrolled">
     <a class="nav-logo" href="../index.html"><span>Voyage</span> Lumière</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html#destinos">Destinos</a></li>
-      <li><a href="paris.html">París</a></li>
-      <li><a href="../sobre-nosotros.html">Nosotros</a></li>
-      <li><a href="visa-schengen-mexico.html">Visa Schengen</a></li>
+      <li><a href="paris.html" class="active">París</a></li>
+      <li><a href="barcelona.html">Barcelona</a></li>
+      <li><a href="roma.html">Roma</a></li>
       <li><a href="../index.html#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
-    <button class="nav-mobile-btn" id="mobileBtn"><span></span><span></span><span></span></button>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú"><span></span><span></span><span></span></button>
   </nav>
 
   <div class="article-hero">
     <div class="article-hero-bg"></div>
-    <img src="https://picsum.photos/id/1029/900/506" fetchpriority="high" decoding="async" alt="" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;"/>
     <div class="article-hero-content">
-      <div class="breadcrumb">
-        <a href="../index.html">Inicio</a><span>/</span>
-        <a href="paris.html">París</a><span>/</span>
-        <span style="color:#fff">Versalles</span>
-      </div>
-      <h1><em>Versalles</em> desde París:<br/>guía completa día trip</h1>
+      <div class="breadcrumb"><a href="../index.html">Inicio</a><span>/</span><a href="paris.html">París</a><span>/</span><span style="color:#fff">Versalles</span></div>
+      <h1>Excursión a <em>Versalles</em><br/>desde París 2026</h1>
       <div class="article-meta">
-        <span class="article-meta-tag">Francia · Día trip</span>
-        <span>📅 Mayo 2025</span><span>⏱ 9 min de lectura</span>
+        <span class="article-meta-tag">Francia · Excursión</span>
+        <span>📅 Actualizado septiembre 2026</span>
+        <span> 9 min de lectura</span>
+        <span>👁 41.200 visitas</span>
       </div>
     </div>
   </div>
 
-  <div class="ad-banner"><div class="ad-placeholder"><!-- ADSENSE 728×90 -->📢 Google AdSense 728×90</div></div>
+  <div class="ad-banner"><div class="ad-placeholder">📢 Google AdSense 728×90</div></div>
 
   <div class="article-wrapper">
-    <main class="article-main">
+    <main>
       <div class="article-content">
-
-        <p>El Palacio de Versalles es la excursión de un día más visitada de Europa — y también una de las más mal aprovechadas. La mayoría llega tarde, hace cola dos horas y se marcha agotada sin haber visto los jardines. Esta guía está diseñada para hacer exactamente lo contrario: llegar con el palacio casi vacío, ver lo esencial y salir con tiempo para los jardines.</p>
-
+        
+        <!-- CAJA DE RESUMEN RÁPIDO -->
         <div class="tip-box">
-          <strong>📌 Lo más importante antes de leer</strong>
-          <p>Reserva la entrada online en <strong>chateauversailles.fr</strong> con al menos 3–5 días de antelación, especialmente en verano. Sin reserva online, la cola puede ser de 2–3 horas. La entrada cuesta 21,50€ e incluye el palacio completo.</p>
+          <strong>💡 Lo esencial de Versalles en un vistazo:</strong>
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem; margin-bottom: 1rem;">
+            <li><strong>Cómo llegar:</strong> Tren RER C (línea amarilla) hasta 'Versailles Château Rive Gauche' (40 min).</li>
+            <li><strong>Tiempo de visita:</strong> Mínimo medio día, ideal un día completo (6-7 horas).</li>
+            <li><strong>Entrada recomendada:</strong> El "Passport" (incluye Palacio, Jardines, Trianon y María Antonieta).</li>
+            <li><strong>Mejor época:</strong> Primavera y otoño. Evita martes (cerrado) y fines de semana si puedes.</li>
+          </ul>
+          <p style="margin:0;">👉 <a href="#entradas" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Comprar entradas con acceso prioritario</a></p>
         </div>
 
-        <h2 id="como-llegar">Cómo llegar desde París</h2>
+        <p>Si París es la capital de la elegancia, Versalles es el símbolo absoluto del poder y el exceso. A solo 40 minutos del centro de París, el Palacio de Versalles fue la residencia de los reyes Luis XIV, Luis XV y Luis XVI. En esta guía actualizada para 2026, te decimos exactamente cómo organizar tu excursión para aprovechar al máximo cada rincón de este Patrimonio de la Humanidad.</p>
+        <p>Si aún no has planeado tu viaje a Francia, consulta nuestra <a href="paris.html">Guía completa de París</a> y no olvides revisar los <a href="visa-schengen-mexico.html">requisitos de la Visa Schengen</a>.</p>
 
-        <h3>Tren RER C — la opción más fácil</h3>
-        <p>El tren <strong>RER C</strong> sale de varias estaciones del centro de París (Musée d'Orsay, Saint-Michel, Invalides) hasta la estación <strong>Versailles Château Rive Gauche</strong>. El trayecto dura 35–40 minutos y desde la estación son 10 minutos a pie hasta la entrada del palacio.</p>
+        <h2 id="transporte">Cómo llegar de París a Versalles</h2>
+        
+        <p>La forma más fácil, rápida y económica de llegar es en transporte público. Tienes tres opciones principales:</p>
+
         <ul>
-          <li><strong>Precio:</strong> 4,10€ ida (zona 4 del Navigo)</li>
-          <li><strong>Frecuencia:</strong> cada 15–30 minutos</li>
-          <li><strong>Primer tren:</strong> sale hacia las 5:30 AM</li>
+          <li><strong>RER C (Tren de cercanías):</strong> Es la opción más popular. Sale desde varias estaciones en el centro de París (como Saint-Michel o Musée d'Orsay). Debes bajar en la estación <strong>Versailles Château Rive Gauche</strong>. El viaje dura unos 40 minutos. ⚠️ <em>Tip: Asegúrate de tomar un tren que diga "VICK" o "CIME" en el tablero, ya que no todos los RER C van hasta Versalles.</em></li>
+          <li><strong>Tren SNCF desde Montparnasse:</strong> Sale de la estación Paris Montparnasse y llega a Versailles Chantiers. Es más rápido (20 min) pero la estación queda un poco más lejos del palacio (15 min caminando).</li>
+          <li><strong>Auto o Tour organizado:</strong> Si prefieres no preocuparte por los horarios, puedes rentar un auto o contratar un tour con transporte incluido desde París.</li>
         </ul>
 
-        <div class="warning-box">
-          <strong>⚠️ Cuidado con el tren correcto</strong>
-          <p>El RER C tiene varias líneas. Asegúrate de coger la dirección <strong>Versailles Château Rive Gauche</strong> — no Versailles Chantiers (queda más lejos). Mira el letrero del destino en el andén antes de subir.</p>
+        <!-- IMAGEN DE LOS JARDINES -->
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://images.unsplash.com/photo-1520939817895-060bdaf4de1e?fm=webp&w=1200&q=80" alt="Jardines del Palacio de Versalles"/>
+        <p class="img-caption">Los jardines de Versalles se extienden por 800 hectáreas y son un espectáculo absoluto en primavera y verano · © Unsplash</p>
+
+        <h2 id="que-ver">Qué ver en Versalles: El itinerario perfecto</h2>
+        
+        <p>El dominio de Versalles es gigantesco. Para no perderte nada, sigue este orden lógico:</p>
+
+        <h3>1. El Palacio (Le Château)</h3>
+        <p>Empieza aquí apenas abran las puertas (9:00 AM) para evitar las multitudes. Recorre los Apartamentos del Rey, la famosa <strong>Galería de los Espejos</strong> (donde se firmó el Tratado de Versalles en 1919) y los Apartamentos de la Reina.</p>
+
+        <h3>2. Los Jardines (Les Jardins)</h3>
+        <p>Sal del palacio y piérdete en los jardines diseñados por Le Nôtre. Busca la Fuente de Apolo, el Gran Canal y el Bosquete de la Reina. <strong>Dato clave:</strong> De abril a octubre, los fines de semana hay "Fuentes Musicales" (agua y música clásica).</p>
+
+        <!-- IMAGEN DE LA GALERÍA DE LOS ESPEJOS -->
+        <img loading="lazy" decoding="async" class="article-img-full" src="https://images.unsplash.com/photo-1597923896694-1b821069c702?fm=webp&w=1200&q=80" alt="Galería de los Espejos en Versalles"/>
+        <p class="img-caption">La Galería de los Espejos es el corazón del palacio, con 357 espejos que reflejan la luz de los jardines · © Unsplash</p>
+
+        <h3>3. Los Dominios de Trianón y María Antonieta</h3>
+        <p>Toma el trenecito interno o camina (20 min) hacia el Pequeño Trianón y la Aldea de la Reina. Aquí verás el refugio privado de María Antonieta, con su cabaña rústica y el famoso Templo del Amor. Es la parte más tranquila y fotogénica.</p>
+
+        <!-- TIQETS INLINE WIDGET -->
+        <div class="tiqets-inline-block" id="entradas">
+          <div class="tiqets-inline-header">
+            <span class="tiq-title"> Entradas para el Palacio de Versalles</span>
+            <span class="tiq-badge">Acceso prioritario · Sin colas · Confirmación inmediata</span>
+          </div>
+          <div class="tiqets-cards-grid">
+            <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">👑</span>
+              <span class="tci-body">
+                <span class="tci-name">Passport Versalles</span>
+                <span class="tci-desc">Palacio + Jardines + Trianon · La más completa</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde 30€</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon"></span>
+              <span class="tci-body">
+                <span class="tci-name">Crucero por el Sena + Versalles</span>
+                <span class="tci-desc">Tour de día completo con transporte</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde 85€</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon">🎨</span>
+              <span class="tci-body">
+                <span class="tci-name">Tour guiado en español</span>
+                <span class="tci-desc">Guía experto · Historia y secretos</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde 65€</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+            <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored" class="tiqets-card-inline">
+              <span class="tci-icon"></span>
+              <span class="tci-body">
+                <span class="tci-name">Alquiler de bicicletas</span>
+                <span class="tci-desc">Recorre los jardines a tu ritmo</span>
+              </span>
+              <span class="tci-price">
+                <span class="tci-price-num">Desde 8€</span>
+                <span class="tci-cta">Reservar →</span>
+              </span>
+            </a>
+          </div>
+          <div class="tiqets-inline-footer">
+            <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored">Ver todas las entradas para Versalles →</a>
+            <span>En colaboración con <strong>Tiqets</strong> · Comisión de afiliado incluida</span>
+          </div>
         </div>
 
-        <h2 id="precios">Entradas y precios 2025</h2>
-
-        <table class="price-table">
-          <thead><tr><th>Ticket</th><th>Incluye</th><th>Precio</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Pasaporte</strong></td><td>Palacio + jardines + Trianon + estate</td><td>32€</td></tr>
-            <tr><td><strong>Palacio</strong></td><td>Solo el palacio (Galería de los Espejos + habitaciones)</td><td>21,50€</td></tr>
-            <tr><td><strong>Jardines</strong></td><td>Solo jardines (gratis en invierno)</td><td>10€ (verano)</td></tr>
-            <tr><td><strong>Menores de 18 años</strong></td><td>Todo incluido</td><td>Gratis</td></tr>
-            <tr><td><strong>Con Paris Museum Pass</strong></td><td>Palacio incluido (jardines aparte)</td><td>Incluido</td></tr>
-          </tbody>
-        </table>
-
-        <h2 id="itinerario">Itinerario perfecto para un día</h2>
-
-        <div class="itinerary">
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">8:00</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Sale el tren desde París</div>
-              <p class="itin-desc">Coge el RER C desde Invalides o Musée d'Orsay. A esta hora el tren va bastante vacío. Lleva el billete descargado en el móvil.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">8:45</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Llegada — Desayuno en el pueblo</div>
-              <p class="itin-desc">La ciudad de Versalles tiene una boulangerie excelente a 2 minutos de la estación. Desayuna aquí en lugar de en el palacio, donde los precios son el doble.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">9:00</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Entrada al palacio — primera hora</div>
-              <p class="itin-desc">El palacio abre a las 9:00 AM. Si tienes la reserva online, usa los torniquetes directos y entra sin espera. Los primeros 45 minutos son los más tranquilos del día.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">9:00–11:30</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">El palacio — las habitaciones reales</div>
-              <p class="itin-desc">Sigue el recorrido oficial: apartamentos del Rey, Salón de los Espejos, apartamentos de la Reina. El Salón de los Espejos (72 metros, 357 espejos) es el momento cumbre. A las 11 AM ya empieza a llenarse — aprovecha las primeras horas.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">11:30</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Los jardines de Le Nôtre</div>
-              <p class="itin-desc">800 hectáreas de jardines formales diseñados por André Le Nôtre. Los Grandes Fuentes musicales (sábados y domingos de abril a octubre) son espectaculares. Alquila una bicicleta o un carrito de golf para cubrir más terreno.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">13:30</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Almuerzo — Angelina o picnic</div>
-              <p class="itin-desc">El salón de té Angelina en el palacio es caro pero tiene una terraza con vistas. Alternativa más económica: lleva un picnic de París y cómelo en los jardines — está permitido y es lo que hacen los locales.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">14:30</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Petit Trianon y el Hameau de la Reine</div>
-              <p class="itin-desc">A 20 minutos andando por los jardines. El pequeño palacio privado de María Antonieta y su aldea artificial (donde la reina jugaba a ser pastora) son los espacios más íntimos y fotogénicos de Versalles. La mayoría de visitantes no llega hasta aquí.</p>
-            </div>
-          </div>
-          <div class="itin-step">
-            <div class="itin-time"><div class="itin-hour">17:00</div><div class="itin-dot"></div></div>
-            <div class="itin-body">
-              <div class="itin-title">Regreso a París</div>
-              <p class="itin-desc">Tren RER C de vuelta. Llegas a París sobre las 17:45h con tiempo para cenar tranquilamente.</p>
-            </div>
-          </div>
-        </div>
-
-        <img loading="lazy" decoding="async" class="article-img-full" src="https://picsum.photos/id/1029/700/420" alt="Jardines del Palacio de Versalles"/>
-        <p class="img-caption">Los jardines de Versalles — 800 hectáreas que la mayoría de visitantes no llega a explorar del todo</p>
-
-        <h2 id="consejos">Lo que no debes perderte</h2>
-
-        <h3>El Salón de los Espejos</h3>
-        <p>73 metros de largo, 357 espejos enfrentados a 357 ventanas con vistas a los jardines. Luis XIV lo construyó para deslumbrar a los embajadores extranjeros. Funciona igual 350 años después. La luz de la mañana entrando por las ventanas es la mejor — razón de más para llegar a las 9 AM.</p>
-
-        <h3>El Hameau de la Reine — el secreto mejor guardado</h3>
-        <p>María Antonieta mandó construir una aldea de 12 casitas de campo donde retirarse del protocolo de la corte. Hay un molino, un lago, una granja con animales y jardines ingleses. Es el lugar más tranquilo y fotogénico de todo Versalles. La mayoría de visitantes no llega hasta aquí porque está a 25 minutos andando del palacio.</p>
-
-        <h3>Las Grandes Fuentes Musicales</h3>
-        <p>Los sábados y domingos de abril a octubre, las fuentes de los jardines se activan al ritmo de música barroca. Espectáculo incluido en la entrada a los jardines (10€ separado del palacio). De 11 AM a 5:30 PM. Es una experiencia completamente diferente a los días normales.</p>
-
+        <h2 id="consejos">Consejos de experto para tu visita</h2>
+        
         <div class="tip-box">
-          <strong>📅 El mejor día para ir: martes</strong>
-          <p>Versalles cierra los lunes. El día con menos visitas es el martes. Evita los sábados de verano (Grandes Fuentes + grupos turísticos = el día más masificado). Los meses ideales son marzo-abril y septiembre-octubre.</p>
+          <strong>🎯 Trucos para evitar multitudes:</strong>
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+            <li>Llega a la apertura (9:00 AM) o después de las 3:00 PM.</li>
+            <li>Evita los martes (el palacio está cerrado) y los fines de semana si es posible.</li>
+            <li>Entra por la puerta de la Reina (Grille de la Reine) si hay mucha fila en la entrada principal.</li>
+            <li>Lleva tu propia comida y agua para hacer un picnic en los jardines (hay zonas habilitadas).</li>
+          </ul>
         </div>
+
+        <h3>📱 Descarga la app oficial</h3>
+        <p>La aplicación "Château de Versailles" es gratuita y funciona como audioguía. Incluye mapas interactivos y recorridos temáticos (uno para niños, otro para la Revolución Francesa, etc.).</p>
+
+        <h2 id="presupuesto">Presupuesto para la excursión a Versalles</h2>
+        <ul>
+          <li><strong>Transporte (RER C ida y vuelta):</strong> ~8€</li>
+          <li><strong>Entrada Passport:</strong> ~30€ (gratis para menores de 18 años y residentes UE menores de 26).</li>
+          <li><strong>Comida (picnic o cafetería):</strong> 15-25€</li>
+          <li><strong>Total estimado por persona:</strong> ~55-65€ (sin contar tours guiados).</li>
+        </ul>
+
+        <p>Si quieres ver más opciones de gastos, revisa nuestra guía de <a href="presupuesto-europa.html">Presupuesto para viajar por Europa</a>.</p>
 
       </div>
 
-        <!-- OMIO — Trenes y buses Europa -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
-          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
-            <div>
-              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
-              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
-            </div>
+      <!-- GYG Inline Widget — Versalles -->
+      <div style="margin:2.5rem 0;">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+          <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+            <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades en Versalles</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Afiliado · 8% comisión</span>
           </div>
-          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
-            <div>
-              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
-              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
-              </div>
+          <div style="padding:1rem;">
+            <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                 data-gyg-location-id="145"
+                 data-gyg-locale="es"
+                 data-gyg-type="activities"
+                 data-gyg-number-of-items="4"
+                 data-gyg-partner-id="1ABLZMR"
+                 data-gyg-q="Versailles Palace">
             </div>
-            <div style="text-align:center;flex-shrink:0;">
-              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
-              <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
-            <h3 id="1698061" style="margin:0;font-size:0;line-height:0;">
-              <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
-                 style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-                Buscar en Omio →
-              </a>
-            </h3>
-            <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" border="0"/>
-            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
+            <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+              Actividades por <a href="https://www.getyourguide.es/paris-l145/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+            </p>
           </div>
         </div>
-        <!-- /OMIO -->
-
-
-        <!-- HOTMART: Audioguía Turística: París -->
-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎧</div>
-            <div style="flex:1">
-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Audioguía Turística: París</p>
-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
-            </div>
-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $197 MXN</p>
-            </div>
-          </div>
-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
-            <div style="flex:1">
-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">Incluye la visita completa a Versalles: la Galería de los Espejos, los jardines y la historia del Rey Sol narrada en español.</p>
-              
-            </div>
-          </div>
-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
-            <a rel="sponsored" href="https://go.hotmart.com/T105319543Q" target="_blank"
-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
-              Ver en Hotmart →
-            </a>
-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días · Sin suscripción</span>
+      </div>
+      
+      <!-- OMIO — Trenes y buses Europa -->
+      <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2rem 0;">
+        <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
+          <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
+          <div>
+            <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
+            <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
           </div>
         </div>
-        <!-- /HOTMART -->
+        <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
+          <div>
+            <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
+              <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:var(--warm);border:1px solid var(--border);color:var(--muted);">800+ operadores</span>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0;">
+            <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
+            <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
+          </div>
+        </div>
+        <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+          <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+            Buscar en Omio →
+          </a>
+          <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" alt="" border="0"/>
+          <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado · Sin coste adicional para el usuario</span>
+        </div>
+      </div>
 
+      <div class="ad-rect-wrap" style="margin:2.5rem 0"><div class="ad-rect">📢 AdSense 300×250</div></div>
     </main>
 
     <aside class="article-sidebar">
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">📋 En este artículo</div>
+      <div class="sidebar-card reveal"><div class="sidebar-card-header">📋 Contenidos</div><div class="sidebar-card-body"><ul class="toc"><li><a href="#transporte">Cómo llegar</a></li><li><a href="#que-ver">Qué ver</a></li><li><a href="#entradas">Entradas</a></li><li><a href="#consejos">Consejos</a></li><li><a href="#presupuesto">Presupuesto</a></li></ul></div></div>
+      
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎫 Entradas prioritarias</div>
         <div class="sidebar-card-body">
-          <ul class="toc">
-            <li><a href="#como-llegar">🚆 Cómo llegar</a></li>
-            <li><a href="#precios">🎟️ Precios 2025</a></li>
-            <li><a href="#itinerario">🗺️ Itinerario del día</a></li>
-            <li><a href="#consejos">💡 No te pierdas</a></li>
-          </ul>
+          <p>Evita las filas de más de 1 hora comprando tu Passport online.</p>
+          <a href="https://www.tiqets.com/es/paris-l14544/" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Comprar entrada →</a>
         </div>
       </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">🎟️ Entrada a Versalles</div>
+      
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🏨 Hoteles cerca de Versalles</div>
         <div class="sidebar-card-body">
-          <p>Reserva tu entrada con acceso prioritario y evita las colas de 2 horas.</p>
-          <a href="https://www.tiqets.com/es/versailles-c75184/?partner=TU_TIQETS_PARTNER_ID" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Comprar entrada →</a>
+          <p>¿Prefieres quedarte a dormir? Encuentra hoteles con encanto cerca del palacio.</p>
+          <a href="https://www.booking.com/city/fr/versailles.html?aid=TU_ID" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver hoteles →</a>
         </div>
       </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">🏨 Hoteles en París</div>
-        <div class="sidebar-card-body">
-          <p>Alójate en París y haz la excursión de un día cómodamente.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=6776&awinaffid=TU_ID&p=https://www.booking.com/city/fr/paris.es.html" target="_blank" rel="noopener sponsored" class="sidebar-booking-btn">Ver hoteles →</a>
+
+      <!-- GYG Widget Versalles -->
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-header">🎟️ Tours guiados</div>
+        <div class="sidebar-card-body" style="padding:.8rem;">
+          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id="145" data-gyg-locale="es" data-gyg-type="city" data-gyg-number-of-items="3" data-gyg-partner-id="1ABLZMR"></div>
+          <p style="font-size:.68rem;color:var(--muted);text-align:center;margin-top:.5rem;">Actividades con <a href="https://www.getyourguide.es" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a></p>
         </div>
       </div>
+      
+      <div class="ad-rect" style="width:100%;height:250px">📢 AdSense 300×250</div>
     </aside>
   </div>
 
   <section class="related-section">
-    <div style="max-width:1100px;margin:0 auto;">
-      <div class="section-header" style="text-align:center;">
-        <p class="section-tag">Sigue explorando</p>
-        <h2 class="section-title">Más sobre París</h2>
-      </div>
-      <div class="articles-grid">
-        <article class="article-card reveal">
-          <div class="article-img" style="background-image:url('https://picsum.photos/id/1029/480/340')"></div>
-          <div class="article-body">
-            <p class="article-tag">Francia · Guía</p>
-            <h3 class="article-title">Guía completa de París para 2025</h3>
-            <p class="article-excerpt">Todo lo que necesitas saber para tu viaje a París.</p>
-            <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
-          </div>
-        </article>
-        <article class="article-card reveal">
-          <div class="article-img" style="background-image:url('https://picsum.photos/id/1050/480/340')"></div>
-          <div class="article-body">
-            <p class="article-tag">París · Cultura</p>
-            <h3 class="article-title">El Louvre en 3 horas</h3>
-            <p class="article-excerpt">Ruta optimizada para ver lo esencial sin agotarte.</p>
-            <div class="article-footer"><span>5 min</span><a href="paris-louvre.html" class="read-more">Leer →</a></div>
-          </div>
-        </article>
-        <article class="article-card reveal">
-          <div class="article-img" style="background-image:url('https://picsum.photos/id/1060/480/340')"></div>
-          <div class="article-body">
-            <p class="article-tag">Francia · Gastronomía</p>
-            <h3 class="article-title">Los mejores bistrós de París</h3>
-            <p class="article-excerpt">Donde comen los parisinos, lejos de las trampas turísticas.</p>
-            <div class="article-footer"><span>7 min</span><a href="paris-bistros.html" class="read-more">Leer →</a></div>
-          </div>
-        </article>
-      </div>
+    <div class="section-header reveal"><p class="section-tag">Sigue explorando</p><h2 class="section-title">Artículos relacionados</h2></div>
+    <div class="articles-grid" style="max-width:1200px;margin:0 auto">
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Guía completa</p>
+          <h3 class="article-title">Guía completa de París para 2026</h3>
+          <p class="article-excerpt">El Louvre, Montmartre y los mejores bistrós te esperan en la Ciudad de la Luz.</p>
+          <div class="article-footer"><span>12 min</span><a href="paris.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Francia · Cultura</p>
+          <h3 class="article-title">Guía del Museo del Louvre 2026</h3>
+          <p class="article-excerpt">Entradas, Mona Lisa, obras imprescindibles y consejos de expertos.</p>
+          <div class="article-footer"><span>10 min</span><a href="paris-louvre.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&w=600&q=80')"></div>
+        <div class="article-body">
+          <p class="article-tag">Europa · Multi-destino</p>
+          <h3 class="article-title">Itinerario de 10 días: París, Suiza y Roma</h3>
+          <p class="article-excerpt">El viaje soñado hecho realidad: descubre cómo recorrer tres destinos europeos en 10 días.</p>
+          <div class="article-footer"><span>12 min</span><a href="itinerario-10-dias-europa.html" class="read-more">Leer →</a></div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <footer id="footer"></footer>
-  <div class="cookie-banner hidden" id="cookieBanner">
-    <p>Usamos cookies propias y de terceros. <a href="../privacidad.html">Política de privacidad</a></p>
-    <div class="cookie-actions">
-      <button onclick="acceptCookies()" class="btn-primary" style="padding:.6rem 1.2rem;font-size:.8rem;">Aceptar</button>
-      <button onclick="dismissCookies()" style="background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.2rem;border-radius:2px;cursor:pointer;font-size:.8rem;">Solo necesarias</button>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="../index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+          <a href="#" class="social-btn" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Destinos</h4><ul>
+        <li><a href="paris.html">París</a></li>
+        <li><a href="roma.html">Roma</a></li>
+        <li><a href="barcelona.html">Barcelona</a></li>
+        <li><a href="lisboa.html">Lisboa</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="amsterdam.html">Ámsterdam</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Categorías</h4><ul>
+        <li><a href="paris-louvre.html">Cultura</a></li>
+        <li><a href="paris-versalles.html">Excursiones</a></li>
+        <li><a href="gastronomia-europa.html">Gastronomía</a></li>
+        <li><a href="presupuesto-europa.html">Presupuesto</a></li>
+        <li><a href="visa-schengen-mexico.html">Visa Schengen</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Nosotros</h4><ul>
+        <li><a href="../sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="../sobre-nosotros.html">Contacto</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Voyage Lumière</span>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Usamos cookies propias y de terceros. <a href="../cookies.html" style="color:var(--gold)">Más info</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" id="cookieAccept">Aceptar</button>
+      <button class="cookie-dismiss" id="cookieDismiss">Rechazar</button>
     </div>
   </div>
+
   <script>
-    window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
-    document.getElementById('mobileBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-    const observer=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-    const banner=document.getElementById('cookieBanner');
-    window.addEventListener('load',function(){
-      if(!localStorage.getItem('cookieConsent')){
-        setTimeout(()=>{banner.style.display='flex';requestAnimationFrame(()=>banner.classList.add('visible'));},1200);
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          navbar.classList.toggle('scrolled', window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('cookieAccept');
+    const dismissBtn = document.getElementById('cookieDismiss');
+
+    window.addEventListener('load', function() {
+      if(!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          banner.style.display = 'flex';
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }, 1200);
       }
     });
-    function acceptCookies(){localStorage.setItem('cookieConsent','accepted');banner.classList.add('hidden')}
-    function dismissCookies(){localStorage.setItem('cookieConsent','dismissed');banner.classList.add('hidden')}
-  </script>
 
-  <!-- Klaviyo — Viewed Product tracking -->
-  <script>
+    function hideBanner(){
+      banner.classList.add('hidden');
+      setTimeout(function(){ banner.style.display='none'; }, 420);
+    }
+    
+    acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','accepted'); hideBanner(); });
+    dismissBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent','dismissed'); hideBanner(); });
+
+    // Klaviyo — Viewed Product tracking
     window.addEventListener('load', function() {
-      if (typeof klaviyo !== 'undefined') {
+      window.klaviyo = window.klaviyo || [];
+      if (typeof klaviyo !== 'undefined' && Array.isArray(klaviyo)) {
         klaviyo.push(['track', 'Viewed Product', {
-          "Name":       "Versalles — París",
+          "Name":       "Excursión a Versalles 2026",
           "URL":        "https://voyagelumiere.indevs.in/articles/paris-versalles.html",
-          "Categories": ["Europa", "Francia", "Monumentos"],
-          "ImageURL":   "https://voyagelumiere.indevs.in/og-paris.jpg"
+          "Categories": ["Europa", "Francia", "Excursiones", "París"],
+          "ImageURL":   "https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1200&q=80"
         }]);
       }
     });
   </script>
-  <!-- /Klaviyo -->
+  <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="1ABLZMR"></script>
 </body>
 </html>
