@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recursos y Herramientas de Viaje 2026 — Voyage Lumière</title>
+  <meta name="description" content="Las mejores herramientas, apps y servicios que usamos para viajar por Europa: seguros, alojamiento, transporte, eSIM y entradas sin colas."/>
+  <link rel="canonical" href="https://voyagelumiere.indevs.in/recursos.html"/>
+
+  <style id="critical-css">
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2B4C; --gold: #C5A059; --gold-lt: #E8D5A3; --cream: #FDFBF7;
+      --warm: #F5F0E8; --ink: #1A1A1A; --muted: #6B6460; --border: #E8E2D8;
+      --ff-head: 'Playfair Display', serif; --ff-body: 'Lato', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 4vw; height:72px; background:rgba(253,251,247,.95); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
+    .nav-logo { font-family:var(--ff-head); font-size:1.45rem; font-weight:700; color:var(--navy); }
+    .nav-logo span { color:var(--gold); }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a { font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--navy); }
+    .nav-cta { background:var(--navy); color:#fff !important; padding:.52rem 1.4rem; border-radius:2px; font-size:.78rem !important; }
+    .nav-mobile-btn { display:none; background:none; border:none; cursor:pointer; flex-direction:column; gap:5px; padding:4px; }
+    .nav-mobile-btn span { display:block; width:24px; height:2px; background:var(--navy); }
+
+    .page-header { padding: 8rem 5vw 4rem; text-align: center; background: var(--warm); border-bottom: 1px solid var(--border); }
+    .page-header h1 { font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 1rem; }
+    .page-header p { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+    .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 4rem auto; padding: 0 5vw; }
+    .resource-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: transform 0.3s, box-shadow 0.3s; }
+    .resource-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(26,43,76,0.08); }
+    .resource-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .resource-card h3 { font-family: var(--ff-head); font-size: 1.4rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .resource-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .resource-btn { display: inline-block; background: var(--gold); color: var(--navy); padding: 0.7rem 1.5rem; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.3s; width: 100%; text-align: center; }
+    .resource-btn:hover { background: var(--gold-lt); }
+    .affiliate-disclaimer { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 1rem; font-style: italic; }
+
+    .newsletter-section { background: var(--navy); color: #fff; padding: 4rem 5vw; text-align: center; margin-top: 4rem; }
+    .newsletter-section h2 { font-family: var(--ff-head); font-size: 2rem; margin-bottom: 1rem; }
+    .newsletter-form { display: flex; gap: 1rem; max-width: 500px; margin: 2rem auto 0; flex-wrap: wrap; justify-content: center; }
+    .newsletter-input { flex: 1; min-width: 250px; padding: 0.8rem 1rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-family: var(--ff-body); }
+    .newsletter-input:focus { outline: none; border-color: var(--gold); }
+
+    footer { background: #111820; color: rgba(255,255,255,.55); padding: 3rem 5vw 2rem; text-align: center; font-size: 0.85rem; }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--border); padding: 1.5rem 4vw; gap: 1.2rem; }
+      .nav-mobile-btn { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a class="nav-logo" href="index.html"><span>Voyage</span> Lumière</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#destinos">Destinos</a></li>
+      <li><a href="articles/presupuesto-europa.html">Consejos</a></li>
+      <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-header">
+    <h1>Nuestras Herramientas de Viaje Favoritas</h1>
+    <p>Después de años recorriendo Europa, estas son las apps, servicios y plataformas que usamos religiosamente para ahorrar dinero, tiempo y dolores de cabeza. Todas han sido probadas por nuestro equipo.</p>
+  </header>
+
+  <main class="resources-grid">
+    
+    <!-- SEGURO DE VIAJE -->
+    <div class="resource-card">
+      <div class="resource-icon">🛡️</div>
+      <h3>IATI Seguros</h3>
+      <p>El único seguro que cumple al 100% con los requisitos de la Visa Schengen (30.000€ de cobertura). Incluye asistencia en español 24/7 y no tiene copagos.</p>
+      <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored" class="resource-btn">Obtener 5% de descuento</a>
+      <p class="affiliate-disclaimer">Enlace de afiliado · Sin costo extra para ti</p>
+    </div>
+
+    <!-- ALOJAMIENTO -->
+    <div class="resource-card">
+      <div class="resource-icon">🏨</div>
+      <h3>Booking.com</h3>
+      <p>La plataforma más confiable para reservar hoteles y apartamentos en Europa. Su política de cancelación gratuita es nuestra salvación cuando los planes cambian.</p>
+      <a href="https://www.dpbolvw.net/click-101701931-17314585" target="_blank" rel="noopener sponsored" class="resource-btn">Buscar alojamiento</a>
+      <p class="affiliate-disclaimer">Enlace de afiliado · Sin costo extra para ti</p>
+    </div>
+
+    <!-- TRANSPORTE -->
+    <div class="resource-card">
+      <div class="resource-icon">🚆</div>
+      <h3>Omio</h3>
+      <p>La mejor app para comparar y reservar trenes, autobuses y vuelos low-cost en toda Europa en un solo lugar. Todo en español y con boleto digital.</p>
+      <a href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank" rel="noopener sponsored" class="resource-btn">Comparar rutas y precios</a>
+      <p class="affiliate-disclaimer">Enlace de afiliado · Sin costo extra para ti</p>
+    </div>
+
+    <!-- INTERNET / eSIM -->
+    <div class="resource-card">
+      <div class="resource-icon">📱</div>
+      <h3>Airalo (eSIM)</h3>
+      <p>Olvídate del roaming caro o de buscar WiFi. Compra un plan de datos regional para Europa desde tu celular, actívalo al aterrizar y listo. ¡Sin chips físicos!</p>
+      <a href="https://airalo.tpx.gr/YT79qcFj" target="_blank" rel="noopener sponsored" class="resource-btn">Obtener tu eSIM</a>
+      <p class="affiliate-disclaimer">Enlace de afiliado · Sin costo extra para ti</p>
+    </div>
+
+    <!-- ENTRADAS Y TOURS -->
+    <div class="resource-card">
+      <div class="resource-icon">🎟️</div>
+      <h3>Tiqets & GetYourGuide</h3>
+      <p>Nuestras plataformas favoritas para comprar entradas a museos (Louvre, Sagrada Familia) y tours guiados. Confirmación inmediata y acceso prioritario para saltar filas.</p>
+      <a href="https://www.tiqets.com/es/" target="_blank" rel="noopener sponsored" class="resource-btn">Ver entradas disponibles</a>
+      <p class="affiliate-disclaimer">Enlace de afiliado · Sin costo extra para ti</p>
+    </div>
+
+    <!-- TRÁMITES -->
+    <div class="resource-card">
+      <div class="resource-icon">📝</div>
+      <h3>Guía de Visa Schengen</h3>
+      <p>¿No estás seguro de los requisitos? Nuestra guía paso a paso te explica cómo conseguir cita en BLS/VFS, qué seguro necesitas y cómo armar tu expediente sin errores.</p>
+      <a href="articles/visa-schengen-mexico.html" class="resource-btn" style="background: var(--navy); color: #fff;">Leer la guía gratuita</a>
+    </div>
+
+  </main>
+
+  <section class="newsletter-section">
+    <h2>¿Quieres nuestro Checklist de Equipaje en PDF?</h2>
+    <p>Suscríbete a nuestra newsletter y recibe gratis la lista definitiva de lo que debes (y no debes) llevar en tu maleta a Europa.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias! Revisa tu correo para descargar el PDF.');">
+      <input type="email" placeholder="Tu correo electrónico" class="newsletter-input" required/>
+      <button type="submit" class="resource-btn" style="width: auto; border: none; cursor: pointer;">Enviar PDF</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Voyage Lumière. Todos los derechos reservados.</p>
+    <p style="margin-top: 0.5rem;"><a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a> · <a href="aviso-legal.html">Aviso Legal</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('mobileBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+  </script>
+</body>
+</html>
