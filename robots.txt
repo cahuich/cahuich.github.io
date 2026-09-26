@@ -1,9 +1,8 @@
+# Robots.txt para Voyage Lumière
+# Permite a todos los motores de búsqueda rastrear todo el sitio.
+
 User-agent: *
 Allow: /
 
-Disallow: /privacidad.html
-Disallow: /cookies.html
-Disallow: /aviso-legal.html
-Disallow: /afiliados.html
-
+# Ubicación del Sitemap XML
 Sitemap: https://voyagelumiere.indevs.in/sitemap.xml
