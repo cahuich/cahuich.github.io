@@ -1,122 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://voyagelumiere.indevs.in/</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- PÁGINA DE RECURSOS (Hub de afiliados) -->
   <url>
-    <loc>https://voyagelumiere.indevs.in/sobre-nosotros.html</loc>
-    <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/paris.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/recursos.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- GUÍAS DE CIUDADES PRINCIPALES -->
   <url>
-    <loc>https://voyagelumiere.indevs.in/articles/roma.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/articles/paris.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://voyagelumiere.indevs.in/articles/barcelona.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/roma.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/londres.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://voyagelumiere.indevs.in/articles/lisboa.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/amsterdam.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍAS TEMÁTICAS Y DE TRÁMITES -->
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://voyagelumiere.indevs.in/articles/paris-louvre.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/paris-bistros.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/paris-versalles.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/gastronomia-europa.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/naturaleza-europa.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/primavera-europa.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://voyagelumiere.indevs.in/articles/presupuesto-europa.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html</loc>
-    <lastmod>2025-03-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/articles/gastronomia-europa.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-
-  <url>
-    <loc>https://voyagelumiere.indevs.in/articles/londres.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://voyagelumiere.indevs.in/articles/paris-ninos.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/articles/naturaleza-europa.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://voyagelumiere.indevs.in/articles/amsterdam.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://voyagelumiere.indevs.in/articles/primavera-europa.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
+
+  <!-- GUÍAS ESPECÍFICAS DE ATRACCIONES Y EXCURSIONES -->
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-louvre.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/paris-versalles.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- PÁGINAS LEGALES Y CORPORATIVAS -->
+  <url>
+    <loc>https://voyagelumiere.indevs.in/sobre-nosotros.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/privacidad.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/cookies.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://voyagelumiere.indevs.in/aviso-legal.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
