@@ -1,0 +1,330 @@
+From f144a93b91e41b7f6bb87711cd0bc4292accd700 Mon Sep 17 00:00:00 2001
+From: SEO Audit Agent <seo-agent@example.com>
+Date: Fri, 2 Oct 2026 16:38:54 +0000
+Subject: [PATCH] SEO: shorten titles to <=60 chars, 2026 year consistency,
+ ETIAS title, fix broken Lisboa image URL, cookies canonical
+---
+ articles/amsterdam.html                 | 4 ++--
+ articles/gastronomia-europa.html        | 4 ++--
+ articles/itinerario-10-dias-europa.html | 4 ++--
+ articles/lisboa.html                    | 4 ++--
+ articles/londres.html                   | 4 ++--
+ articles/paris-louvre.html              | 4 ++--
+ articles/paris-ninos.html               | 4 ++--
+ articles/paris-versalles.html           | 4 ++--
+ articles/paris.html                     | 4 ++--
+ articles/presupuesto-europa.html        | 4 ++--
+ articles/roma.html                      | 4 ++--
+ articles/visa-schengen-mexico.html      | 4 ++--
+ cookies.html                            | 1 +
+ index.html                              | 6 +++---
+ 14 files changed, 28 insertions(+), 27 deletions(-)
+diff --git a/articles/amsterdam.html b/articles/amsterdam.html
+index 7fddb96..6643c7a 100644
+--- a/articles/amsterdam.html
++++ b/articles/amsterdam.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía completa de Ámsterdam 2026: Qué ver, canales y trucos | Voyage Lumière</title>
++  <title>Guía de Ámsterdam 2026: qué ver y trucos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="La guía definitiva para visitar Ámsterdam en 2026: canales, Rijksmuseum, Van Gogh, la Casa de Ana Frank, barrios auténticos y los mejores coffeeshops."/>
+@@ -284,7 +284,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/amsterdam.html"/>
+-  <meta property="og:title" content="Guía completa de Ámsterdam 2026: Qué ver, canales y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Guía de Ámsterdam 2026: qué ver y trucos | Voyage Lumière"/>
+   <meta property="og:description" content="La guía definitiva para visitar Ámsterdam en 2026: canales, Rijksmuseum, Van Gogh, la Casa de Ana Frank, barrios auténticos y los mejores coffeeshops."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/gastronomia-europa.html b/articles/gastronomia-europa.html
+index cc7ac8c..e4ec6be 100644
+--- a/articles/gastronomia-europa.html
++++ b/articles/gastronomia-europa.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Gastronomía Europea 2026: Los mejores platos y dónde comerlos | Voyage Lumière</title>
++  <title>Gastronomía europea: mejores platos 2026 | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="Descubre los platos imprescindibles de Europa: pasta italiana, croissants franceses, tapas españolas y más. Guía gastronómica 2026 con los mejores restaurantes."/>
+@@ -264,7 +264,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/gastronomia-europa.html"/>
+-  <meta property="og:title" content="Gastronomía Europea 2026: Los mejores platos y dónde comerlos | Voyage Lumière"/>
++  <meta property="og:title" content="Gastronomía europea: mejores platos 2026 | Voyage Lumière"/>
+   <meta property="og:description" content="Descubre los platos imprescindibles de Europa: pasta italiana, croissants franceses, tapas españolas y más. Guía gastronómica 2026 con los mejores restaurantes."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/itinerario-10-dias-europa.html b/articles/itinerario-10-dias-europa.html
+index 87a1a78..b2317fd 100644
+--- a/articles/itinerario-10-dias-europa.html
++++ b/articles/itinerario-10-dias-europa.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Itinerario de 10 días en Europa: París, Suiza y Roma 2026 | Voyage Lumière</title>
++  <title>Itinerario 10 días Europa: París, Suiza, Roma | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="El viaje soñado hecho realidad: descubre cómo recorrer París, los Alpes suizos y Roma en 10 días. Itinerario optimizado, presupuestos reales y tips de transporte en tren.">
+@@ -248,7 +248,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/itinerario-10-dias-europa.html"/>
+-  <meta property="og:title" content="Itinerario de 10 días en Europa: París, Suiza y Roma 2026 | Voyage Lumière"/>
++  <meta property="og:title" content="Itinerario 10 días Europa: París, Suiza, Roma | Voyage Lumière"/>
+   <meta property="og:description" content="El viaje soñado hecho realidad: descubre cómo recorrer París, los Alpes suizos y Roma en 10 días. Itinerario optimizado, presupuestos reales y tips de transporte en tren."/>
+   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-itinerario-europa.jpg"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/lisboa.html b/articles/lisboa.html
+index afc66fe..8b4685b 100644
+--- a/articles/lisboa.html
++++ b/articles/lisboa.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
++  <title>Guía de Lisboa 2026: qué ver y trucos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge, y presupuestos reales."/>
+@@ -276,7 +276,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/lisboa.html"/>
+-  <meta property="og:title" content="Guía completa de Lisboa 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Guía de Lisboa 2026: qué ver y trucos | Voyage Lumière"/>
+   <meta property="og:description" content="La guía definitiva para visitar Lisboa en 2026: itinerarios por barrios, los mejores pasteles de Belém, cómo evitar filas en la Torre de Belém y el Castillo de São Jorge, y presupuestos reales."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/londres.html b/articles/londres.html
+index 66de3f2..084b1b8 100644
+--- a/articles/londres.html
++++ b/articles/londres.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía completa de Londres 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
++  <title>Guía de Londres 2026: qué ver y trucos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="La guía definitiva para visitar Londres en 2026: itinerarios por barrios, los mejores pubs, cómo evitar filas en la Torre de Londres y el British Museum, y presupuestos reales."/>
+@@ -276,7 +276,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/londres.html"/>
+-  <meta property="og:title" content="Guía completa de Londres 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Guía de Londres 2026: qué ver y trucos | Voyage Lumière"/>
+   <meta property="og:description" content="La guía definitiva para visitar Londres en 2026: itinerarios por barrios, los mejores pubs, cómo evitar filas en la Torre de Londres y el British Museum, y presupuestos reales."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/paris-louvre.html b/articles/paris-louvre.html
+index d07a67c..c398c69 100644
+--- a/articles/paris-louvre.html
++++ b/articles/paris-louvre.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía del Museo del Louvre 2026: Entradas, Mona Lisa y trucos | Voyage Lumière</title>
++  <title>Louvre 2026: entradas sin filas y Mona Lisa | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="Todo lo que necesitas saber para visitar el Museo del Louvre en 2026: cómo evitar filas, ver la Mona Lisa, obras imprescindibles y consejos de expertos."/>
+@@ -272,7 +272,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris-louvre.html"/>
+-  <meta property="og:title" content="Guía del Museo del Louvre 2026: Entradas, Mona Lisa y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Louvre 2026: entradas sin filas y Mona Lisa | Voyage Lumière"/>
+   <meta property="og:description" content="Todo lo que necesitas saber para visitar el Museo del Louvre en 2026: cómo evitar filas, ver la Mona Lisa, obras imprescindibles y consejos de expertos."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?fm=webp&w=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/paris-ninos.html b/articles/paris-ninos.html
+index e77ff54..2d11ad5 100644
+--- a/articles/paris-ninos.html
++++ b/articles/paris-ninos.html
+@@ -21,7 +21,7 @@
+   <link rel="dns-prefetch" href="https://www.tiqets.com"/>
+   <link rel="dns-prefetch" href="https://www.awin1.com"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+-  <title>París con niños 2025: la guía definitiva para familias — Voyage Lumière</title>
++  <title>París con niños 2026: guía para familias | Voyage Lumière</title>
+   <meta name="description" content="París con niños paso a paso: los mejores museos, parques y actividades para toda la familia. Itinerario de 5 días, consejos prácticos y presupuesto real."/>
+   <meta name="keywords" content="París con niños, París en familia, actividades niños París, viaje familiar Europa, Torre Eiffel niños"/>
+ 
+@@ -43,7 +43,7 @@
+   <!-- SEO -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris-ninos.html"/>
+-  <meta property="og:title" content="París con niños 2025: la guía definitiva para familias"/>
++  <meta property="og:title" content="París con niños 2026: guía para familias | Voyage Lumière"/>
+   <meta property="og:description" content="Los mejores museos, parques y actividades para toda la familia en París. Itinerario de 5 días y presupuesto real."/>
+   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-paris-ninos.jpg"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/paris-versalles.html b/articles/paris-versalles.html
+index cd98e08..56fc8ba 100644
+--- a/articles/paris-versalles.html
++++ b/articles/paris-versalles.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Excursión a Versalles desde París 2026: Guía completa y trucos | Voyage Lumière</title>
++  <title>Versalles desde París 2026: entradas y guía | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio."/>
+@@ -272,7 +272,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris-versalles.html"/>
+-  <meta property="og:title" content="Excursión a Versalles desde París 2026: Guía completa y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Versalles desde París 2026: entradas y guía | Voyage Lumière"/>
+   <meta property="og:description" content="Todo lo que necesitas para tu excursión a Versalles desde París en 2026: cómo llegar en RER C, entradas con acceso prioritario, qué ver en los jardines y el Palacio."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1565802526946-1a727e0a0e33?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/paris.html b/articles/paris.html
+index 893af0a..1f5da1e 100644
+--- a/articles/paris.html
++++ b/articles/paris.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía completa de París 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
++  <title>Guía de París 2026: qué ver, comer y trucos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="La guía definitiva para visitar París en 2026: itinerarios por barrios, los mejores bistrós, cómo evitar filas en el Louvre y la Torre Eiffel, y presupuestos reales."/>
+@@ -278,7 +278,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/paris.html"/>
+-  <meta property="og:title" content="Guía completa de París 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Guía de París 2026: qué ver, comer y trucos | Voyage Lumière"/>
+   <meta property="og:description" content="La guía definitiva para visitar París en 2026: itinerarios por barrios, los mejores bistrós, cómo evitar filas en el Louvre y la Torre Eiffel, y presupuestos reales."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/presupuesto-europa.html b/articles/presupuesto-europa.html
+index c4351e2..5854cf1 100644
+--- a/articles/presupuesto-europa.html
++++ b/articles/presupuesto-europa.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Presupuesto Europa 2026: Cuánto cuesta viajar por país | Voyage Lumière</title>
++  <title>Cuánto cuesta viajar a Europa 2026 en pesos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="Guía completa de presupuestos para viajar por Europa en 2026: cuánto cuesta por país, tips para ahorrar, transporte económico y alojamiento barato."/>
+@@ -262,7 +262,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/presupuesto-europa.html"/>
+-  <meta property="og:title" content="Presupuesto Europa 2026: Cuánto cuesta viajar por país | Voyage Lumière"/>
++  <meta property="og:title" content="Cuánto cuesta viajar a Europa 2026 en pesos | Voyage Lumière"/>
+   <meta property="og:description" content="Guía completa de presupuestos para viajar por Europa en 2026: cuánto cuesta por país, tips para ahorrar, transporte económico y alojamiento barato."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1488646953014-85cb44e25828?fm=webp&w=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/roma.html b/articles/roma.html
+index ef67372..6c5b19e 100644
+--- a/articles/roma.html
++++ b/articles/roma.html
+@@ -27,7 +27,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR -->
+-  <title>Guía completa de Roma 2026: Qué ver, dónde comer y trucos | Voyage Lumière</title>
++  <title>Guía de Roma 2026: qué ver, comer y trucos | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano, y presupuestos reales."/>
+@@ -276,7 +276,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/roma.html"/>
+-  <meta property="og:title" content="Guía completa de Roma 2026: Qué ver, dónde comer y trucos | Voyage Lumière"/>
++  <meta property="og:title" content="Guía de Roma 2026: qué ver, comer y trucos | Voyage Lumière"/>
+   <meta property="og:description" content="La guía definitiva para visitar Roma en 2026: itinerarios por barrios, los mejores restaurantes de pasta, cómo evitar filas en el Coliseo y el Vaticano, y presupuestos reales."/>
+   <meta property="og:image" content="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=1200&q=80"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/articles/visa-schengen-mexico.html b/articles/visa-schengen-mexico.html
+index 0d8f32e..7b45dc2 100644
+--- a/articles/visa-schengen-mexico.html
++++ b/articles/visa-schengen-mexico.html
+@@ -28,7 +28,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR (Máx 60 caracteres) -->
+-  <title>Visa Schengen para Mexicanos 2026: Requisitos y Citas | Voyage Lumière</title>
++  <title>ETIAS y Schengen para mexicanos 2026 | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada (Máx 155 caracteres) -->
+   <meta name="description" content="¿Necesitas visa Schengen siendo mexicano? Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio.">
+@@ -249,7 +249,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph (CORREGIDO A 2026) -->
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html"/>
+-  <meta property="og:title" content="Visa Schengen para Mexicanos 2026: Requisitos y Citas | Voyage Lumière"/>
++  <meta property="og:title" content="ETIAS y Schengen para mexicanos 2026 | Voyage Lumière"/>
+   <meta property="og:description" content="¿Necesitas visa Schengen siendo mexicano? Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio."/>
+   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-visa-schengen.jpg"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+diff --git a/cookies.html b/cookies.html
+index 125306b..9639f0d 100644
+--- a/cookies.html
++++ b/cookies.html
+@@ -8,6 +8,7 @@
+   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"/></noscript>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Política de Cookies — Voyage Lumière</title>
++  <link rel="canonical" href="https://voyagelumiere.indevs.in/cookies.html"/>
+   <meta name="description" content="Qué cookies usamos, para qué y cómo puedes controlarlas."/>
+   <meta name="robots" content="noindex, follow"/>
+   <style id="critical-css">
+diff --git a/index.html b/index.html
+index 71a487e..13d05f4 100644
+--- a/index.html
++++ b/index.html
+@@ -28,7 +28,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <!-- Título optimizado para CTR (Actualizado a 2026) -->
+-  <title>Guía de viajes a Europa desde México 2027 — Voyage Lumière</title>
++  <title>Guía de viajes a Europa desde México 2026 | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada -->
+   <meta name="description" content="Guías completas de París, Roma, Barcelona, Lisboa, Londres y Ámsterdam. Consejos de viaje, presupuestos reales, Visa Schengen y entradas sin colas para viajeros mexicanos."/>
+@@ -211,7 +211,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Open Graph (Actualizado a 2026) -->
+   <meta property="og:type" content="website"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/"/>
+-  <meta property="og:title" content="Guía de viajes a Europa desde México 2026 — Voyage Lumière"/>
++  <meta property="og:title" content="Guía de viajes a Europa desde México 2026 | Voyage Lumière"/>
+   <meta property="og:description" content="Guías completas de París, Roma, Barcelona, Lisboa, Londres y Ámsterdam. Consejos de viaje, presupuestos reales y entradas sin colas."/>
+   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-home.jpg"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+@@ -341,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+         </div>
+       </a>
+       <a href="articles/lisboa.html" class="destination-card reveal">
+-        <img src="https://images.unsplash.com/photo-1697748525265-7431cba075b6??fm=webp&w=600&q=80" alt="Lisboa" loading="lazy"/>
++        <img src="https://images.unsplash.com/photo-1697748525265-7431cba075b6?fm=webp&w=600&q=80" alt="Lisboa" loading="lazy"/>
+         <div class="destination-info">
+           <h3>Lisboa</h3>
+           <span>Portugal</span>
+-- 
+2.47.3
