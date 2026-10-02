@@ -147,4 +147,11 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/seguro-viaje-europa.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
