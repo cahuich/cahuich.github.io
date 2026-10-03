@@ -118,6 +118,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- NUEVA PÁGINA: ENTRADAS TORRE EIFFEL -->
+  <url>
+    <loc>https://voyagelumiere.indevs.in/articles/entradas-torre-eiffel.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- PÁGINAS LEGALES Y CORPORATIVAS -->
   <url>
     <loc>https://voyagelumiere.indevs.in/sobre-nosotros.html</loc>

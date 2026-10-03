@@ -26,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- Título optimizado para CTR (Actualizado a 2026) -->
-  <title>Guía de viajes a Europa desde México 2027 — Voyage Lumière</title>
+  <title>Guía de viajes a Europa desde México 2027 – Voyage Lumière</title>
   
   <!-- Meta descripción optimizada -->
   <meta name="description" content="Guías completas de París, Roma, Barcelona, Lisboa, Londres y Ámsterdam. Consejos de viaje, presupuestos reales, Visa Schengen y entradas sin colas para viajeros mexicanos."/>
@@ -113,6 +113,33 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .btn-primary { background:var(--gold); color:var(--navy); padding:.9rem 2.2rem; border-radius:2px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; transition:background .3s, transform .2s, box-shadow .3s; border:none; cursor:pointer; display:inline-block; }
 .btn-primary:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 12px 32px rgba(197,160,89,.4); }
 
+/* ── SECTION COMMONS ── */
+.section-header { text-align:center; margin-bottom:4rem; padding: 0 5vw; }
+.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
+.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
+.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
+.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
+
+/* ─ AD SPACES ── */
+.ad-banner { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; min-height:100px; padding:1rem; }
+.ad-placeholder { width:100%; max-width:728px; height:90px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+.ad-rect-wrap { display:flex; justify-content:center; margin:2rem auto; }
+.ad-rect { width:300px; height:250px; background:linear-gradient(135deg,#f0ebe0,#e8e0d0); border:1px dashed var(--gold); border-radius:2px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+
+/* ── ARTICLE CARDS ── */
+.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; padding: 0 5vw; }
+.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
+.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
+.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
+.article-card:hover .article-img { transform:scale(1.04); }
+.article-body { padding:1.6rem; }
+.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
+.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
+.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
+.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
+.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
+.read-more:hover { color:var(--gold); gap:.65rem; }
+
 /* ── HERO SECTION ── */
 .hero {
   min-height: 90vh;
@@ -129,45 +156,34 @@ nav.scrolled { box-shadow:0 4px 24px rgba(26,43,76,.08); }
 .hero h1 { font-family: var(--ff-head); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; color: var(--navy); line-height: 1.1; margin-bottom: 1.5rem; }
 .hero p { font-size: 1.1rem; color: var(--muted); line-height: 1.7; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-/* ── SECTION COMMONS ── */
-.section-header { text-align:center; margin-bottom:4rem; padding: 0 5vw; }
-.section-tag { display:inline-flex; align-items:center; gap:.5rem; color:var(--gold); font-family:var(--ff-acc); font-size:.95rem; font-style:italic; margin-bottom:.75rem; }
-.section-tag::before, .section-tag::after { content:''; flex:1; height:1px; background:var(--gold); opacity:.4; width:24px; }
-.section-title { font-family:var(--ff-head); font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1rem; }
-.section-sub { color:var(--muted); font-size:1rem; line-height:1.7; max-width:560px; margin:0 auto; }
-
-/* ── ARTICLE CARDS ── */
-.articles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; max-width:1280px; margin:0 auto; padding: 0 5vw; }
-.article-card { background:var(--cream); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .4s, box-shadow .4s; }
-.article-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(26,43,76,.1); }
-.article-img { height:210px; background-size:cover; background-position:center; transition:transform .7s ease; }
-.article-card:hover .article-img { transform:scale(1.04); }
-.article-body { padding:1.6rem; }
-.article-tag { font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold); margin-bottom:.6rem; }
-.article-title { font-family:var(--ff-head); font-size:1.15rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:.75rem; }
-.article-excerpt { font-size:.875rem; line-height:1.7; color:var(--muted); margin-bottom:1.2rem; }
-.article-footer { display:flex; align-items:center; justify-content:space-between; padding-top:1rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); }
-.read-more { color:var(--navy); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s, color .3s; }
-.read-more:hover { color:var(--gold); gap:.65rem; }
-
-/* ── DESTINATIONS GRID ── */
+/* ─ DESTINATIONS GRID ── */
 .destinations-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; max-width:1280px; margin:0 auto; padding: 0 5vw; }
 .destination-card { position:relative; height:300px; border-radius:3px; overflow:hidden; display:flex; align-items:flex-end; padding:1.5rem; text-decoration:none; }
 .destination-card::before { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent); transition:opacity .3s; }
 .destination-card:hover::before { opacity:0.9; }
-.destination-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s; }
+.destination-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
 .destination-card:hover img { transform:scale(1.1); }
 .destination-info { position:relative; z-index:2; color:#fff; }
 .destination-info h3 { font-family:var(--ff-head); font-size:1.5rem; font-weight:700; margin-bottom:0.2rem; }
 .destination-info span { font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; opacity:0.8; }
 
-/* ── NEWSLETTER ── */
+/* ─ NEWSLETTER ── */
 .newsletter { background:var(--navy); color:#fff; padding:5rem 5vw; text-align:center; margin-top:5rem; }
 .newsletter h2 { font-family:var(--ff-head); font-size:2rem; margin-bottom:1rem; }
 .newsletter p { color:rgba(255,255,255,0.7); margin-bottom:2rem; max-width:500px; margin-left:auto; margin-right:auto; }
 .newsletter-form { display:flex; gap:1rem; max-width:500px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
 .newsletter-input { flex:1; min-width:250px; padding:0.8rem 1rem; border-radius:2px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.05); color:#fff; font-family:var(--ff-body); }
 .newsletter-input:focus { outline:none; border-color:var(--gold); }
+
+/* ─ COOKIE BANNER ── */
+.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
+.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
+.cookie-banner.visible { opacity:1; }
+.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
+.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
+.cookie-accept:hover { background:var(--gold-lt); }
+.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
+.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
 
 /* ── FOOTER ── */
 footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5rem; }
@@ -184,16 +200,6 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 .footer-legal { display:flex; gap:1.5rem; }
 .footer-legal a:hover { color:var(--gold); }
 
-/* ── COOKIE BANNER ── */
-.cookie-banner { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%); z-index:200; background:var(--navy); color:rgba(255,255,255,.85); padding:1.1rem 1.8rem; border-radius:3px; display:none; align-items:center; gap:1.5rem; max-width:680px; width:calc(100% - 3rem); font-size:.82rem; line-height:1.55; box-shadow:0 12px 40px rgba(0,0,0,.3); transition:opacity .4s, transform .4s; }
-.cookie-banner.hidden { opacity:0; pointer-events:none; transform:translateX(-50%) translateY(20px); }
-.cookie-banner.visible { opacity:1; }
-.cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
-.cookie-accept { background:var(--gold); color:var(--navy); border:none; cursor:pointer; padding:.55rem 1.2rem; border-radius:2px; font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; transition:background .3s; }
-.cookie-accept:hover { background:var(--gold-lt); }
-.cookie-dismiss { background:transparent; border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.7); cursor:pointer; padding:.55rem 1rem; border-radius:2px; font-size:.75rem; transition:border-color .3s; }
-.cookie-dismiss:hover { border-color:rgba(255,255,255,.6); }
-
 /* ── RESPONSIVE ── */
 @media (max-width:900px) {
   .nav-links { display:none; }
@@ -209,7 +215,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
   <!-- SEO: Open Graph (Actualizado a 2026) -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://voyagelumiere.indevs.in/"/>
-  <meta property="og:title" content="Guía de viajes a Europa desde México 2026 — Voyage Lumière"/>
+  <meta property="og:title" content="Guía de viajes a Europa desde México 2026 – Voyage Lumière"/>
   <meta property="og:description" content="Guías completas de París, Roma, Barcelona, Lisboa, Londres y Ámsterdam. Consejos de viaje, presupuestos reales y entradas sin colas."/>
   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-home.jpg"/>
   <meta property="og:site_name" content="Voyage Lumière"/>
@@ -217,11 +223,11 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Guía de viajes a Europa desde México 2026 — Voyage Lumière"/>
+  <meta name="twitter:title" content="Guía de viajes a Europa desde México 2026 – Voyage Lumière"/>
   <meta name="twitter:description" content="Guías completas de París, Roma, Barcelona, Lisboa, Londres y Ámsterdam. Consejos de viaje, presupuestos reales y entradas sin colas."/>
   <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-home.jpg"/>
 
-  <!-- SEO: Schema.org WebSite -->
+  <!-- SEO: Schema.org Website -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -277,20 +283,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="articles-grid">
       <!-- Artículo Visa -->
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=600&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1555555555-3b3e5e5e5e5e?fm=webp&w=600&q=80')"></div>
         <div class="article-body">
-          <p class="article-tag">Trámites · México</p>
+          <p class="article-tag">Trámites › México</p>
           <h3 class="article-title"><a href="articles/visa-schengen-mexico.html">Visa Schengen desde México 2026</a></h3>
           <p class="article-excerpt">Requisitos exactos, cómo conseguir cita rápido en BLS/VFS y el seguro médico obligatorio.</p>
           <a href="articles/visa-schengen-mexico.html" class="read-more">Leer guía →</a>
         </div>
       </article>
-      
+
       <!-- Artículo Itinerario -->
       <article class="article-card reveal">
         <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?fm=webp&w=600&q=80')"></div>
         <div class="article-body">
-          <p class="article-tag">Europa · Multi-destino</p>
+          <p class="article-tag">Europa › Multi-destino</p>
           <h3 class="article-title"><a href="articles/itinerario-10-dias-europa.html">Itinerario de 10 días: París, Suiza y Roma</a></h3>
           <p class="article-excerpt">El viaje soñado hecho realidad: descubre cómo recorrer tres destinos europeos en tren.</p>
           <a href="articles/itinerario-10-dias-europa.html" class="read-more">Ver plan →</a>
@@ -299,9 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- Artículo Presupuesto -->
       <article class="article-card reveal">
-        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1501554728187-ce583db33af7?fm=webp&w=600&q=80')"></div>
+        <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1501550355984-4ec00388a9d5?fm=webp&w=600&q=80')"></div>
         <div class="article-body">
-          <p class="article-tag">Europa · Ahorro</p>
+          <p class="article-tag">Europa › Ahorro</p>
           <h3 class="article-title"><a href="articles/presupuesto-europa.html">Presupuesto Europa: Cuánto cuesta por país</a></h3>
           <p class="article-excerpt">Cifras reales de 2026 para alojamiento, transporte, comida y atracciones.</p>
           <a href="articles/presupuesto-europa.html" class="read-more">Ver cifras →</a>
@@ -310,7 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- SECCIÓN DE DESTINOS (Actualizada con Londres y Ámsterdam) -->
+  <!-- SECCIÓN DE DESTINOS (ACTUALIZADA CON LONDRES Y ÁMSTERDAM) -->
   <section id="destinos" style="padding: 5rem 0;">
     <div class="section-header reveal">
       <p class="section-tag">Explora por ciudad</p>
@@ -318,42 +324,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="destinations-grid">
       <a href="articles/paris.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=webp&w=600&q=80" alt="París" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=webp&w=600&q=80" alt="París"/>
         <div class="destination-info">
           <h3>París</h3>
           <span>Francia</span>
         </div>
       </a>
       <a href="articles/roma.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=webp&w=600&q=80" alt="Roma" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1552832860-5658e9c3ac23?fm=webp&w=600&q=80" alt="Roma"/>
         <div class="destination-info">
           <h3>Roma</h3>
           <span>Italia</span>
         </div>
       </a>
       <a href="articles/barcelona.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?fm=webp&w=600&q=80" alt="Barcelona" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?fm=webp&w=600&q=80" alt="Barcelona"/>
         <div class="destination-info">
           <h3>Barcelona</h3>
           <span>España</span>
         </div>
       </a>
       <a href="articles/lisboa.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1697748525265-7431cba075b6??fm=webp&w=600&q=80" alt="Lisboa" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1697214202733-1a39949a9995?fm=webp&w=600&q=80" alt="Lisboa"/>
         <div class="destination-info">
           <h3>Lisboa</h3>
           <span>Portugal</span>
         </div>
       </a>
       <a href="articles/londres.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&w=600&q=80" alt="Londres" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&w=600&q=80" alt="Londres"/>
         <div class="destination-info">
           <h3>Londres</h3>
           <span>Reino Unido</span>
         </div>
       </a>
       <a href="articles/amsterdam.html" class="destination-card reveal">
-        <img src="https://images.unsplash.com/photo-1584003564911-a7a321c84e1c?fm=webp&w=600&q=80" alt="Ámsterdam" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1584003232920-6a2f57a9fb17?fm=webp&w=600&q=80" alt="Ámsterdam"/>
         <div class="destination-info">
           <h3>Ámsterdam</h3>
           <span>Países Bajos</span>
@@ -366,9 +372,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="newsletter" class="newsletter reveal">
     <h2>Únete a la comunidad Voyage Lumière</h2>
     <p>Recibe itinerarios exclusivos, trucos de ahorro y guías en PDF directamente en tu correo. Sin spam, solo inspiración.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte! Pronto recibirás nuestras guías.');">
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirse! Pronto recibirás nuestras guías.');">
       <input type="email" placeholder="Tu correo electrónico" class="newsletter-input" required/>
-      <button type="submit" class="btn-primary">Suscribirme</button>
+      <button type="submit" class="btn-primary">Suscribírme</button>
     </form>
   </section>
 
@@ -376,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="nav-logo" href="index.html" style="display:block;margin-bottom:1rem;color:#fff"><span style="color:var(--gold)">Voyage</span> Lumière</a>
-        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes, creada para viajeros mexicanos.</p>
+        <p>Una guía de viaje editorial dedicada a los destinos europeos más fascinantes.</p>
         <div class="footer-social">
           <a href="#" class="social-btn" aria-label="Instagram">📷</a>
           <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
@@ -394,16 +400,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul></div>
       <div class="footer-col"><h4>Categorías</h4><ul>
         <li><a href="articles/paris-louvre.html">Cultura</a></li>
+        <li><a href="articles/paris-versalles.html">Excursiones</a></li>
         <li><a href="articles/gastronomia-europa.html">Gastronomía</a></li>
         <li><a href="articles/presupuesto-europa.html">Presupuesto</a></li>
         <li><a href="articles/visa-schengen-mexico.html">Visa Schengen</a></li>
         <li><a href="articles/seguro-viaje-europa.html">Seguro de viaje</a></li>
-        <li><a href="../recursos.html">Herramientas</a></li>
+        <li><a href="articles/entradas-torre-eiffel.html">Entradas Torre Eiffel</a></li>
+        <li><a href="recursos.html">Herramientas</a></li>
       </ul></div>
       <div class="footer-col"><h4>Nosotros</h4><ul>
         <li><a href="sobre-nosotros.html">Quiénes somos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="afiliados.html">Afiliados</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
@@ -417,7 +424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
-    <p>Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="cookies.html" style="color:var(--gold)">Más info</a></p>
+    <p>Usamos cookies propias y de terceros. <a href="cookies.html" style="color:var(--gold)">Más info</a></p>
     <div class="cookie-btns">
       <button class="cookie-accept" id="cookieAccept">Aceptar</button>
       <button class="cookie-dismiss" id="cookieDismiss">Rechazar</button>
@@ -476,6 +483,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
   </script>
-  <script src="../affiliate-tracking.js" defer></script>
+  <script src="affiliate-tracking.js" defer></script>
 </body>
 </html>
