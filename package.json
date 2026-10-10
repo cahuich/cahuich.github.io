@@ -1,0 +1,16 @@
+{
+  "name": "voyage-lumiere-tests",
+  "private": true,
+  "description": "Test suite for the Voyage Lumière static site (site invariants, HTML/a11y, affiliate tracking, E2E).",
+  "scripts": {
+    "test": "playwright test",
+    "test:invariants": "playwright test tests/site-invariants.spec.js",
+    "test:a11y": "playwright test tests/html-a11y.spec.js",
+    "test:tracking": "playwright test tests/affiliate-tracking.spec.js",
+    "test:e2e": "playwright test tests/e2e.spec.js",
+    "serve": "python -m http.server 8080"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0"
+  }
+}
