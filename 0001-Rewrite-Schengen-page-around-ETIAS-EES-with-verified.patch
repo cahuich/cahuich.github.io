@@ -1,0 +1,577 @@
+From bc764ce2f6be3eb8f4104c09eafca3fcd09ac1ae Mon Sep 17 00:00:00 2001
+From: SEO Audit Agent <seo-agent@example.com>
+Date: Sat, 3 Oct 2026 00:43:12 +0000
+Subject: [PATCH] Rewrite Schengen page around ETIAS/EES with verified official
+ data (2026-10-03)
+
+---
+ articles/visa-schengen-mexico.html | 442 ++++++++++-------------------
+ index.html                         |   4 +-
+ 2 files changed, 154 insertions(+), 292 deletions(-)
+
+diff --git a/articles/visa-schengen-mexico.html b/articles/visa-schengen-mexico.html
+index 7dcc593..af1e8bf 100644
+--- a/articles/visa-schengen-mexico.html
++++ b/articles/visa-schengen-mexico.html
+@@ -31,35 +31,59 @@
+   <title>ETIAS y Schengen para mexicanos 2026 | Voyage Lumière</title>
+   
+   <!-- Meta descripción optimizada (Máx 155 caracteres) -->
+-  <meta name="description" content="¿Necesitas visa Schengen siendo mexicano? Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio.">
++  <meta name="description" content="ETIAS para mexicanos: aún no está en operación y no se puede solicitar. Qué es, cuánto costará (20 €), cuándo se avisará la fecha, el EES y cuándo sí necesitas visa. Octubre 2026.">
+   
+   <!-- Canonical CORREGIDO -->
+   <link rel="canonical" href="https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html"/>
+ 
+   <!-- Schema FAQ para ganar Fragmentos Destacados en Google -->
+   <script type="application/ld+json">
++{
++ "@context": "https://schema.org",
++ "@type": "FAQPage",
++ "mainEntity": [
+   {
+-    "@context": "https://schema.org",
+-    "@type": "FAQPage",
+-    "mainEntity": [
+-      {
+-        "@type": "Question",
+-        "name": "¿Los mexicanos necesitan visa para Europa en 2026?",
+-        "acceptedAnswer": {
+-          "@type": "Answer",
+-          "text": "No, los ciudadanos mexicanos con pasaporte vigente no necesitan visa Schengen para estancias turísticas o de negocios de hasta 90 días en un periodo de 180 días."
+-        }
+-      },
+-      {
+-        "@type": "Question",
+-        "name": "¿Cuál es el requisito más importante para la Visa Schengen?",
+-        "acceptedAnswer": {
+-          "@type": "Answer",
+-          "text": "El seguro de viaje médico con una cobertura mínima de 30,000 euros, válido en todos los países del espacio Schengen y que cubra gastos de repatriación."
+-        }
+-      }
+-    ]
++   "@type": "Question",
++   "name": "¿Los mexicanos necesitan visa para Europa en 2026?",
++   "acceptedAnswer": {
++    "@type": "Answer",
++    "text": "No para turismo, negocios o visitas de hasta 90 días dentro de cualquier periodo de 180 días. Sí necesitan visa nacional o Schengen para estudiar, trabajar o quedarse más tiempo."
++   }
++  },
++  {
++   "@type": "Question",
++   "name": "¿Los mexicanos ya necesitan ETIAS?",
++   "acceptedAnswer": {
++    "@type": "Answer",
++    "text": "No todavía. Según el sitio oficial de la UE (travel-europe.europa.eu), ETIAS no está en operación y no recibe solicitudes. La UE anunciará la fecha de inicio varios meses antes del lanzamiento."
++   }
++  },
++  {
++   "@type": "Question",
++   "name": "¿Cuánto cuesta el ETIAS?",
++   "acceptedAnswer": {
++    "@type": "Answer",
++    "text": "Según el sitio oficial, la solicitud cuesta 20 EUR, aunque algunos viajeros están exentos del pago. La autorización es válida hasta tres años o hasta que venza el pasaporte, lo que ocurra primero."
++   }
++  },
++  {
++   "@type": "Question",
++   "name": "¿Qué es el EES y ya aplica a mexicanos?",
++   "acceptedAnswer": {
++    "@type": "Answer",
++    "text": "El Sistema de Entrada/Salida (EES) está plenamente operativo en todos los cruces fronterizos externos Schengen desde el 10 de abril de 2026. Registra datos del pasaporte, huellas y foto facial de viajeros no europeos en estancias cortas, y no requiere trámite previo."
++   }
++  },
++  {
++   "@type": "Question",
++   "name": "¿Cuánto tiempo puedo quedarme en Europa siendo mexicano?",
++   "acceptedAnswer": {
++    "@type": "Answer",
++    "text": "Hasta 90 días dentro de cualquier periodo de 180 días en el espacio Schengen. ETIAS, cuando inicie, tendrá el mismo límite."
++   }
+   }
++ ]
++}
+   </script>
+   
+   <!-- Google Analytics — defer para no bloquear render -->
+@@ -250,7 +274,7 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <meta property="og:type" content="article"/>
+   <meta property="og:url" content="https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html"/>
+   <meta property="og:title" content="ETIAS y Schengen para mexicanos 2026 | Voyage Lumière"/>
+-  <meta property="og:description" content="¿Necesitas visa Schengen siendo mexicano? Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio."/>
++  <meta property="og:description" content="ETIAS para mexicanos: aún no está en operación y no se puede solicitar. Qué es, cuánto costará (20 €), cuándo se avisará la fecha, el EES y cuándo sí necesitas visa. Octubre 2026."/>
+   <meta property="og:image" content="https://voyagelumiere.indevs.in/og-visa-schengen.jpg"/>
+   <meta property="og:site_name" content="Voyage Lumière"/>
+   <meta property="og:locale" content="es_MX"/>
+@@ -258,114 +282,39 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+   <!-- SEO: Twitter Card (CORREGIDO A 2026) -->
+   <meta name="twitter:card" content="summary_large_image"/>
+   <meta name="twitter:title" content="Visa Schengen para Mexicanos 2026: Requisitos y Citas | Voyage Lumière"/>
+-  <meta name="twitter:description" content="¿Necesitas visa Schengen siendo mexicano? Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio."/>
++  <meta name="twitter:description" content="ETIAS para mexicanos: aún no está en operación y no se puede solicitar. Qué es, cuánto costará (20 €), cuándo se avisará la fecha, el EES y cuándo sí necesitas visa. Octubre 2026."/>
+   <meta name="twitter:image" content="https://voyagelumiere.indevs.in/og-visa-schengen.jpg"/>
+ 
+   <!-- SEO: Schema.org Article (CORREGIDO A 2026) -->
+   <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "Article",
+-    "headline": "Visa Schengen para Mexicanos 2026: Requisitos y Citas",
+-    "description": "Guía actualizada 2026 con requisitos exactos, cómo conseguir cita en BLS/VFS rápido y el seguro obligatorio.",
+-    "image": "https://voyagelumiere.indevs.in/og-visa-schengen.jpg",
+-    "url": "https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html",
+-    "inLanguage": "es",
+-    "dateModified": "2026-09-12",
+-    "datePublished": "2024-03-01",
+-    "author": {
+-      "@type": "Organization",
+-      "name": "Voyage Lumière",
+-      "url": "https://voyagelumiere.indevs.in/"
+-    },
+-    "publisher": {
+-      "@type": "Organization",
+-      "name": "Voyage Lumière",
+-      "url": "https://voyagelumiere.indevs.in/",
+-      "logo": {
+-        "@type": "ImageObject",
+-        "url": "https://voyagelumiere.indevs.in/logo.png"
+-      }
+-    },
+-    "mainEntityOfPage": {
+-      "@type": "WebPage",
+-      "@id": "https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html"
+-    }
+-  }
++{
++ "@context": "https://schema.org",
++ "@type": "Article",
++ "headline": "ETIAS y Schengen para mexicanos 2026: qué necesitas hoy",
++ "description": "ETIAS para mexicanos: aún no está en operación y no se puede solicitar. Qué es, cuánto costará (20 €), cuándo se avisará la fecha, el EES y cuándo sí necesitas visa. Octubre 2026.",
++ "image": "https://voyagelumiere.indevs.in/og-visa-schengen.jpg",
++ "url": "https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html",
++ "inLanguage": "es",
++ "dateModified": "2026-10-03",
++ "datePublished": "2024-03-01",
++ "author": {
++  "@type": "Organization",
++  "name": "Voyage Lumière",
++  "url": "https://voyagelumiere.indevs.in/"
++ },
++ "publisher": {
++  "@type": "Organization",
++  "name": "Voyage Lumière",
++  "url": "https://voyagelumiere.indevs.in/"
++ },
++ "mainEntityOfPage": {
++  "@type": "WebPage",
++  "@id": "https://voyagelumiere.indevs.in/articles/visa-schengen-mexico.html"
++ }
++}
+   </script>
+     <!-- Schema HowTo para GEO (Optimización para IAs) -->
+-  <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "HowTo",
+-    "name": "Cómo obtener la Visa Schengen siendo mexicano en 2026",
+-    "description": "Guía paso a paso actualizada para tramitar la visa Schengen desde México, incluyendo requisitos exactos, citas en BLS/VFS Global y costos consulares.",
+-    "totalTime": "P45D",
+-    "estimatedCost": {
+-      "@type": "MonetaryAmount",
+-      "currency": "MXN",
+-      "value": "2000"
+-    },
+-    "supply": [
+-      {
+-        "@type": "HowToSupply",
+-        "name": "Pasaporte vigente con 2 páginas en blanco"
+-      },
+-      {
+-        "@type": "HowToSupply",
+-        "name": "Seguro de viaje con cobertura mínima de 30,000 EUR"
+-      },
+-      {
+-        "@type": "HowToSupply",
+-        "name": "Estados de cuenta bancarios de los últimos 3 meses"
+-      }
+-    ],
+-    "tool": [
+-      {
+-        "@type": "HowToTool",
+-        "name": "Portal de citas de BLS International o VFS Global"
+-      }
+-    ],
+-    "step": [
+-      {
+-        "@type": "HowToStep",
+-        "position": 1,
+-        "name": "Define tu país de destino principal",
+-        "text": "Identifica el país Schengen donde pasarás la mayor cantidad de noches. Ese será el consulado donde debas tramitar tu visa (ej. si vas 4 días a Francia y 3 a Italia, tramítala en Francia)."
+-      },
+-      {
+-        "@type": "HowToStep",
+-        "position": 2,
+-        "name": "Reúne la documentación obligatoria",
+-        "text": "Prepara tu pasaporte, fotografía 3.5x4.5 cm, comprobante de empleo o estudios, estados de cuenta con movimientos (no solo saldo), reservación de vuelo y alojamiento, y tu póliza de seguro de viaje."
+-      },
+-      {
+-        "@type": "HowToStep",
+-        "position": 3,
+-        "name": "Agenda tu cita biométrica",
+-        "text": "Crea una cuenta en el portal oficial del consulado o su proveedor externo (BLS para España, VFS Global para Francia/Italia). Las citas se liberan frecuentemente a medianoche; sé rápido para reservar."
+-      },
+-      {
+-        "@type": "HowToStep",
+-        "position": 4,
+-        "name": "Asiste a tu cita en el centro de visados",
+-        "text": "Acude puntualmente a la sede en CDMX, Monterrey o Guadalajara. Lleva tu expediente organizado en una carpeta (sin engrapar) con originales y copias simples. Te tomarán huellas digitales y foto."
+-      },
+-      {
+-        "@type": "HowToStep",
+-        "position": 5,
+-        "name": "Paga la tasa consular",
+-        "text": "Realiza el pago de la tarifa de la visa, que para adultos es de 90 EUR (pagaderos en pesos mexicanos al tipo de cambio del día, aproximadamente $1,900 - $2,100 MXN)."
+-      },
+-      {
+-        "@type": "HowToStep",
+-        "position": 6,
+-        "name": "Espera la resolución",
+-        "text": "El tiempo legal de respuesta es de 15 días hábiles, pero en temporada alta (verano) puede extenderse hasta 45 días. Rastrea tu expediente con el número de referencia que te dieron."
+-      }
+-    ]
+-  }
+-  </script>
++  
+   
+   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+   <link rel="preload" as="image" fetchpriority="high" href="https://picsum.photos/id/1036/900/506?w=400&q=60&fm=webp"/>
+@@ -391,13 +340,13 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+       <div class="breadcrumb">
+         <a href="../index.html">Inicio</a><span>/</span>
+         <a href="presupuesto-europa.html">Consejos</a><span>/</span>
+-        <span style="color:#fff">Visa Schengen</span>
++        <span style="color:#fff">ETIAS y Schengen</span>
+       </div>
+       <!-- CORREGIDO: Año actualizado a 2026 -->
+-      <h1>Visa Schengen desde México:<br/><em>guía completa 2026</em></h1>
++      <h1>ETIAS y Schengen para mexicanos:<br/><em>qué necesitas en 2026</em></h1>
+       <div class="article-meta">
+         <span class="article-meta-tag">México · Trámites</span>
+-        <span>📅 Actualizado septiembre 2026</span>
++        <span>📅 Actualizado octubre 2026</span>
+         <span>⏱ 8 min de lectura</span>
+         <span>👁 42.100 visitas</span>
+       </div>
+@@ -412,208 +361,120 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+     <main class="article-main">
+       <div class="article-content">
+ 
+-        <!-- CORREGIDO: Markdown convertido a HTML semántico con clases CSS existentes -->
+-        <p><strong>Tip:</strong> Aunque los mexicanos no necesitan visa, conviene contratar un <a href="seguro-viaje-europa.html">seguro de viaje a Europa</a> con al menos 30,000 € de cobertura médica.</p>
+-
+-        <h2 style="margin-top:0;">Visa Schengen para Mexicanos 2026: Requisitos, Citas y Trucos</h2>
+-        <p style="color:var(--muted); font-size:.9rem; margin-bottom:2rem; font-style:italic;">Por el equipo de Voyage Lumière | Actualizado: Septiembre 2026 | ⏱️ 8 min de lectura</p>
+-        <hr style="border:0; border-top:1px solid var(--border); margin-bottom:2rem;">
+-
+         <div class="tip-box">
+-          <strong>💡 Resumen Rápido para Mexicanos (2026):</strong>
++          <strong>💡 Resumen para mexicanos (actualizado el 3 de octubre de 2026):</strong>
+           <ul style="margin-top: 0.5rem; padding-left: 1.2rem; margin-bottom: 1rem;">
+-            <li><strong>¿Necesito visa?</strong> No, para turismo menor a 90 días. Sí, para estudiar, trabajar o residir.</li>
+-            <li><strong>Requisito #1 innegociable:</strong> Seguro de viaje con cobertura mínima de 30,000 €.</li>
+-            <li><strong>El mayor reto:</strong> Conseguir cita en BLS International o VFS Global (ver trucos abajo).</li>
+-            <li><strong>Tiempo de procesamiento:</strong> 15 días hábiles (hasta 45 en temporada alta).</li>
++            <li><strong>¿Necesito visa?</strong> No, para turismo, negocios o visitas de hasta 90 días en un periodo de 180.</li>
++            <li><strong>¿Necesito ETIAS hoy?</strong> No. Según el sitio oficial de la UE, ETIAS no está en operación y no acepta solicitudes.</li>
++            <li><strong>Cuando inicie:</strong> costará 20 € por solicitud, será válido hasta 3 años o hasta que venza tu pasaporte, y se tramitará solo en el sitio o la app oficial.</li>
++            <li><strong>Ya aplica:</strong> el Sistema de Entrada/Salida (EES) registra huellas y foto al llegar, desde el 10 de abril de 2026.</li>
+           </ul>
+-          <p style="margin:0;">👉 <a href="#checklist" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Descarga la Checklist Completa de Documentos en PDF</a></p>
++          <p style="margin:0;">👉 <a href="#estado-etias" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Ver el estado actual de ETIAS</a></p>
+         </div>
+ 
+-        <p>Planear un viaje a Europa es un sueño hecho realidad, pero la burocracia puede opacar la emoción si no se conoce el proceso. Si tienes pasaporte mexicano, tienes la gran ventaja de poder ingresar a los 29 países del Espacio Schengen <strong>sin visa</strong> para estancias turísticas de hasta 90 días en un periodo de 180 días.</p>
+-        <p>Sin embargo, si tu intención es estudiar, trabajar, o permanecer por más de 90 días, la <strong>Visa Schengen (Tipo C o D)</strong> es un requisito obligatorio. En esta guía editorial de Voyage Lumière, desglosamos todo lo que necesitas saber para 2026, desde el papeleo exacto hasta los trucos para conseguir cita en los centros de gestión.</p>
++        <p>Muchos mexicanos buscan "visa Schengen" cuando en realidad lo que cambia es otra cosa: <strong>ETIAS</strong>, una autorización electrónica de viaje que se pedirá a los viajeros que hoy entran sin visa. Esta guía separa lo que ya es obligatorio, lo que todavía no, y lo que debes hacer antes de comprar tus vuelos.</p>
+ 
+         <div class="tip-box" style="background: rgba(26, 43, 76, 0.05); border-left-color: var(--navy);">
+           <strong>💡 Nota importante:</strong>
+-          <p style="margin:0;">Las regulaciones migratorias pueden cambiar. Siempre verifica la información en el sitio web oficial del consulado del país que será tu destino principal o tu primera entrada.</p>
++          <p style="margin:0;">Las reglas de entrada cambian y las fechas de ETIAS se han movido antes. Esta información corresponde al 3 de octubre de 2026; confírmala en <a href="https://travel-europe.europa.eu/etias" target="_blank" rel="noopener">travel-europe.europa.eu/etias</a> antes de reservar.</p>
+         </div>
+ 
+         <h2 id="que-es-schengen">1. ¿Los mexicanos necesitan visa para Europa en 2026?</h2>
+-        <p>Esta es la pregunta más frecuente, y la respuesta depende del propósito de tu viaje:</p>
+-        
+         <h3>NO necesitas visa Schengen si:</h3>
+         <ul>
+-          <li>Viajas como <strong>turista</strong> por un máximo de 90 días consecutivos.</li>
++          <li>Viajas como <strong>turista</strong> hasta 90 días dentro de cualquier periodo de 180 días.</li>
+           <li>Vas por <strong>negocios</strong> (reuniones, conferencias, ferias).</li>
+-          <li>Visitas a <strong>familiares o amigos</strong> residentes en Europa.</li>
++          <li>Visitas a <strong>familiares o amigos</strong>.</li>
+         </ul>
+-        <p><strong>Solo necesitas:</strong> Pasaporte mexicano vigente (con al menos 3 meses de validez posterior a tu fecha de salida), boleto de avión de ida y vuelta, comprobante de alojamiento, solvencia económica demostrable y seguro de viaje médico.</p>
+-
+-        <h3>SÍ necesitas solicitar visado Schengen si:</h3>
++        <h3>SÍ necesitas visa (nacional o Schengen) si:</h3>
+         <ul>
+-          <li>Planeas <strong>estudiar</strong> por más de 90 días.</li>
+-          <li>Vas a <strong>trabajar</strong> o hacer una residencia.</li>
+-          <li>Tu pasaporte mexicano está próximo a vencer y no puedes renovarlo a tiempo.</li>
++          <li>Vas a <strong>estudiar</strong> o hacer un intercambio de larga duración.</li>
++          <li>Vas a <strong>trabajar</strong> o a residir.</li>
++          <li>Quieres quedarte <strong>más de 90 días</strong> en el espacio Schengen.</li>
+         </ul>
++        <p>Para esos casos, el trámite depende del país: consulta al consulado o a la embajada del país donde vas a vivir o estudiar. No lo hagas por intermediarios ajenos.</p>
+ 
+-        <h2 id="documentos-completos">2. Documentación exacta requerida</h2>
+-        <p>El expediente debe presentarse en estricto orden. Prepáralo con al menos <strong>2 meses de anticipación</strong> a tu viaje.</p>
+-        <ol>
+-          <li><strong>Formulario de solicitud:</strong> Completado en inglés o en el idioma del país destino, firmado y fechado.</li>
+-          <li><strong>Pasaporte original y copias:</strong> Vigencia mínima de 3 meses posteriores a la fecha prevista de salida, con al menos dos páginas en blanco.</li>
+-          <li><strong>Fotografías recientes:</strong> Dos fotos tamaño pasaporte (35x45 mm), a color, fondo blanco, sin lentes.</li>
+-          <li><strong>Seguro de viaje médico obligatorio:</strong> Cobertura mínima de <strong>30,000 euros</strong>, que incluya gastos médicos de urgencia y repatriación.</li>
+-          <li><strong>Reserva de vuelo:</strong> Itinerario detallado (no es recomendable comprar el boleto hasta tener la visa).</li>
+-          <li><strong>Comprobante de alojamiento:</strong> Reservas de hotel confirmadas o carta de invitación oficial.</li>
+-          <li><strong>Solvencia económica:</strong> Estados de cuenta bancarios de los últimos 3 meses. (Ej: Francia solicita ~65€/día; España 100€/día).</li>
+-          <li><strong>Comprobante laboral/académico:</strong> Carta de trabajo con antigüedad y sueldo, o constancia de estudios vigente.</li>
+-        </ol>
++        <h2 id="estado-etias">2. ETIAS: ¿ya es obligatorio?</h2>
++        <p>Todavía no. En la página oficial de ETIAS (travel-europe.europa.eu) se lee, a la fecha de esta actualización, que <strong>"ETIAS no está en operación y no se reciben solicitudes de autorización de viaje"</strong>, y que la Unión Europea <strong>informará la fecha de inicio varios meses antes</strong> del lanzamiento.</p>
++        <p>Documentos oficiales publicados antes hablaban del <strong>último trimestre de 2026</strong>, pero la página principal de ETIAS ya no confirma esa fecha. Por eso no la damos por segura: planea tu viaje como si hoy no fuera necesario, pero revisa el sitio oficial al reservar, especialmente si viajas a finales de 2026 o en 2027.</p>
++        <p><strong>Cuidado con las páginas no oficiales:</strong> hay sitios que ya cobran por "solicitar ETIAS". Como el sistema no está en operación, no puedes obtener una autorización válida todavía. La solicitud oficial se hará únicamente en el sitio o la app oficial de ETIAS.</p>
+ 
+-        <h2 id="seguro-viaje">3. El requisito innegociable: Tu seguro de viaje</h2>
+-        <p>Uno de los motivos más comunes de rechazo es un seguro que no cumple con las especificaciones del consulado. La póliza debe cubrir explícitamente gastos médicos, hospitalarios y de repatriación con un mínimo de 30,000 euros.</p>
+-        
+-        <h3>🛡️ Nuestra recomendación probada</h3>
+-        <p>No arriesgues tu inversión ni tu salud. Hemos probado decenas de seguros y estos cumplen al 100% con los requisitos consulares y ofrecen atención en español 24/7:</p>
++        <h2 id="que-es-etias">3. Qué es ETIAS y qué cambiará para ti</h2>
++        <p>ETIAS es una autorización de viaje electrónica para ciudadanos de países sin visa, como México, que viajan a <strong>30 países europeos</strong>. Los datos oficiales son:</p>
+         <ul>
+-          <li><strong>Opción #1: IATI Seguros</strong> (Recomendado). Cobertura hasta 5,000,000 MXN, asistencia 24/7 y opción de cancelación. 👉 <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored"><strong>Cotiza tu seguro con IATI aquí (5% descuento)</strong></a></li>
++          <li><strong>Costo:</strong> 20 EUR por solicitud (algunos viajeros están exentos; revisa las condiciones en el sitio oficial).</li>
++          <li><strong>Vigencia:</strong> hasta tres años o hasta que venza el pasaporte, lo que ocurra primero.</li>
++          <li><strong>Estancia:</strong> hasta 90 días dentro de cualquier periodo de 180 días.</li>
++          <li><strong>Vinculada al pasaporte:</strong> debes viajar con el mismo pasaporte que usaste en la solicitud; si lo renuevas, necesitas una nueva autorización.</li>
++          <li><strong>No garantiza la entrada:</strong> en la frontera, el oficial puede pedirte tu pasaporte y otros documentos.</li>
+         </ul>
+-        <p><em>Consejo: Compra el seguro después de tener tu visa aprobada, pero antes de comprar los boletos de avión.</em></p>
++        <p>No es una visa ni requiere ir a un consulado ni a BLS o VFS. Es un trámite en línea que se hará con tu pasaporte.</p>
+ 
+-        <h2 id="paso-a-paso">4. Cómo conseguir cita en BLS o VFS Global (Trucos)</h2>
+-        <p>La mayor frustración en 2026 no es la documentación, sino <strong>conseguir una cita</strong>. Los sistemas suelen saturarse en minutos. Aquí tienes estrategias que sí funcionan:</p>
++        <h2 id="ees">4. EES: lo que ya aplica desde abril de 2026</h2>
++        <p>El <strong>Sistema de Entrada/Salida (EES)</strong> está plenamente operativo en todos los cruces fronterizos externos Schengen desde el <strong>10 de abril de 2026</strong>, según la Comisión Europea. Registra los datos de tu pasaporte, tus huellas y una imagen facial en tu primera entrada, además de las fechas de entrada y salida.</p>
+         <ul>
+-          <li><strong>La regla de la medianoche:</strong> Muchos consulados liberan nuevos bloques de citas entre las 12:00 a.m. y las 6:00 a.m. (hora local de México). Configura una alarma.</li>
+-          <li><strong>Flexibilidad geográfica:</strong> Si la CDMX está saturada, revisa la disponibilidad en Guadalajara o Monterrey. A veces hay disponibilidad semanas antes.</li>
+-          <li><strong>Monitoreo constante:</strong> Las cancelaciones de última hora se reintegran al sistema inmediatamente. Revisa la página al menos dos veces al día.</li>
+-          <li><strong>⚠️ Evita gestores no oficiales:</strong> Pagar cantidades exorbitantes a terceros no garantiza la cita y pone en riesgo tus datos. Usa solo <a href="https://www.blsinternational.com" target="_blank" rel="noopener">BLS International</a> o <a href="https://www.vfsglobal.com" target="_blank" rel="noopener">VFS Global</a>.</li>
++          <li>No requiere trámite previo ni pago.</li>
++          <li>Puede sumar tiempo en la fila de migración al llegar, en especial en aeropuertos grandes: no programes conexiones ajustadas.</li>
++          <li>Cuenta tus días: el sistema calcula automáticamente el límite de 90 días en 180.</li>
+         </ul>
+ 
+-        <h2 id="preguntas">5. Preguntas frecuentes sobre la Visa Schengen</h2>
++        <h2 id="documentos-completos">5. Qué llevar para entrar sin visa</h2>
++        <p>Aunque no necesites visa, el oficial de migración puede pedirte demostrar el propósito y los medios del viaje. Lleva, impreso o en el celular:</p>
++        <ol>
++          <li><strong>Pasaporte vigente:</strong> con validez de al menos 3 meses posteriores a tu fecha de salida de Schengen y emitido en los últimos 10 años.</li>
++          <li><strong>Boleto de regreso o de salida</strong> del espacio Schengen.</li>
++          <li><strong>Comprobante de alojamiento</strong> (reservas o carta de invitación).</li>
++          <li><strong>Solvencia económica:</strong> tarjetas, efectivo o estados de cuenta recientes. Los montos exigidos varían por país.</li>
++          <li><strong>Seguro de viaje</strong> (ver abajo).</li>
++        </ol>
++
++        <h2 id="seguro-viaje">6. Seguro de viaje: no es requisito de visa, pero sí conviene</h2>
++        <p>Como no necesitas visa, la UE no te exige hoy una póliza para entrar. Aun así, una urgencia médica para un turista extranjero se cobra, y un seguro con asistencia en español y al menos 30,000 € de cobertura médica es una referencia razonable. Lee nuestra <a href="seguro-viaje-europa.html">guía de seguro de viaje a Europa</a> para saber qué cubrir.</p>
++        <ul>
++          <li><strong>IATI Seguros:</strong> cotiza tu viaje con asistencia en español. 👉 <a href="https://www.iatiseguros.com/?ref=34462984428636" target="_blank" rel="noopener sponsored"><strong>Cotiza tu seguro con IATI</strong></a></li>
++        </ul>
++
++        <h2 id="preguntas">7. Preguntas frecuentes</h2>
+         <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+-          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Cuánto tiempo tarda el trámite de la Visa Schengen?</summary>
+-          <p style="margin-top: 0.5rem;">El tiempo de procesamiento oficial es de <strong>15 días hábiles</strong>. Sin embargo, en temporadas altas (mayo a agosto), puede extenderse hasta 30 o 45 días. Aplica con al menos 2 meses de anticipación.</p>
++          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Los mexicanos necesitan visa para Europa en 2026?</summary>
++          <p style="margin-top: 0.5rem;">No para turismo, negocios o visitas de hasta 90 días dentro de cualquier periodo de 180 días. Sí necesitan visa nacional o Schengen para estudiar, trabajar o quedarse más tiempo.</p>
+         </details>
+         <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+-          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Qué pasa si me niegan la visa?</summary>
+-          <p style="margin-top: 0.5rem;">Recibirás una carta con el motivo exacto del rechazo. Tienes derecho a apelar la decisión o a volver a aplicar corrigiendo las deficiencias señaladas (por ejemplo, mostrando mayores fondos económicos).</p>
++          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Los mexicanos ya necesitan ETIAS?</summary>
++          <p style="margin-top: 0.5rem;">No todavía. Según el sitio oficial de la UE (travel-europe.europa.eu), ETIAS no está en operación y no recibe solicitudes. La UE anunciará la fecha de inicio varios meses antes del lanzamiento.</p>
+         </details>
+         <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+-          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Cuánto cuesta la Visa Schengen para mexicanos?</summary>
+-          <p style="margin-top: 0.5rem;">La tarifa consular es de <strong>80€</strong> (aproximadamente 1,600 MXN). Los niños de 6-12 años pagan 40€. Menores de 6 años están exentos. Este costo no incluye el servicio del centro de visados (BLS/VFS), que cobra alrededor de 300-500 MXN adicionales.</p>
++          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Cuánto cuesta el ETIAS?</summary>
++          <p style="margin-top: 0.5rem;">Según el sitio oficial, la solicitud cuesta 20 EUR, aunque algunos viajeros están exentos del pago. La autorización es válida hasta tres años o hasta que venza el pasaporte, lo que ocurra primero.</p>
++        </details>
++        <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
++          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Qué es el EES y ya aplica a mexicanos?</summary>
++          <p style="margin-top: 0.5rem;">El Sistema de Entrada/Salida (EES) está plenamente operativo en todos los cruces fronterizos externos Schengen desde el 10 de abril de 2026. Registra datos del pasaporte, huellas y foto facial de viajeros no europeos en estancias cortas, y no requiere trámite previo.</p>
++        </details>
++        <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
++          <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--ff-head); font-size: 1.1rem;">¿Cuánto tiempo puedo quedarme en Europa siendo mexicano?</summary>
++          <p style="margin-top: 0.5rem;">Hasta 90 días dentro de cualquier periodo de 180 días en el espacio Schengen. ETIAS, cuando inicie, tendrá el mismo límite.</p>
+         </details>
+ 
+-        <h2>6. Conclusión: Tu viaje comienza con una buena planeación</h2>
+-        <p>Obtener la Visa Schengen desde México es un proceso meticuloso, pero totalmente manejable con organización. No dejes este trámite para el final. Arma tu expediente con tiempo, asegura tu cobertura médica y, sobre todo, disfruta el proceso de planear la aventura de tu vida.</p>
++        <h2>8. Conclusión: planea con calma, verifica en la fuente oficial</h2>
++        <p>Hoy, un mexicano puede viajar a Europa como turista sin visa y sin ETIAS, pasando por el registro del EES en la frontera. Lo que debes vigilar es el anuncio oficial de ETIAS: cuando se publique la fecha, la solicitud costará 20 € y se hará en línea. Mientras tanto, enfócate en lo que sí está en tu control: pasaporte, seguro y conectividad.</p>
+ 
+         <div class="tip-box" style="background: linear-gradient(135deg, rgba(46, 125, 50, 0.08), rgba(46, 125, 50, 0.15)); border-left-color: #2E7D32;">
+-  <strong>📱 Tip de Ahorro: Internet en Europa sin roaming</strong>
+-  <p style="margin:0;">Evita los cargos exorbitantes de tu operador mexicano. Te recomendamos <strong>Airalo</strong>, la app de eSIM más confiable para viajeros. Descarga la app, compra un plan de datos regional para Europa (desde 5 USD) y activa tu internet al aterrizar. ¡Sin chips físicos, sin tiendas y sin contratos!</p>
++  <strong>📱 Internet en Europa sin roaming</strong>
++  <p style="margin:0;">Con una eSIM instalas tu plan de datos en casa y lo activas al aterrizar. Lee nuestra <a href="esim-europa.html">guía de eSIM para Europa</a> o compara planes directamente.</p>
+   <p style="margin-top: 0.8rem; margin-bottom: 0;">
+-    👉 <a href="https://airalo.tpx.gr/YT79qcFj?utm_source=voyagelumiere&utm_medium=article&utm_campaign=esim_europa_2026" target="_blank" rel="noopener sponsored" style="color: #2E7D32; font-weight: 700; text-decoration: underline;">Obtén tu eSIM para Europa aquí con descuento</a>
++    👉 <a href="https://airalo.tpx.gr/YT79qcFj?utm_source=voyagelumiere&utm_medium=article&utm_campaign=esim_europa_2026" target="_blank" rel="noopener sponsored" style="color: #2E7D32; font-weight: 700; text-decoration: underline;">Ver planes de eSIM para Europa</a>
+   </p>
+         </div>
+-        
+-        <div class="tip-box" id="checklist">
+-          <strong>📥 Descarga tu Checklist gratuita</strong>
+-          <p>No arriesgues tu cita por olvidar un documento. Descarga nuestra <strong>Checklist Completa en PDF</strong> con todos los requisitos, formularios y consejos para que llegues al centro de visados con todo en orden.</p>
+-          <p style="margin-top: 1rem; margin-bottom: 0;">👉 <a href="../index.html#newsletter" style="color: var(--navy); font-weight: 700; text-decoration: underline;">Suscríbete y recibe el PDF en tu correo</a></p>
+-        </div>
+ 
+-        <h3>🗺️ ¿Ya tienes tu visa? Planea tu itinerario</h3>
+-        <p>Una vez aprobada tu visa, es hora de soñar en grande. Consulta nuestras guías completas:</p>
++        <h3>🗺️ Planea tu itinerario</h3>
+         <ul>
+-          <li><a href="barcelona.html">Qué ver en Barcelona en 3 días</a>: Gaudí, la Barceloneta y los mejores bares de tapas.</li>
+-          <li><a href="paris.html">Guía completa de París 2026</a>: El Louvre, Montmartre y los mejores bistrós.</li>
+-          <li><a href="roma.html">Roma en 4 días: Itinerario perfecto</a>: El Coliseo, el Vaticano y la mejor pasta del mundo.</li>
++          <li><a href="presupuesto-europa.html">Cuánto cuesta viajar a Europa</a>: presupuesto por país.</li>
++          <li><a href="itinerario-10-dias-europa.html">Itinerario de 10 días</a>: París, Suiza y Roma.</li>
++          <li><a href="paris.html">Guía de París</a> · <a href="barcelona.html">Barcelona</a> · <a href="roma.html">Roma</a></li>
+         </ul>
+ 
+-        <p>👉 <a href="../index.html">Volver a la guía principal de viajes a Europa de Voyage Lumière</a> para descubrir todos nuestros destinos, consejos y plantillas de presupuesto actualizadas.</p>
+-        
+-        <!-- OMIO — Trenes y buses Europa -->
+-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:2.5rem 0;">
+-          <div style="background:linear-gradient(135deg,var(--navy),#0d1e3a);padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;">
+-            <div style="width:44px;height:44px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🚆</div>
+-            <div>
+-              <p style="color:#fff;font-weight:700;font-size:.95rem;margin:0 0 .2rem;font-family:var(--ff-head);">Trenes y buses por Europa con Omio</p>
+-              <p style="font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin:0;">Compara rutas · Precio más bajo · Ticket móvil</p>
+-            </div>
+-          </div>
+-          <div style="background:#fff;padding:1.1rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;">
+-            <div>
+-              <p style="font-size:.88rem;color:var(--ink);line-height:1.7;margin-bottom:.75rem;">Busca y compara trenes, autobuses y vuelos entre ciudades europeas. Ideal para moverse entre París, Roma, Barcelona, Lisboa y Londres sin complicaciones.</p>
+-              <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Tren de alta velocidad</span>
+-                <span style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .6rem;border-radius:1px;background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32;">✓ Autobús económico</span>
+-              </div>
+-            </div>
+-            <div style="text-align:center;flex-shrink:0;">
+-              <p style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 .4rem;">Desde</p>
+-              <p style="font-size:1.4rem;font-weight:700;color:var(--navy);font-family:var(--ff-head);line-height:1;margin:0;">9 <span style="font-size:.85rem;font-weight:400;color:var(--muted);">€</span></p>
+-            </div>
+-          </div>
+-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.85rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+-            <a rel="sponsored" href="https://omio.sjv.io/c/7062459/1698061/7385" target="_blank"
+-               style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.4rem;border-radius:2px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+-              Buscar en Omio →
+-            </a>
+-            <img height="0" width="0" src="https://omio.sjv.io/i/7062459/1698061/7385" style="position:absolute;visibility:hidden;" alt="" border="0"/>
+-            <span style="font-size:.67rem;color:var(--muted);">Enlace de afiliado</span>
+-          </div>
+-        </div>
+-
+-        <!-- HOTMART: Proceso Consular para Europa -->
+-        <div style="border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:1.5rem 0;">
+-          <div style="background:linear-gradient(135deg,#E8380D,#c22d0a);padding:.65rem 1.4rem;display:flex;align-items:center;gap:.75rem;">
+-            <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📋</div>
+-            <div style="flex:1">
+-              <p style="color:#fff;font-weight:700;font-size:.85rem;margin:0 0 .1rem;font-family:var(--ff-head);">Proceso Consular para Europa</p>
+-              <p style="font-size:.62rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin:0;">Producto digital · Hotmart · Pago seguro</p>
+-            </div>
+-            <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.2rem .65rem;flex-shrink:0;text-align:center;">
+-              <p style="font-size:.62rem;color:rgba(255,255,255,.6);margin:0;text-transform:uppercase;letter-spacing:.06em;">precio</p>
+-              <p style="font-size:.85rem;font-weight:700;color:#fff;margin:0;">desde $197 MXN</p>
+-            </div>
+-          </div>
+-          <div style="background:#fff;padding:.9rem 1.4rem;display:flex;gap:.75rem;align-items:center;">
+-            <div style="flex:1">
+-              <p style="font-size:.86rem;color:var(--ink);line-height:1.7;margin-bottom:.5rem;">Guía paso a paso para tramitar tu visa Schengen desde México: documentos exactos, tiempos, consulados y cómo evitar los rechazos más comunes.</p>
+-            </div>
+-          </div>
+-          <div style="background:var(--warm);border-top:1px solid var(--border);padding:.7rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+-            <a rel="sponsored" href="https://go.hotmart.com/F105319521Y" target="_blank"
+-               style="display:inline-flex;align-items:center;gap:.5rem;background:#E8380D;color:#fff;padding:.55rem 1.2rem;border-radius:2px;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;">
+-              Ver en Hotmart →
+-            </a>
+-            <span style="font-size:.64rem;color:var(--muted);">Garantía 7 días</span>
+-          </div>
+-        </div>
+-
+-        <!-- GYG Widget — Tours Europa -->
+-        <div style="margin:2.5rem 0;">
+-          <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;overflow:hidden;">
+-            <div style="background:var(--navy);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+-              <span style="font-family:var(--ff-head);color:#fff;font-size:1rem;font-weight:600;">🎟️ Tours y actividades para tu viaje a Europa</span>
+-              <a href="https://www.getyourguide.es/" target="_blank" rel="noopener sponsored" style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Ver todos →</a>
+-            </div>
+-            <div style="padding:1rem;">
+-              <div data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+-                   data-gyg-locale-code="es-ES"
+-                   data-gyg-widget="activities"
+-                   data-gyg-number-of-items="4"
+-                   data-gyg-partner-id="1ABLZMR"
+-                   data-gyg-q="Europe tour highlights">
+-              </div>
+-              <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.5rem;margin-bottom:0;">
+-                Actividades en colaboración con <a href="https://www.getyourguide.es/" target="_blank" rel="noopener sponsored" style="color:var(--gold);border:none;">GetYourGuide</a>
+-              </p>
+-            </div>
+-          </div>
+-        </div>
+-
+-        <div class="ad-rect-wrap" style="margin:2.5rem 0;">
+-          <div class="ad-rect">📢 AdSense 300×250</div>
+-        </div>
+-
++        <p>👉 <a href="../index.html">Volver a la guía principal de viajes a Europa de Voyage Lumière</a></p>
+       </div>
+     </main>
+ 
+@@ -624,9 +485,10 @@ footer { background:#111820; color:rgba(255,255,255,.55); padding:5rem 5vw 2.5re
+         <div class="sidebar-card-body">
+           <ul class="toc">
+             <li><a href="#que-es-schengen">¿Necesitas visa?</a></li>
+-            <li><a href="#documentos-completos">Lista de documentos</a></li>
++            <li><a href="#estado-etias">Estado de ETIAS</a></li>
++            <li><a href="#ees">EES desde abril 2026</a></li>
++            <li><a href="#documentos-completos">Qué llevar</a></li>
+             <li><a href="#seguro-viaje">Seguro de viaje</a></li>
+-            <li><a href="#paso-a-paso">Cómo conseguir cita</a></li>
+             <li><a href="#preguntas">Preguntas frecuentes</a></li>
+           </ul>
+         </div>
+diff --git a/index.html b/index.html
+index 956f487..2393f7f 100644
+--- a/index.html
++++ b/index.html
+@@ -282,8 +282,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+         <div class="article-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd81?fm=webp&w=600&q=80')"></div>
+         <div class="article-body">
+           <p class="article-tag">Trámites · México</p>
+-          <h3 class="article-title"><a href="articles/visa-schengen-mexico.html">Visa Schengen desde México 2026</a></h3>
+-          <p class="article-excerpt">Requisitos exactos, cómo conseguir cita rápido en BLS/VFS y el seguro médico obligatorio.</p>
++          <h3 class="article-title"><a href="articles/visa-schengen-mexico.html">ETIAS y Schengen para mexicanos 2026</a></h3>
++          <p class="article-excerpt">Qué es el ETIAS, cuánto costará (20 €), si ya es obligatorio y qué necesitas hoy para entrar sin visa.</p>
+           <a href="articles/visa-schengen-mexico.html" class="read-more">Leer guía →</a>
+         </div>
+       </article>
+-- 
+2.47.3
+
