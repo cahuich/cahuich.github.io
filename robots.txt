@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Ubicación del Sitemap XML
-Sitemap: https://voyagelumiere.indevs.in/sitemap.xml
+Sitemap: https://voyagelumiere.mx/sitemap.xml
